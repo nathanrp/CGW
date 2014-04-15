@@ -32,14 +32,14 @@ CGW.config(
 					 }
 				})
 				
-				.state('owner.caregivers', {
-					url: '/caregivers',
+				.state('owner.staff', {
+					url: '/staff',
 					views: {
 						'content@': {
-							templateUrl: 'owner.caregivers.html'
+							templateUrl: 'owner.staff.html'
 						},
-						'tab-content@owner.caregivers': {
-							templateUrl: 'owner.caregivers.all.html'
+						'tab-content@owner.staff': {
+							templateUrl: 'owner.caregivers.html'
 						}
 					 }
 				})
@@ -48,7 +48,7 @@ CGW.config(
 					url: '/applicants',
 					views: {
 						'content@': {
-							templateUrl: 'owner.caregivers.html'
+							templateUrl: 'owner.staff.html'
 						},
 						'tab-content@owner.applicants': {
 							templateUrl: 'owner.applicants.html'

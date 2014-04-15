@@ -7,9 +7,9 @@
 	line-height: 36px;
 	padding: 0 10px;
 	border-radius: 4px;
-	background: lighten(@brand,10%);
-	color: @dkblue;
-	font-weight: 600;
+	background: @ltgray;
+	color: @bcolor;
+	font-weight: 700;
 	cursor: pointer;
 	vertical-align: middle;
 	font-size: 15px;
@@ -19,7 +19,8 @@
 	i {
 		font-size: 16px;
 		vertical-align: middle;
-		margin-right: 5px;
+		margin-right: 10px;
+		color: darken(@ltgray,20%);
 	}
 	&.disabled, [disabled=disabled] {
 		.opacity(.5);
@@ -32,16 +33,26 @@
 		font-weight: 400;
 		font-size: 16px;
 	}
+	&.primary {
+		background: @brand;
+		color: @white;
+		&:active {
+			border-top-color: darken(@brand,30%) !important;
+		}
+		i {
+			color: lighten(@brand,20%);
+		}
+	}
 	&.warning{
 		background: @orange !important;
-		color: darken(@orange,40%) !important;
+		color: @white;
 		&:active {
 			border-top-color: darken(@orange,30%) !important;
 		}
 	}
 	&:active {
 		.box-shadow(0 0 36px fadeout(@black,70%) inset);
-		border-top: 2px solid darken(@brand,10%);
+		border-top: 2px solid darken(@ltgray,30%);
 		line-height: 34px;
 		&.small-btn {
 			line-height: 27px;
@@ -50,13 +61,6 @@
 	&.full-btn {
 		display: block;
 		width: 100%;
-	}
-	&.secondary-btn {
-		background: @ltgray;
-		color: darken(@ltgray,60%);
-		&:active {
-			border-top-color: darken(@ltgray,30%);
-		}
 	}
 }
 

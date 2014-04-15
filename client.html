@@ -6,6 +6,7 @@
 			</div>
 			<h2>Chowrichzy Wisdomy Octopios</h2>
 		</div>
+<!--
 		<ul class="ui-statusbar">
 			<li>
 				<small>Last Check In</small>
@@ -16,16 +17,17 @@
 				September 2, 2014
 			</li>
 		</ul>
+-->
 		<div class="ui-btns btns">
-			<a id="check-in-btn" class="ladda-button btn" data-style="expand-left">Check In</a>
+			<a id="check-in-btn" class="ladda-button btn primary" data-style="expand-left">Check In</a>
 			<a id="check-out-btn" class="btn disabled">Check Out</a>
 		</div>
-		<ul class="ui-tabs tabs">
-			<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
-			<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
-			<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
-		</ul>
 	</div>
+	<ul class="ui-tabs tabs">
+		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
+		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
+		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
+	</ul>
 	<div ui-view="tab-content" class="ui-content tab"></div>
 </div>
 
@@ -68,7 +70,7 @@
 						click: function(){
 							$(this).dialog('close');
 						},
-						class: 'prev full-btn secondary-btn'
+						class: 'prev full-btn'
 					},
 					{
 						text: 'Check Out',

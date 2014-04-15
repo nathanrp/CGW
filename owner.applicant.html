@@ -5,15 +5,10 @@
 				<img src="img/avatar.jpg" />
 			</div>
 			<h2>Yip Kai-man</h2>
+			<h4 class="secondary">Applied on August 28, 2014</h4>
 		</div>
-		<ul class="ui-statusbar">
-			<li>
-				<small>Applied on</small>
-				<span id="application-status">August 28, 2014</span>
-			</li>
-		</ul>
 		<div class="ui-btns btns">
-			<a id="accept-btn" class="ladda-button btn" data-style="expand-left">Accept</a>
+			<a id="accept-btn" class="ladda-button primary btn" data-style="expand-left">Accept</a>
 			<a id="reject-btn" class="btn ladda-button warning" data-style="expand-right">Reject</a>
 		</div>
 	</div>
@@ -139,11 +134,11 @@
 </div>
 
 <div class="dialog" id="accept-dialog">
-	<p>Accept Yip Kai-man. This will create Yip as a caregiver in the system and send Yip the steps to complete the application process.</p>
+	<p>Accept Yip Kai-man? This will create Yip as a caregiver in the system and send Yip the steps to complete the application process.</p>
 </div>
 
 <div class="dialog" id="reject-dialog">
-	<p>Reject Yip Kai-man. This will also delete Yip&rsquo;s application.</p>
+	<p>Reject Yip Kai-man? This will also delete Yip&rsquo;s application.</p>
 </div>
 
 <script>
@@ -161,7 +156,7 @@
 					click: function(){
 						$(this).dialog('close');
 					},
-					class: 'prev full-btn secondary-btn'
+					class: 'prev full-btn'
 				},
 				{
 					text: 'Accept Applicant',
@@ -173,7 +168,7 @@
 						}, 2000)
 						$(this).dialog('close');
 					},
-					class: 'next full-btn'
+					class: 'next full-btn primary'
 				}
 			]
 		});
@@ -192,7 +187,7 @@
 					click: function(){
 						$(this).dialog('close');
 					},
-					class: 'prev full-btn secondary-btn'
+					class: 'prev full-btn'
 				},
 				{
 					text: 'Reject Applicant',
