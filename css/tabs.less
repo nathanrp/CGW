@@ -1,0 +1,34 @@
+// tabs
+
+.tabs {
+	.clearfix();
+	padding: 5px 0;
+	border-bottom: 1px solid darken(@ltgray,10%);
+	li {
+		float: left;
+		position: relative;
+		a {
+			display: block;
+			line-height: 36px;
+			padding: 0 10px;
+			text-align: center;
+			border-right: 1px solid darken(@ltgray,10%);
+			color: lighten(@bcolor,10%);
+			font-size: 18px;
+		}
+		&.active {
+			a {
+				color: @brand;
+			}
+		}
+		&:last-child {
+			a {
+				border-right: none;
+			}
+		}
+	}
+}
+
+.tab {
+	padding: 20px 0;
+}

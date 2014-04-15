@@ -1,0 +1,69 @@
+// mixins
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//		contenteditable attribute is included anywhere else in the document.
+//		Otherwise it causes space to appear at the top and bottom of elements
+//		that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//		`:before` to contain the top-margins of child elements.
+.clearfix() {
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+	-moz-box-sizing: @boxmodel;
+	box-sizing: @boxmodel;
+}
+
+// nowrap
+
+.nowrap() {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+// Transitions
+.transition(@transition) {
+	-webkit-transition: @transition;
+	transition: @transition;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+	box-shadow: @shadow;
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+	&:-moz-placeholder { color: @color; } // Firefox 4-18
+	&::-moz-placeholder { color: @color; } // Firefox 19+
+	&:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder { color: @color; } // Safari and Chrome
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.translate3d(@x; @y; @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}

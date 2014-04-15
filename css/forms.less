@@ -1,0 +1,162 @@
+// forms
+
+input[type=text], select, textarea {
+	font-family: @bfont;
+	font-size: 18px;
+	background: @ltgray;
+	.box-shadow(0 2px 0 darken(@ltgray,10%) inset);
+	border-radius: 4px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	&:focus {
+	}
+//	.placeholder(darken(@ltgray,40%));
+	&.money {
+		max-width: 120px;
+	}
+}
+
+select {
+	-webkit-appearance: none;
+}
+
+input[type=checkbox], input[type=radio] {
+	position:absolute;
+    /* Reset anything that could peek out or interfere with dimensions */
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    opacity:0;
+	+ label.option {
+		position: relative;
+		padding: 15px 0 15px 40px;
+		&:before {
+			content: '';
+			background: @ltgray;
+			.box-shadow(0 2px 0 darken(@ltgray,10%) inset);
+			display: block;
+			width: 22px;
+			height: 22px;
+			position: absolute;
+			left: 5px;
+			top: 12px;
+			text-align: center;
+			color: @white;
+		}
+	}
+	&:checked {
+		+ label.option {
+			&:before {
+				background: @brand !important;
+				.box-shadow(0 2px 0 darken(@brand,10%) inset) !important;
+			}
+		}
+	}
+	&:focus {
+		+ label.option {
+			&:before {
+			}
+		}
+	}
+	&:disabled {
+		+ label.option {
+			.opacity(.5);
+		}
+	}
+}
+
+input[type=checkbox] {
+	+ label.option {
+		&:before {
+			border-radius: 3px;
+		}
+	}
+	&:checked {
+		+ label.option {
+			&:before {
+				content: '\2713';
+				text-shadow: 0 2px 0 darken(@brand,10%);
+			}
+		}
+	}
+}
+
+input[type=radio] {
+	+ label.option {
+		&:before {
+			border-radius: 50%;
+		}
+	}
+	&:checked {
+		+ label.option {
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 6px;
+				top: 11px;
+				background: @white;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				.box-shadow(0 2px 0 darken(@brand,10%));
+			}
+		}
+	}
+}
+
+.options-vertical {
+	.option {
+		display: block;
+	}
+}
+
+.options-horizontal {
+	.option {
+		display: inline-block;
+		padding-right: 10px !important;
+	}
+}
+
+form {
+	fieldset {
+		&.table {
+			dl {
+				display: table-row;
+				padding: 5px 0;
+				margin: 0;
+				clear: both;
+				overflow: hidden;
+				dt, dd {
+					display: table-cell;
+					margin: 0;
+					float: none;
+					width: auto;
+					position: relative;
+					padding: 0 20px 10px 0;
+					vertical-align: top;
+					label {
+						display: inline-block;
+					}
+				}
+				dt {
+					text-align: right;
+					font-weight: normal;
+					label {
+						padding-top: 5px;
+					}
+				}
+				dd {
+					&.options-vertical, &.options-horizontal {
+						.yesno {
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// dialogs
+
+.dialog {
+	display: none;
+}
+
+.ui-widget-overlay {
+	position: fixed;
+	background: fadeout(@dkblue,10%);
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
+.ui-dialog {
+	position: absolute;
+	border-radius: 4px;
+	overflow: hidden;
+	background: darken(@white,1%);
+	z-index: 999;
+	.ui-dialog-titlebar {
+		display: none;
+		padding: 0 20px;
+		position: relative;
+		.ui-dialog-title {
+			font-weight: 600;
+			line-height: 56px;
+		}
+		.ui-button {
+			display: none;
+		}
+	}
+	.ui-dialog-content {
+		padding: 20px;
+		* {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.ui-dialog-buttonpane {
+		padding: 20px 10px;
+		.ui-button {
+			margin: 0 0 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

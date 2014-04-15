@@ -1,0 +1,213 @@
+<div class="ui-section applicant">
+	<div class="ui-header">
+		<div class="ui-title">
+			<div class="avatar">
+				<img src="img/avatar.jpg" />
+			</div>
+			<h2>Yip Kai-man</h2>
+		</div>
+		<ul class="ui-statusbar">
+			<li>
+				<small>Applied on</small>
+				<span id="application-status">August 28, 2014</span>
+			</li>
+		</ul>
+		<div class="ui-btns btns">
+			<a id="accept-btn" class="ladda-button btn" data-style="expand-left">Accept</a>
+			<a id="reject-btn" class="btn ladda-button warning" data-style="expand-right">Reject</a>
+		</div>
+	</div>
+	<div class="ui-content">
+		<h3>Application</h3>
+		<div class="float">
+			<dl>
+				<dt>First Name</dt>
+				<dd>Yip</dd>
+			</dl>
+			<dl>
+				<dt>Last Name</dt>
+				<dd>Kai-man</dd>
+			</dl>
+		</div>
+			<dl>
+				<dt>Address</dt>
+				<dd>123 Main Street</dd>
+			</dl>
+		<div class="float">
+			<dl>
+				<dt>City</dt>
+				<dd>Salt Lake City</dd>
+			</dl>
+			<dl>
+				<dt>Zip Code</dt>
+				<dd>84101</dd>
+			</dl>
+			<dl>
+				<dt>State</dt>
+				<dd>Utah</dd>
+			</dl>
+		</div>
+			<dl>
+				<dt>Phone</dt>
+				<dd><a href="tel:8015131208" class="link">(801) 513-1208</a></dd>
+			</dl>
+			<dl>
+				<dt>Email</dt>
+				<dd><a href="mailto:nathanphilpot@gmail.com" class="link">nathanphilpot@gmail.com</a></dd>
+			</dl>
+			<dl>
+				<dt>Availability</dt>
+				<dd>Monday thru Sunday, all hours</dd>
+			</dl>
+			<dl>
+				<dt>Work Experience</dt>
+				<dd>
+					<ul class="b-list">
+						<li>Bathing/Showering</li>
+						<li>Dressing</li>
+						<li>Alz/Dementia</li>
+						<li>Transferring</li>
+						<li>Feeding</li>
+						<li>Parkinson&rsquo;s</li>
+						<li>Toileting</li>
+						<li>Ambulating</li>
+						<li>Stroke</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>How long have you worked professionally as a Care-Provider?</dt>
+				<dd>5 years</dd>
+			</dl>
+			<dl>
+				<dt>What certifications do you have?</dt>
+				<dd>ABC Certified, CNA</dd>
+			</dl>
+			<dl>
+				<dt>Do you have a valid Driver&rsquo;s License?</dt>
+				<dd>Yes</dd>
+			</dl>
+			<dl>
+				<dt>Do you have a car to use at work?</dt>
+				<dd>Yes</dd>
+			</dl>
+			<dl>
+				<dt>List any physical limitations you may have</dt>
+				<dd>None</dd>
+			</dl>
+			<dl>
+				<dt>Do you Smoke?</dt>
+				<dd>No</dd>
+			</dl>
+			<dl>
+				<dt>Use Drugs?</dt>
+				<dd>No</dd>
+			</dl>
+			<dl>
+				<dt>Drink Alcohol?</dt>
+				<dd>Yes</dd>
+			</dl>
+			<dl>
+				<dt>Do you speak any language other than English? If so please list</dt>
+				<dd>Spanish, Russian, Mandarin, Samoan</dd>
+			</dl>
+			<dl>
+				<dt>Have you ever been convicted of a felony or misdemeanor other than traffic violations? If so please explain</dt>
+				<dd></dd>
+			</dl>
+			<dl>
+				<dt>List 2 references who we can verify your work experience:</dt>
+				<dd>
+					<div class="table">
+						<dl>
+							<dt>Jason Alexander</dt>
+							<dd>568-598-6348</dd>
+						</dl>
+						<dl>
+							<dt>Jerry Seinfeld</dt>
+							<dd>236-897-6526</dd>
+						</dl>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt>Do you have a valid Driver&rsquo;s License?</dt>
+				<dd>Yes</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="dialog" id="accept-dialog">
+	<p>Accept Yip Kai-man. This will create Yip as a caregiver in the system and send Yip the steps to complete the application process.</p>
+</div>
+
+<div class="dialog" id="reject-dialog">
+	<p>Reject Yip Kai-man. This will also delete Yip&rsquo;s application.</p>
+</div>
+
+<script>
+
+	$('#accept-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#accept-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn secondary-btn'
+				},
+				{
+					text: 'Accept Applicant',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							$('#accept-btn').addClass('disabled').prepend('<i class="fa fa-check"></i>');
+							window.location.replace('/cgw/#/owner/applicants');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next full-btn'
+				}
+			]
+		});
+	});
+	
+	$('#reject-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#reject-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn secondary-btn'
+				},
+				{
+					text: 'Reject Applicant',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							$('#reject-btn').addClass('disabled');
+							window.location.replace('/cgw/#/owner/applicants');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next warning full-btn'
+				}
+			]
+		});
+	});
+
+</script>

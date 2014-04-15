@@ -1,0 +1,90 @@
+<div class="ui-section client">
+	<div class="ui-header">
+		<div class="ui-title">
+			<div class="avatar">
+				<img src="img/avatar.jpg" />
+			</div>
+			<h2>Chowrichzy Wisdomy Octopios</h2>
+		</div>
+		<ul class="ui-statusbar">
+			<li>
+				<small>Last Check In</small>
+				<span id="check-in-status">August 28, 2014</span>
+			</li>
+			<li>
+				<small>Next Visit</small>
+				September 2, 2014
+			</li>
+		</ul>
+		<div class="ui-btns btns">
+			<a id="check-in-btn" class="ladda-button btn" data-style="expand-left">Check In</a>
+			<a id="check-out-btn" class="btn disabled">Check Out</a>
+		</div>
+		<ul class="ui-tabs tabs">
+			<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
+			<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
+			<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
+		</ul>
+	</div>
+	<div ui-view="tab-content" class="ui-content tab"></div>
+</div>
+
+<div class="dialog" id="check-out-dialog" title="Check Out">
+	<div class="feedback warning">
+		<p>You have not completed any tasks with Chowrichzy Wisdomy Octopios. Are you sure you want to check out?</p>
+	</div>
+	<p>Check out from Chowrichzy Wisdomy Octopios?</p>
+</div>
+
+<script>
+
+
+	$('#check-in-btn').click(function(){
+		var a = $(this);
+		if (a.hasClass('disabled')){
+			return false;
+		} else {
+			var l = Ladda.create(this);
+			l.start();
+			setTimeout(function(){
+				l.stop();
+				a.addClass('disabled').prepend('<i class="fa fa-check"></i>');
+				$('#check-in-status').text('You are checked in!');
+				$('#check-out-btn').removeClass('disabled').addClass('warning');
+				$('.task').attr('disabled',false);
+			}, 2000)
+		}
+	});
+
+	$('#check-out-btn').click(function(){
+		if(!$(this).hasClass('disabled')) {
+			$('#check-out-dialog').dialog({
+				resizable: false,
+				modal: true,
+				width: 280,
+				buttons: [
+					{
+						text: 'Cancel',
+						click: function(){
+							$(this).dialog('close');
+						},
+						class: 'prev full-btn secondary-btn'
+					},
+					{
+						text: 'Check Out',
+						click: function(event){
+							var a = $(event.target);
+							$('#check-in-btn').removeClass('disabled').find('i').remove();
+							$('#check-out-btn').addClass('disabled').removeClass('warning');
+							$('#check-in-status').text('August 28, 2014');
+							$('.task').attr('disabled',true);
+							$(this).dialog('close');
+						},
+						class: 'next warning full-btn'
+					}
+				]
+			});
+		}
+	});
+
+</script>

@@ -1,0 +1,72 @@
+// buttons
+
+.btn, button, .ui-button {
+	display: inline-block;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 36px;
+	padding: 0 10px;
+	border-radius: 4px;
+	background: lighten(@brand,10%);
+	color: @dkblue;
+	font-weight: 600;
+	cursor: pointer;
+	vertical-align: middle;
+	font-size: 15px;
+	border: none;
+	font-family: @bfont;
+	text-align: center;
+	i {
+		font-size: 16px;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	&.disabled, [disabled=disabled] {
+		.opacity(.5);
+		cursor: pointer;
+	}
+	&.small-btn {
+		text-transform: none;
+		letter-spacing: 0;
+		line-height: 29px;
+		font-weight: 400;
+		font-size: 16px;
+	}
+	&.warning{
+		background: @orange !important;
+		color: darken(@orange,40%) !important;
+		&:active {
+			border-top-color: darken(@orange,30%) !important;
+		}
+	}
+	&:active {
+		.box-shadow(0 0 36px fadeout(@black,70%) inset);
+		border-top: 2px solid darken(@brand,10%);
+		line-height: 34px;
+		&.small-btn {
+			line-height: 27px;
+		}
+	}
+	&.full-btn {
+		display: block;
+		width: 100%;
+	}
+	&.secondary-btn {
+		background: @ltgray;
+		color: darken(@ltgray,60%);
+		&:active {
+			border-top-color: darken(@ltgray,30%);
+		}
+	}
+}
+
+.btns {
+	text-align: center;
+	.nowrap();
+	.btn {
+		margin: 0 10px 0 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

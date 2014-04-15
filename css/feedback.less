@@ -1,0 +1,57 @@
+// buttons
+
+.feedback {
+	background: lighten(@ltblue,60%);
+	color: @ltblue;
+	padding: 10px 20px 10px 10px;
+	margin: 0 0 18px;
+	border-radius: 4px;
+	position: relative;
+	display: block;
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	a {
+		color: lighten(@ltblue,10);
+		text-decoration: underline;
+	}
+	.close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		.opacity(.5);
+		&:hover {
+			.opacity(1);
+		}
+	}
+	&.warning {
+		background: lighten(@orange,30%);
+		color: darken(@orange,20%);
+	}
+	&.alert {
+		background: @orange;
+		color: lighten(@orange,30%);
+		a {
+			color: lighten(@orange,25%);
+		}
+	}
+	&.feedback-icon {
+		padding-left: 50px;
+		min-height: 65px;
+		i {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			font-size: 30px;
+			.opacity(.5);
+		}
+	}
+}
