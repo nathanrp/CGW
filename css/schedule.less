@@ -1,0 +1,70 @@
+// schedule
+
+@event: #a1decb;
+
+.schedule {
+	table {
+		thead {
+			tr {
+				th {
+					padding: 5px;
+					font-weight: 500;
+					border-bottom: 1px solid @ltgray;
+					vertical-align: bottom;
+					small {
+						color: lighten(@bcolor,30%);
+					}
+					&.today {
+						font-weight: 700;
+						background: @yellow;
+						border-bottom-color: darken(@yellow,10%);
+						color: darken(@yellow,50%);
+						small {
+							color: darken(@yellow,30%);
+						}
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				td, th {
+					border-bottom: 1px solid @ltgray;
+					vertical-align: top;
+					.wrapper {
+						.event {
+							padding: 10px;
+							background: lighten(@event,20%);
+							border: 1px solid @event;
+							margin: 2px 5px 5px 0;
+							&.alert {
+								background: @orange;
+								color: @white;
+								border-color: @orange;
+							}
+						}
+					}
+				}
+				th {
+					text-align: left;
+					a {
+						display: block;
+						padding: 10px 10px 10px 40px;
+						position: relative;
+						min-height: 40px;
+						.avatar {
+							position: absolute;
+							left: 5px;
+							top: 5px;
+							border-radius: 50%;
+							overflow: hidden;
+							width: 30px;
+							height: 30px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

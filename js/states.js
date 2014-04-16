@@ -22,6 +22,16 @@ CGW.config(
 					 }
 				})
 				
+				.state('owner.schedule', {
+
+					url: '/schedule',
+					views: {
+						'content@': {
+							templateUrl: 'owner.schedule.html'
+						}
+					 }
+				})
+				
 				.state('owner.clients', {
 
 					url: '/clients',

@@ -50,17 +50,33 @@
 			border-top-color: darken(@orange,30%) !important;
 		}
 	}
-	&:active {
+	&:active, &.ui-state-active {
 		.box-shadow(0 0 36px fadeout(@black,70%) inset);
 		border-top: 2px solid darken(@ltgray,30%);
 		line-height: 34px;
-		&.small-btn {
-			line-height: 27px;
-		}
 	}
 	&.full-btn {
 		display: block;
 		width: 100%;
+	}
+}
+
+.ui-buttonset {
+	display: inline-block;
+	.ui-button, .btn {
+		border-right: 1px solid darken(@ltgray,10%);
+		float: left;
+		border-radius: 0;
+		&:first-child, &.ui-corner-left {
+			border-radius: 4px 0 0 4px;
+		}
+		&:last-child, &.ui-corner-right {
+			border-radius: 0 4px 4px 0;
+			border-right: none;
+		}
+		&:active, &.ui-state-active {
+			border-right-color: darken(@ltgray,30%);
+		}
 	}
 }
 
@@ -72,5 +88,24 @@
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+}
+
+.ui-toolbar {
+	.clearfix();
+	text-align: right;
+	padding: 5px 0;
+	h2 {
+		line-height: 36px;
+	}
+	input[type=text], select {
+		margin-top: 3px;
+	}
+	.left {
+		float: left;
+		margin: 0 10px 0 0;
+	}
+	.right {
+		margin: 0 0 0 10px;
 	}
 }

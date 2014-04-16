@@ -2,7 +2,7 @@
 
 input[type=text], select, textarea {
 	font-family: @bfont;
-	font-size: 18px;
+	font-size: 17px;
 	background: @ltgray;
 	.box-shadow(0 2px 0 darken(@ltgray,10%) inset);
 	border-radius: 4px;
@@ -11,10 +11,7 @@ input[type=text], select, textarea {
 	outline: none;
 	&:focus {
 	}
-//	.placeholder(darken(@ltgray,40%));
-	&.money {
-		max-width: 120px;
-	}
+	.placeholder(lighten(@bcolor,30%));
 }
 
 select {
@@ -123,6 +120,12 @@ input[type=radio] {
 
 form {
 	fieldset {
+		padding: 20px 0;
+		border-top: 1px solid @ltgray;
+		legend {
+			font-weight: 500;
+			padding: 0 20px;
+		}
 		&.table {
 			dl {
 				display: table-row;
@@ -157,6 +160,16 @@ form {
 					}
 				}
 			}
+			&.left-aligned {
+				dl {
+					dt {
+						text-align: left;
+					}
+				}
+			}
+		}
+		&.noborder {
+			border-top: none;
 		}
 	}
 }

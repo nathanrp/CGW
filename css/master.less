@@ -6,12 +6,12 @@
 	&::-moz-focus-inner {
 		border: 0;
 	}
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 body {
 	cursor: default;
-	font-family: @bfont;
-	font-size: @bsize;
 	background: @white;
 	color: @bcolor;
 	overflow: hidden;
@@ -27,84 +27,7 @@ a {
 	color: lighten(@bcolor,10%);
 	cursor: pointer;
 	&.link {
-		
-		color: @ltblue;
-	}
-}
-
-p {
-	line-height: 1.4em;
-	margin-bottom: 1em;
-}
-
-h2, h3 {
-	font-weight: 500;
-}
-
-h2 {
-	font-size: 17px;
-}
-
-h3 {
-	padding: 0 0 1em;
-}
-
-ul {
-	&.b-list {
-		list-style-type: disc;
-		li {
-			padding: 0 0 .5em;
-			margin: 0 0 0 20px;
-		}	
-	}
-}
-
-dl {
-	dt {
-		padding: 0 0 .25em;
-		color: lighten(@bcolor, 30%);
-	}
-	dd {
-		padding: 0 0 1em;
-	}
-}
-
-.float {
-	.clearfix();
-	dl {
-		float: left;
-		padding: 0 20px 0 0;
-		&:last-child {
-			padding-right: 0;
-		}
-	}
-}
-
-.table {
-	dl {
-		display: table-row;
-		margin: 0;
-		clear: both;
-		overflow: hidden;
-		dt, dd {
-			display: table-cell;
-			margin: 0;
-			float: none;
-			width: auto;
-			position: relative;
-			padding-bottom: 1em;
-			vertical-align: top;
-			label {
-				display: inline-block;
-			}
-		}
-		dt {
-			text-align: right;
-			font-weight: normal;
-			padding-right: 20px;
-			color: lighten(@bcolor,40%);
-			max-width: 30%;
-		}
+		color: @brand;
 	}
 }
 
@@ -119,8 +42,11 @@ dl {
 	left: 0;
 	right: 0;
 	border-right: 1px solid darken(@dkblue,10%);
+	overflow-y: auto;
+	overflow-x: hidden;
 	ul {
 		padding: 10px 0 20px;
+		margin: 0 0 200px;
 		li {
 			position: relative;
 			padding: 0 5px;
@@ -130,6 +56,8 @@ dl {
 				top: 15px;
 				color: lighten(@dkblue,20%);
 				z-index: 1;
+				width: 25px;
+				text-align: center;
 			}
 			a {
 				display: block;
@@ -150,7 +78,7 @@ dl {
 	}
 	.cgw {
 		position: absolute;
-		bottom: 0px;
+		bottom: -100px;
 		left: 0px;
 		padding: 20px;
 		color: lighten(@dkblue,20%);
@@ -270,6 +198,9 @@ dl {
 		}
 	}
 	.ui-section {
+		&.no-header {
+			padding-top: 5px;
+		}
 		.ui-header {
 			.clearfix();
 			padding: 5px 0;

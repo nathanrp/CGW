@@ -50,34 +50,11 @@ CGW.directive('scroll', function ($document) {
 	}
 });
 
-CGW.directive('openDialog',function(){
+CGW.directive('jqUiButtonset', function ($document) {
 	return {
 		restrict: 'A',
-		link: function(scope,element,attr) {
-			var dialogId = '#' + attr.openDialog;
-			element.bind('click',function(event){
-				$(dialogId).dialog({
-					resizable: false,
-					modal: true, 
-					buttons: [
-						{
-							text: 'Cancel',
-							click: function(){
-								$(this).dialog('close');
-							},
-							class: 'prev'
-						},
-						{
-							text: 'Done',
-							click: function(){
-								$(this).dialog('close');
-							},
-							class: 'next'
-						}
-					]
-				});
-			});
+		link: function(scope, element, attrs) {
+			$(element).buttonset();
 		}
 	}
 });
-
