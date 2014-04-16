@@ -1,0 +1,90 @@
+<div class="ui-section applicant">
+	<div class="ui-header">
+		<div class="ui-title">
+			<div class="avatar">
+				<img src="img/avatar.jpg" />
+			</div>
+			<h2>Rainn Wilson</h2>
+			<h4 class="secondary">Applied on August 28, 2014</h4>
+		</div>
+		<div class="ui-btns btns">
+			<a id="accept-btn" class="ladda-button primary btn" data-style="expand-left">Accept</a>
+			<a id="reject-btn" class="btn ladda-button warning" data-style="expand-right">Reject</a>
+		</div>
+	</div>
+	<div class="ui-content" ng-include src="'applicant.app.html'"></div>
+</div>
+
+<div class="dialog" id="accept-dialog">
+	<p>Accept Rainn Wilson? This will create Yip as a caregiver in the system and send Yip the steps to complete the application process.</p>
+</div>
+
+<div class="dialog" id="reject-dialog">
+	<p>Reject Rainn Wilson? This will also delete Yip&rsquo;s application.</p>
+</div>
+
+<script>
+
+	$('#accept-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#accept-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Accept Applicant',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							$('#accept-btn').addClass('disabled').prepend('<i class="fa fa-check"></i>');
+							window.location.replace('/cgw/#/owner/applicants');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next full-btn primary'
+				}
+			]
+		});
+	});
+	
+	$('#reject-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#reject-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Reject Applicant',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							$('#reject-btn').addClass('disabled');
+							window.location.replace('/cgw/#/owner/applicants');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next warning full-btn'
+				}
+			]
+		});
+	});
+
+</script>
