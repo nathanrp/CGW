@@ -281,6 +281,39 @@ a {
 				}
 			}
 		}
-		
+		&.applicant {
+			.ui-content {
+				.application-list {
+					li {
+						position: relative;
+						padding: 20px 0 20px 60px;
+						i {
+							display: block;
+							position: absolute;
+							left: 5px;
+							top: 5px;
+							background: 
+							@ltgray;
+							border-radius: 50%;
+							width: 40px;
+							height: 40px;
+							text-align: center;
+							line-height: 40px;
+							font-weight: 700;
+						}
+						&.done {
+							i {
+								background: @green;
+								color: @white;
+							}
+						}
+					}
+				}
+			}
+		}
+		.paper {
+			padding: 20px;
+			max-width: 612px;
+		}
 	}
 }

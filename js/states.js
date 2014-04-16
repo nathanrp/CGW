@@ -32,6 +32,16 @@ CGW.config(
 					 }
 				})
 				
+				.state('owner.schedule.new', {
+
+					url: '/new',
+					views: {
+						'content@': {
+							templateUrl: 'owner.schedule.new.html'
+						}
+					 }
+				})
+				
 				.state('owner.clients', {
 
 					url: '/clients',
@@ -169,16 +179,39 @@ CGW.config(
 					 }
 				})
 				
-/*
-				.state('caregiver.clients.client.tasks.checkout', {
+				.state('applicant', {
 
-					parent: 'caregiver.clients.client.tasks',
-					url: '/checkout',
-					onEnter: function($stateParams, $state) {
-						alert('hello')
-					}
+					url: '/applicant',
+					views: {
+						'content@': {
+							templateUrl: 'applicant.html'
+						},
+						'drawer@': {
+							templateUrl: 'applicant.drawer.html'
+						}
+					 }
 				})
-*/
+				
+				.state('applicant.application', {
+
+					url: '/application',
+					views: {
+						'content@': {
+							templateUrl: 'applicant.application.html'
+						}
+					 }
+				})
+				
+				.state('applicant.application.contract', {
+
+					url: '/contract',
+					views: {
+						'content@': {
+							templateUrl: 'application.contract.html'
+						}
+					 }
+				})
+
 		}
 	]
 );
