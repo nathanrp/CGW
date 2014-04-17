@@ -4,7 +4,6 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
-				.when('/caregiver', '/caregiver/skills')
 //				.otherwise('/caregiver/skills');
 
 			$stateProvider
@@ -14,10 +13,10 @@ CGW.config(
 					url: '/owner',
 					views: {
 						'content@': {
-							templateUrl: 'owner.html'
+							templateUrl: 'owner/owner.html'
 						},
 						'drawer@': {
-							templateUrl: 'owner.drawer.html'
+							templateUrl: 'owner/drawer.html'
 						}
 					 }
 				})
@@ -27,7 +26,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'content@': {
-							templateUrl: 'owner.schedule.html'
+							templateUrl: 'owner/schedule.html'
 						}
 					 }
 				})
@@ -37,7 +36,7 @@ CGW.config(
 					url: '/new',
 					views: {
 						'content@': {
-							templateUrl: 'owner.schedule.new.html'
+							templateUrl: 'owner/schedule.new.html'
 						}
 					 }
 				})
@@ -47,19 +46,28 @@ CGW.config(
 					url: '/clients',
 					views: {
 						'content@': {
-							templateUrl: 'owner.clients.html'
+							templateUrl: 'owner/clients.html'
 						}
 					 }
 				})
 				
-				.state('owner.staff', {
-					url: '/staff',
+				.state('owner.caregivers', {
+					url: '/caregivers',
 					views: {
 						'content@': {
-							templateUrl: 'owner.staff.html'
+							templateUrl: 'owner/caregivers-applicants.html'
 						},
-						'tab-content@owner.staff': {
-							templateUrl: 'owner.caregivers.html'
+						'tab-content@owner.caregivers': {
+							templateUrl: 'owner/caregivers.html'
+						}
+					 }
+				})
+				
+				.state('owner.caregivers.caregiver', {
+					url: '/caregiver',
+					views: {
+						'content@': {
+							templateUrl: 'owner/caregiver.html'
 						}
 					 }
 				})
@@ -68,10 +76,10 @@ CGW.config(
 					url: '/applicants',
 					views: {
 						'content@': {
-							templateUrl: 'owner.staff.html'
+							templateUrl: 'owner/caregivers-applicants.html'
 						},
 						'tab-content@owner.applicants': {
-							templateUrl: 'owner.applicants.html'
+							templateUrl: 'owner/applicants.html'
 						}
 					 }
 				})
@@ -81,7 +89,7 @@ CGW.config(
 					url: '/applicant',
 					views: {
 						'content@': {
-							templateUrl: 'owner.applicant.html'
+							templateUrl: 'owner/applicant.html'
 						}
 					 }
 				})
@@ -91,10 +99,10 @@ CGW.config(
 					url: '/caregiver',
 					views: {
 						'content@': {
-							templateUrl: 'caregiver.html'
+							templateUrl: 'caregiver/caregiver.html'
 						},
 						'drawer@': {
-							templateUrl: 'caregiver.drawer.html'
+							templateUrl: 'caregiver/drawer.html'
 						}
 					 }
 				})
@@ -104,7 +112,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'content@': {
-							templateUrl: 'caregiver.schedule.html'
+							templateUrl: 'caregiver/schedule.html'
 						}
 					 }
 				})
@@ -113,8 +121,8 @@ CGW.config(
 
 					url: '/skills',
 					views: {
-						'tab-content': {
-							templateUrl: 'caregiver.skills.html'
+						'content@': {
+							templateUrl: 'caregiver/skills.html'
 						}
 					 }
 				})
@@ -124,7 +132,7 @@ CGW.config(
 					url: '/contact',
 					views: {
 						'tab-content': {
-							templateUrl: 'caregiver.contact.html'
+							templateUrl: 'caregiver/contact.html'
 						}
 					 }
 				})
@@ -134,7 +142,7 @@ CGW.config(
 					url: '/clients',
 					views: {
 						'content@': {
-							templateUrl: 'caregiver.clients.html'
+							templateUrl: 'caregiver/clients.html'
 						}
 					 }
 				})
@@ -144,7 +152,7 @@ CGW.config(
 					url: '/client',
 					views: {
 						'content@': {
-							templateUrl: 'client.html'
+							templateUrl: 'caregiver/client.html'
 						}
 					 }
 				})
@@ -154,7 +162,7 @@ CGW.config(
 					url: '/tasks',
 					views: {
 						'tab-content': {
-							templateUrl: 'client.tasks.html'
+							templateUrl: 'caregiver/client.tasks.html'
 						}
 					 }
 				})
@@ -164,7 +172,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'tab-content': {
-							templateUrl: 'client.schedule.html'
+							templateUrl: 'caregiver/client.schedule.html'
 						}
 					 }
 				})
@@ -174,7 +182,7 @@ CGW.config(
 					url: '/notes',
 					views: {
 						'tab-content': {
-							templateUrl: 'client.notes.html'
+							templateUrl: 'caregiver/client.notes.html'
 						}
 					 }
 				})
@@ -184,10 +192,10 @@ CGW.config(
 					url: '/applicant',
 					views: {
 						'content@': {
-							templateUrl: 'applicant.html'
+							templateUrl: 'applicant/applicant.html'
 						},
 						'drawer@': {
-							templateUrl: 'applicant.drawer.html'
+							templateUrl: 'applicant/drawer.html'
 						}
 					 }
 				})
@@ -197,7 +205,7 @@ CGW.config(
 					url: '/application',
 					views: {
 						'content@': {
-							templateUrl: 'applicant.application.html'
+							templateUrl: 'applicant/application.html'
 						}
 					 }
 				})
@@ -207,7 +215,7 @@ CGW.config(
 					url: '/contract',
 					views: {
 						'content@': {
-							templateUrl: 'application.contract.html'
+							templateUrl: 'applicant/contract.html'
 						}
 					 }
 				})

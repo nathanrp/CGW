@@ -4,7 +4,7 @@
 	background: lighten(@ltblue,10%);
 	color: @dkblue;
 	padding: 10px 20px 10px 10px;
-	margin: 0 0 18px;
+	margin: 0 0 20px;
 	border-radius: 4px;
 	position: relative;
 	display: block;
@@ -52,6 +52,19 @@
 			top: 10px;
 			font-size: 30px;
 			.opacity(.5);
+		}
+	}
+}
+
+.instructions {
+	padding: 5px 10px;
+	background: lighten(@yellow,20%);
+	color: darken(@yellow,50%);
+	margin: 0 0 20px;
+	border-radius: 4px;
+	p {
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

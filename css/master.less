@@ -78,7 +78,7 @@ a {
 	}
 	.cgw {
 		position: absolute;
-		bottom: -100px;
+		bottom: 0px;
 		left: 0px;
 		padding: 20px;
 		color: lighten(@dkblue,20%);
@@ -284,10 +284,11 @@ a {
 		&.applicant {
 			.ui-content {
 				.application-list {
+					padding: 0 0 20px;
 					li {
 						position: relative;
 						padding: 20px 0 20px 60px;
-						i {
+						.number {
 							display: block;
 							position: absolute;
 							left: 5px;
@@ -301,8 +302,14 @@ a {
 							line-height: 40px;
 							font-weight: 700;
 						}
+						a:not(.btn) {
+							display: block;
+						}
+						.btn {
+							margin-top: 10px;
+						}
 						&.done {
-							i {
+							.number {
 								background: @green;
 								color: @white;
 							}
