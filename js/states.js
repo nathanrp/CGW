@@ -4,7 +4,7 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
-//				.otherwise('/caregiver/skills');
+				.otherwise('/owner');
 
 			$stateProvider
 
