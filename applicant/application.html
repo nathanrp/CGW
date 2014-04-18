@@ -1,0 +1,39 @@
+<ol class="application-list">
+	<li class="done">
+		<i class="fa fa-check number"></i>
+		<a class="link" ui-sref="applicant.resume">Initial Application</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">2</i>
+		<a class="link" ui-sref="applicant.contract">Read and sign contract</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">3</i>
+		<a class="link" ui-sref="applicant.contract">Requirements</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">4</i>
+		<a class="link" ui-sref="applicant.contract">Employee Health Evaluation</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">5</i>
+		<a class="link" ui-sref="applicant.contract">Direct Deposit</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">6</i>
+		<a class="link" ui-sref="applicant.w9">W-9</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">7</i>
+		<a class="link" ui-sref="applicant.w9">I-9</a>
+	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">8</i>
+		W-4
+		<div class="ui-toolbar">
+			<a class="btn left" href="pdfs/w9.pdf"><i class="fa fa-arrow-circle-down"></i>Download</a> 
+			<a class="btn left ladda-button upload" data-style="expand-left" data-spinner-color="#3b3b3b"><i class="fa fa-arrow-circle-up"></i>Upload</a>
+			<input type="file" hidden="hidden" />
+		</div>
+	</li>
+</ol>
