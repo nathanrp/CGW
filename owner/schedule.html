@@ -6,7 +6,10 @@
 			<a><span class="fa fa-caret-right"></span></a>
 		</div>
 		<h2 class="left">October 27 &mdash; November 2, 2014</h2>
-		<input type="text" class="right" placeholder="Search&hellip;" />
+		<div jq-ui-buttonset class="right">
+			<input type="radio" id="3" name="time" checked="checked"><label for="3">7 days</label>
+			<input type="radio" id="4" name="time"><label for="4">Week</label>
+		</div>
 	</div>
 	<div class="ui-toolbar">
 		<div jq-ui-buttonset class="left">
@@ -18,16 +21,16 @@
 			<option>Kaysville</option>
 			<option>Fruit Heights</option>
 		</select>
-		<div jq-ui-buttonset class="right">
-			<input type="radio" id="3" name="time" checked="checked"><label for="3">7 days</label>
-			<input type="radio" id="4" name="time"><label for="4">Week</label>
-		</div>
+		<ul class="tags right">
+			<li class="tag alert">Needs Caregiver</li>
+			<li class="tag open">Missed Check In</li>
+		</ul>
 	</div>
 	<div class="week-schedule">
 		<table>
 			<thead>
 				<tr>
-					<th></th>
+					<th><input type="text" placeholder="Search&hellip;" /></th>
 					<th>Thurs <small class="date">10/30</small></th>
 					<th class="today">Fri <small class="date">10/31</small></th>
 					<th>Sat <small class="date">11/1</small></th>
@@ -68,9 +71,9 @@
 								<span class="time">7-9a</span>
 								<span class="caregiver">Rainn Wilson</span>
 							</div>
-							<div class="event" ui-sref="owner.schedule.new">
+							<div class="event open" ui-sref="owner.schedule.new">
 								<span class="time">7-9p</span>
-								<span class="caregiver">Rainn Wilson</span>
+								<span class="caregiver"></span>
 							</div>
 						</div>
 					</td>

@@ -200,22 +200,32 @@ CGW.config(
 					 }
 				})
 				
-				.state('applicant.application', {
+				.state('applicant.resume', {
 
-					url: '/application',
+					url: '/resume',
 					views: {
 						'content@': {
-							templateUrl: 'applicant/application.html'
+							templateUrl: 'applicant/resume.html'
 						}
 					 }
 				})
 				
-				.state('applicant.application.contract', {
+				.state('applicant.contract', {
 
 					url: '/contract',
 					views: {
 						'content@': {
 							templateUrl: 'applicant/contract.html'
+						}
+					 }
+				})
+				
+				.state('applicant.w9', {
+
+					url: '/w9',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/w9.html'
 						}
 					 }
 				})

@@ -3,6 +3,22 @@
 @event: #a1decb;
 
 .schedule {
+	.ui-toolbar {
+		.tags {
+			.tag {
+				&.alert {
+					background: @orange;
+					color: @white;
+					border-color: @orange;
+				}
+				&.open {
+					background: @ltgray;
+					border-color: darken(@ltgray,10%);
+					border-style: dashed;
+				}
+			}
+		}
+	}
 	table {
 		thead {
 			tr {
@@ -41,6 +57,11 @@
 								background: @orange;
 								color: @white;
 								border-color: @orange;
+							}
+							&.open {
+								background: @ltgray;
+								border-color: darken(@ltgray,10%);
+								border-style: dashed;
 							}
 						}
 					}

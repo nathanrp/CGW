@@ -1,6 +1,6 @@
 // forms
 
-input[type=text], select, textarea {
+input[type=text], select, textarea, input[type=number] {
 	font-family: @bfont;
 	font-size: 17px;
 	background: @ltgray;
@@ -12,10 +12,17 @@ input[type=text], select, textarea {
 	&:focus {
 	}
 	.placeholder(lighten(@bcolor,30%));
+	&.smart-width {
+		width: 100%;
+	}
 }
 
 select {
 	-webkit-appearance: none;
+	
+	&:after {
+		content: 'hello';
+	}
 }
 
 input[type=checkbox], input[type=radio] {
@@ -76,6 +83,7 @@ input[type=checkbox] {
 			&:before {
 				content: '\2713';
 				text-shadow: 0 2px 0 darken(@brand,10%);
+				line-height: 21px;
 			}
 		}
 	}
@@ -120,12 +128,25 @@ input[type=radio] {
 
 form {
 	position: relative;
+	.help {
+		display: block;
+		padding: 5px 0;
+		color: lighten(@bcolor,30%);
+	}
 	fieldset {
 		padding: 20px 0;
 		border-top: 1px solid @ltgray;
 		legend {
 			font-weight: 500;
 			padding: 0 20px;
+		}
+		dl {
+			dt {
+				label {
+					padding: 0 0 10px;
+					display: block;
+				}
+			}
 		}
 		&.table {
 			dl {
@@ -150,7 +171,10 @@ form {
 					text-align: right;
 					font-weight: normal;
 					label {
-						padding-top: 10px;
+						padding: 10px 0 0;
+						&.options-label {
+							padding-top: 15px;
+						}
 					}
 				}
 				dd {

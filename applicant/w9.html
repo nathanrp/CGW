@@ -1,0 +1,153 @@
+<div class="ui-section">
+	<div class="ui-toolbar">
+		<a class="btn left" ui-sref="applicant.application"><i class="fa fa-caret-left"></i>Back</a>
+		<a class="btn right">Print</a>
+	</div>
+	<form class="paper contract">
+		<h2 class="title">W-9 Request for Taxpayer Identification Number and Certification</h2>
+		
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Name</label></dt>
+				<dd>
+					<input type="text" />
+					<small class="help">as shown on your income tax return</small>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Business Name</label></dt>
+				<dd>
+					<input type="text" />
+					<small class="help">disregarded entity name, if different from above</small>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<p>Check appropriate box for federal tax</p>
+			<dl>
+				<dt><label for="">Classification</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" name="class" id="1" />
+					<label class="option" for="1">Individual/sole proprietor</label>
+					<input type="radio" name="class" id="2" />
+					<label class="option" for="2">C Corporation</label>
+					<input type="radio" name="class" id="3" />
+					<label class="option" for="3">S Corporation</label>
+					<input type="radio" name="class" id="4" />
+					<label class="option" for="4">Partnership</label>
+					<input type="radio" name="class" id="5" />
+					<label class="option" for="5">Trust/estate</label>
+					<dl>
+						<dd class="options-vertical">
+							<input type="radio" name="class" id="6" />
+							<label class="option" for="6">Limited liability company</label>
+						</dd>
+						<dd>
+							<input type="text" disabled="disabled" />
+							<small class="help">Enter the tax classification (C=C corporation, S=S corporation, P=partnership)</small>
+						</dd>
+					</dl>
+					<input type="radio" name="class" id="7" />
+					<label class="option" for="7">Other</label>
+					<input type="radio" name="class" id="8" />
+					<label class="option" for="8">Exempt payee</label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City, State ZIP code</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">List account numbers(s) here (optional)</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Part 1 Taxpayer Identification Number (TIN)</legend>
+			<p>Enter your TIN in the appropriate box. The TIN provided must match the name given on the &ldquo;Name&rdquo; line to avoid backup withholding. For individuals, this is your social security number (SSN). However, for a resident alien, sole proprietor, or disregarded entity, see the Part I instructions on page 3. For other entities, it is your employer identification number (EIN). If you do not have a number, see How to get a
+TIN on page 3.</p>
+			<p>Note. If the account is in more than one name, see the chart on page 4 for guidelines on whose number to enter.</p>
+			<dl>
+				<dt><label for="">Social security number</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Employer identification number</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+		</fieldset>
+		
+		<fieldset class="table">
+			<legend>Part 2 Certification</legend>
+			<p>Under penalties of perjury, I certify that:</p>
+			<p>1. The number shown on this form is my correct taxpayer identification number (or I am waiting for a number to be issued to me), and</p>
+			<p>2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service (IRS) that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding, and</p>
+			<p>3. I am a U.S. citizen or other U.S. person <a>See instruction</a>.</p>
+			<p><strong>Certification instructions.</strong> You must cross out item 2 above if you have been notified by the IRS that you are currently subject to backup withholding because you have failed to report all interest and dividends on your tax return. For real estate transactions, item 2 does not apply. For mortgage interest paid, acquisition or abandonment of secured property, cancellation of debt, contributions to an individual retirement arrangement (IRA), and
+generally, payments other than interest and dividends, you are not required to sign the certification, but you must provide your correct TIN. See the instructions on page 4.</p>
+			<div class="m-signature-pad">
+				<div class="ui-toolbar">
+					<label for="" class="left">Signature of U.S. person</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</div>
+				<div class="m-signature-pad--body">
+					<canvas></canvas>
+				</div>
+			</div>
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="text" class="datepicker" /></dd>
+			</dl>
+		</fieldset>
+		<div class="ui-btns">
+			<a class="primary btn ladda-button" id="done" data-style="expand-left">Done</a>
+		</div>
+	</form>
+</div>
+
+<script src="js/signature_pad.js"></script>
+
+<script>
+
+	$('.m-signature-pad').each(function(){
+		var wrapper = this,
+		    clearButton = wrapper.querySelector("[data-action=clear]"),
+		    canvas = wrapper.querySelector("canvas"),
+		    signaturePad;
+		
+		// Adjust canvas coordinate space taking into account pixel ratio,
+		// to make it look crisp on mobile devices.
+		// This also causes canvas to be cleared.
+		function resizeCanvas() {
+		    var ratio =  window.devicePixelRatio || 1;
+		    canvas.width = canvas.offsetWidth * ratio;
+		    canvas.height = canvas.offsetHeight * ratio;
+		    canvas.getContext("2d").scale(ratio, ratio);
+		}
+		
+		window.onresize = resizeCanvas;
+		resizeCanvas();
+		
+		signaturePad = new SignaturePad(canvas);
+		
+		clearButton.addEventListener("click", function (event) {
+		    signaturePad.clear();
+		});
+	});
+
+	$('#done').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		setTimeout(function(){
+			l.stop();
+			window.location.replace('/cgw/#/applicant/application');
+		}, 2000)
+	});
+	
+</script>

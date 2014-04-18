@@ -1,11 +1,46 @@
-<div class="caregiver ui-section">
+<div class="applicant ui-section">
 	<div class="ui-header">
 		<div class="ui-title">
 			<div class="avatar">
 				<img src="img/avatar.jpg" />
 			</div>
 			<h2>Rainn Wilson</h2>
+			<h4 class="secondary">Applied on August 28, 2014</h4>
+		</div>
+		<div class="ui-btns btns">
+			<a id="submit-btn" class="ladda-button btn primary" data-style="expand-left">Submit Application</a>
+			<a id="withdraw-btn" class="btn">Withdraw Application</a>
 		</div>
 	</div>
-	<div class="ui-content" ng-include src="'applicant/resume.html'"></div>
+	<div class="ui-content">
+		<div class="instructions">
+			<p>Thank you for applying at Essential Care. Please complete the following steps to complete the application process.</p>
+			<p>After completing the steps below submit your application.</p>
+		</div>
+		<ng-include src="'applicant/application.html'"></ng-include>
+	</div>
 </div>
+
+<script>
+
+
+	$('.upload').click(function(){
+		var a = $(this);
+		a.next('input[type=file]').click();
+	});
+	
+	$('input[type=file]').change(function(){
+		var a = $(this);
+		var b = a.closest('li');
+		var c = b.find('.upload');
+		c.text(a.val())
+		var l = Ladda.create(document.querySelector('.upload'));
+		l.start();
+		setTimeout(function(){
+			l.stop();
+			c.prepend('<i class="fa fa-check"></i>');
+			b.addClass('done').find('.number').text('').addClass('fa fa-check');
+		}, 2000)
+	});
+
+</script>
