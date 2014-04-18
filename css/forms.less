@@ -1,6 +1,6 @@
 // forms
 
-input[type=text], select, textarea, input[type=number] {
+input[type=text], select, textarea, input[type=number], .textarea {
 	font-family: @bfont;
 	font-size: 17px;
 	background: @ltgray;
@@ -25,6 +25,12 @@ select {
 	
 	&:after {
 		content: 'hello';
+	}
+}
+
+textarea, .textarea {
+	&.md {
+		min-height: 200px;
 	}
 }
 

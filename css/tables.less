@@ -5,20 +5,53 @@ table {
 	td, th {
 		&.option {
 			text-align: center;
-			width: 40px;
+			width: 22px;
+			padding: 10px;
 			.option {
 				display: inline-block;
+				padding: 11px;
+				vertical-align: text-bottom;
 				&:before {
-					top: 10px;
+					top: 0;
+					left: 0;
 				}
 			}
+		}
+		&.money {
+			text-align: right;
 		}
 	}
 	thead {
 		tr {
 			th {
+				text-align: left;
+				vertical-align: bottom;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: .9em;
+				border-bottom: 1px solid @green;
+				&.a {
+					padding: 10px;
+				}
 				input[type=text] {
 					width: 100%;
+				}
+				a {
+					display: block;
+					padding: 10px;
+					color: @green;
+				}
+			}
+		}
+	}
+	tbody {
+		tr {
+			td {
+				padding: 10px 5px;
+				border-bottom: 1px solid @ltgray;
+				a {
+					color: @green;
 				}
 			}
 		}

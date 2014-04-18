@@ -58,3 +58,43 @@ CGW.directive('jqUiButtonset', function ($document) {
 		}
 	}
 });
+
+CGW.directive('randomId',function($document){
+	return function (scope, element, attrs) {
+		var a = Math.floor(Math.random()*999999999)
+		$(element).text(a);
+	}
+});
+
+CGW.directive('randomNumber',function($document){
+	return function (scope, element, attrs) {
+		var a = Math.floor(Math.random()*999999999)
+		var b = a.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		$(element).text(b);
+	}
+});
+
+CGW.directive('randomSmallNumber',function($document){
+	return function (scope, element, attrs) {
+		var a = Math.floor(Math.random()*9)
+		var b = a.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		$(element).text(b);
+	}
+});
+
+CGW.directive('randomMoney',function($document){
+	return function (scope, element, attrs) {
+		var a = Math.floor(Math.random()*9999)
+		function format(n, currency) {
+		    return currency + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+		}
+		$(element).text(format(a, '$'));
+	}
+});
+
+CGW.directive('randomName',function($document){
+	return function (scope, element, attrs) {
+		var names = ['Chowrichzy Wisdomy Octopios', 'Bruce Wayne', 'Natalia Allanovna Romanova', 'Loki Laufeyson', 'Remy LeBeau', 'Alec Holland', 'Raven Darkholme', 'Maz &lsquo;Magnus&rsquo; Eisenhardt', 'Reed Richards', 'Obadiah Stane', 'Clark Kent', 'Charles Francis Xavier', 'Rocket Raccoon',];
+		$(element).html(names[Math.floor(Math.random()*names.length)]);
+	}
+});

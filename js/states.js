@@ -4,6 +4,7 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
+				.when('/owner/accounting', '/owner/accounting/invoices')
 				.otherwise('/owner');
 
 			$stateProvider
@@ -37,6 +38,46 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'owner/schedule.new.html'
+						}
+					 }
+				})
+
+				.state('owner.schedule.new.message', {
+
+					url: '/message',
+					views: {
+						'content@': {
+							templateUrl: 'owner/schedule.new.message.html'
+						}
+					 }
+				})
+				
+				.state('owner.accounting', {
+					
+					url: '/accounting',
+					views: {
+						'content@': {
+							templateUrl: 'owner/accounting.html'
+						}
+					 }
+				})
+				
+				.state('owner.accounting.invoices', {
+					
+					url: '/invoices',
+					views: {
+						'tab-content@owner.accounting': {
+							templateUrl: 'owner/invoices.html'
+						}
+					 }
+				})
+				
+				.state('owner.accounting.payroll', {
+					
+					url: '/payroll',
+					views: {
+						'tab-content@owner.accounting': {
+							templateUrl: 'owner/payroll.html'
 						}
 					 }
 				})

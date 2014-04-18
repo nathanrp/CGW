@@ -1,0 +1,33 @@
+<form class="ui-section no-header">
+	<div class="ui-toolbar">
+		<a class="btn left" ui-sref="owner.schedule.new"><i class="fa fa-caret-left"></i>Back</a>
+		<a class="btn primary left ladda-button save" data-style="expand-left">Done</a>
+	</div>
+	<fieldset class="margin-top-sm">
+		<legend>Edit Message</legend>
+		<div class="feedback">
+			<p>This message will be sent to the selected caregivers.</p>
+		</div>
+		<dl>
+			<dt><label for="">Subject</label></dt>
+			<dd><input type="text" class="smart-width" placeholder="Subject" value="New Schedule Chowrichzy Wisdomy Octopios" /></dd>
+			<dd>
+				<textarea class="md smart-width">You have been schedule to care for Chowrichzy Wisdomy Octopios daily from 7am to 10am starting on Saturday, November 2, 2014. Please confirm.
+				</textarea>
+			</dd>
+		</dl>
+	</fieldset>
+</form>
+
+<script>
+
+	$('.save').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		setTimeout(function(){
+			l.stop();
+			window.location.replace('/cgw/#/owner/schedule/new');
+		}, 2000)
+	});
+	
+</script>
