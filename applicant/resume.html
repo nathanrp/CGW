@@ -1,6 +1,7 @@
 <div class="ui-section">
 	<div class="ui-toolbar">
 		<a class="btn left" ui-sref="applicant"><i class="fa fa-caret-left"></i>Back</a>
+		<a class="primary btn ladda-button done left" data-style="expand-left">Apply</a>
 		<a class="btn right">Print</a>
 	</div>
 	<form class="paper">
@@ -202,7 +203,7 @@ before, during or up to 30 days after my work.</p>
 			</div>
 		</div>
 		<div class="ui-btns">
-			<a class="primary btn ladda-button" id="done" data-style="expand-left">Apply</a>
+			<a class="primary btn ladda-button done" data-style="expand-left">Apply</a>
 		</div>
 	</form>
 </div>
@@ -237,7 +238,7 @@ before, during or up to 30 days after my work.</p>
 		});
 	});
 
-	$('#done').click(function(){
+	$('.done').click(function(){
 		var l = Ladda.create(this);
 		l.start();
 		setTimeout(function(){

@@ -1,0 +1,26 @@
+// tables
+
+table {
+	width: 100%;
+	td, th {
+		&.option {
+			text-align: center;
+			width: 40px;
+			.option {
+				display: inline-block;
+				&:before {
+					top: 10px;
+				}
+			}
+		}
+	}
+	thead {
+		tr {
+			th {
+				input[type=text] {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
