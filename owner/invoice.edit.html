@@ -1,0 +1,97 @@
+<div class="ui-section">
+	<div class="ui-toolbar">
+		<a class="btn left" ui-sref="owner.accounting.invoices.invoice"><i class="fa fa-caret-left"></i>Back</a>
+		<a class="primary btn ladda-button done left" data-style="expand-left">Save</a>
+	</div>
+	<form class="paper invoice">
+		<h2 class="title">Invoice <small random-id></small></h2>
+		<div class="inv-client">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<div class="name">Chowrichzy Wisdomy Octopios</div>
+					<div class="address">
+						<div>4321 Rally Road</div>
+						<div>Antelope, UT 89234</div>
+					</div>
+					<a class="link">Edit Address</a>
+				</div>
+				<div class="col-xs-12 col-md-6 table">
+					<dl>
+						<dt><label for="">Invoice Number</label></dt>
+						<dd><input type="tel" random-id /></dd>
+					</dl>
+					<dl>
+						<dt><label for="">Date</label></dt>
+						<dd><input type="date" class="datepicker" jq-datepicker value="Aug 15, 2014" /></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="inv-content">
+			<div class="table-wrapper">
+				<table>
+					<thead>
+						<tr>
+							<th><a>Description</a></th>
+							<th class="money"><a>Cost</a></th>
+							<th class="icon"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="editable">
+								<input type="text" value="Care description" class="smart-width" />
+							</td>
+							<td class="money editable">
+								<input type="tel" random-money class="money" />
+							</td>
+							<td class="icon">
+								<a class="fa fa-trash-o fa-large"></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+							<td>Total</td>
+							<td class="money" random-money></td>
+							<td class="icon"></td>
+						</tr>
+						<tr>
+							<td>Amount Paid</td>
+							<td class="money" random-money></td>
+							<td class="icon"></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>Amount Due</td>
+							<td class="money" random-money></td>
+							<td class="icon"></td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="ui-toolbar">
+				<a class="btn left">Add line</a>
+			</div>
+		</div>
+	</form>
+	<div class="ui-toolbar">
+		<a class="primary btn ladda-button done left" data-style="expand-left">Save</a>
+	</div>
+</div>
+
+<script>
+
+	$('.done').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		setTimeout(function(){
+			l.stop();
+			window.location.replace('/cgw/#/owner/accounting/invoices/invoice');
+		}, 2000)
+	});
+
+</script>

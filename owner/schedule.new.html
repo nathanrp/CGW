@@ -26,7 +26,7 @@
 	<fieldset class="table">
 		<legend>Time</legend>
 		<dl>
-			<dd><input type="text" class="datepicker" /></dd>
+			<dd><input type="date" class="datepicker" jq-datepicker placeholder="from" /></dd>
 			<dd>
 				<select>
 					<option>12:00am</option>
@@ -80,7 +80,7 @@
 				</select>
 			</dd>
 			<dt><label for="">to</label></dt>
-			<dd><input type="text" class="datepicker" /></dd>
+			<dd><input type="date" class="datepicker" jq-datepicker placeholder="to" /></dd>
 			<dd>
 				<select>
 					<option>12:00am</option>
@@ -173,24 +173,20 @@
 		</dl>
 		<dl>
 			<dt><label for="">Ends on</label></dt>
-			<dd><input type="text" class="datepicker" /></dd>
+			<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 		</dl>	
 	</fieldset>
-	<fieldset class="schedule">
-		<legend>Select Caregiver</legend>
-		<div class="ui-toolbar">
-			<fieldset class="left table">
-				<dl>
-					<dt><label for="">Showing</label></dt>
-					<dd class="options-horizontal">
-						<input type="checkbox" id="10" />
-						<label for="10" class="option">Available Caregivers</label>
-						<input type="checkbox" id="11" />
-						<label for="11" class="option">Best Match Caregivers</label>
-					</dd>
-				</dl>
-			</fieldset>
+	<h3 class="legend">Select Caregiver</h3>
+	<div class="ui-toolbar">
+		<label class="left">Showing</label>
+		<div class="options-horizontal left">
+			<input type="checkbox" id="10" />
+			<label for="10" class="option">Available Caregivers</label>
+			<input type="checkbox" id="11" />
+			<label for="11" class="option">Best Match Caregivers</label>
 		</div>
+	</div>
+	<div class="schedule">
 		<div class="week-schedule">
 			<table>
 				<thead>
@@ -410,7 +406,7 @@
 					</tr>
 				</tbody>
 			</table>
-		</fieldset>
+		</div>
 	</div>
 </form>
 

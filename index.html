@@ -47,13 +47,16 @@
 
 <nav class="nav" ui-view="drawer"></nav>
 
+<header class="header">
+	<a class="nav-toggle" snap-toggle="left"><i class="fa fa-bars"></i></a>
+	<div ui-view="header"></div>
+</header>
+
 <div class="page">
-	<header class="header">
-		<a class="nav-toggle" snap-toggle="left"><i class="fa fa-bars"></i>Menu</a>
-	</header>
 	<div ui-view="content" class="content"></div>
-	<div class="nav-overlay"></div>
 </div>
+
+<div class="nav-overlay"></div>
 
 </body>
 </html>

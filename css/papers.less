@@ -1,0 +1,41 @@
+// invoice
+
+.invoice {
+	.inv-header {
+		div {
+			line-height: 1.4em;
+		}
+		padding: 0 0 60px;
+	}
+	.inv-client {
+		padding: 0 0 20px;
+		div {
+			line-height: 1.4em;
+		}
+	}
+	.inv-content {
+		padding: 0 0 40px;
+	}
+	.inv-footer {
+		padding: 0 0 20px;
+	}
+	table {
+		tbody {
+			tr {
+				&:last-child {
+					td,th {
+						border-bottom-color: darken(@ltgray,10%);
+					}
+				}
+			}
+		}
+		tfoot {
+			tr {
+				td {
+					background: @ltgray;
+					color: @bcolor;
+				}
+			}
+		}
+	}
+}

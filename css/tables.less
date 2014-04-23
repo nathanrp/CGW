@@ -1,5 +1,12 @@
 // tables
 
+.table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+}
+
 table {
 	width: 100%;
 	td, th {
@@ -20,6 +27,14 @@ table {
 		&.money {
 			text-align: right;
 		}
+		&.date {
+			.nowrap();
+		}
+		&.icon {
+			width: 36px;
+			text-align: center;
+			font-size: 24px;
+		}
 	}
 	thead {
 		tr {
@@ -36,6 +51,7 @@ table {
 				}
 				input[type=text] {
 					width: 100%;
+					margin-bottom: 5px;
 				}
 				a {
 					display: block;
@@ -53,6 +69,15 @@ table {
 				a {
 					color: @green;
 				}
+			}
+		}
+	}
+	tfoot {
+		tr {
+			td {
+				padding: 10px 5px;
+				font-weight: 700;
+				color: lighten(@bcolor,40%);
 			}
 		}
 	}

@@ -28,6 +28,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'owner/schedule.html'
+						},
+						'header@': {
+							templateUrl: 'owner/schedule.header.html'
 						}
 					 }
 				})
@@ -72,6 +75,36 @@ CGW.config(
 					 }
 				})
 				
+				.state('owner.accounting.invoices.invoice', {
+					
+					url: '/invoice',
+					views: {
+						'tab-content@owner.accounting': {
+							templateUrl: 'owner/invoice.html'
+						}
+					 }
+				})
+				
+				.state('owner.accounting.invoices.invoice.edit', {
+					
+					url: '/edit',
+					views: {
+						'content@': {
+							templateUrl: 'owner/invoice.edit.html'
+						}
+					 }
+				})
+				
+				.state('owner.accounting.invoices.invoice.payment', {
+					
+					url: '/payment',
+					views: {
+						'content@': {
+							templateUrl: 'owner/invoice.payment.html'
+						}
+					 }
+				})
+				
 				.state('owner.accounting.payroll', {
 					
 					url: '/payroll',
@@ -87,7 +120,53 @@ CGW.config(
 					url: '/clients',
 					views: {
 						'content@': {
+							templateUrl: 'owner/clients-requests.html'
+						},
+						'tab-content@owner.clients': {
 							templateUrl: 'owner/clients.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client', {
+
+					url: '/client',
+					views: {
+						'content@': {
+							templateUrl: 'owner/client.html'
+						}
+					 }
+				})
+				
+				.state('owner.requests', {
+
+					url: '/requests',
+					views: {
+						'content@': {
+							templateUrl: 'owner/clients-requests.html'
+						},
+						'tab-content@owner.requests': {
+							templateUrl: 'owner/requests.html'
+						}
+					 }
+				})
+				
+				.state('owner.requests.request', {
+
+					url: '/request',
+					views: {
+						'content@': {
+							templateUrl: 'owner/request.html'
+						}
+					 }
+				})
+
+				.state('owner.requests.request.initial', {
+
+					url: '/initial',
+					views: {
+						'content@': {
+							templateUrl: 'owner/request.initial.html'
 						}
 					 }
 				})

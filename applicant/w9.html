@@ -75,11 +75,11 @@ TIN on page 3.</p>
 			<p>Note. If the account is in more than one name, see the chart on page 4 for guidelines on whose number to enter.</p>
 			<dl>
 				<dt><label for="">Social security number</label></dt>
-				<dd><input type="number" /></dd>
+				<dd><input type="tel" /></dd>
 			</dl>
 			<dl>
 				<dt><label for="">Employer identification number</label></dt>
-				<dd><input type="number" /></dd>
+				<dd><input type="tel" /></dd>
 			</dl>
 		</fieldset>
 		
@@ -102,7 +102,7 @@ generally, payments other than interest and dividends, you are not required to s
 			</div>
 			<dl>
 				<dt><label for="">Date</label></dt>
-				<dd><input type="text" class="datepicker" /></dd>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
 		<div class="ui-btns">
@@ -141,12 +141,12 @@ generally, payments other than interest and dividends, you are not required to s
 		});
 	});
 
-	$('#done').click(function(){
+	$('.done').click(function(){
 		var l = Ladda.create(this);
 		l.start();
 		setTimeout(function(){
 			l.stop();
-			window.location.replace('/cgw/#/applicant/application');
+			window.location.replace('/cgw/#/applicant');
 		}, 2000)
 	});
 	

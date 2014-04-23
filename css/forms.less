@@ -1,6 +1,6 @@
 // forms
 
-input[type=text], select, textarea, input[type=number], .textarea {
+input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
 	font-family: @bfont;
 	font-size: 17px;
 	background: @ltgray;
@@ -18,14 +18,14 @@ input[type=text], select, textarea, input[type=number], .textarea {
 	&.datepicker {
 		width: 120px;
 	}
+	&.money {
+		text-align: right;
+	}
 }
 
-select {
+select, input[type=date] {
 	-webkit-appearance: none;
-	
-	&:after {
-		content: 'hello';
-	}
+	min-height: 34px;
 }
 
 textarea, .textarea {
@@ -142,9 +142,56 @@ form {
 		padding: 5px 0;
 		color: lighten(@bcolor,30%);
 	}
+	.table {
+		dl {
+			display: table-row;
+			padding: 5px 0;
+			margin: 0;
+			clear: both;
+			overflow: hidden;
+			dt, dd {
+				display: table-cell;
+				margin: 0;
+				float: none;
+				width: auto;
+				position: relative;
+				padding: 0 20px 10px 0;
+				vertical-align: top;
+				label {
+					display: inline-block;
+				}
+			}
+			dt {
+				text-align: right;
+				font-weight: normal;
+				label {
+					padding: 10px 0 0;
+					&.options-label {
+						padding-top: 15px;
+					}
+				}
+			}
+			dd {
+				&.options-vertical, &.options-horizontal {
+					.yesno {
+						text-align: left;
+					}
+				}
+			}
+		}
+		&.left-aligned {
+			dl {
+				dt {
+					text-align: left;
+				}
+			}
+		}
+	}
 	fieldset {
-		padding: 20px 0;
+		padding: 10px 0;
+		margin: 10px 0;
 		border-top: 1px solid @ltgray;
+		border-radius: 4px;
 		legend {
 			font-weight: 500;
 			padding: 0 20px;
@@ -157,53 +204,24 @@ form {
 				}
 			}
 		}
-		&.table {
-			dl {
-				display: table-row;
-				padding: 5px 0;
-				margin: 0;
-				clear: both;
-				overflow: hidden;
-				dt, dd {
-					display: table-cell;
-					margin: 0;
-					float: none;
-					width: auto;
-					position: relative;
-					padding: 0 20px 10px 0;
-					vertical-align: top;
-					label {
-						display: inline-block;
-					}
-				}
-				dt {
-					text-align: right;
-					font-weight: normal;
-					label {
-						padding: 10px 0 0;
-						&.options-label {
-							padding-top: 15px;
-						}
-					}
-				}
-				dd {
-					&.options-vertical, &.options-horizontal {
-						.yesno {
-							text-align: left;
-						}
-					}
-				}
-			}
-			&.left-aligned {
-				dl {
-					dt {
-						text-align: left;
-					}
-				}
-			}
-		}
 		&.noborder {
 			border-top: none;
+		}
+		&.border {
+			border: 1px solid @ltgray;
+			padding-left: 10px;
+			padding-right: 10px;
+			background: @ltgray;
+			input[type=text], select, textarea, input[type=number], .textarea {
+				background: @white;
+			}
+			.btn, button, .ui-button, input[type=submit] {
+				background: darken(@ltgray,10%);
+				border-color: darken(@ltgray,20%);
+				&:active, &.ui-state-active, &.active {
+					border-top-color: darken(@ltgray,40%);
+				}
+			}
 		}
 	}
 }

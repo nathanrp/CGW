@@ -14,7 +14,7 @@ CGW.run(
 			
 			$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
 //				if($(window).width()<768) {
-					$('.page').removeClass('open');
+					$('body').removeClass('open');
 //				}
 			});
 
@@ -25,11 +25,11 @@ CGW.run(
 CGW.controller('menu', function ($scope) {
 
 	$('.nav-toggle').click(function(){
-		$('.page').addClass('open');
+		$('body').addClass('open');
 	});
 
 	$('.nav-overlay, .nav .active a').bind('click', function() {
-      $('.page').removeClass('open');
+      $('body').removeClass('open');
     });
 
 });
@@ -62,7 +62,11 @@ CGW.directive('jqUiButtonset', function ($document) {
 CGW.directive('randomId',function($document){
 	return function (scope, element, attrs) {
 		var a = Math.floor(Math.random()*999999999)
-		$(element).text(a);
+		if($(element).is('input')) {
+			$(element).val(a);
+		} else {
+			$(element).text(a);
+		}
 	}
 });
 
@@ -70,7 +74,11 @@ CGW.directive('randomNumber',function($document){
 	return function (scope, element, attrs) {
 		var a = Math.floor(Math.random()*999999999)
 		var b = a.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-		$(element).text(b);
+		if($(element).is('input')) {
+			$(element).val(b);
+		} else {
+			$(element).text(b);
+		}
 	}
 });
 
@@ -78,7 +86,11 @@ CGW.directive('randomSmallNumber',function($document){
 	return function (scope, element, attrs) {
 		var a = Math.floor(Math.random()*9)
 		var b = a.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-		$(element).text(b);
+		if($(element).is('input')) {
+			$(element).val(b);
+		} else {
+			$(element).text(b);
+		}
 	}
 });
 
@@ -88,7 +100,11 @@ CGW.directive('randomMoney',function($document){
 		function format(n, currency) {
 		    return currency + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 		}
-		$(element).text(format(a, '$'));
+		if($(element).is('input')) {
+			$(element).val(format(a,''));
+		} else {
+			$(element).text(format(a, '$'));
+		}
 	}
 });
 
@@ -96,5 +112,17 @@ CGW.directive('randomName',function($document){
 	return function (scope, element, attrs) {
 		var names = ['Chowrichzy Wisdomy Octopios', 'Bruce Wayne', 'Natalia Allanovna Romanova', 'Loki Laufeyson', 'Remy LeBeau', 'Alec Holland', 'Raven Darkholme', 'Maz &lsquo;Magnus&rsquo; Eisenhardt', 'Reed Richards', 'Obadiah Stane', 'Clark Kent', 'Charles Francis Xavier', 'Rocket Raccoon',];
 		$(element).html(names[Math.floor(Math.random()*names.length)]);
+	}
+});
+
+CGW.directive('jqDatepicker',function($document){
+	return function (scope, element, attrs) {
+		if(!Modernizr.touch) {
+			$(element).datepicker({
+				nextText: '',
+				prevText: '',
+				showButtonPanel: true
+			});
+		}
 	}
 });

@@ -50,7 +50,7 @@
 			border-top-color: darken(@orange,30%) !important;
 		}
 	}
-	&:active, &.ui-state-active {
+	&:active, &.ui-state-active, &.active {
 		.box-shadow(0 0 36px fadeout(@black,70%) inset);
 		border-top: 2px solid darken(@ltgray,30%);
 		line-height: 34px;
@@ -93,21 +93,34 @@
 .ui-toolbar {
 	.clearfix();
 	text-align: right;
-	padding: 5px 0;
-	h2, label {
+	padding: 5px 0 0;
+	h2, h3, label, .links {
 		line-height: 36px;
+		padding-bottom: 0;
 	}
 	input[type=text], select {
 		margin-top: 0px;
 	}
 	.left {
 		float: left;
-		margin: 0 10px 0 0;
+		margin: 0 10px 5px 0;
+		display: inline-block;
+		text-align: left;
 	}
 	.right {
-		margin: 0 0 0 10px;
+		margin: 0 0 5px 10px;
 		display: inline-block;
 		vertical-align: middle;
+	}
+	label {
+		&.option {
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+			line-height: 36px !important;
+			&:before {
+				top: 8px !important;
+			}
+		}
 	}
 	fieldset {
 		padding: 0;
@@ -115,17 +128,6 @@
 		dl {
 			dt, dd {
 				padding-bottom: 0;
-				label {
-					line-height: inherit;
-					&.option {
-						padding-top: 0;
-						padding-bottom: 0;
-						line-height: 36px;
-						&:before {
-							top: 8px;
-						}
-					}
-				}
 			}
 		}
 	}
@@ -137,6 +139,21 @@
 		padding: 0 5px;
 		line-height: 34px;
 		border: 1px solid @ltgray;
-		border-radius: 4px;
+	}
+}
+
+.links {
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			padding: 0 5px;
+			color: @green;
+		}
+		&.active {
+			a {
+				color: @bcolor;
+			}
+		}
 	}
 }

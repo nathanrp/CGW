@@ -19,6 +19,11 @@
 			}
 		}
 	}
+	.week-schedule {
+		width: 100%;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
 	table {
 		width: 100%;
 		thead {
@@ -26,6 +31,7 @@
 				th {
 					padding: 5px;
 					border-bottom: 1px solid @ltgray;
+					.nowrap();
 					small {
 						color: lighten(@bcolor,30%);
 					}
@@ -38,6 +44,9 @@
 							color: darken(@yellow,30%);
 						}
 					}
+					input[type=text] {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -46,6 +55,7 @@
 				td, th {
 					border-bottom: 1px solid @ltgray;
 					vertical-align: top;
+					padding: 5px;
 					.wrapper {
 						.event {
 							padding: 10px;

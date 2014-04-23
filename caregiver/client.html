@@ -4,15 +4,19 @@
 			<div class="avatar">
 				<img src="img/avatar.jpg" />
 			</div>
-			<h2>Chowrichzy Wisdomy Octopios</h2>
+			<h2 random-name></h2>
 		</div>
 		<div class="ui-btns btns">
 			<a id="check-in-btn" class="ladda-button btn primary" data-style="expand-left">Check In</a>
 			<a id="check-out-btn" class="btn disabled">Check Out</a>
 		</div>
+		<div class="feedback" style="display:none;">
+			<p>You are checked in.</p>
+		</div>
 	</div>
 	<ul class="ui-tabs tabs">
 		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
+		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.activities">Activities</a></li>
 		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
 		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
 	</ul>
@@ -42,6 +46,10 @@
 				$('#check-in-status').text('You are checked in!');
 				$('#check-out-btn').removeClass('disabled').addClass('warning');
 				$('.task').attr('disabled',false);
+				$('.feedback').fadeIn(250);
+				setTimeout(function(){
+					$('.feedback').fadeOut(250);
+				}, 2000)
 			}, 2000)
 		}
 	});
