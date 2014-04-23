@@ -1,10 +1,5 @@
 <div class="ui-section">
-	<div class="ui-toolbar">
-		<a class="btn left" ui-sref="owner.accounting.invoices.invoice"><i class="fa fa-caret-left"></i>Back</a>
-		<a class="primary btn ladda-button done left" data-style="expand-left">Save</a>
-	</div>
 	<form class="paper invoice">
-		<h2 class="title">Invoice <small random-id></small></h2>
 		<div class="inv-client">
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
@@ -78,9 +73,6 @@
 			</div>
 		</div>
 	</form>
-	<div class="ui-toolbar">
-		<a class="primary btn ladda-button done left" data-style="expand-left">Save</a>
-	</div>
 </div>
 
 <script>
@@ -90,7 +82,7 @@
 		l.start();
 		setTimeout(function(){
 			l.stop();
-			window.location.replace('/cgw/#/owner/accounting/invoices/invoice');
+			window.location.replace('/cgw/#/owner/invoices/invoice');
 		}, 2000)
 	});
 

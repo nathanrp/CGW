@@ -22,17 +22,18 @@ CGW.run(
 	]
 );
 
-CGW.controller('menu', function ($scope) {
+$(document).ready(function() {
 
-	$('.nav-toggle').click(function(){
+	$('body').on('click', '.nav-toggle', function(){
 		$('body').addClass('open');
 	});
 
-	$('.nav-overlay, .nav .active a').bind('click', function() {
+	$('body').on('click', '.nav-overlay, .nav .active a', function() {
       $('body').removeClass('open');
     });
 
 });
+
 
 CGW.directive('scroll', function ($document) {
 	return function (scope, element, attrs) {

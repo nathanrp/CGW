@@ -43,13 +43,14 @@
 
 	<title>Caregiver</title>
 </head>
-<body ng-controller="menu">
+<body>
 
 <nav class="nav" ui-view="drawer"></nav>
 
-<header class="header">
-	<a class="nav-toggle" snap-toggle="left"><i class="fa fa-bars"></i></a>
-	<div ui-view="header"></div>
+<header class="header" ui-view="header">
+	<ul>
+		<li><a class="nav-toggle"><i class="fa fa-bars"></i></a></li>
+	</ul>
 </header>
 
 <div class="page">

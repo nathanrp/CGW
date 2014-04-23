@@ -4,7 +4,6 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
-				.when('/owner/accounting', '/owner/accounting/invoices')
 				.otherwise('/owner');
 
 			$stateProvider
@@ -41,6 +40,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'owner/schedule.new.html'
+						},
+						'header@': {
+							templateUrl: 'owner/schedule.new.header.html'
 						}
 					 }
 				})
@@ -51,66 +53,71 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'owner/schedule.new.message.html'
+						},
+						'header@': {
+							templateUrl: 'owner/schedule.new.message.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.accounting', {
-					
-					url: '/accounting',
-					views: {
-						'content@': {
-							templateUrl: 'owner/accounting.html'
-						}
-					 }
-				})
-				
-				.state('owner.accounting.invoices', {
+				.state('owner.invoices', {
 					
 					url: '/invoices',
 					views: {
-						'tab-content@owner.accounting': {
+						'content@': {
 							templateUrl: 'owner/invoices.html'
+						},
+						'header@': {
+							templateUrl: 'owner/accounting.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.accounting.invoices.invoice', {
+				.state('owner.invoices.invoice', {
 					
 					url: '/invoice',
 					views: {
-						'tab-content@owner.accounting': {
+						'content@': {
 							templateUrl: 'owner/invoice.html'
 						}
 					 }
 				})
 				
-				.state('owner.accounting.invoices.invoice.edit', {
+				.state('owner.invoices.invoice.edit', {
 					
 					url: '/edit',
 					views: {
 						'content@': {
 							templateUrl: 'owner/invoice.edit.html'
+						},
+						'header@': {
+							templateUrl: 'owner/invoice.edit.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.accounting.invoices.invoice.payment', {
+				.state('owner.invoices.invoice.payment', {
 					
 					url: '/payment',
 					views: {
 						'content@': {
 							templateUrl: 'owner/invoice.payment.html'
+						},
+						'header@': {
+							templateUrl: 'owner/invoice.payment.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.accounting.payroll', {
+				.state('owner.payrolls', {
 					
-					url: '/payroll',
+					url: '/payrolls',
 					views: {
-						'tab-content@owner.accounting': {
-							templateUrl: 'owner/payroll.html'
+						'content@': {
+							templateUrl: 'owner/payrolls.html'
+						},
+						'header@': {
+							templateUrl: 'owner/accounting.header.html'
 						}
 					 }
 				})
@@ -120,10 +127,10 @@ CGW.config(
 					url: '/clients',
 					views: {
 						'content@': {
-							templateUrl: 'owner/clients-requests.html'
-						},
-						'tab-content@owner.clients': {
 							templateUrl: 'owner/clients.html'
+						},
+						'header@': {
+							templateUrl: 'owner/clients.header.html'
 						}
 					 }
 				})
@@ -132,6 +139,9 @@ CGW.config(
 
 					url: '/client',
 					views: {
+						'header@': {
+							templateUrl: 'owner/clients.header.html'
+						},
 						'content@': {
 							templateUrl: 'owner/client.html'
 						}
@@ -143,10 +153,10 @@ CGW.config(
 					url: '/requests',
 					views: {
 						'content@': {
-							templateUrl: 'owner/clients-requests.html'
-						},
-						'tab-content@owner.requests': {
 							templateUrl: 'owner/requests.html'
+						},
+						'header@': {
+							templateUrl: 'owner/clients.header.html'
 						}
 					 }
 				})
@@ -167,6 +177,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'owner/request.initial.html'
+						},
+						'header@': {
+							templateUrl: 'owner/request.header.html'
 						}
 					 }
 				})
@@ -175,10 +188,10 @@ CGW.config(
 					url: '/caregivers',
 					views: {
 						'content@': {
-							templateUrl: 'owner/caregivers-applicants.html'
-						},
-						'tab-content@owner.caregivers': {
 							templateUrl: 'owner/caregivers.html'
+						},
+						'header@': {
+							templateUrl: 'owner/caregivers.header.html'
 						}
 					 }
 				})
@@ -196,10 +209,10 @@ CGW.config(
 					url: '/applicants',
 					views: {
 						'content@': {
-							templateUrl: 'owner/caregivers-applicants.html'
-						},
-						'tab-content@owner.applicants': {
 							templateUrl: 'owner/applicants.html'
+						},
+						'header@': {
+							templateUrl: 'owner/caregivers.header.html'
 						}
 					 }
 				})
@@ -326,6 +339,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'applicant/resume.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/resume.header.html'
 						}
 					 }
 				})
@@ -336,6 +352,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'applicant/contract.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/header.html'
 						}
 					 }
 				})

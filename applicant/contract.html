@@ -1,6 +1,6 @@
 <div class="ui-section">
 	<div class="ui-toolbar">
-		<a class="btn left" ui-sref="applicant"><i class="fa fa-caret-left"></i>Back</a>
+		<a class="btn left">Print</a>
 	</div>
 	<form class="paper contract">
 		<h2 class="title">Caregiver Independent Contractor Agreement</h2>
@@ -146,9 +146,6 @@
 				<dd><input type="text" readonly="readonly" value="Essential Care" /></dd>
 			</dl>
 		</fieldset>
-		<div class="ui-btns">
-			<a class="primary btn ladda-button" id="done" data-style="expand-left">Done</a>
-		</div>
 	</form>
 </div>
 
@@ -187,7 +184,7 @@
 		l.start();
 		setTimeout(function(){
 			l.stop();
-			window.location.replace('/cgw/#/applicant/application');
+			window.location.replace('/cgw/#/applicant');
 		}, 2000)
 	});
 	
