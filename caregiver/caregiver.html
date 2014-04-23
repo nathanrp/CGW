@@ -1,0 +1,43 @@
+<div class="caregiver ui-section">
+	<div class="ui-header">
+		<div class="ui-title">
+			<div class="avatar">
+				<img src="img/avatar.jpg" />
+			</div>
+			<h2>Rainn Wilson</h2>
+			<a href="tel:8015131208" class="btn"><i class="fa fa-phone"></i> (801) 513-1208</a>
+		</div>
+	</div>
+</div>
+
+<div class="dialog" id="location" title="Check In">
+	<p>We see you are close to Chowrichzy Wisdomy Octopios. Would you like to check in now?</p>
+</div>
+
+<script>
+
+
+	$('#location').dialog({
+		resizable: false,
+		modal: true,
+		width: 280,
+		buttons: [
+			{
+				text: 'Cancel',
+				click: function(){
+					$(this).dialog('close');
+				},
+				class: 'prev full-btn'
+			},
+			{
+				text: 'Check In',
+				click: function(event){
+					$(this).dialog('close');
+					window.location.replace('/cgw/#/caregiver/clients/client');
+				},
+				class: 'next primary full-btn'
+			}
+		]
+	});
+
+</script>
