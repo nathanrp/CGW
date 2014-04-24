@@ -30,3 +30,50 @@
 .tab {
 	padding: 0 0 20px;
 }
+
+ul {
+	&.list {
+		padding: 10px 0;
+		li {
+			a {
+				display: block;
+				padding: 15px 20px;
+				border-bottom: 1px solid darken(@ltgray,10%);
+				position: relative;
+				.flag {
+					position: absolute;
+					right: 5px;
+					top: 10px;
+				}
+			}
+			&:first-child {
+				a {
+					border-top: 1px solid darken(@ltgray,10%);
+				}
+			}
+		}
+		&.avatar-list {
+			li {
+				a {
+					padding-left: 46px;
+					.avatar {
+						display: block;
+						width: 32px;
+						height: 32px;
+						position: absolute;
+						left: 6px;
+						top: 6px;
+						border-radius: 50%;
+						overflow: hidden;
+						border: 1px solid @ltgray;
+					}
+				}
+				&:first-child {
+					a {
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
+}

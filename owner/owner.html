@@ -1,16 +1,4 @@
-<div class="owner ui-section">
-	<div class="ui-header">
-		<div class="ui-title">
-			<div class="avatar">
-				<img src="img/avatar.jpg" />
-			</div>
-			<h2>Essential Care</h2>
-			<h4 class="secondary">1234567890</h4>
-		</div>
-		<div class="ui-btns btns">
-			<a class="btn primary left" ui-sref="owner.requests.request">Create New Client</a>
-		</div>
-	</div>
+<div class="owner ui-section no-header">
 	<div class="ui-content">
 		<ul class="worklist">
 			<li>
@@ -21,17 +9,24 @@
 				</div>
 			</li>
 			<li>
-				<div class="feedback feeback-icon feedback-icon" ui-sref="owner.applicants">
+				<div class="feedback feedback-icon" ui-sref="owner.applicants">
 					<a class="fa fa-times close"></a>
 					<i class="fa fa-info-circle"></i>
 					<p>You have 2 new applications for caregivers.</p>
 				</div>
 			</li>
 			<li>
-				<div class="feedback feeback-icon feedback-icon">
+				<div class="feedback feedback-icon" ui-sref="owner.requests">
 					<a class="fa fa-times close"></a>
 					<i class="fa fa-info-circle"></i>
 					<p>You have 1 new request for care.</p>
+				</div>
+			</li>
+			<li>
+				<div class="feedback feedback-icon" ui-sref="owner.invoices">
+					<a class="fa fa-times close"></a>
+					<i class="fa fa-info-circle"></i>
+					<p>Your invoices for Aug 15 have been generated.</p>
 				</div>
 			</li>
 		</ul>

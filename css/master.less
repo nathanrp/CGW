@@ -7,20 +7,50 @@
 		border: 0;
 	}
 	-webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-text-size-adjust: none;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-webkit-text-size-adjust: none;
 }
 
 body {
 	cursor: default;
 	background: @white;
 	color: @bcolor;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
 	&.open {
 		.header, .page, .nav-overlay {
 			.translate3d(240px, 0px, 0px);
 		}
 		.nav-overlay {
 			display: block;
+		}
+		header {
+			ul {
+				li {
+					a {
+						&.nav-toggle {
+							span, span:before, span:after {
+								top: 10px;
+							}
+							span {
+								background: transparent;
+								&:before {
+									.rotate(45deg);	
+								}
+								&:after {
+									.rotate(-45deg);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	.nav-overlay {
@@ -63,6 +93,7 @@ a {
 		li {
 			position: relative;
 			display: inline-block;
+			vertical-align: top;
 			a, h1 {
 				height: 50px;
 				line-height: 50px;
@@ -78,9 +109,28 @@ a {
 					font-size: 15px;
 					font-weight: 700;
 					width: 30px;
-					i {
-						display: inline-block;
-						color: fadeout(@brand,50%);
+					position: relative;
+					span, span:before, span:after {
+						cursor: pointer;
+						border-radius: 1px;
+						height: 3px;
+						width: 30px;
+						background: @green;
+						position: absolute;
+						display: block;
+						content: '';
+						@transition: transform 0.25s cubic-bezier(.7, 0, .175, 1) 0s;
+						.transition(@transition);
+					}
+					span {
+						top: 23px;
+						left: 5px;
+						&:before {
+							top: -10px;
+						}
+						&:after {
+							bottom: -10px;
+						}
 					}
 				}
 			}
@@ -106,7 +156,7 @@ a {
 		background: @white;
 		right: 0;
 		top: 0;
-		.btn {
+		.btn, .ui-buttonset {
 			margin: 6px 0;
 		}
 	}
@@ -197,31 +247,6 @@ a {
 		z-index: 1;
 		padding: 0 10px;
 	}
-	.clients, .caregivers, .applicants {
-		ul {
-		padding: 10px 0;
-			li {
-				a {
-					display: block;
-					padding: 0 20px 0 46px;
-					line-height: 46px;
-					border-bottom: 1px solid darken(@ltgray,10%);
-					position: relative;
-					img {
-						display: block;
-						width: 32px;
-						height: 32px;
-						position: absolute;
-						left: 6px;
-						top: 6px;
-						border-radius: 50%;
-						overflow: hidden;
-						box-shadow: 0 1px 0px fadeout(@black,80%);
-					}
-				}
-			}
-		}
-	}
 	.ui-section {
 		&.no-header {
 			padding-top: 10px;
@@ -233,21 +258,26 @@ a {
 				padding: 20px 0;
 				position: relative;
 				.avatar {
-					position: absolute;
-					left: 5px;
-					top: 10px;
-					border-radius: 50%;
-					overflow: hidden;
-					width: 50px;
-					height: 50px;
+					position: relative;
+					margin: 0 auto 20px;
+					width: 96px;
+					height: 96px;
 					img {
 						display: block;
+						border: 1px solid @ltgray;
+						border-radius: 50%;
+						overflow: hidden;
 						width: 100%;
 						height: 100%;
 					}
+					.flag {
+						position: absolute;
+						right: -80px;
+						bottom: 5px;
+					}
 				}
 				h2 {
-					padding: 0 0 .25em;
+					text-align: center;
 				}
 				.secondary {
 					color: lighten(@bcolor,50%);
@@ -255,41 +285,6 @@ a {
 				.btn {
 					margin-top: 10px;
 				}
-			}
-			.ui-statusbar {
-				.clearfix();
-				font-size: 16px;
-				padding: 0 0 20px;
-				li {
-					float: left;
-					width: percentage(1/2);
-					padding: 5px 15px;
-					border-right: 1px solid darken(@brand,10%);
-					border-left: 1px solid darken(@brand,10%);
-					margin-left: -1px;
-					.nowrap();
-					text-overflow: ellipsis;
-					small {
-						text-transform: uppercase;
-						letter-spacing: 1px;
-						font-weight: 600;
-						font-size: 15px;
-						color: darken(@brand,20%);
-						display: block;
-						padding: 0 0 5px;
-					}
-					&:first-child {
-						padding-left: 0;
-						margin-left: 0;
-						border-left: none;
-						text-align: right;
-					}
-					&:last-child {
-						border-right: none;
-						padding-right: 0;
-					}
-				}
-				
 			}
 			.ui-btns {
 				padding: 0 10px;
@@ -301,7 +296,7 @@ a {
 		.ui-content {
 			padding: 0 0 20px;
 		}
-		&.client, &.caregiver, &.owner, &.applicant {
+		&.caregiver, &.owner, &.applicant {
 			.ui-header {
 				.ui-title {
 					padding-left: 72px;
@@ -346,9 +341,14 @@ a {
 				}
 			}
 		}
-		.paper {
-			padding: 20px;
-//			max-width: 612px;
+		&.client {
+			.ui-header {
+				.ui-title {
+					.avatar {
+						position: relative;
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,22 +1,15 @@
 <div class="ui-section client">
 	<div class="ui-header">
+		<small id="check-in-feedback" class="flag flag-feedback" style="display:none;" center-me><i class="fa fa-check"></i> You are checked in.</small>
 		<div class="ui-title">
 			<div class="avatar">
-				<img src="img/avatar.jpg" />
+				<img src="img/ronpaul.jpg" />
 			</div>
 			<h2 random-name></h2>
 		</div>
-		<div class="ui-btns btns">
-			<a id="check-in-btn" class="ladda-button btn primary" data-style="expand-left">Check In</a>
-			<a id="check-out-btn" class="btn disabled">Check Out</a>
-		</div>
-		<div class="feedback" style="display:none;">
-			<p>You are checked in.</p>
-		</div>
 	</div>
-	<ul class="ui-tabs tabs">
+	<ul class="ui-tabs tabs tabs-3">
 		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
-		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.activities">Activities</a></li>
 		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
 		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
 	</ul>
@@ -42,47 +35,44 @@
 			l.start();
 			setTimeout(function(){
 				l.stop();
-				a.addClass('disabled').prepend('<i class="fa fa-check"></i>');
-				$('#check-in-status').text('You are checked in!');
-				$('#check-out-btn').removeClass('disabled').addClass('warning');
 				$('.task').attr('disabled',false);
-				$('.feedback').fadeIn(250);
+				a.hide();
+				$('#check-out-btn').show();
+				$('#check-in-feedback').fadeIn(250);
 				setTimeout(function(){
-					$('.feedback').fadeOut(250);
-				}, 2000)
+					$('#check-in-feedback').fadeOut(250);
+				}, 5000)
 			}, 2000)
 		}
 	});
 
 	$('#check-out-btn').click(function(){
-		if(!$(this).hasClass('disabled')) {
-			$('#check-out-dialog').dialog({
-				resizable: false,
-				modal: true,
-				width: 280,
-				buttons: [
-					{
-						text: 'Cancel',
-						click: function(){
-							$(this).dialog('close');
-						},
-						class: 'prev full-btn'
+		$('#check-out-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
 					},
-					{
-						text: 'Check Out',
-						click: function(event){
-							var a = $(event.target);
-							$('#check-in-btn').removeClass('disabled').find('i').remove();
-							$('#check-out-btn').addClass('disabled').removeClass('warning');
-							$('#check-in-status').text('August 28, 2014');
-							$('.task').attr('disabled',true);
-							$(this).dialog('close');
-						},
-						class: 'next warning full-btn'
-					}
-				]
-			});
-		}
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Check Out',
+					click: function(event){
+						var a = $(event.target);
+						$('#check-in-btn').show();
+						$('#check-out-btn').hide();
+						$('.task').attr('disabled',true);
+						$(this).dialog('close');
+					},
+					class: 'next warning full-btn'
+				}
+			]
+		});
+		
 	});
 
 </script>

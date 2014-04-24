@@ -13,7 +13,7 @@ input[type=text], select, textarea, input[type=number], .textarea, input[type=da
 	}
 	.placeholder(lighten(@bcolor,30%));
 	&.smart-width {
-		width: 100%;
+		max-width: 100%;
 	}
 	&.datepicker {
 		width: 120px;
@@ -135,6 +135,11 @@ input[type=radio] {
 	}
 }
 
+.paper-form {
+	padding: 20px;
+//	max-width: 612px;
+}
+
 form {
 	position: relative;
 	.help {
@@ -153,19 +158,18 @@ form {
 				display: table-cell;
 				margin: 0;
 				float: none;
-				width: auto;
 				position: relative;
 				padding: 0 20px 10px 0;
 				vertical-align: top;
-				label {
-					display: inline-block;
-				}
 			}
 			dt {
 				text-align: right;
 				font-weight: normal;
+				color: lighten(@bcolor,20%);
 				label {
 					padding: 10px 0 0;
+					display: inline-block;
+					color: @bcolor;
 					&.options-label {
 						padding-top: 15px;
 					}

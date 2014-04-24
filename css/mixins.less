@@ -53,6 +53,13 @@
 	transition: @transition;
 }
 
+// Transformations
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees); // IE9 only
+          transform: rotate(@degrees);
+}
+
 // Drop shadows
 .box-shadow(@shadow) {
 	-webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1

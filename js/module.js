@@ -28,7 +28,12 @@ $(document).ready(function() {
 		$('body').addClass('open');
 	});
 
-	$('body').on('click', '.nav-overlay, .nav .active a', function() {
+
+});
+
+CGW.controller('menu', function ($scope) {
+
+	$('.nav-overlay, .nav .active a').bind('click', function() {
       $('body').removeClass('open');
     });
 
@@ -48,6 +53,18 @@ CGW.directive('scroll', function ($document) {
 				$(this).closest('.scrolling').removeClass('scrolling');
 			}
 		});
+	}
+});
+
+CGW.directive('centerMe', function ($document) {
+	return function (scope, element, attrs) {
+
+		var a = $(window).width();
+		var b = $(element).width();
+
+		$(element).css({
+			'left':(a-b)/2
+		})
 	}
 });
 
