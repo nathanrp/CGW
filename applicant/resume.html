@@ -1,13 +1,13 @@
 <div class="ui-section">
-	<div class="ui-toolbar">
-		<a class="btn left">Print</a>
-	</div>
 	<form class="paper-form">
+		<a class="btn icon-btn print"><i class="fa fa-print"></i></a>
 		<fieldset class="table">
 			<legend>Applicant</legend>
 			<dl>
 				<dt><label for="">First Name</label></dt>
 				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
 				<dt><label for="">Last Name</label></dt>
 				<dd><input type="text" /></dd>
 			</dl>
@@ -18,6 +18,8 @@
 			<dl>
 				<dt><label for="">City</label></dt>
 				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
 				<dt><label for="">State</label></dt>
 				<dd>
 					<select>
@@ -25,12 +27,14 @@
 						<option>Utah</option>
 					</select>
 				</dd>
+			</dl>
+			<dl>
 				<dt><label for="">Zip Code</label></dt>
 				<dd><input type="tel" /></dd>
 			</dl>
 			<dl>
 				<dt><label for="">Phone</label></dt>
-				<dd><input type="text" /></dd>
+				<dd><input type="tel" /></dd>
 			</dl>
 			<dl>
 				<dt><label for="">Email</label></dt>
@@ -39,10 +43,10 @@
 		</fieldset>
 		<fieldset>
 			<legend>Availability</legend>
-			<div class="instructions">
-				<p>What days and hours are you available to work?</p>
-			</div>
-			<textarea class="smart-width"></textarea>
+			<dl>
+				<dt><label for="">What days and hours are you available to work?</label></dt>
+				<dd><textarea class="smart-width"></textarea></dd>
+			</dl>
 		</fieldset>
 		<fieldset>
 			<legend>Experience</legend>
@@ -147,7 +151,7 @@
 		</fieldset>
 		<fieldset class="table">
 			<dl>
-				<dt><label for="" class="options-label">Do you</label></dt>
+				<dt><label for="">Do you</label></dt>
 				<dd class="options-vertical">
 					<input type="checkbox" id="24" />
 					<label for="24" class="option">have a valid Driver&rsquo;s License?</label>

@@ -12,10 +12,19 @@ CGW.run(
 			$rootScope.$state = $state;
 			$rootScope.$stateParams = $stateParams;
 			
+			var spinner
+			
 			$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-//				if($(window).width()<768) {
-					$('body').removeClass('open');
-//				}
+				$('body').removeClass('open');
+
+				spinner = new Spinner().spin();
+				$('body').append('<div class="spinner-overlay"/>');
+				$('body').append(spinner.el);
+			});
+			
+			$rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+				$('.spinner-overlay').remove();
+				spinner.stop();
 			});
 
 		}

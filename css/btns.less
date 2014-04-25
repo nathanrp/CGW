@@ -18,9 +18,9 @@
 	text-align: center;
 	i {
 		font-size: 16px;
-		vertical-align: middle;
+//		vertical-align: middle;
 		margin-right: 5px;
-		color: darken(@ltgray,20%);
+		color: darken(@ltgray,30%);
 	}
 	&.disabled, [disabled=disabled] {
 		.opacity(.5);
@@ -58,6 +58,16 @@
 	&.full-btn {
 		display: block;
 		width: 100%;
+	}
+	&.icon-btn {
+		text-align: center;
+		background: darken(@white,2%);
+		i {
+			color: @bcolor;
+			margin-right: 0;
+			font-size: 24px;
+			vertical-align: middle;
+		}
 	}
 }
 

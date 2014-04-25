@@ -1,5 +1,5 @@
-<div class="ui-section">
-	<form class="advanced-search mint" style="display:none;">
+<div class="ui-section noheader">
+	<form class="advanced-search" style="display:none;">
 		<fieldset class="table">
 			<legend>Search</legend>
 			<dl>
@@ -22,7 +22,7 @@
 			</dl>
 			<dl>
 				<dt><label for="">Date Range</label></dt>
-				<dd><input type="text" class="datepicker" placeholder="from" /> <input type="text" class="datepicker" placeholder="to" /></dd>
+				<dd><input type="date" class="datepicker" placeholder="from" jq-datepicker /> <input type="date" class="datepicker" placeholder="to" jq-datepicker /></dd>
 			</dl>
 			<dl>
 				<dt><label for="">Invoice Total</label></dt>
@@ -30,11 +30,11 @@
 			</dl>
 			<dl>
 				<dt></dt>
-				<dd>
-					<div jq-ui-buttonset>
-						<input type="checkbox" id="1" name="view"><label for="1">Paid</label>
-						<input type="checkbox" id="2" name="view"><label for="2">Unpaid</label>
-					</div>
+				<dd class="options-horizontal">
+					<input type="radio" id="1" name="view">
+					<label for="1" class="option">Paid</label>
+					<input type="radio" id="2" name="view">
+					<label for="2" class="option">Unpaid</label>
 				</dd>
 			</dl>
 		</fieldset>
@@ -45,24 +45,16 @@
 		</div>
 	</form>
 	<div class="ui-toolbar">
-		<a class="btn left primary">Enter Payment</a>
+		<select class="left">
+			<option>Active</option>
+			<option>Archived</option>
+			<option>Deleted</option>
+		</select>
+		<a class="btn left"><i class="fa fa-print"></i> Print</a>
 		<div class="ui-buttonset left">
-			<a class="btn">Delete</a>
 			<a class="btn">Archive</a>
+			<a class="btn"><i class="fa fa-trash-o"></i> Delete</a>
 		</div>
-		<a class="btn right">Print</a>
-	</div>
-	<div class="ui-toolbar filters">
-		<select class="left">
-			<option>All Dates</option>
-			<option>Nov. 15 &mdash; Nov. 31</option>
-			<option>Nov. 1 &mdash; Nov. 14</option>
-		</select>
-		<select class="left">
-			<option>All Areas</option>
-			<option>Kaysville</option>
-			<option>Fruit Heights</option>
-		</select>
 		<a class="btn right open-search">Search</a>
 	</div>
 	<div class="table-wrapper">
@@ -203,40 +195,33 @@
 		</table>
 	</div>
 	<div class="ui-toolbar">
-		<a class="left btn">Prev</a>
 		<div class="ui-buttonset left">
-			<a class="btn active">1</a>
-			<a class="btn">2</a>
-			<a class="btn">3</a>
-			<a class="btn">4</a>
-			<a class="btn">5</a>
+			<a class="btn">Prev</a>
+			<a class="btn">Next</a>
 		</div>
-		<a class="btn left">Next</a>
-		<ul class="links right">
-			<li class="active"><a>Active</a></li>
-			<li><a>Archived</a></li>
-			<li><a>Deleted</a></li>
-		</ul>
 	</div>
 </div>
 
 <script>
 	$('.open-search').click(function(){
-		$('.filters').slideUp(200);
+		$(this).hide();
 		$('.advanced-search').slideDown(250);
 	});
 	
 	$('.close-search').click(function(){
-		$('.filters').slideDown(200);
+		$('.open-search').show();
 		$('.advanced-search').slideUp(250);
+		spinner = new Spinner().spin();
+		$('.table-wrapper').append('<div class="spinner-overlay"/>');
+		$('.table-wrapper').append(spinner.el);
+		setTimeout(function(){
+			$('.spinner-overlay').remove();
+			spinner.stop();
+		}, 2000)
 	});
 
 	$('.search').click(function(){
-		var opts = {
-			shadow: false,
-			color: '#344870'
-		}
-		var spinner = new Spinner(opts).spin();
+		spinner = new Spinner().spin();
 		$('.table-wrapper').append('<div class="spinner-overlay"/>');
 		$('.table-wrapper').append(spinner.el);
 		setTimeout(function(){

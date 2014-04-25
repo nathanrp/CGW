@@ -1,9 +1,12 @@
-// master 768
+// master 480
 
 @media (max-width: @screen-xs) {
 
 	.paper-form {
 		padding: 0;
+		.print {
+			top: -10px;
+		}
 	}
 
 	.ui-toolbar {
@@ -24,6 +27,9 @@
 
 	input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
 		width: 100%;
+		&.datepicker {
+			width: 100%;
+		}
 	}
 
 	form {
@@ -32,15 +38,23 @@
 				display: block;
 				dt, dd {
 					display: block;
+					padding-right: 0;
 				}
 				dt {
 					text-align: left;
+					label {
+						padding: 5px 0;
+					}
+				}
+				dd {
+					 padding-bottom: 0;
 				}
 			}
 			&.readonly {
 				dl {
+					padding-bottom: 10px;
 					dt, dd {
-						padding: 0 0 5px;
+						padding-bottom: 5px;
 					}
 				}
 			}

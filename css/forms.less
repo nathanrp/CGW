@@ -3,17 +3,22 @@
 input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
 	font-family: @bfont;
 	font-size: 17px;
-	background: @ltgray;
-	.box-shadow(0 2px 0 darken(@ltgray,10%) inset);
+	background: @white;
+	.box-shadow(0 2px 0 fadeout(@black,97%) inset);
 	border-radius: 4px;
-	padding: 7px 5px;
-	border: none;
+	padding: 6px 5px;
+	border: 1px solid darken(@ltgray,10%);
 	outline: none;
+	-webkit-appearance: none;
 	&:focus {
+		border-color: @brand;
 	}
 	.placeholder(lighten(@bcolor,30%));
 	&.smart-width {
 		max-width: 100%;
+	}
+	&.fill-width {
+		width: 100%;
 	}
 	&.datepicker {
 		width: 120px;
@@ -24,11 +29,11 @@ input[type=text], select, textarea, input[type=number], .textarea, input[type=da
 }
 
 select, input[type=date] {
-	-webkit-appearance: none;
 	min-height: 34px;
 }
 
 textarea, .textarea {
+	width: 100%;
 	&.md {
 		min-height: 200px;
 	}
@@ -45,17 +50,18 @@ input[type=checkbox], input[type=radio] {
     opacity:0;
 	+ label.option {
 		position: relative;
-		padding: 15px 0 15px 40px;
+		padding: 10px 0 10px 40px;
 		&:before {
 			content: '';
-			background: @ltgray;
-			.box-shadow(0 2px 0 darken(@ltgray,10%) inset);
+			background: @white;
+			.box-shadow(0 2px 0 fadeout(@black,97%) inset);
+			border: 1px solid darken(@ltgray,10%);
 			display: block;
 			width: 22px;
 			height: 22px;
 			position: absolute;
 			left: 5px;
-			top: 12px;
+			top: 6px;
 			text-align: center;
 			color: @white;
 		}
@@ -65,6 +71,7 @@ input[type=checkbox], input[type=radio] {
 			&:before {
 				background: @brand !important;
 				.box-shadow(0 2px 0 darken(@brand,10%) inset) !important;
+				border-color: darken(@brand,10%);
 			}
 		}
 	}
@@ -110,8 +117,8 @@ input[type=radio] {
 				content: '';
 				display: block;
 				position: absolute;
-				left: 6px;
-				top: 11px;
+				left: 12px;
+				top: 13px;
 				background: @white;
 				border-radius: 50%;
 				width: 10px;
@@ -137,6 +144,11 @@ input[type=radio] {
 
 .paper-form {
 	padding: 20px;
+	.print {
+		position: absolute;
+		right: 0;
+		top: 10px;
+	}
 //	max-width: 612px;
 }
 
@@ -145,12 +157,12 @@ form {
 	.help {
 		display: block;
 		padding: 5px 0;
+		margin: -5px 0 10px;
 		color: lighten(@bcolor,30%);
 	}
 	.table {
 		dl {
 			display: table-row;
-			padding: 5px 0;
 			margin: 0;
 			clear: both;
 			overflow: hidden;
@@ -159,34 +171,25 @@ form {
 				margin: 0;
 				float: none;
 				position: relative;
-				padding: 0 20px 10px 0;
 				vertical-align: top;
+				padding: 0 20px 0 0;
 			}
 			dt {
 				text-align: right;
 				font-weight: normal;
 				color: lighten(@bcolor,20%);
+				padding: 0 20px 0 0;
 				label {
-					padding: 10px 0 0;
+					padding: 10px 0;
 					display: inline-block;
 					color: @bcolor;
-					&.options-label {
-						padding-top: 15px;
-					}
-				}
-			}
-			dd {
-				&.options-vertical, &.options-horizontal {
-					.yesno {
-						text-align: left;
-					}
 				}
 			}
 		}
-		&.left-aligned {
+		&.readonly {
 			dl {
-				dt {
-					text-align: left;
+				dt, dd {
+					padding-bottom: 10px;
 				}
 			}
 		}
@@ -197,7 +200,7 @@ form {
 		border-top: 1px solid @ltgray;
 		border-radius: 4px;
 		legend {
-			font-weight: 500;
+			font-weight: 700;
 			padding: 0 20px;
 		}
 		dl {
@@ -205,6 +208,17 @@ form {
 				label {
 					padding: 0 0 10px;
 					display: block;
+				}
+			}
+			dd {
+				input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
+					margin-bottom: 10px;
+				}
+				.option {
+					margin-bottom: 5px;
+				}
+				&:last-child {
+					padding-right: 0;
 				}
 			}
 		}

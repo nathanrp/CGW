@@ -4,10 +4,15 @@
 			<p>This invoice was paid on Aug 2, 2014</p>
 		</div>
 		<div class="ui-toolbar">
-			<h2 class="left title">Invoice <small random-id></small></h2>
-			<a class="btn right">Print</a>
-			<a class="btn edit right" ui-sref="owner.invoices.invoice.edit">Edit</a>
-			<a class="btn primary right" ui-sref="owner.invoices.invoice.payment">Enter Payment</a>
+			<a class="btn edit left" ui-sref="owner.invoices.invoice.edit">Edit</a>
+			<div class="ui-buttonset left">
+				<a class="btn">Un-archive</a>
+				<a class="btn"><i class="fa fa-trash-o"></i> Delete</a>
+			</div>
+			<div class="ui-buttonset right">
+				<a class="btn"><i class="fa fa-print"></i> Print</a>
+				<a class="btn">Email</a>
+			</div>
 		</div>
 	</div>
 	<div class="ui-content">

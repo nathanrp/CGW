@@ -2,13 +2,20 @@
 
 .mint {
 	background: @mint;
-	border-radius: 4px;
-	padding: 10px;
 	color: @dkblue;
-	input[type=text], select, textarea, input[type=number], .textarea, input[type=date] {
+	input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
 		background: lighten(@mint,20%);
 		.placeholder(darken(@mint,20%));
 		.box-shadow(0 2px 0 darken(@mint,10%) inset);
+	}
+	input[type=checkbox], input[type=radio] {
+		+ label.option {
+			&:before {
+				content: '';
+				background: lighten(@mint,20%);
+				.box-shadow(0 2px 0 darken(@mint,10%) inset);
+			}
+		}
 	}
 	.btn, button, .ui-button, input[type=submit] {
 		background: darken(@mint,10%);

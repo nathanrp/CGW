@@ -82,6 +82,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'owner/invoice.html'
+						},
+						'header@': {
+							templateUrl: 'owner/invoice.header.html'
 						}
 					 }
 				})
@@ -361,6 +364,9 @@ CGW.config(
 						},
 						'drawer@': {
 							templateUrl: 'applicant/drawer.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/header.html'
 						}
 					 }
 				})
@@ -386,7 +392,7 @@ CGW.config(
 							templateUrl: 'applicant/contract.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/header.html'
+							templateUrl: 'applicant/resume.header.html'
 						}
 					 }
 				})
@@ -397,6 +403,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'applicant/w9.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/resume.header.html'
 						}
 					 }
 				})

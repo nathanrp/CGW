@@ -135,9 +135,10 @@ a {
 				}
 			}
 			h1 {
-				font-weight: 500;
-				font-size: 18px;
 				padding: 0 10px;
+				.flag {
+					margin-left: 10px;
+				}
 			}
 			&.active {
 				a {
@@ -248,7 +249,7 @@ a {
 		padding: 0 10px;
 	}
 	.ui-section {
-		&.no-header {
+		&.noheader {
 			padding-top: 10px;
 		}
 		.ui-header {
@@ -257,6 +258,7 @@ a {
 			.ui-title {
 				padding: 20px 0;
 				position: relative;
+				text-align: center;
 				.avatar {
 					position: relative;
 					margin: 0 auto 20px;
@@ -276,10 +278,8 @@ a {
 						bottom: 5px;
 					}
 				}
-				h2 {
-					text-align: center;
-				}
 				.secondary {
+					padding: 5px 0 0;
 					color: lighten(@bcolor,50%);
 				}
 				.btn {
@@ -295,14 +295,6 @@ a {
 		}
 		.ui-content {
 			padding: 0 0 20px;
-		}
-		&.caregiver, &.owner, &.applicant {
-			.ui-header {
-				.ui-title {
-					padding-left: 72px;
-					min-height: 80px;
-				}
-			}
 		}
 		&.applicant, &.client {
 			.ui-content {
@@ -331,21 +323,12 @@ a {
 						.btn {
 							margin-top: 10px;
 						}
-						&.done {
+						&.saved {
 							.number {
 								background: @green;
 								color: @white;
 							}
 						}
-					}
-				}
-			}
-		}
-		&.client {
-			.ui-header {
-				.ui-title {
-					.avatar {
-						position: relative;
 					}
 				}
 			}
