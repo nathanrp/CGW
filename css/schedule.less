@@ -3,6 +3,24 @@
 @event: #a1decb;
 
 .schedule {
+
+	.event {
+		padding: 10px;
+		background: lighten(@event,20%);
+		border: 1px solid @event;
+		margin: 2px 5px 5px 0;
+		&.alert {
+			background: @red;
+			color: @white;
+			border-color: @red;
+		}
+		&.open {
+			background: @ltgray;
+			border-color: darken(@ltgray,10%);
+			border-style: dashed;
+		}
+	}
+
 	.ui-toolbar {
 		.tags {
 			.tag {
@@ -56,24 +74,6 @@
 					border-bottom: 1px solid @ltgray;
 					vertical-align: top;
 					padding: 5px;
-					.wrapper {
-						.event {
-							padding: 10px;
-							background: lighten(@event,20%);
-							border: 1px solid @event;
-							margin: 2px 5px 5px 0;
-							&.alert {
-								background: @red;
-								color: @white;
-								border-color: @red;
-							}
-							&.open {
-								background: @ltgray;
-								border-color: darken(@ltgray,10%);
-								border-style: dashed;
-							}
-						}
-					}
 				}
 				th {
 					text-align: left;

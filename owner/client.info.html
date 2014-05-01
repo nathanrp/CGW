@@ -1,8 +1,12 @@
 <div class="ui-section client noheader">
+	<div class="ui-toolbar">
+		<h2 class="left">Client Information</h2>
+		<a class="btn primary right" ui-sref="owner.clients.client.info.edit">Edit</a>
+	</div>
 	<div class="ui-content">
 		<form>
 			<fieldset class="table readonly">
-				<legend>Contact Information</legend>
+				<legend>Contact</legend>
 				<dl>
 					<dt>First Name</dt>
 					<dd>Chowrichzy</dd>
@@ -37,6 +41,20 @@
 				<dl>
 					<dt></dt>
 					<dd><a class="link"><i class="fa fa-map-marker"></i> Map</a></dd>
+				</dl>
+			</fieldset>
+			<fieldset class="stacked readonly">
+				<legend>Current Situation</legend>
+				<dl>
+					<dt>What is the situation of the care recipient?</dt>
+					<dd>Lives in Assisted Living Community</dd>
+				</dl>
+			</fieldset>
+			<fieldset class="stacked readonly">
+				<legend>Our Services</legend>
+				<dl>
+					<dt>How can we help?</dt>
+					<dd>Home Care Services</dd>
 				</dl>
 			</fieldset>
 		</form>

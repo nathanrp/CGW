@@ -38,5 +38,133 @@
 	</li>
 </ol>
 <div class="btns">
-	<a id="withdraw-btn" class="btn">Withdraw Application</a>
+	<a id="withdraw-btn" class="btn" ng-show="$state.includes('applicant');">Withdraw Application</a>
+	<a id="submit-btn" class="ladda-button btn primary" data-style="expand-left" ng-show="$state.includes('applicant');">Submit Application</a>
+	<a id="accept-btn" class="ladda-button primary btn" data-style="expand-left" ng-show="$state.includes('owner.applicants.applicant');">Accept</a>
+	<a id="create-btn" class="ladda-button primary btn" data-style="expand-left" ng-show="$state.includes('owner.applicants.caregiver');">Create Caregiver</a>
+	<a id="reject-btn" class="btn ladda-button warning" data-style="expand-right" ng-show="$state.includes('owner.applicants.applicant');">Reject</a>
 </div>
+
+<script>
+
+	$('#submit-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		setTimeout(function(){
+			l.stop();
+			$('.feedback').fadeIn(250);
+		}, 2000)
+	})
+
+	$('.upload').click(function(){
+		var a = $(this);
+		a.next('input[type=file]').click();
+	});
+	
+	$('input[type=file]').change(function(){
+		var a = $(this);
+		var b = a.closest('li');
+		var c = b.find('.upload');
+		c.text(a.val())
+		var l = Ladda.create(document.querySelector('.upload'));
+		l.start();
+		setTimeout(function(){
+			l.stop();
+			c.prepend('<i class="fa fa-check"></i>');
+			b.addClass('done').find('.number').text('').addClass('fa fa-check');
+		}, 2000)
+	});
+
+	$('#accept-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#accept-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Accept Applicant',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							$('#accept-btn').addClass('ng-hide');
+							$('#create-btn, .application-list li').removeClass('ng-hide');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next full-btn primary'
+				}
+			]
+		});
+	});
+
+	$('#create-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#create-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Create Caregiver',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							window.location.replace('/cgw/#/owner/applicants');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next full-btn primary'
+				}
+			]
+		});
+	});
+	
+	$('#reject-btn').click(function(){
+		var l = Ladda.create(this);
+		l.start();
+		$('#reject-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Reject Applicant',
+					click: function(event){
+						setTimeout(function(){
+							l.stop();
+							$('#reject-btn').addClass('disabled');
+							window.location.replace('/cgw/#/owner/applicants');
+						}, 2000)
+						$(this).dialog('close');
+					},
+					class: 'next warning full-btn'
+				}
+			]
+		});
+	});
+
+</script>

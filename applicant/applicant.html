@@ -10,35 +10,3 @@
 		<ng-include src="'applicant/application.html'"></ng-include>
 	</div>
 </div>
-
-<script>
-
-	$('#submit-btn').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			$('.feedback').fadeIn(250);
-		}, 2000)
-	})
-
-	$('.upload').click(function(){
-		var a = $(this);
-		a.next('input[type=file]').click();
-	});
-	
-	$('input[type=file]').change(function(){
-		var a = $(this);
-		var b = a.closest('li');
-		var c = b.find('.upload');
-		c.text(a.val())
-		var l = Ladda.create(document.querySelector('.upload'));
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			c.prepend('<i class="fa fa-check"></i>');
-			b.addClass('done').find('.number').text('').addClass('fa fa-check');
-		}, 2000)
-	});
-
-</script>

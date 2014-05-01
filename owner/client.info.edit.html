@@ -1,57 +1,59 @@
 <div class="ui-section client noheader">
-	<div class="ui-content">
-		<form>
-			<fieldset class="table">
-				<legend>Contact Information</legend>
-				<dl>
-					<dt><label for=""><label for="">First Name</label></label></dt>
-					<dd><input type="text" value="Chowrichzy" /></dd>
-				</dl>
-				<dl>
-					<dt><label for="">Last Name</label></dt>
-					<dd><input type="text" value="Octopios" /></dd>
-				</dl>
-				<dl>
-					<dt><label for="">Age</dt>
-					<dd><input type="tel" random-small-number readonly="readonly" disabled="disabled" /></dd>
-				</dl>
-				<dl>
-					<dt><label for="">Birthday</label></dt>
-					<dd><input type="date" value="Nov 23, 1943" class="datepicker" jq-datepicker /></dd>
-				</dl>
-				<dl>
-					<dt><label for="">Phone</label></dt>
-					<dd><input type="tel" value="(123) 456-7890" /></dd>
-				</dl>
-				<dl>
-					<dt><label for="">Email</label></dt>
-					<dd><input type="text" value="chow.octopios@gmail.com" /></dd>
-				</dl>
-				<dl>
-					<dt><label for="">Address</label></dt>
-					<dd><input type="text" value="1234 Main St."/></dd>
-				</dl>
-				<dl>
-					<dt><label for="">City</label></dt>
-					<dd><input type="text" value="Farmington"/></dd>
-				</dl>
-				<dl>
-					<dt><label for="">State</label></dt>
-					<dd>
-						<select>
-							<option>AL</option>
-							<option selected="selected">UT</option>
-							<option>WY</option>
-						</select>
-					</dd>
-				</dl>
-				<dl>
-					<dt><label for="">Zip</label></dt>
-					<dd><input type="tel" value="84101" /></dd>
-				</dl>
-			</fieldset>
-		</form>
-	</div>
+	<form class="ui-content">
+		<fieldset class="table">
+			<legend>Contact Information</legend>
+			<dl>
+				<dt><label for=""><label for="">First Name</label></label></dt>
+				<dd><input type="text" value="Chowrichzy" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Last Name</label></dt>
+				<dd><input type="text" value="Octopios" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Age</dt>
+				<dd><input type="tel" random-small-number readonly="readonly" disabled="disabled" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Birthday</label></dt>
+				<dd><input type="date" value="Nov 23, 1943" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Phone</label></dt>
+				<dd><input type="tel" value="(123) 456-7890" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Email</label></dt>
+				<dd><input type="text" value="chow.octopios@gmail.com" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Address</label></dt>
+				<dd><input type="text" value="1234 Main St."/></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City</label></dt>
+				<dd><input type="text" value="Farmington"/></dd>
+			</dl>
+			<dl>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option>AL</option>
+						<option selected="selected">UT</option>
+						<option>WY</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Zip</label></dt>
+				<dd><input type="tel" value="84101" /></dd>
+			</dl>
+		</fieldset>
+		<div class="btns">
+			<a class="btn" ui-sref="owner.clients.client.info">Cancel</a>
+			<a class="btn primary done ladda-button" data-style="expand-left">Save</a>
+		</div>
+	</form>
 </div>
 
 <script>

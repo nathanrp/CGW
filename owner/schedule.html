@@ -1,14 +1,16 @@
-<form class="ui-section noheader">
+<div class="ui-section noheader">
 	<div class="ui-toolbar">
-		<a class="btn left" ui-sref="owner.caregiver.select">Select Caregiver</a>
-		<a class="btn left" ui-sref="owner.schedules.schedule.message">Edit Message</a>
+		<h2 class="left">Edit Schedule</h2>
+		<a class="btn right" ui-sref="owner.caregiver.select">Select Caregiver</a>
+		<a class="btn right" ui-sref="owner.clients.client.schedule.edit.message">Edit Message</a>
 	</div>
-	<fieldset class="table">
-		<legend>Time</legend>
-		<dl>
-			<dd><input type="date" class="datepicker" jq-datepicker placeholder="from" /></dd>
-			<dd>
-				<select>
+	<form class="ui-content">
+		<fieldset class="table">
+			<legend>Time</legend>
+			<dl>
+				<dd><input type="date" class="datepicker" jq-datepicker placeholder="from" /></dd>
+				<dd>
+					<select>
 					<option>12:00am</option>
 					<option>12:30am</option>
 					<option>1:00am</option>
@@ -58,11 +60,11 @@
 					<option>11:00pm</option>
 					<option>11:30pm</option>
 				</select>
-			</dd>
-			<dt><label for="">to</label></dt>
-			<dd><input type="date" class="datepicker" jq-datepicker placeholder="to" /></dd>
-			<dd>
-				<select>
+				</dd>
+				<dt><label for="">to</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker placeholder="to" /></dd>
+				<dd>
+					<select>
 					<option>12:00am</option>
 					<option>12:30am</option>
 					<option>1:00am</option>
@@ -112,52 +114,57 @@
 					<option>11:00pm</option>
 					<option>11:30pm</option>
 				</select>
-			</dd>
-		</dl>
-		<div class="options-horizontal">
-			<input type="checkbox" id="1" />
-			<label for="1" class="option">All Day</label>
-			<input type="checkbox" id="2" />
-			<label for="2" class="option">Repeat</label>
+				</dd>
+			</dl>
+			<div class="options-horizontal">
+				<input type="checkbox" id="1" />
+				<label for="1" class="option">All Day</label>
+				<input type="checkbox" id="2" />
+				<label for="2" class="option">Repeat</label>
+			</div>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Repeat</legend>
+			<dl>
+				<dt><label for="">Repeats</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Daily</option>
+						<option>Weekly</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Repeats on</label></dt>
+				<dd class="options-horizontal">
+					<input type="checkbox" id="3" />
+					<label for="3" class="option">S</label>
+					<input type="checkbox" id="4" />
+					<label for="4" class="option">M</label>
+					<input type="checkbox" id="5" />
+					<label for="5" class="option">T</label>
+					<input type="checkbox" id="6" />
+					<label for="6" class="option">W</label>
+					<input type="checkbox" id="7" />
+					<label for="7" class="option">T</label>
+					<input type="checkbox" id="8" />
+					<label for="8" class="option">F</label>
+					<input type="checkbox" id="9" />
+					<label for="9" class="option">S</label>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Ends on</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>	
+		</fieldset>
+		<div class="btns">
+			<a class="btn done" ui-sref="owner.clients.client.schedule">Cancel</a>
+			<a class="btn primary ladda-button save" data-style="expand-left">Save</a>
 		</div>
-	</fieldset>
-	<fieldset class="table">
-		<legend>Repeat</legend>
-		<dl>
-			<dt><label for="">Repeats</label></dt>
-			<dd>
-				<select>
-					<option></option>
-					<option>Daily</option>
-					<option>Weekly</option>
-				</select>
-			</dd>
-		</dl>
-		<dl>
-			<dt><label for="">Repeats on</label></dt>
-			<dd class="options-horizontal">
-				<input type="checkbox" id="3" />
-				<label for="3" class="option">S</label>
-				<input type="checkbox" id="4" />
-				<label for="4" class="option">M</label>
-				<input type="checkbox" id="5" />
-				<label for="5" class="option">T</label>
-				<input type="checkbox" id="6" />
-				<label for="6" class="option">W</label>
-				<input type="checkbox" id="7" />
-				<label for="7" class="option">T</label>
-				<input type="checkbox" id="8" />
-				<label for="8" class="option">F</label>
-				<input type="checkbox" id="9" />
-				<label for="9" class="option">S</label>
-			</dd>
-		</dl>
-		<dl>
-			<dt><label for="">Ends on</label></dt>
-			<dd><input type="date" class="datepicker" jq-datepicker /></dd>
-		</dl>	
-	</fieldset>
-</form>
+	</form>
+</div>
 
 <script>
 
@@ -166,7 +173,7 @@
 		l.start();
 		setTimeout(function(){
 			l.stop();
-			window.location.replace('/cgw/#/owner/schedules');
+			window.location.replace('/cgw/#/owner/clients/client/schedule');
 		}, 2000)
 	});
 	

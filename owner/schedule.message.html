@@ -1,8 +1,8 @@
 <form class="ui-section noheader">
-	<div class="feedback">
+	<div class="feedback center">
 		<p>This message will be sent to the selected caregivers.</p>
 	</div>
-	<fieldset>
+	<fieldset class="noborder">
 		<dl>
 			<dt><label for="">Subject</label></dt>
 			<dd><input type="text" class="fill-width" placeholder="Subject" value="New Schedule Chowrichzy Wisdomy Octopios" /></dd>
@@ -12,6 +12,10 @@
 			</dd>
 		</dl>
 	</fieldset>
+	<div class="btns">
+		<a class="btn" ui-sref="owner.clients.client.schedule.edit">Cancel</a>
+		<a class="btn primary ladda-button save" data-style="expand-left">Done</a>
+	</div>
 </form>
 
 <script>
@@ -21,7 +25,7 @@
 		l.start();
 		setTimeout(function(){
 			l.stop();
-			window.location.replace('/cgw/#/owner/schedules/schedule');
+			window.location.replace('/cgw/#/owner/clients/client/schedule/edit');
 		}, 2000)
 	});
 	

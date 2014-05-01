@@ -40,15 +40,26 @@ ul {
 				padding: 15px 20px;
 				border-bottom: 1px solid darken(@ltgray,10%);
 				position: relative;
+				white-space: nowrap;
 				.flag {
 					position: absolute;
 					right: 5px;
 					top: 10px;
+					color: @bcolor;
+				}
+				small {
+					color: lighten(@bcolor,50%);
+					margin-left: 5px;
 				}
 			}
 			&:first-child {
 				a {
-					border-top: 1px solid darken(@ltgray,10%);
+					border-top: 1px solid @ltgray;
+				}
+			}
+			&:last-child {
+				a {
+					border-bottom: 1px solid @ltgray;
 				}
 			}
 		}
@@ -73,7 +84,31 @@ ul {
 						border-top: none;
 					}
 				}
+				&:last-child {
+					a {
+						border-bottom: none;
+					}
+				}
 			}
+		}
+	}
+}
+
+.task-list {
+	li {
+		padding: 15px 20px;
+		border-bottom: 1px solid darken(@ltgray,10%);
+		position: relative;
+		.btn {
+			position: absolute;
+			right: 5px;
+			top: 5px;
+		}
+		&:first-child {
+			border-top: 1px solid @ltgray;
+		}
+		&:last-child {
+			border-bottom: 1px solid @ltgray;
 		}
 	}
 }

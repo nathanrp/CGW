@@ -3,8 +3,8 @@
 .feedback {
 	background: lighten(@ltblue,10%);
 	color: @dkblue;
-	padding: 10px 20px 10px 10px;
-	margin: 10px 0;
+	padding: 10px 20px;
+	margin: 10px auto;
 	border-radius: 4px;
 	position: relative;
 	display: block;
@@ -55,6 +55,9 @@
 			.opacity(.5);
 		}
 	}
+	&.center {
+		display: table;
+	}
 }
 
 .instructions {
@@ -81,6 +84,7 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	padding: 5px;
+	color: @bcolor;
 	i {
 		color: darken(@yellow,30%);
 	}

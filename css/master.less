@@ -33,7 +33,7 @@ body {
 		header {
 			ul {
 				li {
-					a {
+					a:not(.btn) {
 						&.nav-toggle {
 							span, span:before, span:after {
 								top: 10px;
@@ -94,11 +94,11 @@ a {
 			position: relative;
 			display: inline-block;
 			vertical-align: top;
-			a, h1 {
+			a:not(.back), h1 {
 				height: 50px;
 				line-height: 50px;
 			}
-			a {
+			a:not(.back) {
 				display: block;
 				color: @brand;
 				border-bottom: 3px solid transparent;
@@ -149,17 +149,6 @@ a {
 	}
 	.btn {
 		margin: 6px 0 6px 5px;
-	}
-	.btns {
-		position: absolute;
-		height: 49px;
-		padding: 0 5px;
-		background: @white;
-		right: 0;
-		top: 0;
-		.btn, .ui-buttonset {
-			margin: 6px 0;
-		}
 	}
 }
 
@@ -264,6 +253,7 @@ a {
 					margin: 0 auto 20px;
 					width: 96px;
 					height: 96px;
+					display: block;
 					img {
 						display: block;
 						border: 1px solid @ltgray;

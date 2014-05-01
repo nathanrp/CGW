@@ -1,18 +1,20 @@
 <div class="ui-section client">
 	<div class="ui-header">
 		<div class="ui-title">
-			<div class="avatar">
+			<a class="avatar">
 				<img src="img/ronpaul.jpg" />
-			</div>
+			</a>
 			<h2 random-name></h2>
 		</div>
 	</div>
 	<div class="ui-content">
 		<ul class="list">
 			<li><a ui-sref="owner.clients.client.info">Client Information</a></li>
-			<li><a>Check In/Check Out</a></li>
-			<li><a>Schedule</a></li>
-			<li><a>Contract</a></li>
+			<li><a ui-sref="owner.clients.client.schedule">Schedule <small>Check In/Out, Assign Caregivers, Change Schedule</small></a></li>
+			<li><a ui-sref="owner.clients.client.tasks">Required Tasks</a></li>
+			<li><a ui-sref="owner.clients.client.invoices">Invoices</a></li>
+			<li><a ui-sref="owner.clients.client.historys">History <small>Notes, Tasks Completed</small></a></li>
+			<li><a ui-sref="owner.clients.client.contract">Contract</a></li>
 		</ul>
 	</div>
 </div>

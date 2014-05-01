@@ -45,20 +45,7 @@ CGW.config(
 							templateUrl: 'owner/schedule.html'
 						},
 						'header@': {
-							templateUrl: 'owner/schedule.header.html'
-						}
-					 }
-				})
-
-				.state('owner.schedules.schedule.message', {
-
-					url: '/message',
-					views: {
-						'content@': {
-							templateUrl: 'owner/schedule.message.html'
-						},
-						'header@': {
-							templateUrl: 'owner/schedule.message.header.html'
+							templateUrl: 'owner/schedules.header.html'
 						}
 					 }
 				})
@@ -84,7 +71,7 @@ CGW.config(
 							templateUrl: 'owner/invoice.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoice.header.html'
+							templateUrl: 'owner/invoices.header.html'
 						}
 					 }
 				})
@@ -97,7 +84,7 @@ CGW.config(
 							templateUrl: 'owner/invoice.edit.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoice.edit.header.html'
+							templateUrl: 'owner/invoice.header.html'
 						}
 					 }
 				})
@@ -110,7 +97,7 @@ CGW.config(
 							templateUrl: 'owner/invoice.payment.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoice.payment.header.html'
+							templateUrl: 'owner/invoice.header.html'
 						}
 					 }
 				})
@@ -172,10 +159,114 @@ CGW.config(
 					url: '/edit',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.info.edit.header.html'
+							templateUrl: 'owner/client.edit.header.html'
 						},
 						'content@': {
 							templateUrl: 'owner/client.info.edit.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.schedule', {
+
+					url: '/schedule',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/client.schedule.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.schedule.edit', {
+
+					url: '/edit',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.edit.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/schedule.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.schedule.edit.message', {
+
+					url: '/message',
+					views: {
+						'content@': {
+							templateUrl: 'owner/schedule.message.html'
+						},
+						'header@': {
+							templateUrl: 'owner/schedule.message.header.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.invoices', {
+
+					url: '/invoices',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/invoices.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.tasks', {
+
+					url: '/tasks',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/client.tasks.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.historys', {
+
+					url: '/history',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/client.historys.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.historys.history', {
+
+					url: '/history',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/client.history.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.contract', {
+
+					url: '/contract',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/client.contract.html'
 						}
 					 }
 				})
@@ -258,6 +349,18 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('owner.admin', {
+					url: '/admin',
+					views: {
+						'content@': {
+							templateUrl: 'owner/admin.html'
+						},
+						'header@': {
+							templateUrl: 'owner/admin.header.html'
+						}
+					 }
+				})
 
 				.state('caregiver', {
 
@@ -268,6 +371,9 @@ CGW.config(
 						},
 						'drawer@': {
 							templateUrl: 'caregiver/drawer.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/header.html'
 						}
 					 }
 				})
@@ -278,6 +384,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'caregiver/schedules.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/schedules.header.html'
 						}
 					 }
 				})
@@ -308,6 +417,9 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'caregiver/clients.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/clients.header.html'
 						}
 					 }
 				})
@@ -320,7 +432,7 @@ CGW.config(
 							templateUrl: 'caregiver/client.html'
 						},
 						'header@': {
-							templateUrl: 'caregiver/client.header.html'
+							templateUrl: 'caregiver/clients.header.html'
 						}
 					 }
 				})
@@ -340,7 +452,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'tab-content': {
-							templateUrl: 'caregiver/client.schedules.html'
+							templateUrl: 'caregiver/client.schedule.html'
 						}
 					 }
 				})
@@ -379,7 +491,7 @@ CGW.config(
 							templateUrl: 'applicant/resume.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/resume.header.html'
+							templateUrl: 'applicant/edit.header.html'
 						}
 					 }
 				})
@@ -392,7 +504,7 @@ CGW.config(
 							templateUrl: 'applicant/contract.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/resume.header.html'
+							templateUrl: 'applicant/edit.header.html'
 						}
 					 }
 				})
@@ -405,7 +517,7 @@ CGW.config(
 							templateUrl: 'applicant/w9.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/resume.header.html'
+							templateUrl: 'applicant/edit.header.html'
 						}
 					 }
 				})

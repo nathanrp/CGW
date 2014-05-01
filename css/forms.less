@@ -177,7 +177,6 @@ form {
 			dt {
 				text-align: right;
 				font-weight: normal;
-				color: lighten(@bcolor,20%);
 				padding: 0 20px 0 0;
 				label {
 					padding: 10px 0;
@@ -205,6 +204,7 @@ form {
 		}
 		dl {
 			dt {
+				color: lighten(@bcolor,20%);
 				label {
 					padding: 0 0 10px;
 					display: block;
@@ -219,6 +219,14 @@ form {
 				}
 				&:last-child {
 					padding-right: 0;
+				}
+			}
+		}
+		&.readonly {
+			dl {
+				padding-bottom: 10px;
+				dt, dd {
+					padding-bottom: 5px;
 				}
 			}
 		}
