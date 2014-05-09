@@ -31,7 +31,7 @@ body {
 }
 
 a {
-	color: @green;
+	color: @brand;
 	text-decoration: none;
 }
 
@@ -75,6 +75,7 @@ p {
 					margin: 6px 0;
 					padding: 0 10px;
 					line-height: 28px;
+					font-size: 15px;
 				}
 				&.login {
 					margin: 0 20px;
@@ -95,7 +96,7 @@ p {
 	height: 400px;
 	overflow: hidden;
 	position: relative;
-	#gradient > .vertical(#5ec6cf,#7ed6ac);
+	#gradient > .vertical(@brand,@turqoise);
 	.short {
 		width: 50%;
 		margin: 40px;

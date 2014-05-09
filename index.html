@@ -24,8 +24,6 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700,500,900' rel='stylesheet' type='text/css'>
 
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
 	<script src="js/less.min.js" type="text/javascript"></script>
 
 <!--
@@ -55,13 +53,13 @@
 </head>
 <body ng-controller="menu">
 
-<nav class="nav" ui-view="drawer"></nav>
-
 <header class="header" ui-view="header">
 	<ul>
 		<li><a class="nav-toggle"><span></span></a></li>
 	</ul>
 </header>
+
+<nav class="nav" ui-view="drawer"></nav>
 
 <div class="page">
 	<div ui-view="content" class="content"></div>

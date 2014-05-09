@@ -50,21 +50,8 @@
 			</dl>
 		</fieldset>
 		<div class="btns">
-			<a class="btn" ui-sref="owner.clients.client.info">Cancel</a>
-			<a class="btn primary done ladda-button" data-style="expand-left">Save</a>
+			<a class="btn" back>Cancel</a>
+			<a class="btn primary done ladda-button" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
-
-<script>
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/owner/clients/client/information');
-		}, 2000)
-	});
-	
-</script>

@@ -1,7 +1,7 @@
 // buttons
 
 .feedback {
-	background: lighten(@ltblue,10%);
+	background: lighten(@brand,30%);
 	color: @dkblue;
 	padding: 10px 20px;
 	margin: 10px auto;
@@ -9,22 +9,22 @@
 	position: relative;
 	display: block;
 	p {
-		margin-bottom: 5px;
+		padding-bottom: 5px;
 		&:last-child {
-			margin-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 	a {
-		color: @ltblue;
+		color: @brand;
 		text-decoration: underline;
 	}
 	.close {
 		position: absolute;
 		right: 0;
 		top: 0;
-		width: 32px;
-		height: 32px;
-		line-height: 32px;
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
 		text-align: center;
 		text-decoration: none;
 		display: block;
@@ -67,9 +67,9 @@
 	margin: 0 0 20px;
 	border-radius: 4px;
 	p {
-		margin-bottom: 5px;
+		padding-bottom: 5px;
 		&:last-child {
-			margin-bottom: 0;
+			padding-bottom: 0;
 		}
 	}
 }
@@ -85,9 +85,6 @@
 	text-transform: uppercase;
 	padding: 5px;
 	color: @bcolor;
-	i {
-		color: darken(@yellow,30%);
-	}
 	&.flag-feedback {
 		position: fixed;
 		.nowrap();

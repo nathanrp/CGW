@@ -3,7 +3,7 @@
 input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
 	font-family: @bfont;
 	font-size: 17px;
-	background: @white;
+	background: darken(@white,2%);
 	.box-shadow(0 2px 0 fadeout(@black,97%) inset);
 	border-radius: 4px;
 	padding: 6px 5px;
@@ -53,7 +53,7 @@ input[type=checkbox], input[type=radio] {
 		padding: 10px 0 10px 40px;
 		&:before {
 			content: '';
-			background: @white;
+			background: darken(@white,2%);
 			.box-shadow(0 2px 0 fadeout(@black,97%) inset);
 			border: 1px solid darken(@ltgray,10%);
 			display: block;
@@ -148,6 +148,7 @@ input[type=radio] {
 		position: absolute;
 		right: 0;
 		top: 10px;
+		background: @white !important;
 	}
 //	max-width: 612px;
 }
@@ -191,13 +192,23 @@ form {
 					padding-bottom: 10px;
 				}
 			}
+			ul {
+				&.b-list {
+					padding-bottom: 0;
+				}
+			}
+			p {
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
 		}
 	}
 	fieldset {
-		padding: 10px 0;
+		padding: 10px 20px;
 		margin: 10px 0;
-		border-top: 1px solid @ltgray;
 		border-radius: 4px;
+		border: 1px solid @ltgray;
 		legend {
 			font-weight: 700;
 			padding: 0 20px;
@@ -231,23 +242,8 @@ form {
 			}
 		}
 		&.noborder {
-			border-top: none;
-		}
-		&.border {
-			border: 1px solid @ltgray;
-			padding-left: 10px;
-			padding-right: 10px;
-			background: @ltgray;
-			input[type=text], select, textarea, input[type=number], .textarea {
-				background: @white;
-			}
-			.btn, button, .ui-button, input[type=submit] {
-				background: darken(@ltgray,10%);
-				border-color: darken(@ltgray,20%);
-				&:active, &.ui-state-active, &.active {
-					border-top-color: darken(@ltgray,40%);
-				}
-			}
+			border: none;
+			padding: 10px 0;
 		}
 	}
 }

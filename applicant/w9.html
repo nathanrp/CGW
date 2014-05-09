@@ -1,6 +1,6 @@
 <div class="ui-section noheader">
 	<form class="paper-form contract">
-		<a class="btn icon-btn print"><i class="fa fa-print"></i></a>
+		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<h2 class="title">W-9 Request for Taxpayer Identification Number and Certification</h2>
 		<fieldset class="table">
 			<dl>
@@ -102,8 +102,8 @@ generally, payments other than interest and dividends, you are not required to s
 			</dl>
 		</fieldset>
 		<div class="btns">
-			<a class="btn" ui-sref="applicant">Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left">Save</a>
+			<a class="btn" back>Cancel</a>
+			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
@@ -136,15 +136,6 @@ generally, payments other than interest and dividends, you are not required to s
 		clearButton.addEventListener("click", function (event) {
 		    signaturePad.clear();
 		});
-	});
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/applicant');
-		}, 2000)
 	});
 	
 </script>

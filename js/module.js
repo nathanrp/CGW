@@ -34,7 +34,7 @@ CGW.run(
 $(document).ready(function() {
 
 	$('body').on('click', '.nav-toggle', function(){
-		$('body').addClass('open');
+		$('body').toggleClass('open');
 	});
 
 
@@ -42,10 +42,37 @@ $(document).ready(function() {
 
 CGW.controller('menu', function ($scope) {
 
-	$('.nav-overlay, .nav .active a').bind('click', function() {
+	$('.nav-overlay, .nav .active a, .header').bind('click', function() {
       $('body').removeClass('open');
     });
 
+});
+
+CGW.directive('back', function ($document) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			element.bind('click',function(event) {
+				window.history.back();
+			});
+		}
+	}
+});
+
+CGW.directive('done', function ($document) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			element.bind('click',function(event) {
+				var l = Ladda.create(this);
+				l.start();
+				setTimeout(function(){
+					l.stop();
+					window.history.back();
+				}, 2000)
+			});
+		}
+	}
 });
 
 

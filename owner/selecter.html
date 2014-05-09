@@ -1,0 +1,119 @@
+<div class="ui-section selecter noheader">
+	<div class="ui-toolbar">
+		<h2 class="left">Select Caregiver</h2>
+		<a class="btn right" ui-sref="owner.clients.client.schedule.edit.message">Edit Message</a>
+	</div>
+	<div class="ui-content">
+		<div class="ui-toolbar">
+			<div class="options-horizontal left">
+				<input type="radio" name="match" id="1" />
+				<label class="option" for="1">All</label>
+				<input type="radio" name="match" id="2" checked="checked" />
+				<label class="option" for="2">Best Match</label>
+			</div>
+			<div class="options-horizontal">
+				<input type="checkbox" id="3" checked="checked" />
+				<label class="option" for="3">Show Available</label>
+			</div>
+		</div>
+		<div class="owl-carousel">
+			<div class="item">
+				<div class="avatar">
+					<img src="img/caregiver.png" alt="Caregiver" />
+					<span class="flag">.2 m</span>
+				</div>
+				<input type="checkbox" name="caregiver" id="4" />
+				<label class="option" for="4" random-name></label>
+				<ul class="tags">
+					<li class="tag">RN</li>
+					<li class="tag">Alzheimer&rsquo;s</li>
+					<li class="tag">Assist Shower/Bath</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="avatar">
+					<img src="img/caregiver-2.jpg" alt="Caregiver" />
+					<span class="flag">1.6 m</span>
+				</div>
+				<input type="checkbox" name="caregiver" id="5" />
+				<label class="option" for="5" random-name></label>
+				<ul class="tags">
+					<li class="tag">Alzheimer&rsquo;s</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="avatar">
+					<img src="img/caregiver-3.jpeg" alt="Caregiver" />
+					<span class="flag">4 m</span>
+				</div>
+				<input type="checkbox" name="caregiver" id="6" />
+				<label class="option" for="6" random-name></label>
+				<ul class="tags">
+					<li class="tag">RN</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="avatar">
+					<img src="img/caregiver.png" alt="Caregiver" />
+					<span class="flag">.2 m</span>
+				</div>
+				<input type="checkbox" name="caregiver" id="7" />
+				<label class="option" for="7" random-name></label>
+				<ul class="tags">
+					<li class="tag">RN</li>
+					<li class="tag">Alzheimer&rsquo;s</li>
+					<li class="tag">Assist Shower/Bath</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="avatar">
+					<img src="img/caregiver-2.jpg" alt="Caregiver" />
+					<span class="flag">1.6 m</span>
+				</div>
+				<input type="checkbox" name="caregiver" id="8" />
+				<label class="option" for="8" random-name></label>
+				<ul class="tags">
+					<li class="tag">Alzheimer&rsquo;s</li>
+				</ul>
+			</div>
+			<div class="item">
+				<div class="avatar">
+					<img src="img/caregiver-3.jpeg" alt="Caregiver" />
+					<span class="flag">4 m</span>
+				</div>
+				<input type="checkbox" name="caregiver" id="9" />
+				<label class="option" for="9" random-name></label>
+				<ul class="tags">
+					<li class="tag">RN</li>
+				</ul>
+			</div>
+		</div>
+		<div class="btns">
+			<a class="btn done" back>Cancel</a>
+			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
+		</div>
+	</div>
+</div>
+
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	$('.owl-carousel').owlCarousel({
+	
+		navigation : true, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+
+		items : 3, 
+		itemsDesktop : [1024,3],
+		itemsTablet: [768,2],
+		itemsMobile : [480,1]
+		
+	});
+
+});
+
+</script>

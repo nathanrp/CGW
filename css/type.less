@@ -7,7 +7,7 @@ body {
 
 p {
 	line-height: 1.4em;
-	margin-bottom: 1em;
+	padding-bottom: 20px;
 }
 
 h1, h2, h3 {
@@ -38,9 +38,42 @@ h3 {
 ul {
 	&.b-list {
 		list-style-type: disc;
+		padding: 0 0 20px;
 		li {
-			padding: 0 0 .5em;
+			padding: 0 0 10px;
 			margin: 0 0 0 20px;
 		}	
+	}
+}
+
+.table {
+	display: table;
+	margin: 0 0 20px;
+	dl {
+		display: table-row;
+		dt, dd {
+			display: table-cell;
+			ul {
+				&.b-list {
+					padding-bottom: 0;
+				}
+			}
+		}
+		dt {
+			color: lighten(@bcolor,30%);
+			padding: 0 10px 10px 0;
+			text-align: right;
+		}
+		dd {
+			padding: 0 20px 10px 0;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		&.seperate {
+			dt, dd {
+				padding-bottom: 20px;
+			}
+		}
 	}
 }

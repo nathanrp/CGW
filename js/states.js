@@ -102,15 +102,15 @@ CGW.config(
 					 }
 				})
 				
-				.state('owner.payrolls', {
+				.state('owner.selecter', {
 					
-					url: '/payrolls',
+					url: '/caregiver/select',
 					views: {
 						'content@': {
-							templateUrl: 'owner/payrolls.html'
+							templateUrl: 'owner/selecter.html'
 						},
 						'header@': {
-							templateUrl: 'owner/accounting.header.html'
+							templateUrl: 'owner/selecter.header.html'
 						}
 					 }
 				})
@@ -163,6 +163,19 @@ CGW.config(
 						},
 						'content@': {
 							templateUrl: 'owner/client.info.edit.html'
+						}
+					 }
+				})
+				
+				.state('owner.clients.client.assessment', {
+
+					url: '/assessment',
+					views: {
+						'header@': {
+							templateUrl: 'owner/client.header.html'
+						},
+						'content@': {
+							templateUrl: 'owner/client.assessment.html'
 						}
 					 }
 				})
@@ -250,7 +263,7 @@ CGW.config(
 					url: '/history',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'owner/client.history.header.html'
 						},
 						'content@': {
 							templateUrl: 'owner/client.history.html'
@@ -302,7 +315,7 @@ CGW.config(
 							templateUrl: 'owner/request.initial.html'
 						},
 						'header@': {
-							templateUrl: 'owner/request.header.html'
+							templateUrl: 'applicant/edit.header.html'
 						}
 					 }
 				})
@@ -361,6 +374,18 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('owner.admin.profile', {
+					url: '/client',
+					views: {
+						'content@': {
+							templateUrl: 'owner/profile.html'
+						},
+						'header@': {
+							templateUrl: 'owner/admin.header.html'
+						}
+					 }
+				})
 
 				.state('caregiver', {
 
@@ -383,7 +408,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'content@': {
-							templateUrl: 'caregiver/schedules.html'
+							templateUrl: 'owner/schedules.html'
 						},
 						'header@': {
 							templateUrl: 'caregiver/schedules.header.html'
@@ -452,7 +477,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'tab-content': {
-							templateUrl: 'caregiver/client.schedule.html'
+							templateUrl: 'owner/client.schedule.html'
 						}
 					 }
 				})

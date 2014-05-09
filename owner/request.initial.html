@@ -1,6 +1,6 @@
 <div class="ui-section">
 	<form class="paper-form">
-		<a class="btn icon-btn print"><i class="fa fa-print"></i></a>
+		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Client</legend>
 			<dl>
@@ -100,6 +100,7 @@
 					</select>
 				</dd>
 			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<legend>Current Situation</legend>
 			<dl>
@@ -177,6 +178,10 @@ change it I must contact the manager at <a href="tel:7024871703">702-487-1703</a
 				<canvas></canvas>
 			</div>
 		</div>
+		<div class="btns">
+			<a class="btn done" back>Cancel</a>
+			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
+		</div>
 	</form>
 </div>
 
@@ -208,15 +213,6 @@ change it I must contact the manager at <a href="tel:7024871703">702-487-1703</a
 		clearButton.addEventListener("click", function (event) {
 		    signaturePad.clear();
 		});
-	});
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/owner/requests/request');
-		}, 2000)
 	});
 	
 </script>

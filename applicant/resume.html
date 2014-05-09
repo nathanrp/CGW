@@ -1,6 +1,6 @@
 <div class="ui-section">
 	<form class="paper-form">
-		<a class="btn icon-btn print"><i class="fa fa-print"></i></a>
+		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Applicant</legend>
 			<dl>
@@ -205,8 +205,8 @@ before, during or up to 30 days after my work.</p>
 			</div>
 		</div>
 		<div class="btns">
-			<a class="btn" ui-sref="applicant">Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left">Save</a>
+			<a class="btn" back>Cancel</a>
+			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
@@ -239,15 +239,6 @@ before, during or up to 30 days after my work.</p>
 		clearButton.addEventListener("click", function (event) {
 		    signaturePad.clear();
 		});
-	});
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/applicant');
-		}, 2000)
 	});
 	
 </script>

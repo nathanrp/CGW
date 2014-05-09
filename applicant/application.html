@@ -1,6 +1,6 @@
 <ol class="application-list">
 	<li class="saved">
-		<i class="fa fa-check number"></i>
+		<i class="icon-check number"></i>
 		<a class="link" ui-sref="applicant.resume">Initial Application</a>
 	</li>
 	<li ng-show="$state.includes('applicant');">
@@ -31,8 +31,8 @@
 		<i class="number">8</i>
 		W-4
 		<div class="ui-toolbar">
-			<a class="btn left" href="pdfs/w9.pdf"><i class="fa fa-arrow-circle-down"></i>Download</a> 
-			<a class="btn left ladda-button upload" data-style="expand-left" data-spinner-color="#3b3b3b"><i class="fa fa-arrow-circle-up"></i>Upload</a>
+			<a class="btn left" href="pdfs/w9.pdf"><i class="icon-download"></i>Download</a> 
+			<a class="btn left ladda-button upload" data-style="expand-left" data-spinner-color="#3b3b3b"><i class="icon-upload"></i>Upload</a>
 			<input type="file" hidden="hidden" />
 		</div>
 	</li>
@@ -70,8 +70,8 @@
 		l.start();
 		setTimeout(function(){
 			l.stop();
-			c.prepend('<i class="fa fa-check"></i>');
-			b.addClass('done').find('.number').text('').addClass('fa fa-check');
+			c.prepend('<i class="icon-check"></i>');
+			b.addClass('done').find('.number').text('').addClass('icon-check');
 		}, 2000)
 	});
 

@@ -1,8 +1,45 @@
 <div class="schedule ui-section noheader">
-	<div class="ui-header">
-		<h2 random-name></h2>
+	<div class="ui-toolbar padding">
+		<h2 random-name class="left"></h2>
+		<a class="btn right">Edit History</a>
 	</div>
 	<div class="ui-content">
-		Edit tasks, check in/out, add note, etc.
+		<form>
+			<fieldset class="table readonly">
+				<legend>Caregiver</legend>
+				<dl>
+					<dt>Caregiver</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl>
+					<dt>Check In</dt>
+					<dd>12:05 PM</dd>
+				</dl>
+				<dl>
+					<dt>Check Out</dt>
+					<dd>6:24 PM</dd>
+				</dl>
+			</fieldset>
+			<fieldset class="table readonly">
+				<legend>Tasks</legend>
+				<ul class="b-list">
+					<li>Assist Dressing</li>
+					<li>Assist shower/bath Assist Toileting</li>
+					<li>Preparing Meals</li>
+					<li>Cleaning</li>
+				</ul>
+			</fieldset>
+			<fieldset class="table readonly">
+				<legend>Standard Care</legend>
+				<ul class="b-list">
+					<li>Walking</li>
+					<li>Desert</li>
+				</ul>
+			</fieldset>
+			<fieldset class="table readonly">
+				<legend>Notes</legend>
+				<p>Bacon ipsum dolor sit amet pork loin jowl tail, pork belly meatloaf frankfurter prosciutto ball tip short loin beef turducken shoulder. Ground round tail ball tip sirloin brisket bacon corned beef rump capicola kevin sausage frankfurter, short ribs tongue. Doner spare ribs tail bacon tongue. Shankle leberkas short loin pig rump.</p>
+			</fieldset>
+		</form>
 	</div>
 </div>

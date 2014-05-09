@@ -47,6 +47,15 @@
 	white-space: nowrap;
 }
 
+.ellipsis() {
+	.nowrap();
+	text-overflow: ellipsis;
+}
+
+.ellipsis {
+	.ellipsis();
+}
+
 // Transitions
 .transition(@transition) {
 	-webkit-transition: @transition;

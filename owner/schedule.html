@@ -1,7 +1,7 @@
 <div class="ui-section noheader">
 	<div class="ui-toolbar">
 		<h2 class="left">Edit Schedule</h2>
-		<a class="btn right" ui-sref="owner.caregiver.select">Select Caregiver</a>
+		<a class="btn right" ui-sref="owner.selecter">Select Caregiver</a>
 		<a class="btn right" ui-sref="owner.clients.client.schedule.edit.message">Edit Message</a>
 	</div>
 	<form class="ui-content">
@@ -160,21 +160,8 @@
 			</dl>	
 		</fieldset>
 		<div class="btns">
-			<a class="btn done" ui-sref="owner.clients.client.schedule">Cancel</a>
-			<a class="btn primary ladda-button save" data-style="expand-left">Save</a>
+			<a class="btn" back>Cancel</a>
+			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
-
-<script>
-
-	$('.save').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/owner/clients/client/schedule');
-		}, 2000)
-	});
-	
-</script>

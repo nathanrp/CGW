@@ -45,8 +45,8 @@
 			</fieldset>
 		</div>
 		<div class="btns">
-			<a class="btn" ui-sref="owner.invoices.invoice">Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left">Save</a>
+			<a class="btn" back>Cancel</a>
+			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
@@ -60,15 +60,6 @@
 		} else {
 			$('#3').attr('disabled',false);
 		}
-	});
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/owner/invoices/invoice');
-		}, 2000)
 	});
 
 </script>

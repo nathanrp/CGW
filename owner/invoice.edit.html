@@ -1,4 +1,4 @@
-<div class="ui-section">
+<div class="ui-section noheader">
 	<form class="paper-form invoice">
 		<div class="inv-client">
 			<div class="row">
@@ -41,7 +41,7 @@
 								<input type="tel" random-money class="money" />
 							</td>
 							<td class="icon">
-								<a class="icon-btn btn"><i class="fa fa-trash-o fa-large"></i></a>
+								<a class="icon-btn btn"><i class="icon-trash"></i></a>
 							</td>
 						</tr>
 					</tbody>
@@ -73,21 +73,8 @@
 			</div>
 		</div>
 		<div class="btns">
-			<a class="btn" ui-sref="owner.invoices.invoice">Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left">Save</a>
+			<a class="btn" back>Cancel</a>
+			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
-
-<script>
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/owner/invoices/invoice');
-		}, 2000)
-	});
-
-</script>

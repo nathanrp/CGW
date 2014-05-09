@@ -1,15 +1,15 @@
 <div class="schedule ui-section noheader">
 	<div class="ui-toolbar">
 		<div jq-ui-buttonset class="left">
-			<a><span class="fa fa-chevron-left"></span></a>
-			<a><span class="fa fa-chevron-right"></span></a>
+			<a><span class="icon-rewind"></span></a>
+			<a><span class="icon-fast-forward"></span></a>
 		</div>
-		<h2 class="left">Apr 27 &mdash; May 3, 2014</h2>
-		<select class="left">
+		<h2 class="left">Apr 27 &ndash; May 3, 2014</h2>
+		<select class="left" ng-hide="$state.includes('caregiver');">
 			<option>Clients</option>
 			<option>Caregivers</option>
 		</select>
-		<select class="left">
+		<select class="left" ng-hide="$state.includes('caregiver');">
 			<option>All Areas</option>
             <option>Alpine</option>
             <option>Alta</option>
@@ -185,222 +185,785 @@
 			<option>Woodland Hills</option>
 			<option>Woods Cross</option>
 		</select>
-		<input type="text" placeholder="Search&hellip;" class="right" />
+		<input type="text" placeholder="Search&hellip;" class="right" ng-hide="$state.includes('caregiver');" />
 	</div>
 	<div class="week-schedule">
-		<table>
-			<thead>
-				<tr>
-					<th>Clients</th>
-					<th>Mon <small class="date">10/30</small></th>
-					<th class="today">Tue <small class="date">10/31</small></th>
-					<th>Wed <small class="date">11/1</small></th>
-					<th>Thu <small class="date">11/2</small></th>
-					<th>Fri <small class="date">11/3</small></th>
-					<th>Sat <small class="date">11/4</small></th>
-					<th>Sun <small class="date">11/5</small></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>
-						<a><span random-name></span> <img src="img/avatar.jpg" class="avatar" /></a>
-					</th>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9p</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-							<div class="event open" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9p</span>
-								<span class="caregiver"></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9p</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9p</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th><a><span random-name></span> <img src="img/avatar.jpg" class="avatar" /></a></th>
-					<td colspan="7">
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">9a&mdash;3p</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th>
-						<a><span random-name></span> <img src="img/avatar.jpg" class="avatar" /></a>
-					</th>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9p</span>
-								<span class="caregiver">Remy LeBeau</span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th><a><span random-name></span> <img src="img/avatar.jpg" class="avatar" /></a></th>
-					<td colspan="7">
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">8a&mdash;12p</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th>
-						<a><span random-name></span> <img src="img/avatar.jpg" class="avatar" /></a>
-					</th>
-					<td colspan="3">
-						<div class="wrapper">
-							<div class="event alert">
-								<span class="time">7-9a</span>
-								<span class="caregiver" random-name></span>
-							</div>
-						</div>
-					</td>
-					<td>
-						<div class="wrapper">
-							
-						</div>
-					</td>
-					<td colspan="3">
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">4-9p</span>
-								<span class="caregiver">Alec Holland</span>
-							</div>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<th><a><span random-name></span> <img src="img/avatar.jpg" class="avatar" /></a></th>
-					<td colspan="5">
-						<div class="wrapper">
-							<div class="event" ui-sref="owner.clients.client.historys.history">
-								<span class="time">11a&mdash;1p</span>
-								<span class="caregiver">Natalia Allanovna Romanova</span>
-							</div>
-						</div>
-					</td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="ui-toolbar">
-			<ul class="tags right">
-				<li class="tag alert">Missed Check In</li>
-				<li class="tag open">Needs Caregiver</li>
-			</ul>
+		<div class="days">
+			<div class="clients"></div>
+			<div class="day">
+				Mon <small>10/30</small>
+			</div>
+			<div class="day today">
+				Tue <small>10/31</small>
+			</div>
+			<div class="day">
+				Wed <small>11/1</small>
+			</div>
+			<div class="day">
+				Thu <small>11/2</small>
+			</div>
+			<div class="day">
+				Fri <small>11/3</small>
+			</div>
+			<div class="day">
+				Sat <small>11/4</small>
+			</div>
+			<div class="day">
+				Sun <small>11/5</small>
+			</div>
 		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time need">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time missed">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day"></div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time need">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time live-in">
+					<dt>All day</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time missed">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day"></div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="client">
+			<div class="name">
+				<a ui-sref="owner.clients.client" random-name></a>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day today">
+				<dl class="time" ui-sref="">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> am</dt>
+					<dd random-name></dd>
+				</dl>
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+			<div class="day">
+				<dl class="time">
+					<dt><span random-small-number></span>&ndash;<span random-small-number></span> pm</dt>
+					<dd random-name></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<div class="ui-toolbar">
+		<ul class="legend right">
+			<li class="missed">Missed Check In</li>
+			<li class="need">Needs Caregiver</li>
+			<li class="live-in">All Day</li>
+		</ul>
 	</div>
 </div>

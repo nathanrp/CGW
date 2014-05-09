@@ -18,22 +18,9 @@
 			<input id="6" type="checkbox" class="task" />
 			<label for="6" class="option">Cleaning</label>
 			<div class="btns">
-				<a class="btn" ui-sref="owner.clients.client">Cancel</a>
-				<a class="btn primary done ladda-button" data-style="expand-left">Save</a>
+				<a class="btn" back>Cancel</a>
+				<a class="btn primary done ladda-button" data-style="expand-left" done>Save</a>
 			</div>
 		</form>
 	</div>
 </div>
-
-<script>
-
-	$('.done').click(function(){
-		var l = Ladda.create(this);
-		l.start();
-		setTimeout(function(){
-			l.stop();
-			window.location.replace('/cgw/#/owner/clients/client');
-		}, 2000)
-	});
-	
-</script>
