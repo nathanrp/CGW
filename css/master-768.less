@@ -2,6 +2,38 @@
 
 @media (min-width: @screen-md) {
 
+	.no-touch {
+
+		.header {
+			padding-left: 240px;
+			z-index: 2;
+			ul {
+				li {
+					a {
+						&.nav-toggle {
+							display: none;
+						}
+					}
+				}
+			}
+		}
 	
+		.nav {
+			z-index: 3;
+			width: 240px;
+			top: 0;
+		}
+		
+		.page {
+			padding-left: 240px;
+			z-index: 1;
+			transform: none !important;
+		}
+		
+		.nav-overlay {
+			display: none !important;
+		}
+
+	}
 	
 }
