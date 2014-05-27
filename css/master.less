@@ -220,12 +220,10 @@ a {
 
 .page {
 	background: @white;
-	padding: 50px 0;
+	padding: 50px 0 0;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
 	z-index: 2;
 	@transition: transform 0.25s cubic-bezier(.7, 0, .175, 1) 0s;
 	.transition(@transition);
@@ -233,6 +231,10 @@ a {
 		position: relative;
 		z-index: 1;
 		padding: 0 10px;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 	.ui-section {
 		&.noheader {
