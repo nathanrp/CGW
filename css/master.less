@@ -172,14 +172,21 @@ a {
 		padding: 10px 0 20px;
 		li {
 			position: relative;
-			i {
+			svg, i {
 				position: absolute;
+				z-index: 1;
+			}
+			i {
 				left: 10px;
 				top: 10px;
-				z-index: 1;
 				width: 25px;
 				text-align: center;
 				font-size: 21px;
+			}
+			svg {
+				left: 12px;
+				top: 12px;
+				width: 24px;
 			}
 			a {
 				display: block;
@@ -190,7 +197,7 @@ a {
 				z-index: 2;
 			}
 			&.active {
-				i {
+				i, svg {
 					z-index: 3;
 					color: @brand;
 				}
