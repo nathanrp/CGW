@@ -967,3 +967,55 @@
 		</ul>
 	</div>
 </div>
+
+<div class="dialog" id="event-dialog">
+	<dl class="dl">
+		<dt><h2 random-name></h2></dt>
+		<dd>Tuesday, May 29, 2014</dd>
+		<dd><span random-small-number></span>&ndash;<span random-small-number></span> pm</dd>
+	</dl>
+	<dl class="dl">
+		<dt>Caregiver</dt>
+		<dd random-name></dd>
+	</dl>
+</div>
+
+<script>
+
+	$('.time').click(function(){
+		$('#event-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Edit Schedule',
+					click: function(event){
+						
+						$(this).dialog('close');
+						window.location.replace('/cgw/#/owner/clients/client/schedule/edit');
+					},
+					class: 'next full-btn'
+				}
+				,
+				{
+					text: 'Schedule Caregiver',
+					click: function(event){
+						
+						$(this).dialog('close');
+						window.location.replace('/cgw/#/owner/caregiver/select');
+					},
+					class: 'next full-btn'
+				}
+			]
+		});
+	});
+
+</script>

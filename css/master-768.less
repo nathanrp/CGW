@@ -22,6 +22,34 @@
 			z-index: 3;
 			width: 240px;
 			top: 0;
+			ul {
+				padding-top: 0;
+				li {
+					&:first-child {
+						padding: 20px 0 0;
+						svg {
+							position: relative;
+							width: 30%;
+							display: block;
+							left: auto;
+							top: auto;
+							margin: 0 auto;
+						}
+						a {
+							text-align: center;
+							padding: 0;
+							color: @dkblue;
+						}
+						&.active {
+							background: lighten(@ltgray,5%);
+							a {
+								background: lighten(@ltgray,5%);
+								color: @ltblue;
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		.page {

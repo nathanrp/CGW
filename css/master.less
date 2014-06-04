@@ -104,7 +104,7 @@ a {
 			}
 			a:not(.back) {
 				display: block;
-				color: @white;
+				color: lighten(@brand,35%);
 				border-bottom: 3px solid transparent;
 				margin: 0 0 -1px;
 				text-align: center;
@@ -144,9 +144,14 @@ a {
 					margin-left: 10px;
 				}
 			}
+			&.active, &:hover {
+				a {
+					color: @white;
+				}
+			}
 			&.active {
 				a {
-					background: darken(@brand,10%);
+					background: darken(@brand,10%); 
 				}
 			}
 		}
@@ -187,6 +192,7 @@ a {
 				left: 12px;
 				top: 12px;
 				width: 24px;
+				height: 24px;
 			}
 			a {
 				display: block;
