@@ -1,29 +1,18 @@
 <div class="owner ui-section noheader">
 	<div class="ui-content">
 		<ul class="worklist">
-			<li>
-				<div class="feedback alert">
-					<a class="icon-cross close"></a>
-					<p>Rainn Wilson has not checked in at Chowrichzy Wisdomy Octopios. Chowrichzy Wisdomy Octopios&rsquo;s schedule starts at 9:00 <abbr>AM</abbr>.</p>
-				</div>
+			<li class="warning">
+				<p>Rainn Wilson has not checked in at Chowrichzy Wisdomy Octopios.</p>
+				<p>9:00 <abbr>am</abbr>&ndash;11:00<abbr>am</abbr>.</p>
 			</li>
-			<li>
-				<div class="feedback" ui-sref="owner.applicants">
-					<a class="icon-cross close"></a>
-					<p>You have 2 new applications for caregivers.</p>
-				</div>
+			<li ui-sref="owner.applicants">
+				<p>You have <small class="flag">2 New</small> applications for caregivers.</p>
 			</li>
-			<li>
-				<div class="feedback" ui-sref="owner.requests">
-					<a class="icon-cross close"></a>
-					<p>You have 1 new request for care.</p>
-				</div>
+			<li ui-sref="owner.requests">
+				<p>You have <small class="flag">1 New</small> request for care.</p>
 			</li>
-			<li>
-				<div class="feedback" ui-sref="owner.invoices">
-					<a class="icon-cross close"></a>
-					<p>Your invoices for Aug 15 have been generated.</p>
-				</div>
+			<li ui-sref="owner.invoices">
+				<p>Your invoices for Aug 15 have been generated.</p>
 			</li>
 		</ul>
 	</div>
