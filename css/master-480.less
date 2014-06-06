@@ -31,6 +31,9 @@
 
 	input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
 		width: 100%;
+		&.pw {
+			width: auto;
+		}
 		&.datepicker {
 			width: 100%;
 		}
@@ -52,6 +55,9 @@
 				dt, dd {
 					display: block;
 					padding-right: 0;
+					.btn {
+						margin-bottom: 20px;
+					}
 				}
 				dt {
 					text-align: left;
