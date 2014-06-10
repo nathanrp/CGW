@@ -546,6 +546,22 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('family', {
+
+					url: '/family',
+					views: {
+						'content@': {
+							templateUrl: 'family/family.html'
+						},
+						'drawer@': {
+							templateUrl: 'family/drawer.html'
+						},
+						'header@': {
+							templateUrl: 'family/header.html'
+						}
+					 }
+				})
 
 		}
 	]
