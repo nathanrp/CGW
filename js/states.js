@@ -403,6 +403,22 @@ CGW.config(
 					 }
 				})
 				
+				.state('caregiver.profile', {
+
+					url: '/profile',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/profile.html'
+						},
+						'drawer@': {
+							templateUrl: 'caregiver/drawer.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/header.html'
+						}
+					 }
+				})
+				
 				.state('caregiver.schedule', {
 
 					url: '/schedule',

@@ -8,31 +8,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-
-
-	$('#location').dialog({
-		resizable: false,
-		modal: true,
-		width: 280,
-		buttons: [
-			{
-				text: 'Cancel',
-				click: function(){
-					$(this).dialog('close');
-				},
-				class: 'prev full-btn'
-			},
-			{
-				text: 'Check In',
-				click: function(event){
-					$(this).dialog('close');
-					window.location.replace('/cgw/#/caregiver/clients/client');
-				},
-				class: 'next primary full-btn'
-			}
-		]
-	});
-
-</script>
