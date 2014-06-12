@@ -578,6 +578,84 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('family.profile', {
+
+					url: '/profile',
+					views: {
+						'content@': {
+							templateUrl: 'family/profile.html'
+						},
+						'header@': {
+							templateUrl: 'family/profile.header.html'
+						}
+					 }
+				})
+				
+				.state('family.profile.info', {
+
+					url: '/information',
+					views: {
+						'content@': {
+							templateUrl: 'owner/client.info.html'
+						},
+						'header@': {
+							templateUrl: 'family/info.header.html'
+						}
+					 }
+				})
+				
+				.state('family.profile.schedule', {
+
+					url: '/schedule',
+					views: {
+						'content@': {
+							templateUrl: 'family/schedule.html'
+						},
+						'header@': {
+							templateUrl: 'family/schedule.header.html'
+						}
+					 }
+				})
+				
+				.state('family.historys', {
+
+					url: '/history',
+					views: {
+						'content@': {
+							templateUrl: 'owner/client.historys.html'
+						},
+						'header@': {
+							templateUrl: 'family/history.header.html'
+						}
+					 }
+				})
+				
+				.state('family.billings', {
+
+					url: '/billing',
+					views: {
+						'content@': {
+							templateUrl: 'family/billings.html'
+						},
+						'header@': {
+							templateUrl: 'family/billings.header.html'
+						}
+					 }
+				})
+				
+				.state('family.agreement', {
+
+					url: '/agreement',
+					views: {
+						'content@': {
+							templateUrl: 'owner/client.contract.html'
+						},
+						'header@': {
+							templateUrl: 'family/agreement.header.html'
+						}
+					 }
+				})
 
 		}
 	]
