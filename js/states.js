@@ -4,9 +4,19 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
-				.otherwise('/owner');
+				.otherwise('/');
 
 			$stateProvider
+
+				.state('cgw', {
+
+					url: '/',
+					views: {
+						'content@': {
+							templateUrl: 'signin.html'
+						}
+					 }
+				})
 
 				.state('owner', {
 
