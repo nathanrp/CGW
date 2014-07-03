@@ -4,16 +4,22 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
-				.otherwise('/');
+				.otherwise('/404');
 
 			$stateProvider
 
-				.state('cgw', {
+				.state('404', {
 
-					url: '/',
+					url: '/404',
 					views: {
 						'content@': {
-							templateUrl: 'signin.html'
+							templateUrl: '404.html'
+						},
+						'drawer@': {
+							templateUrl: 'owner/drawer.html'
+						},
+						'header@': {
+							templateUrl: '404.header.html'
 						}
 					 }
 				})

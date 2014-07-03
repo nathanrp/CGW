@@ -1,9 +1,99 @@
-<h1>Essential Care</h1>
-<form>
-	<fieldset>
-		<legend>Sign In</legend>
-		<input type="text" placeholder="Username" />
-		<input type="text" placeholder="Password" />
-	</fieldset>
-	<input type="submit" value="Sign In" />
-</form>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+
+	<!-- iOS -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+	<link rel="apple-touch-icon" href="img/icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/icon-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/icon-ipad-retina.png">
+
+	<!-- Android -->
+	
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="196x196" href="img/icon-hires.png">
+	<link rel="icon" sizes="128x128" href="img/icon-medres.png">
+
+	<link rel="stylesheet/less" type="text/css" href="css/cgw.less">
+
+	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700,500,900' rel='stylesheet' type='text/css'>
+
+	<script src="js/less.min.js" type="text/javascript"></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
+	<script src="js/spin.min.js"></script>
+	<script src="js/ladda.min.js"></script>
+
+	<script src="js/cgw.js"></script>
+
+	<title>Caregiver Window</title>
+</head>
+<body class="sign-in">
+	<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595 552">
+	<g id="Layer_8">
+		<path fill="none" d="M108.075,404.214c-3.822,6.62-4.837,14.332-2.859,21.717c1.979,7.384,6.715,13.556,13.335,17.378
+			c4.424,2.555,9.217,3.85,14.243,3.85c10.389,0,19.683-5.354,24.861-14.323l24.857-43.169l-49.711,0.217
+			C122.479,389.932,113.228,395.289,108.075,404.214z"/>
+		<path fill="none" d="M311.315,108.689c-4.42-2.551-9.215-3.847-14.243-3.847c-10.388,0-19.68,5.352-24.854,14.317
+			c-5.143,8.907-5.1,19.966,0.11,28.863c0.063,0.108,0.126,0.217,0.189,0.326l24.476,42.5l24.767-43.012
+			c3.854-6.675,4.87-14.386,2.892-21.769C322.674,118.685,317.938,112.513,311.315,108.689z"/>
+		<path fill="#364F60" d="M411.854,199.789c17.715-30.678,22.422-66.418,13.254-100.637c-9.168-34.215-31.111-62.814-61.798-80.532
+			C343.159,6.99,320.255,0.842,297.072,0.842c-47.272,0-91.309,25.413-114.923,66.32c-23.753,41.142-23.626,92.165,0.318,133.216
+			l48.993,85.074l-99.132,0.432c-47.022,0.223-90.827,25.64-114.319,66.33c-36.563,63.329-14.788,144.598,48.543,181.162
+			c20.151,11.634,43.057,17.782,66.242,17.782c47.269,0,91.305-25.412,114.957-66.373l49.248-85.528l65.859-114.377L411.854,199.789z
+			 M157.656,432.835c-5.179,8.969-14.473,14.323-24.861,14.323c-5.026,0-9.818-1.295-14.243-3.85
+			c-6.621-3.822-11.357-9.994-13.335-17.378c-1.979-7.385-0.963-15.097,2.859-21.717c5.153-8.925,14.404-14.282,24.727-14.331
+			l49.711-0.217L157.656,432.835z M321.76,147.837l-24.767,43.012l-24.476-42.5c-0.063-0.109-0.126-0.218-0.189-0.326
+			c-5.21-8.897-5.253-19.956-0.11-28.863c5.175-8.965,14.466-14.317,24.854-14.317c5.028,0,9.823,1.296,14.243,3.847
+			c6.622,3.823,11.358,9.996,13.336,17.379C326.63,133.451,325.614,141.163,321.76,147.837z"/>
+		<path fill="#5EC6CF" d="M555.109,324.765c-24.571-24.843-57.394-39.149-92.42-40.284c-0.635-0.021-1.27-0.027-1.91-0.027
+			l-97.921,0.427l-65.859,114.377l49.679,86.267c0.109,0.189,0.22,0.378,0.331,0.565c11.522,19.439,27.933,35.723,47.454,47.092
+			c20.184,11.754,43.242,17.967,66.683,17.967c73.131,0,132.628-59.497,132.628-132.629
+			C593.773,383.269,580.042,349.973,555.109,324.765z M461.146,447.147c-10.137,0-19.293-5.182-24.545-13.874l-25.685-44.602
+			l49.137-0.214c16.455,0.904,29.721,14.244,29.721,30.061C489.773,434.305,476.931,447.147,461.146,447.147z"/>
+	</g>
+	<g id="Layer_9">
+		<polygon opacity="0.2" points="461.106,388.535 401.3,284.715 401.285,284.715 401.285,284.715 362.857,284.881 296.998,399.258 
+			316.166,432.543 375.841,328.904 410.929,388.674 	"/>
+		<polygon opacity="0.2" points="182.513,389.666 297.076,190.977 277.599,157.156 217.596,261.362 231.53,285.503 203.406,285.574 
+			143.62,389.836 	"/>
+		<polygon opacity="0.2" points="237.119,295.037 220.581,323.76 203.406,285.574 231.456,285.566 	"/>
+		<polygon opacity="0.2" points="362.872,284.881 356.497,295.953 375.841,328.904 401.285,284.715 	"/>
+	</g>
+	</svg>
+	<h1>Caregiver Window</h1>
+	<form id="signin">
+		<fieldset>
+			<legend>Sign In</legend>
+			<input type="text" placeholder="Username" />
+			<input type="text" placeholder="Password" />
+			<input type="submit" class="primary full-btn ladda-button" data-style="expand-left" value="Sign In" />
+		</fieldset>
+	</form>
+	<ul class="links">
+		<li><a>Sign In help</a></li>
+		<li class="ix">
+			<a href="/cgw/#/applicant">Sign in as Applicant</a>
+		</li>
+		<li class="ix">
+			<a href="/cgw/#/caregiver">Sign in as Caregiver</a>
+		</li>
+		<li class="ix">
+			<a href="/cgw/#/owner">Sign in as Owners</a>
+		</li>
+		<li class="ix">
+			<a href="/cgw/#/family">Sign in as Family</a>
+		</li>
+	</ul>
+</body>
+</html>
