@@ -323,15 +323,15 @@ CGW.config(
 					 }
 				})
 
-				.state('owner.requests.request.initial', {
+				.state('owner.requests.request.request', {
 
-					url: '/initial',
+					url: '/request',
 					views: {
 						'content@': {
-							templateUrl: 'owner/request.initial.html'
+							templateUrl: 'client/request.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/edit.header.html'
+							templateUrl: 'client/request.header.html'
 						}
 					 }
 				})
