@@ -3,9 +3,14 @@
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Client</legend>
-			<dl>
+			<dl class="error">
 				<dt><label for="">First Name</label></dt>
-				<dd><input type="text" /></dd>
+				<dd>
+					<input type="text" />
+					<div class="feedback error">
+						<p>This is an example of an inline error message.</p>
+					</div>
+				</dd>
 			</dl>
 			<dl>
 				<dt><label for="">Last Name</label></dt>
@@ -103,7 +108,7 @@
 		</fieldset>
 		<fieldset class="table">
 			<legend>Current Situation</legend>
-			<dl>
+			<dl class="error">
 				<dt><label for="">What is the situation of the care recipient?</label></dt>
 				<dd class="options-vertical"> 
 					<input type="checkbox" id="1" />
@@ -112,7 +117,7 @@
 					<label class="option" for="2">Lives in Assisted Living Community</label>
 					<input type="checkbox" id="3" />
 					<label class="option" for="3">Lives in Nursing Home</label>
-					<input type="checkbox" id="4" />
+					<input type="checkbox" id="4" class="error" />
 					<label class="option" for="4">Lives with a Family Member</label>
 					<input type="checkbox" id="5" />
 					<label class="option" for="5">Lives in a Senior Apartment</label>

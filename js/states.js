@@ -672,6 +672,22 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('super', {
+
+					url: '/super',
+					views: {
+						'content@': {
+							templateUrl: 'super/super.html'
+						},
+						'drawer@': {
+							templateUrl: 'super/drawer.html'
+						},
+						'header@': {
+							templateUrl: 'super/header.html'
+						}
+					 }
+				})
 
 		}
 	]

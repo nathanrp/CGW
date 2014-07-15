@@ -74,7 +74,6 @@ input[type=checkbox], input[type=radio] {
 		+ label.option {
 			&:before {
 				background: @brand !important;
-				.box-shadow(0 2px 0 darken(@brand,10%) inset) !important;
 				border-color: darken(@brand,10%);
 			}
 		}
@@ -90,6 +89,25 @@ input[type=checkbox], input[type=radio] {
 			.opacity(.5);
 		}
 	}
+	&.error {
+		+ label.option {
+			color: @red;
+			&:before {
+				background: lighten(@red,39%);
+				border-color: @red;
+				color: @red;
+			}
+		}
+		&:checked {
+			+ label.option {
+				&:before {
+					background: @red !important;
+					border-color: darken(@red,10%);
+					color: @white;
+				}
+			}
+		}
+	}
 }
 
 input[type=checkbox] {
@@ -102,7 +120,7 @@ input[type=checkbox] {
 		+ label.option {
 			&:before {
 				content: '\2713';
-				text-shadow: 0 2px 0 darken(@brand,10%);
+				text-shadow: 0 2px 0 fadeout(@black,80%);
 				line-height: 21px;
 			}
 		}
@@ -234,6 +252,23 @@ form {
 				}
 				&:last-child {
 					padding-right: 0;
+				}
+				.feedback {
+					margin-top: 0;
+				}
+			}
+			&.error {
+				dt {
+					color: @red;
+					label {
+						color: @red;
+					}
+				}
+				dd {
+					input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
+						background: lighten(@red,39%);
+						border-color: @red;
+					}
 				}
 			}
 		}
