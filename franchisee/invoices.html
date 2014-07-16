@@ -7,6 +7,20 @@
 				<dd><input type="tel" /></dd>
 			</dl>
 			<dl>
+				<dt><label for="">Client Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Area</label></dt>
+				<dd>
+					<select>
+						<option>All Areas</option>
+						<option>Kaysville</option>
+						<option>Fruit Heights</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
 				<dt><label for="">Date Range</label></dt>
 				<dd><input type="date" class="datepicker" placeholder="from" jq-datepicker /> <input type="date" class="datepicker" placeholder="to" jq-datepicker /></dd>
 			</dl>
@@ -30,14 +44,10 @@
 			<a class="btn close-search">Cancel</a>
 		</div>
 	</form>
-	<div class="ui-toolbar" ng-show="$state.includes('owner');">
-		<select class="left">
-			<option>Active</option>
-			<option>Archived</option>
-			<option>Deleted</option>
-		</select>
-		<a class="btn left"><i class="icon-printer"></i> Print</a>
-		<div class="ui-buttonset left">
+	<div class="ui-toolbar">
+		<a class="btn primary left" ui-sref="franchisee.invoices.invoice.payment">Enter Payment</a>
+		<a class="btn right"><i class="icon-printer"></i> Print</a>
+		<div class="ui-buttonset right">
 			<a class="btn">Archive</a>
 			<a class="btn"><i class="icon-trash"></i> Delete</a>
 		</div>
@@ -52,6 +62,7 @@
 						<label for="" class="option"></label>
 					</th>
 					<th><a>Invoice</a></th>
+					<th ng-hide="$state.includes('franchisee.clients');"><a>Client</a></th>
 					<th class="date"><a>Date</a></th>
 					<th class="money"><a>Total</a></th>
 				</tr>
@@ -60,6 +71,7 @@
 				<tr>
 					<td></td>
 					<td>Totals</td>
+					<td ng-hide="$state.includes('franchisee.clients');"></td>
 					<td></td>
 					<td class="money" random-money></td>
 				</tr>
@@ -70,7 +82,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -79,7 +92,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -88,7 +102,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -97,7 +112,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -106,7 +122,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -115,7 +132,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -124,7 +142,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -133,7 +152,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -142,7 +162,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -151,7 +172,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -160,7 +182,8 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a random-id ui-sref="owner.invoices.invoice"></a></td>
+					<td><a random-id ui-sref="franchisee.invoices.invoice"></a></td>
+					<td random-name ng-hide="$state.includes('franchisee.clients');"></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 				</tr>
@@ -172,6 +195,12 @@
 			<a class="btn">Prev</a>
 			<a class="btn">Next</a>
 		</div>
+		<label class="right" for="">Showing</label>
+		<select class="right">
+			<option>Active</option>
+			<option>Archived</option>
+			<option>Deleted</option>
+		</select>
 	</div>
 </div>
 

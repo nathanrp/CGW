@@ -16,7 +16,7 @@ CGW.config(
 							templateUrl: '404.html'
 						},
 						'drawer@': {
-							templateUrl: 'owner/drawer.html'
+							templateUrl: 'franchisee/drawer.html'
 						},
 						'header@': {
 							templateUrl: '404.header.html'
@@ -24,306 +24,306 @@ CGW.config(
 					 }
 				})
 
-				.state('owner', {
+				.state('franchisee', {
 
-					url: '/owner',
+					url: '/franchisee',
 					views: {
 						'content@': {
-							templateUrl: 'owner/owner.html'
+							templateUrl: 'franchisee/franchisee.html'
 						},
 						'drawer@': {
-							templateUrl: 'owner/drawer.html'
+							templateUrl: 'franchisee/drawer.html'
 						},
 						'header@': {
-							templateUrl: 'owner/header.html'
+							templateUrl: 'franchisee/header.html'
 						}
 					 }
 				})
 				
-				.state('owner.schedules', {
+				.state('franchisee.schedules', {
 
 					url: '/schedules',
 					views: {
 						'content@': {
-							templateUrl: 'owner/schedules.html'
+							templateUrl: 'franchisee/schedules.html'
 						},
 						'header@': {
-							templateUrl: 'owner/schedules.header.html'
+							templateUrl: 'franchisee/schedules.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.schedules.schedule', {
+				.state('franchisee.schedules.schedule', {
 
 					url: '/schedule',
 					views: {
 						'content@': {
-							templateUrl: 'owner/schedule.html'
+							templateUrl: 'franchisee/schedule.html'
 						},
 						'header@': {
-							templateUrl: 'owner/schedules.header.html'
+							templateUrl: 'franchisee/schedules.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.invoices', {
+				.state('franchisee.invoices', {
 					
 					url: '/invoices',
 					views: {
 						'content@': {
-							templateUrl: 'owner/invoices.html'
+							templateUrl: 'franchisee/invoices.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoices.header.html'
+							templateUrl: 'franchisee/invoices.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.invoices.invoice', {
+				.state('franchisee.invoices.invoice', {
 					
 					url: '/invoice',
 					views: {
 						'content@': {
-							templateUrl: 'owner/invoice.html'
+							templateUrl: 'franchisee/invoice.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoices.header.html'
+							templateUrl: 'franchisee/invoices.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.invoices.invoice.edit', {
+				.state('franchisee.invoices.invoice.edit', {
 					
 					url: '/edit',
 					views: {
 						'content@': {
-							templateUrl: 'owner/invoice.edit.html'
+							templateUrl: 'franchisee/invoice.edit.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoice.header.html'
+							templateUrl: 'franchisee/invoice.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.invoices.invoice.payment', {
+				.state('franchisee.invoices.invoice.payment', {
 					
 					url: '/payment',
 					views: {
 						'content@': {
-							templateUrl: 'owner/invoice.payment.html'
+							templateUrl: 'franchisee/invoice.payment.html'
 						},
 						'header@': {
-							templateUrl: 'owner/invoice.header.html'
+							templateUrl: 'franchisee/invoice.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.selecter', {
+				.state('franchisee.selecter', {
 					
 					url: '/caregiver/select',
 					views: {
 						'content@': {
-							templateUrl: 'owner/selecter.html'
+							templateUrl: 'franchisee/selecter.html'
 						},
 						'header@': {
-							templateUrl: 'owner/selecter.header.html'
+							templateUrl: 'franchisee/selecter.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients', {
+				.state('franchisee.clients', {
 
 					url: '/clients',
 					views: {
 						'content@': {
-							templateUrl: 'owner/clients.html'
+							templateUrl: 'franchisee/clients.html'
 						},
 						'header@': {
-							templateUrl: 'owner/clients.header.html'
+							templateUrl: 'franchisee/clients.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client', {
+				.state('franchisee.clients.client', {
 
 					url: '/client',
 					views: {
 						'header@': {
-							templateUrl: 'owner/clients.header.html'
+							templateUrl: 'franchisee/clients.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.html'
+							templateUrl: 'franchisee/client.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.info', {
+				.state('franchisee.clients.client.info', {
 
 					url: '/information',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.info.html'
+							templateUrl: 'franchisee/client.info.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.info.edit', {
+				.state('franchisee.clients.client.info.edit', {
 
 					url: '/edit',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.edit.header.html'
+							templateUrl: 'franchisee/client.edit.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.info.edit.html'
+							templateUrl: 'franchisee/client.info.edit.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.assessment', {
+				.state('franchisee.clients.client.assessment', {
 
 					url: '/assessment',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.assessment.html'
+							templateUrl: 'franchisee/client.assessment.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.schedule', {
+				.state('franchisee.clients.client.schedule', {
 
 					url: '/schedule',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.schedule.html'
+							templateUrl: 'franchisee/client.schedule.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.schedule.edit', {
+				.state('franchisee.clients.client.schedule.edit', {
 
 					url: '/edit',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.edit.header.html'
+							templateUrl: 'franchisee/client.edit.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/schedule.html'
+							templateUrl: 'franchisee/schedule.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.schedule.edit.message', {
+				.state('franchisee.clients.client.schedule.edit.message', {
 
 					url: '/message',
 					views: {
 						'content@': {
-							templateUrl: 'owner/schedule.message.html'
+							templateUrl: 'franchisee/schedule.message.html'
 						},
 						'header@': {
-							templateUrl: 'owner/schedule.message.header.html'
+							templateUrl: 'franchisee/schedule.message.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.invoices', {
+				.state('franchisee.clients.client.invoices', {
 
 					url: '/invoices',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/invoices.html'
+							templateUrl: 'franchisee/invoices.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.tasks', {
+				.state('franchisee.clients.client.tasks', {
 
 					url: '/tasks',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.tasks.html'
+							templateUrl: 'franchisee/client.tasks.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.historys', {
+				.state('franchisee.clients.client.historys', {
 
 					url: '/history',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.historys.html'
+							templateUrl: 'franchisee/client.historys.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.historys.history', {
+				.state('franchisee.clients.client.historys.history', {
 
 					url: '/history',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.history.header.html'
+							templateUrl: 'franchisee/client.history.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.history.html'
+							templateUrl: 'franchisee/client.history.html'
 						}
 					 }
 				})
 				
-				.state('owner.clients.client.contract', {
+				.state('franchisee.clients.client.contract', {
 
 					url: '/contract',
 					views: {
 						'header@': {
-							templateUrl: 'owner/client.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'owner/client.contract.html'
+							templateUrl: 'franchisee/client.contract.html'
 						}
 					 }
 				})
 				
-				.state('owner.requests', {
+				.state('franchisee.requests', {
 
 					url: '/requests',
 					views: {
 						'content@': {
-							templateUrl: 'owner/requests.html'
+							templateUrl: 'franchisee/requests.html'
 						},
 						'header@': {
-							templateUrl: 'owner/clients.header.html'
+							templateUrl: 'franchisee/clients.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.requests.request', {
+				.state('franchisee.requests.request', {
 
 					url: '/request',
 					views: {
 						'content@': {
-							templateUrl: 'owner/request.html'
+							templateUrl: 'franchisee/request.html'
 						}
 					 }
 				})
 
-				.state('owner.requests.request.request', {
+				.state('franchisee.requests.request.request', {
 
 					url: '/request',
 					views: {
@@ -336,69 +336,69 @@ CGW.config(
 					 }
 				})
 				
-				.state('owner.caregivers', {
+				.state('franchisee.caregivers', {
 					url: '/caregivers',
 					views: {
 						'content@': {
-							templateUrl: 'owner/caregivers.html'
+							templateUrl: 'franchisee/caregivers.html'
 						},
 						'header@': {
-							templateUrl: 'owner/caregivers.header.html'
+							templateUrl: 'franchisee/caregivers.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.caregivers.caregiver', {
+				.state('franchisee.caregivers.caregiver', {
 					url: '/caregiver',
 					views: {
 						'content@': {
-							templateUrl: 'owner/caregiver.html'
+							templateUrl: 'franchisee/caregiver.html'
 						}
 					 }
 				})
 				
-				.state('owner.applicants', {
+				.state('franchisee.applicants', {
 					url: '/applicants',
 					views: {
 						'content@': {
-							templateUrl: 'owner/applicants.html'
+							templateUrl: 'franchisee/applicants.html'
 						},
 						'header@': {
-							templateUrl: 'owner/caregivers.header.html'
+							templateUrl: 'franchisee/caregivers.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.applicants.applicant', {
+				.state('franchisee.applicants.applicant', {
 
 					url: '/applicant',
 					views: {
 						'content@': {
-							templateUrl: 'owner/applicant.html'
+							templateUrl: 'franchisee/applicant.html'
 						}
 					 }
 				})
 				
-				.state('owner.admin', {
+				.state('franchisee.admin', {
 					url: '/admin',
 					views: {
 						'content@': {
-							templateUrl: 'owner/admin.html'
+							templateUrl: 'franchisee/admin.html'
 						},
 						'header@': {
-							templateUrl: 'owner/admin.header.html'
+							templateUrl: 'franchisee/admin.header.html'
 						}
 					 }
 				})
 				
-				.state('owner.admin.profile', {
+				.state('franchisee.admin.profile', {
 					url: '/client',
 					views: {
 						'content@': {
-							templateUrl: 'owner/profile.html'
+							templateUrl: 'franchisee/profile.html'
 						},
 						'header@': {
-							templateUrl: 'owner/admin.header.html'
+							templateUrl: 'franchisee/admin.header.html'
 						}
 					 }
 				})
@@ -440,7 +440,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'content@': {
-							templateUrl: 'owner/schedules.html'
+							templateUrl: 'franchisee/schedules.html'
 						},
 						'header@': {
 							templateUrl: 'caregiver/schedules.header.html'
@@ -509,7 +509,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'tab-content': {
-							templateUrl: 'owner/client.schedule.html'
+							templateUrl: 'franchisee/client.schedule.html'
 						}
 					 }
 				})
@@ -613,7 +613,7 @@ CGW.config(
 					url: '/information',
 					views: {
 						'content@': {
-							templateUrl: 'owner/client.info.html'
+							templateUrl: 'franchisee/client.info.html'
 						},
 						'header@': {
 							templateUrl: 'family/info.header.html'
@@ -639,7 +639,7 @@ CGW.config(
 					url: '/history',
 					views: {
 						'content@': {
-							templateUrl: 'owner/client.historys.html'
+							templateUrl: 'franchisee/client.historys.html'
 						},
 						'header@': {
 							templateUrl: 'family/history.header.html'
@@ -665,7 +665,7 @@ CGW.config(
 					url: '/agreement',
 					views: {
 						'content@': {
-							templateUrl: 'owner/client.contract.html'
+							templateUrl: 'franchisee/client.contract.html'
 						},
 						'header@': {
 							templateUrl: 'family/agreement.header.html'
@@ -685,6 +685,19 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/header.html'
+						}
+					 }
+				})
+				
+				.state('super.franchisees', {
+
+					url: '/franchisees',
+					views: {
+						'content@': {
+							templateUrl: 'super/franchisees.html'
+						},
+						'header@': {
+							templateUrl: 'super/franchisees.header.html'
 						}
 					 }
 				})
