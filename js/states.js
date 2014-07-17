@@ -435,6 +435,46 @@ CGW.config(
 					 }
 				})
 				
+				.state('caregiver.profile.info', {
+
+					url: '/information',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/info.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/info.header.html'
+						}
+					 }
+				})
+				
+				.state('caregiver.profile.info.edit', {
+
+					url: '/edit',
+					views: {
+						'header@': {
+							templateUrl: 'caregiver/info.edit.header.html'
+						},
+						'content@': {
+							templateUrl: 'caregiver/info.edit.html'
+						}
+					 }
+				})
+				
+				
+				.state('caregiver.profile.password', {
+
+					url: '/password',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/password.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/password.header.html'
+						}
+					 }
+				})
+				
 				.state('caregiver.schedule', {
 
 					url: '/schedule',
@@ -454,6 +494,22 @@ CGW.config(
 					views: {
 						'content@': {
 							templateUrl: 'caregiver/skills.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/skills.header.html'
+						}
+					 }
+				})
+				
+				.state('caregiver.skills.skill', {
+
+					url: '/skill',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/skill.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/skill.header.html'
 						}
 					 }
 				})
@@ -489,7 +545,7 @@ CGW.config(
 							templateUrl: 'caregiver/client.html'
 						},
 						'header@': {
-							templateUrl: 'caregiver/clients.header.html'
+							templateUrl: 'caregiver/client.header.html'
 						}
 					 }
 				})
@@ -500,6 +556,19 @@ CGW.config(
 					views: {
 						'tab-content': {
 							templateUrl: 'caregiver/client.tasks.html'
+						}
+					 }
+				})
+				
+				.state('caregiver.clients.client.tasks.task', {
+
+					url: '/task',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/client.task.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/task.header.html'
 						}
 					 }
 				})
@@ -519,7 +588,20 @@ CGW.config(
 					url: '/notes',
 					views: {
 						'tab-content': {
-							templateUrl: 'caregiver/client.notes.html'
+							templateUrl: 'caregiver/notes.html'
+						}
+					 }
+				})
+				
+				.state('caregiver.clients.client.notes.note', {
+
+					url: '/note',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/note.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/note.header.html'
 						}
 					 }
 				})

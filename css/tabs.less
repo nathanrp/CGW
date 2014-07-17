@@ -105,20 +105,28 @@ ul {
 }
 
 .task-list {
+	margin: 0 0 20px;
 	li {
 		padding: 15px 20px;
 		border-bottom: 1px solid darken(@ltgray,10%);
 		position: relative;
-		.btn {
+		.action {
 			position: absolute;
 			right: 5px;
-			top: 5px;
+			top: 11px;
 		}
 		&:first-child {
 			border-top: 1px solid @ltgray;
 		}
 		&:last-child {
 			border-bottom: 1px solid @ltgray;
+		}
+	}
+	&.wtoolbar {
+		li {
+			&:first-child {
+				border-top: none;
+			}
 		}
 	}
 }

@@ -1,7 +1,7 @@
 <ol class="application-list">
 	<li class="saved">
 		<i class="icon-check number"></i>
-		<a class="link" ui-sref="applicant.resume">Initial Application</a>
+		<a class="link" ui-sref="applicant.resume">Application</a>
 	</li>
 	<li ng-show="$state.includes('applicant');">
 		<i class="number">2</i>
@@ -29,12 +29,7 @@
 	</li>
 	<li ng-show="$state.includes('applicant');">
 		<i class="number">8</i>
-		W-4
-		<div class="ui-toolbar">
-			<a class="btn left" href="pdfs/w9.pdf"><i class="icon-download"></i>Download</a> 
-			<a class="btn left ladda-button upload" data-style="expand-left" data-spinner-color="#3b3b3b"><i class="icon-upload"></i>Upload</a>
-			<input type="file" hidden="hidden" />
-		</div>
+		<a class="link" ui-sref="applicant.w9">W-4</a>
 	</li>
 	<li ng-show="$state.includes('applicant');">
 		<i class="number">9</i>
@@ -57,6 +52,7 @@
 		setTimeout(function(){
 			l.stop();
 			$('.feedback').fadeIn(250);
+			$('#withdraw-btn, #submit-btn').addClass('disabled');
 		}, 2000)
 	})
 
