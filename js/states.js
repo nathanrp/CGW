@@ -648,6 +648,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('applicant.seepaper', {
+
+					url: '/fake',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/seepaper.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/seepaper.header.html'
+						}
+					 }
+				})
+				
 				.state('applicant.w9', {
 
 					url: '/w9',

@@ -15,7 +15,7 @@
 		<i class="icon-book"></i>
 		<a ui-sref="franchisee.clients">Clients</a>
 	</li>
-	<li ui-sref-active="active" as-parent>
+	<li ui-sref-active="active" as-parent ng-class="{active: $state.includes('franchisee.caregivers')}">
 		<i class="icon-clipboard"></i>
 		<a ui-sref="franchisee.caregivers">Caregivers</a>
 	</li>
