@@ -144,6 +144,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.clients.new', {
+
+					url: '/new',
+					views: {
+						'header@': {
+							templateUrl: 'franchisee/client.new.header.html'
+						},
+						'content@': {
+							templateUrl: 'franchisee/client.new.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.clients.client', {
 
 					url: '/client',
@@ -287,15 +300,15 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.clients.client.contract', {
+				.state('franchisee.clients.client.request', {
 
-					url: '/contract',
+					url: '/request',
 					views: {
 						'header@': {
 							templateUrl: 'franchisee/client.header.html'
 						},
 						'content@': {
-							templateUrl: 'franchisee/client.contract.html'
+							templateUrl: 'franchisee/client.request.html'
 						}
 					 }
 				})
@@ -391,14 +404,50 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.admin.profile', {
-					url: '/client',
+				.state('franchisee.admin.info', {
+					url: '/info',
 					views: {
 						'content@': {
-							templateUrl: 'franchisee/profile.html'
+							templateUrl: 'franchisee/info.html'
 						},
 						'header@': {
-							templateUrl: 'franchisee/admin.header.html'
+							templateUrl: 'franchisee/info.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.admin.info.edit', {
+					url: '/edit',
+					views: {
+						'content@': {
+							templateUrl: 'franchisee/info.edit.html'
+						},
+						'header@': {
+							templateUrl: 'franchisee/info.edit.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.admin.forms', {
+					url: '/forms',
+					views: {
+						'content@': {
+							templateUrl: 'franchisee/forms.html'
+						},
+						'header@': {
+							templateUrl: 'franchisee/forms.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.admin.geo', {
+					url: '/geography',
+					views: {
+						'content@': {
+							templateUrl: 'franchisee/geo.html'
+						},
+						'header@': {
+							templateUrl: 'franchisee/geo.header.html'
 						}
 					 }
 				})
@@ -760,7 +809,7 @@ CGW.config(
 					url: '/agreement',
 					views: {
 						'content@': {
-							templateUrl: 'franchisee/client.contract.html'
+							templateUrl: 'family/agreement.html'
 						},
 						'header@': {
 							templateUrl: 'family/agreement.header.html'
