@@ -846,6 +846,45 @@ CGW.config(
 					 }
 				})
 
+				.state('super.franchisees.franchisee', {
+
+					url: '/franchisee',
+					views: {
+						'content@': {
+							templateUrl: 'super/franchisee.html'
+						},
+						'header@': {
+							templateUrl: 'super/franchisees.header.html'
+						}
+					 }
+				})
+				
+				.state('super.accounts', {
+
+					url: '/accounts',
+					views: {
+						'content@': {
+							templateUrl: 'super/accounts.html'
+						},
+						'header@': {
+							templateUrl: 'super/accounts.header.html'
+						}
+					 }
+				})
+				
+				.state('super.accounts.account', {
+
+					url: '/account',
+					views: {
+						'content@': {
+							templateUrl: 'super/account.html'
+						},
+						'header@': {
+							templateUrl: 'super/account.header.html'
+						}
+					 }
+				})
+
 		}
 	]
 );

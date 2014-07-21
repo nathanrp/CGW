@@ -1,0 +1,114 @@
+<div class="ui-section noheader">
+	<form class="advanced-search" style="display:none;">
+		<fieldset class="table">
+			<legend>Search</legend>
+			<dl>
+				<dt><label for="">Invoice Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Franchisee</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Area</label></dt>
+				<dd>
+					<select>
+						<option>All Areas</option>
+						<option>Kaysville</option>
+						<option>Fruit Heights</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Date Range</label></dt>
+				<dd><input type="date" class="datepicker" placeholder="from" jq-datepicker /> <input type="date" class="datepicker" placeholder="to" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Invoice Total</label></dt>
+				<dd><input type="tel" placeholder="from" /> <input type="tel" placeholder="to" /></dd>
+			</dl>
+		</fieldset>
+		<div class="btns">
+			<a class="btn primary search">Search</a>
+			<a class="btn">Reset</a>
+			<a class="btn close-search">Cancel</a>
+		</div>
+	</form>
+	<div class="ui-toolbar">
+		<a class="btn right"><i class="icon-printer"></i> Print</a>
+		<a class="btn right open-search">Search</a>
+	</div>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th class="option">
+						<input type="checkbox" id="" />
+						<label for="" class="option"></label>
+					</th>
+					<th><a>Franchisee</a></th>
+					<th class="date"><a>Date</a></th>
+					<th class="money"><a>Total</a></th>
+					<th class="percent"><a>Percent</a></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td></td>
+					<td>Totals</td>
+					<td></td>
+					<td class="money" random-money></td>
+					<td class="money" random-money></td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td class="option">
+						<input type="checkbox" id="" />
+						<label for="" class="option"></label>
+					</td>
+					<td><a ui-sref="super.accounts.account">Natalia Allanovna Romanova</a></td>
+					<td class="date">Aug. 15, 2014</td>
+					<td class="money" random-money></td>
+					<td class="money" random-money></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="ui-toolbar">
+		<div class="ui-buttonset left">
+			<a class="btn">Prev</a>
+			<a class="btn">Next</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('.open-search').click(function(){
+		$(this).hide();
+		$('.advanced-search').slideDown(250);
+	});
+	
+	$('.close-search').click(function(){
+		$('.open-search').show();
+		$('.advanced-search').slideUp(250);
+		spinner = new Spinner().spin();
+		$('.table-wrapper').append('<div class="spinner-overlay"/>');
+		$('.table-wrapper').append(spinner.el);
+		setTimeout(function(){
+			$('.spinner-overlay').remove();
+			spinner.stop();
+		}, 2000)
+	});
+
+	$('.search').click(function(){
+		spinner = new Spinner().spin();
+		$('.table-wrapper').append('<div class="spinner-overlay"/>');
+		$('.table-wrapper').append(spinner.el);
+		setTimeout(function(){
+			$('.spinner-overlay').remove();
+			spinner.stop();
+		}, 2000)
+	});
+</script>
