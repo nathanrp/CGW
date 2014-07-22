@@ -1,0 +1,57 @@
+<div class="ui-section clients noheader">
+	<div class="ui-content">
+		<div class="ui-toolbar">
+			<h2 class="left">Geography</h2>
+			<form>
+				<fieldset class="table">
+					<dl>
+						<dt><label for="">Add</label></dt>
+						<dd>
+							<input type="number" placeholder="Zip Code" />
+							<span class="help"></span>
+						</dd>
+						<dd>
+							<a class="btn">Add</a>
+						</dd>
+					</dl>
+				</fieldset>
+			</form>
+		</div>
+		<ul class="task-list wtoolbar">
+			<li>
+				84037
+				<small>Kaysville, Fruit Heights, Utah</small>
+				<a class="icon-trash action"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+
+	$('input[type=number]').keyup(function(){
+		if($(this).val().length==5) {
+			spinner = new Spinner({
+					length: 3,
+					radius: 4,
+					lines: 9,
+					width: 3, 
+					color: '#5ec6cf',
+					className: 'inline spinner',
+					top: 'auto',
+					left: 'auto'
+				}).spin();
+			$('.help').prepend(spinner.el);
+			setTimeout(function(){
+				$('.help').append('Kaysville, Fruit Heights, UT');
+				spinner.stop();
+			}, 500);
+		} else {
+			if(typeof spinner != 'undefined') {
+				spinner.stop();
+			}
+			$('.help').text('');
+		}
+	});
+
+</script>

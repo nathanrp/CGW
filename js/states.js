@@ -859,6 +859,32 @@ CGW.config(
 					 }
 				})
 				
+				.state('super.franchisees.franchisee.geos', {
+
+					url: '/geography',
+					views: {
+						'content@': {
+							templateUrl: 'super/geos.html'
+						},
+						'header@': {
+							templateUrl: 'super/account.header.html'
+						}
+					 }
+				})
+				
+				.state('super.franchisees.franchisee.geos.add', {
+
+					url: '/add',
+					views: {
+						'content@': {
+							templateUrl: 'super/geo.add.html'
+						},
+						'header@': {
+							templateUrl: 'super/account.header.html'
+						}
+					 }
+				})
+				
 				.state('super.accounts', {
 
 					url: '/accounts',

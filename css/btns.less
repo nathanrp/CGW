@@ -133,12 +133,32 @@
 			}
 		}
 	}
+	form {
+		padding: 0;
+		display: inline-block;
+		text-align: left;
+	}
 	fieldset {
 		padding: 0;
-		border-top: none;
+		border: none;
+		margin: 0;
 		dl {
 			dt, dd {
 				padding-bottom: 0;
+				padding-top: 0;
+			}
+			dt {
+				label {
+					padding: 0;
+				}
+			}
+			dd {
+				input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel] {
+					margin-bottom: 0;
+				}
+				.help {
+					text-align: left;
+				}
 			}
 		}
 	}
