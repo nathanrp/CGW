@@ -1,0 +1,50 @@
+<div class="ui-section">
+	<form class="paper-form">
+		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Client Signature</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<div class="btns">
+			<a class="btn done" back>Cancel</a>
+			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
+		</div>
+	</form>
+</div>
+
+<script src="js/signature_pad.js"></script>
+
+<script>
+
+	$('.m-signature-pad').each(function(){
+		var wrapper = this,
+		    clearButton = wrapper.querySelector("[data-action=clear]"),
+		    canvas = wrapper.querySelector("canvas"),
+		    signaturePad;
+		
+		// Adjust canvas coordinate space taking into account pixel ratio,
+		// to make it look crisp on mobile devices.
+		// This also causes canvas to be cleared.
+		function resizeCanvas() {
+		    var ratio =  window.devicePixelRatio || 1;
+		    canvas.width = canvas.offsetWidth * ratio;
+		    canvas.height = canvas.offsetHeight * ratio;
+		    canvas.getContext("2d").scale(ratio, ratio);
+		}
+		
+		window.onresize = resizeCanvas;
+		resizeCanvas();
+		
+		signaturePad = new SignaturePad(canvas);
+		
+		clearButton.addEventListener("click", function (event) {
+		    signaturePad.clear();
+		});
+	});
+	
+</script>

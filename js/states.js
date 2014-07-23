@@ -349,6 +349,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.requests.request.directives', {
+
+					url: '/directives',
+					views: {
+						'content@': {
+							templateUrl: 'client/directives.html'
+						},
+						'header@': {
+							templateUrl: 'client/directives.header.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.caregivers', {
 					url: '/caregivers',
 					views: {
