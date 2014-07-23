@@ -910,6 +910,19 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('super.forms', {
+
+					url: '/forms',
+					views: {
+						'content@': {
+							templateUrl: 'super/forms.html'
+						},
+						'header@': {
+							templateUrl: 'super/forms.header.html'
+						}
+					 }
+				})
 
 		}
 	]
