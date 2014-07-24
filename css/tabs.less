@@ -138,4 +138,33 @@ ul {
 			}
 		}
 	}
+	&.wnumbers {
+		li {
+			padding-left: 60px;
+			.number {
+				display: block;
+				position: absolute;
+				left: 5px;
+				top: 9px;
+				background: @ltgray;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.sortable {
+	.ui-sortable-helper {
+		background: fadeout(@white,10%);
+		.rotate(-2deg);
+		cursor:url(img/grabbing.cur) 8 8, move;	
+	}
+	.handle {
+		cursor:url(img/grab.cur) 8 8, move;	
+	}
 }

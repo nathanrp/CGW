@@ -122,6 +122,23 @@ CGW.directive('jqUiButtonset', function ($document) {
 	}
 });
 
+CGW.directive('jqSortable', function ($document) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			$(element).sortable({
+				handle: '.handle',
+				change: function(event,ui) {
+					$('.task-list li').each(function() {
+			            $(this).children('.number').html($(this).index())
+			        });
+				}
+			});
+			$(element).disableSelection();
+		}
+	}
+});
+
 CGW.directive('randomId',function($document){
 	return function (scope, element, attrs) {
 		var a = Math.floor(Math.random()*999999999)
