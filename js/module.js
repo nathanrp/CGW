@@ -59,6 +59,15 @@ CGW.directive('back', function ($document) {
 	}
 });
 
+CGW.controller('form',['$scope', '$state', function($scope,$state){
+	
+	if ($state.includes('super')){
+		$('input,select,textarea').attr('readonly',true).attr('disabled',true);
+		$('.wrap-edit').wrap('<fieldset class=\"editable\" />');
+	}
+
+}]);
+
 CGW.directive('done', function ($document) {
 	return {
 		restrict: 'A',

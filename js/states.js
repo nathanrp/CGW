@@ -923,6 +923,32 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('super.forms.resume', {
+
+					url: '/resume',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/resume.html'
+						},
+						'header@': {
+							templateUrl: 'super/resume.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.resume.experiences', {
+
+					url: '/experiences',
+					views: {
+						'content@': {
+							templateUrl: 'super/experiences.html'
+						},
+						'header@': {
+							templateUrl: 'super/experiences.header.html'
+						}
+					 }
+				})
 
 		}
 	]

@@ -1,5 +1,5 @@
 <div class="ui-section">
-	<form class="paper-form">
+	<form class="paper-form" ng-controller="form">
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Applicant</legend>
@@ -72,7 +72,10 @@
 			<div class="instructions">
 				<p>Check the conditions and duties that you have encountered or performed.</p>
 			</div>
-			<div class="container-fluid padding-bottom-sm">
+			<div class="ui-toolbar" ng-show="$state.includes('super');">
+				<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
+			</div>
+			<div class="container-fluid padding-bottom-sm wrap-edit">
 				<div class="row">
 					<div class="col-sm-4 col-xs-12 options-vertical">
 						<input type="checkbox" id="1" />
@@ -86,7 +89,7 @@
 						<input type="checkbox" id="5" />
 						<label class="option" for="5">Feeding</label>
 						<input type="checkbox" id="6" />
-						<label class="option" for="6">Parkinson&lsquo;s</label>
+						<label class="option" for="6">Parkinson&rsquo;s</label>
 						<input type="checkbox" id="7" />
 						<label class="option" for="7">Toileting</label>
 						<input type="checkbox" id="8" />
@@ -104,7 +107,7 @@
 						<input type="checkbox" id="13" />
 						<label class="option" for="13">Shaving</label>
 						<input type="checkbox" id="14" />
-						<label class="option" for="14">Orall Hygiene</label>
+						<label class="option" for="14">Oral Hygiene</label>
 						<input type="checkbox" id="15" />
 						<label class="option" for="15">Cancers</label>
 						<input type="checkbox" id="16" />
@@ -204,12 +207,22 @@ before, during or up to 30 days after my work.</p>
 				<canvas></canvas>
 			</div>
 		</div>
-		<div class="btns">
+		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn" back>Cancel</a>
 			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
+
+<form class="dialog" id="add-item-dialog">
+	<fieldset>
+		<legend>Conditions and Duties Experience</legend>
+		<dl>
+			<dt><label for="">Item</label></dt>
+			<dd><input type="text" /></dd>
+		</dl>
+	</fieldset>
+</form>
 
 <script src="js/signature_pad.js"></script>
 
@@ -240,5 +253,5 @@ before, during or up to 30 days after my work.</p>
 		    signaturePad.clear();
 		});
 	});
-	
+
 </script>

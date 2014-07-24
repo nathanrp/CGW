@@ -69,6 +69,10 @@ input[type=checkbox], input[type=radio] {
 			text-align: center;
 			color: @white;
 		}
+		.action {
+			float: right;
+			margin: -3px 0 0;
+		}
 	}
 	&:checked {
 		+ label.option {
@@ -86,7 +90,7 @@ input[type=checkbox], input[type=radio] {
 	}
 	&:disabled {
 		+ label.option {
-			.opacity(.5);
+//			.opacity(.5);
 		}
 	}
 	&.error {
@@ -283,6 +287,9 @@ form {
 		&.noborder {
 			border: none;
 			padding: 10px 0;
+		}
+		&.editable {
+			border-style: dashed;
 		}
 	}
 }
