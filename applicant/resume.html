@@ -1,5 +1,12 @@
 <div class="ui-section noheader">
 	<form class="paper-form" ng-controller="form">
+		<fieldset class="table options-vertical" ng-show="$state.includes('super');">
+			<legend>State Visibility</legend>
+			<input type="checkbox" />
+			<label class="option" >Utah</label>
+			<input type="checkbox" />
+			<label class="option" >Nevada</label>
+		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Applicant</legend>
@@ -40,12 +47,158 @@
 				<dt><label for="">Email</label></dt>
 				<dd><input type="text" /></dd>
 			</dl>
+			<dl>
+				<dt><label for="">Social Security Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Driver&rsquo;s License Number</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Date of Birth</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
 		</fieldset>
-		<fieldset>
+		<fieldset class="table">
 			<legend>Availability</legend>
 			<dl>
-				<dt><label for="">What days and hours are you available to work?</label></dt>
-				<dd><textarea class="smart-width"></textarea></dd>
+				<dt></dt>
+				<dd class="options-horizontal">
+					<input type="radio" />
+					<label class="option">Full-time</label>
+					<input type="radio" />
+					<label class="option">Part-time</label>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Start Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<div class="instructions">
+				<p>What days and hours are you available to work?</p>
+			</div>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Monday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
+				<dd>
+					<a class="btn">Add Time</a>
+				</dd>
+			</dl>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Tuesday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Wednesday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Thursday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Friday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Saturday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dd class="options-vertical">
+					<input type="checkbox" />
+					<label class="option">Sunday</label>
+				</dd>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+					to
+					<select class="pw">
+						<option>12:00am</option>
+						<option>1:00am</option>
+					</select>
+				</dd>
 			</dl>
 		</fieldset>
 		<fieldset>
@@ -131,14 +284,68 @@
 					</div>
 				</div>
 			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Certifications</legend>
 			<dl>
-				<dt><label for="">What certifications do you have? <small class="help"><abbr>CNA</abbr>, Caregiver, Etc.</small></label></dt>
+				<dt><label for="">What certifications do you have? <small><abbr>CNA</abbr>, Caregiver, Etc.</small></label></dt>
+				<dd>
+					<div class="ui-toolbar" ng-show="$state.includes('super');">
+						<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
+					</div>
+					<div class="container-fluid padding-bottom-sm wrap-edit">
+						<div class="row">
+							<div class="col-sm-4 col-xs-12 options-vertical">
+								<input type="checkbox" id="1" />
+								<label class="option" for="1"><abbr>RNA</abbr></label>
+							</div>
+							<div class="col-sm-4 col-xs-12 options-vertical">
+								<input type="checkbox" id="9" />
+								<label class="option" for="9"><abbr>CNA</abbr></label>
+							</div>
+							<div class="col-sm-4 col-xs-12 options-vertical">
+								<input type="checkbox" id="17" />
+								<label class="option" for="17">Caregiver</label>
+							</div>
+						</div>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Other</label></dt>
 				<dd>
 					<textarea class="smart-width"></textarea>
 				</dd>
 			</dl>
+		</fieldset>
+		<fieldset>
+			<legend>Languages</legend>
 			<dl>
-				<dt><label for="">Do you speak any language other than English? If so please list</label></dt>
+				<dt><label for="">Do you speak any language other than English?</label></dt>
+				<dd>
+					<div class="ui-toolbar" ng-show="$state.includes('super');">
+						<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
+					</div>
+					<div class="container-fluid padding-bottom-sm wrap-edit">
+						<div class="row">
+							<div class="col-sm-4 col-xs-12 options-vertical">
+								<input type="checkbox" id="1" />
+								<label class="option" for="1"><abbr>Portuguese</abbr></label>
+							</div>
+							<div class="col-sm-4 col-xs-12 options-vertical">
+								<input type="checkbox" id="9" />
+								<label class="option" for="9"><abbr>Russian</abbr></label>
+							</div>
+							<div class="col-sm-4 col-xs-12 options-vertical">
+								<input type="checkbox" id="17" />
+								<label class="option" for="17">Spanish</label>
+							</div>
+						</div>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Other</label></dt>
 				<dd>
 					<textarea class="smart-width"></textarea>
 				</dd>
@@ -195,8 +402,7 @@
 				<dd><input type="tel" /></dd>
 			</dl>
 		</fieldset>
-		<p>By signing this application I agree to voluntarily submit to any drug and/or alcohol screening requested by Essential Care at any time
-before, during or up to 30 days after my work.</p>
+		<p>By signing this application I agree to voluntarily submit to any drug and/or alcohol screening requested by Essential Care at any time before, during or up to 30 days after my work.</p>
 		<p>I certify to the best of my knowledge that the above information is complete and true.</p>
 		<div class="m-signature-pad">
 			<div class="ui-toolbar">

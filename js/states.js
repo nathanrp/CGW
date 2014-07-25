@@ -705,7 +705,20 @@ CGW.config(
 							templateUrl: 'applicant/contract.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/edit.header.html'
+							templateUrl: 'applicant/contract.header.html'
+						}
+					 }
+				})
+				
+				.state('applicant.reqs', {
+
+					url: '/reqs',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/reqs.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/reqs.header.html'
 						}
 					 }
 				})
@@ -959,6 +972,32 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/experiences.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.ccontract', {
+
+					url: '/ccontract',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/contract.html'
+						},
+						'header@': {
+							templateUrl: 'super/ccontract.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.creqs', {
+
+					url: '/creqs',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/reqs.html'
+						},
+						'header@': {
+							templateUrl: 'super/creqs.header.html'
 						}
 					 }
 				})

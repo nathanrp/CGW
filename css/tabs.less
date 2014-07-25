@@ -162,7 +162,17 @@ ul {
 	.ui-sortable-helper {
 		background: fadeout(@white,10%);
 		.rotate(-2deg);
-		cursor:url(img/grabbing.cur) 8 8, move;	
+		cursor:url(img/grabbing.cur) 8 8, move;
+		.handle {
+			cursor:url(img/grabbing.cur) 8 8, move;
+		}
+	}
+	.ui-sortable-placeholder {
+		border: 2px dashed @ltgray;
+		margin: 5px 0;
+		visibility: visible !important;
+		background: darken(@white,2%);
+		border-radius: 6px;
 	}
 	.handle {
 		cursor:url(img/grab.cur) 8 8, move;	

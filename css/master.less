@@ -143,6 +143,15 @@ a {
 				.flag {
 					margin-left: 10px;
 				}
+				&.breadcrumbs {
+					color: lighten(@brand,25%);
+					.caret {
+						color: lighten(@brand, 20%);
+					}
+					.current {
+						color: @white;
+					}
+				}
 			}
 			&.active, &:hover {
 				a {
