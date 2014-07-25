@@ -723,6 +723,32 @@ CGW.config(
 					 }
 				})
 				
+				.state('applicant.health', {
+
+					url: '/health',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/health.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/health.header.html'
+						}
+					 }
+				})
+				
+				.state('applicant.dda', {
+
+					url: '/dda',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/dda.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/dda.header.html'
+						}
+					 }
+				})
+				
 				.state('applicant.seepaper', {
 
 					url: '/fake',
@@ -998,6 +1024,32 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/creqs.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.chealth', {
+
+					url: '/chealth',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/health.html'
+						},
+						'header@': {
+							templateUrl: 'super/chealth.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.cdda', {
+
+					url: '/cdda',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/dda.html'
+						},
+						'header@': {
+							templateUrl: 'super/cdda.header.html'
 						}
 					 }
 				})

@@ -186,6 +186,7 @@ form {
 		display: block;
 		padding: 5px 0;
 		color: lighten(@bcolor,30%);
+		margin: -5px 0 5px;
 	}
 	.table {
 		dl {
@@ -209,6 +210,16 @@ form {
 					padding: 10px 0;
 					display: inline-block;
 					color: @bcolor;
+				}
+				&[class^="options-"],
+				&[class*=" options-"] {
+					text-align: left;
+				}
+			}
+			&.dlhead {
+				dt {
+					padding-bottom: 10px;
+					text-align: left;
 				}
 			}
 		}
