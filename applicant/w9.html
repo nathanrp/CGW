@@ -1,7 +1,17 @@
 <div class="ui-section noheader">
-	<form class="paper-form contract">
+	<form class="paper-form" ng-controller="form">
+		<fieldset class="table options-vertical" ng-show="$state.includes('super');">
+			<legend>State Visibility</legend>
+			<input type="checkbox" />
+			<label class="option" >Utah</label>
+			<input type="checkbox" />
+			<label class="option" >Nevada</label>
+		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<h2 class="title">W-9 Request for Taxpayer Identification Number and Certification</h2>
+		<div class="instructions">
+			<p>See the <a href="http://www.irs.gov/pub/irs-pdf/iw9.pdf" class="link"><abbr>IRS</abbr> instructions</a> for additional help filling out this form.</p>
+		</div>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Name</label></dt>
@@ -96,10 +106,12 @@ generally, payments other than interest and dividends, you are not required to s
 					<canvas></canvas>
 				</div>
 			</div>
-			<dl>
-				<dt><label for="">Date</label></dt>
-				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
-			</dl>
+			<fieldset class="table noborder">
+				<dl>
+					<dt><label for="">Date</label></dt>
+					<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+				</dl>
+			</fieldset>
 		</fieldset>
 		<div class="btns">
 			<a class="btn" back>Cancel</a>

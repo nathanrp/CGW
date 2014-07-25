@@ -749,19 +749,6 @@ CGW.config(
 					 }
 				})
 				
-				.state('applicant.seepaper', {
-
-					url: '/fake',
-					views: {
-						'content@': {
-							templateUrl: 'applicant/seepaper.html'
-						},
-						'header@': {
-							templateUrl: 'applicant/seepaper.header.html'
-						}
-					 }
-				})
-				
 				.state('applicant.w9', {
 
 					url: '/w9',
@@ -770,7 +757,46 @@ CGW.config(
 							templateUrl: 'applicant/w9.html'
 						},
 						'header@': {
-							templateUrl: 'applicant/edit.header.html'
+							templateUrl: 'applicant/w9.header.html'
+						}
+					 }
+				})
+				
+				.state('applicant.i9', {
+
+					url: '/i9',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/i9.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/i9.header.html'
+						}
+					 }
+				})
+				
+				.state('applicant.w4', {
+
+					url: '/w4',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/w4.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/w4.header.html'
+						}
+					 }
+				})
+				
+				.state('applicant.udpa', {
+
+					url: '/udpa',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/udpa.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/udpa.header.html'
 						}
 					 }
 				})
@@ -1050,6 +1076,58 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/cdda.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.cw9', {
+
+					url: '/cw9',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/w9.html'
+						},
+						'header@': {
+							templateUrl: 'super/cw9.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.ci9', {
+
+					url: '/ci9',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/i9.html'
+						},
+						'header@': {
+							templateUrl: 'super/ci9.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.cw4', {
+
+					url: '/cw4',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/w4.html'
+						},
+						'header@': {
+							templateUrl: 'super/cw4.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.cudpa', {
+
+					url: '/cudpa',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/udpa.html'
+						},
+						'header@': {
+							templateUrl: 'super/cudpa.header.html'
 						}
 					 }
 				})

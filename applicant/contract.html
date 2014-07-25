@@ -124,7 +124,7 @@
 			</div>
 		</div>
 		
-		<fieldset class="table">
+		<fieldset class="table noborder">
 			<dl>
 				<dt><label for="">Print Name</label></dt>
 				<dd><input type="text" /></dd>
@@ -138,7 +138,16 @@
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<fieldset class="table">
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Company Signature</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<fieldset class="table noborder">
 			<dl>
 				<dt><label for="">Company</label></dt>
 				<dd><input type="text" readonly="readonly" value="Essential Care" /></dd>

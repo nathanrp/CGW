@@ -1,0 +1,65 @@
+<div class="ui-section noheader">
+	<form class="paper-form" ng-controller="form">
+		<fieldset class="table options-vertical" ng-show="$state.includes('super');">
+			<legend>State Visibility</legend>
+			<input type="checkbox" />
+			<label class="option" >Utah</label>
+			<input type="checkbox" />
+			<label class="option" >Nevada</label>
+		</fieldset>
+		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
+		<h2 class="title">W-4 Employee&rsquo;s Withholding Allowance Certificate</h2>
+		<div class="m-signature-pad">
+				<div class="ui-toolbar">
+					<label for="" class="left">Signature of U.S. person</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</div>
+				<div class="m-signature-pad--body">
+					<canvas></canvas>
+				</div>
+			</div>
+			<fieldset class="table noborder">
+				<dl>
+					<dt><label for="">Date</label></dt>
+					<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+				</dl>
+			</fieldset>
+		</fieldset>
+		<div class="btns">
+			<a class="btn" back>Cancel</a>
+			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
+		</div>
+	</form>
+</div>
+
+<script src="js/signature_pad.js"></script>
+
+<script>
+
+	$('.m-signature-pad').each(function(){
+		var wrapper = this,
+		    clearButton = wrapper.querySelector("[data-action=clear]"),
+		    canvas = wrapper.querySelector("canvas"),
+		    signaturePad;
+		
+		// Adjust canvas coordinate space taking into account pixel ratio,
+		// to make it look crisp on mobile devices.
+		// This also causes canvas to be cleared.
+		function resizeCanvas() {
+		    var ratio =  window.devicePixelRatio || 1;
+		    canvas.width = canvas.offsetWidth * ratio;
+		    canvas.height = canvas.offsetHeight * ratio;
+		    canvas.getContext("2d").scale(ratio, ratio);
+		}
+		
+		window.onresize = resizeCanvas;
+		resizeCanvas();
+		
+		signaturePad = new SignaturePad(canvas);
+		
+		clearButton.addEventListener("click", function (event) {
+		    signaturePad.clear();
+		});
+	});
+	
+</script>
