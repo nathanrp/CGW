@@ -132,6 +132,11 @@ CGW.directive('jqSortable', function ($document) {
 					$('.task-list li').each(function() {
 			            $(this).children('.number').html($(this).index())
 			        });
+				},
+				update: function(event,ui) {
+					$('.task-list li').each(function() {
+			            $(this).children('.number').html($(this).index()+1)
+			        });
 				}
 			});
 			$(element).disableSelection();
