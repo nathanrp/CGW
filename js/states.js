@@ -336,6 +336,8 @@ CGW.config(
 					 }
 				})
 
+// Client Forms
+
 				.state('franchisee.requests.request.request', {
 
 					url: '/request',
@@ -349,15 +351,119 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.directives', {
+				.state('franchisee.requests.request.dirs', {
 
 					url: '/directives',
 					views: {
 						'content@': {
-							templateUrl: 'client/directives.html'
+							templateUrl: 'client/dirs.html'
 						},
 						'header@': {
-							templateUrl: 'client/directives.header.html'
+							templateUrl: 'client/dirs.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.assess', {
+
+					url: '/assessment',
+					views: {
+						'content@': {
+							templateUrl: 'client/assess.html'
+						},
+						'header@': {
+							templateUrl: 'client/assess.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.eval', {
+
+					url: '/evaluation',
+					views: {
+						'content@': {
+							templateUrl: 'client/eval.html'
+						},
+						'header@': {
+							templateUrl: 'client/eval.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.agreement', {
+
+					url: '/agreement',
+					views: {
+						'content@': {
+							templateUrl: 'client/agreement.html'
+						},
+						'header@': {
+							templateUrl: 'client/agreement.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.rights', {
+
+					url: '/rights',
+					views: {
+						'content@': {
+							templateUrl: 'client/rights.html'
+						},
+						'header@': {
+							templateUrl: 'client/rights.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.title42', {
+
+					url: '/title42',
+					views: {
+						'content@': {
+							templateUrl: 'client/title42.html'
+						},
+						'header@': {
+							templateUrl: 'client/title42.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.psda', {
+
+					url: '/psda',
+					views: {
+						'content@': {
+							templateUrl: 'client/psda.html'
+						},
+						'header@': {
+							templateUrl: 'client/psda.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.npsda', {
+
+					url: '/npsda',
+					views: {
+						'content@': {
+							templateUrl: 'client/npsda.html'
+						},
+						'header@': {
+							templateUrl: 'client/npsda.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.requests.request.ndirs', {
+
+					url: '/ndirs',
+					views: {
+						'content@': {
+							templateUrl: 'client/ndirs.html'
+						},
+						'header@': {
+							templateUrl: 'client/ndirs.header.html'
 						}
 					 }
 				})
@@ -683,6 +789,8 @@ CGW.config(
 						}
 					 }
 				})
+
+// Applicant Forms
 				
 				.state('applicant.resume', {
 
@@ -1001,6 +1109,8 @@ CGW.config(
 						}
 					 }
 				})
+
+// Caregiver Super Forms
 				
 				.state('super.forms.resume', {
 
@@ -1128,6 +1238,129 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/cudpa.header.html'
+						}
+					 }
+				})
+
+// Client Super Forms
+				
+				.state('super.forms.frequest', {
+
+					url: '/frequest',
+					views: {
+						'content@': {
+							templateUrl: 'client/request.html'
+						},
+						'header@': {
+							templateUrl: 'super/frequest.header.html'
+						}
+					 }
+				})
+				.state('super.forms.fdirs', {
+
+					url: '/fdirectives',
+					views: {
+						'content@': {
+							templateUrl: 'client/dirs.html'
+						},
+						'header@': {
+							templateUrl: 'super/fdirs.header.html'
+						}
+					 }
+				})
+				.state('super.forms.fassess', {
+
+					url: '/fassessment',
+					views: {
+						'content@': {
+							templateUrl: 'client/assess.html'
+						},
+						'header@': {
+							templateUrl: 'super/fassess.header.html'
+						}
+					 }
+				})
+				.state('super.forms.feval', {
+
+					url: '/fevaluations',
+					views: {
+						'content@': {
+							templateUrl: 'client/eval.html'
+						},
+						'header@': {
+							templateUrl: 'super/feval.header.html'
+						}
+					 }
+				})
+				.state('super.forms.fagreement', {
+
+					url: '/fagreement',
+					views: {
+						'content@': {
+							templateUrl: 'client/agreement.html'
+						},
+						'header@': {
+							templateUrl: 'super/fagreement.header.html'
+						}
+					 }
+				})
+				.state('super.forms.frights', {
+
+					url: '/frights',
+					views: {
+						'content@': {
+							templateUrl: 'client/rights.html'
+						},
+						'header@': {
+							templateUrl: 'super/frights.header.html'
+						}
+					 }
+				})
+				.state('super.forms.ftitle42', {
+
+					url: '/ftitle42',
+					views: {
+						'content@': {
+							templateUrl: 'client/title42.html'
+						},
+						'header@': {
+							templateUrl: 'super/ftitle42.header.html'
+						}
+					 }
+				})
+				.state('super.forms.fpsda', {
+
+					url: '/fpsda',
+					views: {
+						'content@': {
+							templateUrl: 'client/psda.html'
+						},
+						'header@': {
+							templateUrl: 'super/fpsda.header.html'
+						}
+					 }
+				})
+				.state('super.forms.fnpsda', {
+
+					url: '/fnpsda',
+					views: {
+						'content@': {
+							templateUrl: 'client/npsda.html'
+						},
+						'header@': {
+							templateUrl: 'super/fnpsda.header.html'
+						}
+					 }
+				})
+				.state('super.forms.fndirs', {
+
+					url: '/fndirs',
+					views: {
+						'content@': {
+							templateUrl: 'client/ndirs.html'
+						},
+						'header@': {
+							templateUrl: 'super/fndirs.header.html'
 						}
 					 }
 				})

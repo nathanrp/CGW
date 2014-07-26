@@ -1,5 +1,12 @@
-<div class="ui-section">
-	<form class="paper-form">
+<div class="ui-section noheader">
+	<form class="paper-form" ng-controller="form">
+		<fieldset class="table options-vertical" ng-show="$state.includes('super');">
+			<legend>State Visibility</legend>
+			<input type="checkbox" />
+			<label class="option" >Utah</label>
+			<input type="checkbox" />
+			<label class="option" >Nevada</label>
+		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Client</legend>
@@ -183,7 +190,7 @@ change it I must contact the manager at <a href="tel:7024871703">702-487-1703</a
 				<canvas></canvas>
 			</div>
 		</div>
-		<div class="btns">
+		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn done" back>Cancel</a>
 			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
 		</div>

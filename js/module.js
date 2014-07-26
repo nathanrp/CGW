@@ -129,12 +129,12 @@ CGW.directive('jqSortable', function ($document) {
 			$(element).sortable({
 				handle: '.handle',
 				change: function(event,ui) {
-					$('.task-list li').each(function() {
+					$(this).find('li').each(function() {
 			            $(this).children('.number').html($(this).index())
 			        });
 				},
 				update: function(event,ui) {
-					$('.task-list li').each(function() {
+					$(this).find('li').each(function() {
 			            $(this).children('.number').html($(this).index()+1)
 			        });
 				}
