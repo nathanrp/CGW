@@ -9,23 +9,173 @@
 		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<h2 class="title">Utah Individual Clearance for Direct Patient Access</h2>
-		<div class="m-signature-pad">
-				<div class="ui-toolbar">
-					<label for="" class="left">Signature</label>
-					<button class="button clear right" data-action="clear">Clear</button>
-				</div>
-				<div class="m-signature-pad--body">
-					<canvas></canvas>
-				</div>
+		<div class="instructions">
+			<p>All fields must be complete or form will be returned</p>
+		</div>
+		<fieldset class="table">
+			<legend>Applicant Information</legend>
+			<div class="instructions">
+				<p>Information must be completed by the applicant</p>
 			</div>
-			<fieldset class="table noborder">
-				<dl>
-					<dt><label for="">Date</label></dt>
-					<dd><input type="date" class="datepicker" jq-datepicker /></dd>
-				</dl>
-			</fieldset>
+			<dl>
+				<dt><label for="">First Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Last Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Middle Initial</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Date of Birth</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Gender</label></dt>
+				<dd class="options-horizontal">
+					<input type="radio" name="" />
+					<label for="" class="option">Male</label>
+					<input type="radio" name="" />
+					<label for="" class="option">Female</label>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Maiden Name &amp; All Previous Married Names/Alias</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Social Security Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Drivers License Number</label></dt>
+				<dd><input type="tel" /></dd>
+				<dd>
+					<select>
+						<option>State&hellip;</option>
+						<option>AL</option>
+						<option>UT</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Current Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Utah</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Zip Code</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Home Phone Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Hire Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
 		</fieldset>
-		<div class="btns">
+		<fieldset class="table">
+			<legend>Previous Address Information</legend>
+			<dl>
+				<dt><label for="">City and State</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker placeholder="from" /></dd>
+				<dd><input type="date" class="datepicker" jq-datepicker placeholder="to" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City and State</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker placeholder="from" /></dd>
+				<dd><input type="date" class="datepicker" jq-datepicker placeholder="to" /></dd>
+			</dl>
+		</fieldset>
+		<fieldset class="options-vertical">
+			<legend>Staff Position</legend>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Executive, Administrative or Managerial</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Technical, Unlicensed Health Care</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Professional/Licensed Health Care</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Housekeeping and Engineer Services</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Food and Dietary Services</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Laboratory and Radiology Services</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Volunteer</label>
+			<input type="checkbox" name="" />
+			<label for="" class="option">Other</label>
+			<dl>
+				<dt><label for="">Position Description</label></dt>
+				<dd><textarea class="fill-width"></textarea></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<dl>
+				<dt><label for="">Have you ever been convicted of a felony or misdemeanor as a juvenile or adult? If yes, include a written explanation of the offense(s).</label></dt>
+				<dd class="options-horizontal">
+					<input type="radio" name="" />
+					<label for="" class="option">Yes</label>
+					<input type="radio" name="" />
+					<label for="" class="option">No</label>
+				</dd>
+				<dd><textarea class="fill-width" placeholder="If yes explanation&hellip;"></textarea></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Are you currently awaiting trial on a pending felony or misdemeanor charge? Attach explanation of charge(s).</label></dt>
+				<dd class="options-horizontal">
+					<input type="radio" name="" />
+					<label for="" class="option">Yes</label>
+					<input type="radio" name="" />
+					<label for="" class="option">No</label>
+				</dd>
+				<dd><textarea class="fill-width" placeholder="If yes explanation&hellip;"></textarea></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Have you ever been investigated for abuse or neglect of disabled or vulnerable individuals by the State of Utah? If yes, attach explanation.</label></dt>
+				<dd class="options-horizontal">
+					<input type="radio" name="" />
+					<label for="" class="option">Yes</label>
+					<input type="radio" name="" />
+					<label for="" class="option">No</label>
+				</dd>
+				<dd><textarea class="fill-width" placeholder="If yes explanation&hellip;"></textarea></dd>
+			</dl>
+		</fieldset>
+		<p>I hereby authorize the Utah Department of Health (<abbr>UDOH</abbr>) to submit my direct patient access application to the Utah Bureau of Criminal Identification (<abbr>BCI</abbr>) for processing in accordance with Utah Code annotated Chapter 26 Title 21 Part 2. I authorize <abbr>BCI</abbr> to access and review state and federal criminal history records and provide that information to the UDOH to be used to make a clearance determination. I do herby release <abbr>UDOH</abbr> and <abbr>BCI</abbr>, all persons, organizations, or government agencies from any damages of, or resulting from, furnishing such information. I have been provided with a copy of this form. I have read and understand the foregoing and my certification is true and correct to the best of my knowledge and belief.</p>
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Applicant Signature</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
+		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn" back>Cancel</a>
 			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>

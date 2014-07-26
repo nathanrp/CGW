@@ -188,6 +188,9 @@ form {
 		color: lighten(@bcolor,30%);
 		margin: -5px 0 5px;
 	}
+	.indent {
+		margin-left: 40px;
+	}
 	.table {
 		dl {
 			display: table-row;
@@ -201,6 +204,10 @@ form {
 				position: relative;
 				vertical-align: top;
 				padding: 0 20px 0 0;
+				p {
+					padding: 10px 0;
+					line-height: inherit;
+				}
 			}
 			dt {
 				text-align: right;
@@ -212,7 +219,8 @@ form {
 					color: @bcolor;
 				}
 				&[class^="options-"],
-				&[class*=" options-"] {
+				&[class*=" options-"], 
+				&.left {
 					text-align: left;
 				}
 			}

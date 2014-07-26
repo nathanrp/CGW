@@ -8,7 +8,7 @@
 			<label class="option" >Nevada</label>
 		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
-		<h2 class="title">W-9 Request for Taxpayer Identification Number and Certification</h2>
+		<h2 class="title">W-9 <small>Request for Taxpayer Identification Number and Certification</small></h2>
 		<div class="instructions">
 			<p>See the <a href="http://www.irs.gov/pub/irs-pdf/iw9.pdf" class="link"><abbr>IRS</abbr> instructions</a> for additional help filling out this form.</p>
 		</div>
@@ -113,7 +113,7 @@ generally, payments other than interest and dividends, you are not required to s
 				</dl>
 			</fieldset>
 		</fieldset>
-		<div class="btns">
+		<div class="btns"  ng-hide="$state.includes('super');">
 			<a class="btn" back>Cancel</a>
 			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>

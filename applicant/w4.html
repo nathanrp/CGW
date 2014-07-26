@@ -8,24 +8,126 @@
 			<label class="option" >Nevada</label>
 		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
-		<h2 class="title">W-4 Employee&rsquo;s Withholding Allowance Certificate</h2>
-		<div class="m-signature-pad">
-				<div class="ui-toolbar">
-					<label for="" class="left">Signature of U.S. person</label>
-					<button class="button clear right" data-action="clear">Clear</button>
-				</div>
-				<div class="m-signature-pad--body">
-					<canvas></canvas>
-				</div>
-			</div>
-			<fieldset class="table noborder">
-				<dl>
-					<dt><label for="">Date</label></dt>
-					<dd><input type="date" class="datepicker" jq-datepicker /></dd>
-				</dl>
-			</fieldset>
+		<h2 class="title">W-4 <small>Employee&rsquo;s Withholding Allowance Certificate</small></h2>
+		<fieldset class="table">
+			<dl>
+				<dt><label>1</label></dt>
+				<dt><label for="">First Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">Last Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">Middle Initial</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">Home Address</label></dt>
+				<dd>
+					<input type="text" />
+					<small class="help">number and street or rural route</small>
+				</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">City or Town</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Utah</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">Zip Code</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label><strong>2</strong></label></dt>
+				<dt><label for="">Your Social Security Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
 		</fieldset>
-		<div class="btns">
+		<fieldset class="table">
+			<dl>
+				<dt><label><strong>3</strong></label></dt>
+				<dd class="options-vertical">
+					<input type="radio" name="" />
+					<label class="option" for="">Single</label>
+					<input type="radio" name="" />
+					<label class="option" for="">Married</label>
+					<input type="radio" name="" />
+					<label class="option" for="">Married, but withhold at higher Single rate.</label>
+					<div class="instructions">
+						<p>Note. If married, but legally separated, or spouse is a nonresident alien, check the &ldquo;Single&rdquo; box.</p>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label><strong>4</strong></label></dt>
+				<dd class="options-vertical">
+					<input type="checkbox" name="" />
+					<label class="option" for="">If your last name differs from that shown on your social security card, check here. You must call 1-800-772-1213 for a replacement card.</label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">5</label></dt>
+				<dt class="left"><label for="">Total number of allowances you are claiming (from line H above or from the <a href="http://www.irs.gov/pub/irs-pdf/fw4.pdf" class="link">applicable worksheet on page 2</a>)</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">6</label></dt>
+				<dt class="left"><label for="">Additional amount, if any, you want withheld from each paycheck</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">7</label></dt>
+				<dd>
+					<p>I claim exemption from withholding for 2013, and I certify that I meet both of the following conditions for exemption.</p>
+					<ul class="b-list">
+						<li>Last year I had a right to a refund of all federal income tax withheld because I had no tax liability, and</li>
+						<li>This year I expect a refund of all federal income tax withheld because I expect to have no tax liability.</li>
+					</ul>
+				</dd>
+				<dd></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dt><label for="">If you meet both conditions, write “Exempt” here</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+		</fieldset>
+		<p>Under penalties of perjury, I declare that I have examined this certificate and, to the best of my knowledge and belief, it is true, correct, and complete.</p>
+		<p>This form is not valid unless you sign it.</p>
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Employee&rsquo;s signature</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
+		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn" back>Cancel</a>
 			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
