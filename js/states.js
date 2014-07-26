@@ -343,10 +343,10 @@ CGW.config(
 					url: '/request',
 					views: {
 						'content@': {
-							templateUrl: 'client/request.html'
+							templateUrl: 'request/request.html'
 						},
 						'header@': {
-							templateUrl: 'client/request.header.html'
+							templateUrl: 'request/request.header.html'
 						}
 					 }
 				})
@@ -356,10 +356,10 @@ CGW.config(
 					url: '/directives',
 					views: {
 						'content@': {
-							templateUrl: 'client/dirs.html'
+							templateUrl: 'request/dirs.html'
 						},
 						'header@': {
-							templateUrl: 'client/dirs.header.html'
+							templateUrl: 'request/dirs.header.html'
 						}
 					 }
 				})
@@ -369,10 +369,10 @@ CGW.config(
 					url: '/assessment',
 					views: {
 						'content@': {
-							templateUrl: 'client/assess.html'
+							templateUrl: 'request/assess.html'
 						},
 						'header@': {
-							templateUrl: 'client/assess.header.html'
+							templateUrl: 'request/assess.header.html'
 						}
 					 }
 				})
@@ -382,10 +382,10 @@ CGW.config(
 					url: '/evaluation',
 					views: {
 						'content@': {
-							templateUrl: 'client/eval.html'
+							templateUrl: 'request/eval.html'
 						},
 						'header@': {
-							templateUrl: 'client/eval.header.html'
+							templateUrl: 'request/eval.header.html'
 						}
 					 }
 				})
@@ -395,10 +395,10 @@ CGW.config(
 					url: '/agreement',
 					views: {
 						'content@': {
-							templateUrl: 'client/agreement.html'
+							templateUrl: 'request/agreement.html'
 						},
 						'header@': {
-							templateUrl: 'client/agreement.header.html'
+							templateUrl: 'request/agreement.header.html'
 						}
 					 }
 				})
@@ -408,10 +408,10 @@ CGW.config(
 					url: '/rights',
 					views: {
 						'content@': {
-							templateUrl: 'client/rights.html'
+							templateUrl: 'request/rights.html'
 						},
 						'header@': {
-							templateUrl: 'client/rights.header.html'
+							templateUrl: 'request/rights.header.html'
 						}
 					 }
 				})
@@ -421,10 +421,10 @@ CGW.config(
 					url: '/title42',
 					views: {
 						'content@': {
-							templateUrl: 'client/title42.html'
+							templateUrl: 'request/title42.html'
 						},
 						'header@': {
-							templateUrl: 'client/title42.header.html'
+							templateUrl: 'request/title42.header.html'
 						}
 					 }
 				})
@@ -434,10 +434,10 @@ CGW.config(
 					url: '/psda',
 					views: {
 						'content@': {
-							templateUrl: 'client/psda.html'
+							templateUrl: 'request/psda.html'
 						},
 						'header@': {
-							templateUrl: 'client/psda.header.html'
+							templateUrl: 'request/psda.header.html'
 						}
 					 }
 				})
@@ -447,10 +447,10 @@ CGW.config(
 					url: '/npsda',
 					views: {
 						'content@': {
-							templateUrl: 'client/npsda.html'
+							templateUrl: 'request/npsda.html'
 						},
 						'header@': {
-							templateUrl: 'client/npsda.header.html'
+							templateUrl: 'request/npsda.header.html'
 						}
 					 }
 				})
@@ -460,10 +460,10 @@ CGW.config(
 					url: '/ndirs',
 					views: {
 						'content@': {
-							templateUrl: 'client/ndirs.html'
+							templateUrl: 'request/ndirs.html'
 						},
 						'header@': {
-							templateUrl: 'client/ndirs.header.html'
+							templateUrl: 'request/ndirs.header.html'
 						}
 					 }
 				})
@@ -1249,7 +1249,7 @@ CGW.config(
 					url: '/frequest',
 					views: {
 						'content@': {
-							templateUrl: 'client/request.html'
+							templateUrl: 'request/request.html'
 						},
 						'header@': {
 							templateUrl: 'super/frequest.header.html'
@@ -1261,7 +1261,7 @@ CGW.config(
 					url: '/fdirectives',
 					views: {
 						'content@': {
-							templateUrl: 'client/dirs.html'
+							templateUrl: 'request/dirs.html'
 						},
 						'header@': {
 							templateUrl: 'super/fdirs.header.html'
@@ -1273,7 +1273,7 @@ CGW.config(
 					url: '/fassessment',
 					views: {
 						'content@': {
-							templateUrl: 'client/assess.html'
+							templateUrl: 'request/assess.html'
 						},
 						'header@': {
 							templateUrl: 'super/fassess.header.html'
@@ -1285,7 +1285,7 @@ CGW.config(
 					url: '/fevaluations',
 					views: {
 						'content@': {
-							templateUrl: 'client/eval.html'
+							templateUrl: 'request/eval.html'
 						},
 						'header@': {
 							templateUrl: 'super/feval.header.html'
@@ -1297,7 +1297,7 @@ CGW.config(
 					url: '/fagreement',
 					views: {
 						'content@': {
-							templateUrl: 'client/agreement.html'
+							templateUrl: 'request/agreement.html'
 						},
 						'header@': {
 							templateUrl: 'super/fagreement.header.html'
@@ -1309,7 +1309,7 @@ CGW.config(
 					url: '/frights',
 					views: {
 						'content@': {
-							templateUrl: 'client/rights.html'
+							templateUrl: 'request/rights.html'
 						},
 						'header@': {
 							templateUrl: 'super/frights.header.html'
@@ -1321,7 +1321,7 @@ CGW.config(
 					url: '/ftitle42',
 					views: {
 						'content@': {
-							templateUrl: 'client/title42.html'
+							templateUrl: 'request/title42.html'
 						},
 						'header@': {
 							templateUrl: 'super/ftitle42.header.html'
@@ -1333,7 +1333,7 @@ CGW.config(
 					url: '/fpsda',
 					views: {
 						'content@': {
-							templateUrl: 'client/psda.html'
+							templateUrl: 'request/psda.html'
 						},
 						'header@': {
 							templateUrl: 'super/fpsda.header.html'
@@ -1345,7 +1345,7 @@ CGW.config(
 					url: '/fnpsda',
 					views: {
 						'content@': {
-							templateUrl: 'client/npsda.html'
+							templateUrl: 'request/npsda.html'
 						},
 						'header@': {
 							templateUrl: 'super/fnpsda.header.html'
@@ -1357,7 +1357,7 @@ CGW.config(
 					url: '/fndirs',
 					views: {
 						'content@': {
-							templateUrl: 'client/ndirs.html'
+							templateUrl: 'request/ndirs.html'
 						},
 						'header@': {
 							templateUrl: 'super/fndirs.header.html'
