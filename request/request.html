@@ -135,7 +135,10 @@
 		</fieldset>
 		<fieldset class="table">
 			<legend>Our Services</legend>
-			<dl>
+			<div class="ui-toolbar" ng-show="$state.includes('super');">
+				<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
+			</div>
+			<dl class="wrap-edit">
 				<dt><label for="">How can we help?</label></dt>
 				<dd class="options-vertical"> 
 					<input type="checkbox" id="9" />
@@ -180,7 +183,14 @@
 			<textarea class="smart-width"></textarea>
 		</fieldset>
 		<p>I understand this is the plan of care I would like implemented by Essential Care and if I wish to 
-change it I must contact the manager at <a href="tel:7024871703">702-487-1703</a>.</p>
+change it I must contact the manager at 
+			<select ng-show="$state.includes('super');" class="admin">
+				<option>&hellip;</option>
+				<option>Franchisee Number</option>
+				<option>Franchisor Number</option>
+			</select>
+			<a href="tel:7024871703" ng-hide="$state.includes('super');">702-487-1703</a>.
+		</p>
 		<div class="m-signature-pad">
 			<div class="ui-toolbar">
 				<label for="" class="left">Client Signature</label>

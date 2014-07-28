@@ -8,15 +8,122 @@
 			<label class="option" >Nevada</label>
 		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
+		<h2 class="title">Acknowledgment of Patient Information on Advanced Directives</h2>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">First Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Last Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Utah</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Zip Code</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Social Security Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Date of Birth</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<legend>Acknowledgements</legend>
+			<ol class="n-list">
+				<li class="options-vertical">
+					<input type="checkbox" />
+					<label class="option" for="">I have received written information on state law, and the hospital&rsquo;s written policy, advising me of my right to make decisions concerning my medical care, including the right to accept or refuse medical or surgical treatment, and formulate advance directives (declaration and/or durable power of attorney for health care decisions).</label>
+				</li>
+				<li class="options-vertical">
+					<p>I have formulated an advance directive:</p>
+					<input type="checkbox" />
+					<label class="option" for="">Declaration</label>
+					<input type="checkbox" />
+					<label class="option" for="">Durable Power of Attorney for Health Care Decisions</label>
+					<p>If yes, I have provided a copy of my advance directive to the hospital (if I haven&rsquo;t, I will provide a copy to the hospital as soon as possible)</p>
+					<input type="checkbox" />
+					<label class="option" for="">Copy is provided</label>
+				</li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<legend>Comments</legend>
+			<dl>
+				<dt><label for="">Comments: (hospital follow up efforts if the patient cannot receive the advance directives information upon admission or does not bring in a copy of the advance directive if he/she states he/she has one)</label></dt>
+				<dd><textarea class="fill-width"></textarea></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Although the patient is instructed to bring in a copy of his/her advance directive to be placed in the medical record, the substance/instructions of patient’s advance directive states:</label></dt>
+				<dd><textarea class="fill-width"></textarea></dd>
+			</dl>
+		</fieldset>
+		<p>I understand I will not be discriminated against on my provision of care whether or not I have an advance directive.</p>
 		<div class="m-signature-pad">
 			<div class="ui-toolbar">
-				<label for="" class="left">Client Signature</label>
+				<label for="" class="left">Patient&rsquo; Signature</label>
 				<button class="button clear right" data-action="clear">Clear</button>
 			</div>
 			<div class="m-signature-pad--body">
 				<canvas></canvas>
 			</div>
 		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Family or Other (if patient is unable to sign)</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Hospital Representative</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn done" back>Cancel</a>
 			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
