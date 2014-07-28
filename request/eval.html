@@ -8,50 +8,905 @@
 			<label class="option" >Nevada</label>
 		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Client Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
+		<h2 class="title">Client Evaluation &amp; Plan of Care</h2>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Referral Source</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<dl>
+				<dt><label for="">Sales Notes</label></dt>
+				<dd><textarea class="smart-width"></textarea></dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Assessment By</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Meeting Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Meeting Time</label></dt>
+				<dd>
+					<select class="pw">
+						<option>12:00am</option>
+						<option>12:30am</option>
+						<option>1:00am</option>
+						<option>1:30am</option>
+						<option>2:00am</option>
+						<option>2:30am</option>
+						<option>3:00am</option>
+						<option>3:30am</option>
+						<option>4:00am</option>
+						<option>4:30am</option>
+						<option>5:00am</option>
+						<option>5:30am</option>
+						<option>6:00am</option>
+						<option>6:30am</option>
+						<option>7:00am</option>
+						<option>7:30am</option>
+						<option>8:00am</option>
+						<option>8:30am</option>
+						<option>9:00am</option>
+						<option>9:30am</option>
+						<option>10:00am</option>
+						<option>10:30am</option>
+						<option>11:00am</option>
+						<option>11:30am</option>
+						<option>12:00pm</option>
+						<option>12:30pm</option>
+						<option>1:00pm</option>
+						<option>1:30pm</option>
+						<option>2:00pm</option>
+						<option>2:30pm</option>
+						<option>3:00pm</option>
+						<option>3:30pm</option>
+						<option>4:00pm</option>
+						<option>4:30pm</option>
+						<option>5:00pm</option>
+						<option>5:30pm</option>
+						<option>6:00pm</option>
+						<option>6:30pm</option>
+						<option>7:00pm</option>
+						<option>7:30pm</option>
+						<option>8:00pm</option>
+						<option>8:30pm</option>
+						<option>9:00pm</option>
+						<option>9:30pm</option>
+						<option>10:00pm</option>
+						<option>10:30pm</option>
+						<option>11:00pm</option>
+						<option>11:30pm</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Start Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Daily Rate</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Hourly Rate</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Caregiver Rate</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Original Contact</legend>		
+			<dl>
+				<dt><label for="">First Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Last Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Date of Birth</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Utah</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Zip Code</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Phone</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Alternate Phone</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Client</legend>	
+			<div class="options-vertical">
+				<input type="checkbox" />
+				<label class="option" for="">Same as Original Contact</label>	
 			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
+			<dl>
+				<dt><label for="">First Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Last Name</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Date of Birth</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Social Security Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Utah</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Zip Code</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Phone</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Alternate Phone</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Age</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Height</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Gender</label></dt>
+				<dd class="options-horizontal">
+					<input type="radio" />
+					<label class="option" for="">Female</label>	
+					<input type="radio" />
+					<label class="option" for="">Male</label>	
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Weight</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<div class="options-vertical">
+				<input type="checkbox" />
+				<label class="option" for="">Same as Above Address</label>	
 			</div>
-		</div>
+			<dl>
+				<dt><label for="">Billing Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">State</label></dt>
+				<dd>
+					<select>
+						<option></option>
+						<option>Utah</option>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt><label for="">Zip Code</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<dl>
+				<dt><label for="">Client Notes</label></dt>
+				<dd><textarea class="smart-width"></textarea></dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Care Provider Requirements</legend>
+			<div class="options-horizontal">
+				<input type="radio" />
+				<label class="option" for="">Female</label>	
+				<input type="radio" />
+				<label class="option" for="">Male</label>	
+			</div>
+			<div class="options-horizontal">
+				<input type="checkbox" />
+				<label class="option" for="">Drivers License</label>	
+				<input type="checkbox" />
+				<label class="option" for="">Car</label>	
+			</div>
+		</fieldset>
+		<fieldset>
+			<dl>
+				<dt><label for="">Notes</label></dt>
+				<dd><textarea class="smart-width"></textarea></dd>
+			</dl>
+		</fieldset>
+		<fieldset>
+			<legend>Medical History</legend>
+			<div class="ui-toolbar" ng-show="$state.includes('super');">
+				<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
+			</div>
+			<div class="wrap-edit">
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Medications</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Heart Conditions</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Stroke</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+	<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Depression</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Surgeries</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Cancer</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Seizures</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Diabetes</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Allergies</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+				<dl>
+					<dt class="options-vertical">
+						<input type="checkbox" />
+						<label for="" class="option">Alzheimer&rsquo;s/Dementia</label>
+					</dt>
+					<dd><textarea class="smart-width" placeholder="Medications notes&hellip;"></textarea></dd>
+				</dl>
+			</div>
+		</fieldset>
+		<fieldset class="table">
+			<legend>General Health Conditions</legend>
+			<dl class="dlhead">
+				<dt></dt>
+				<dt class="center">Yes</dt>
+				<dt class="center">No</dt>
+				<dt class="center">Sometimes</dt>
+			</dl>
+			<dl>
+				<dt class="left">
+					<label for="">Are special medical procedures required?</label>
+					<dl>
+						<dt><label for="">Which</label></dt>
+						<dd><input type="text" /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need help keeping track of medications?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual have trouble sleeping?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Has the individual lost his/her appetite?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Has the person ever become violent, paranoid or hallucinated?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the person or anyone in the household smoke?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the person have any vision or hearing impairments?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Are there any contact precautions (i.e. Gloves, masks, etc.)?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left">
+					<label for="">Is the individual terminally ill?</label>
+					<dl>
+						<dt><label for="">Condition</label></dt>
+						<dd><input type="text" /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Is their <abbr>DNR</abbr> order in effect?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Cognitive Awareness</legend>
+			<dl>
+				<dt class="left"><label for="">Is the individual forgetful or confused?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual have any aphasia? (Receptive or Expressive)</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the person wander or get lost?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Mobility</legend>
+			<dl>
+				<dt class="left">
+					<label for="">Has the individual fallen recently?</label>
+					<dl>
+						<dt><label for="">Date</label></dt>
+						<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance walking? (unsteady on feet)</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Is a cane, walker, wheelchair, Hoyar lift or Gate Belt used?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Is the individual bedridden?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance getting in and out of bed?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need to be turned in bed?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Personal Care Needs</legend>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance eating?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance preparing meals?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance shopping?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left">
+					<label for="">Are there any dietary restrictions?</label>
+					<dl>
+						<dt><label for="">Restrictions</label></dt>
+						<dd><input type="text" /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance bathing?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance dressing?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Does the individual need assistance using the restroom?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left"><label for="">Is the person incontinent? (bladder/bowel)</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left">
+					<label for="">Are adult briefs or a catheter used?</label>
+					<dl>
+						<dt><label for="">Notes</label></dt>
+						<dd><input type="text" /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Household</legend>
+			<dl>
+				<dt class="left"><label for="">Is there a bedroom/bathroom for the caregiver?</label></dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left">
+					<label for="">Does the individual need transportation assistance?</label>
+					<dl>
+						<dt><label for="">Notes</label></dt>
+						<dd><input type="text" /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="left">
+					<label for="">Are there any pets?</label>
+					<dl>
+						<dt><label for="">Note</label></dt>
+						<dd><input type="text" /></dd>
+					</dl>
+				</dt>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+				<dd class="options-vertical">
+					<input type="radio" />
+					<label for="" class="option"></label>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<legend>Insurance</legend>
+			<div class="options-vertical">
+				<input type="checkbox" />
+				<label for="" class="option">Does the individual have long-term care insurance?</label>
+			</div>
+			<dl>
+				<dt><label for="">Insurance Company</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Phone</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Policy Number</label></dt>
+				<dd><input type="number" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">Social Security Number</label></dt>
+				<dd><input type="tel" /></dd>
+			</dl>
+		</fieldset>
 		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn done" back>Cancel</a>
 			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
-
-<script src="js/signature_pad.js"></script>
-
-<script>
-
-	$('.m-signature-pad').each(function(){
-		var wrapper = this,
-		    clearButton = wrapper.querySelector("[data-action=clear]"),
-		    canvas = wrapper.querySelector("canvas"),
-		    signaturePad;
-		
-		// Adjust canvas coordinate space taking into account pixel ratio,
-		// to make it look crisp on mobile devices.
-		// This also causes canvas to be cleared.
-		function resizeCanvas() {
-		    var ratio =  window.devicePixelRatio || 1;
-		    canvas.width = canvas.offsetWidth * ratio;
-		    canvas.height = canvas.offsetHeight * ratio;
-		    canvas.getContext("2d").scale(ratio, ratio);
-		}
-		
-		window.onresize = resizeCanvas;
-		resizeCanvas();
-		
-		signaturePad = new SignaturePad(canvas);
-		
-		clearButton.addEventListener("click", function (event) {
-		    signaturePad.clear();
-		});
-	});
-	
-</script>
