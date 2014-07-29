@@ -8,15 +8,81 @@
 			<label class="option" >Nevada</label>
 		</fieldset>
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
+		<p>Clients of Essential Care have the right to</p>
+		<ul class="b-list">
+			<li>Choose their own caregiver</li></li>
+			<li>Terminate service at any time</li>
+			<li>Decide when to start services</li>
+			<li>Receive considerate and respectful care</li>
+			<li>Participate in service plan development</li>
+			<li>Receive notification of any authority of the health division to examine records.</li>
+			<li>Receive the limits of the service plan and program criteria</li>
+			<li>Receive written policies and procedures of agency pertaining to charges, reimbursements, determinations of service plan</li>
+			<li>Get in touch with Essential Care 24 hours a day at <a href="tel:7024871703">702-487-1703</a></li>
+			<li>Call Nevada Health Care &amp; Compliance at 486-6515 to express any concerns or complaints</li>
+		</ul>
+		<h3>Qualifications and requirements of Essential Care Caregivers</h3>
+		<ul class="b-list">
+			<li>Fingerprints &amp; background checks</li>
+			<li>Yearly <abbr>TB</abbr> test</li>
+			<li>Physical</li>
+			<li>Current CPR/basic first aid training</li>
+			<li>Complete a 16 hour training course with written and on the job instruction in the following areas: PCA scope of practice, body mechanics, safety & universal precautions, personal care & grooming, bowel & bladder, care of the home & personal belongings, nutrition, communication, client rights & confidentiality, aging & disabilities, elderly neglect & abuse, advance directives, recognizing and responding to emergencies including fires and medical emergencies, dealing with adverse/confrontational behavior, skin care.</li>
+		</ul>
+		<h3>Essential Care Client Review</h3>
+		<ul class="b-list">
+			<li>The Essential Care representative clearly explained my terms and conditions.</li>
+			<li>Essential Care resolved all my questions and concerns.</li>
+			<li>My service plan was clearly explained to me by the Essential Care representative.</li>
+			<li>Essential Care scheduled a date for provision of services.</li>
+			<li>Essential Care explained what I should do if my caregiver did not show up for their scheduled shift.</li>
+			<li>Surveys are done twice a year and are done by the survey that the client has answered;
+				<ul class="b-list">
+					<li>The survey is either mailed or dropped off, according to the client&rsquo;s preference.</li>
+				</ul>
+			<li>For those who are not Attendants (marketers, business office, director), an evaluation according to performance is done by the Director.</li>
+			<li>The Director under the supervision of the owner does the maintenance of current employees and clients; in the event that the Director is the Owner, he or she oversees their own works and maintains the files up to date.</li>
+		</ul>
+		<h3>Grievance Policy:</h3>
+		<ul class="b-list">
+			<li>In the event of a complaint or grievance with Essential Care Nevada, Inc., clients may contact the Area Manager of Essential Care, 24 hours a day, 7 days a week at (702) 487-1703. The complaint or grievance will then be evaluated and documented, and a response, solution or, if appropriate, explanation as to why no action was necessary, will be provided to the client no later than 12 hours after initial complaint/grievance telephone call is made.</li>
+			<li>If the situation involves a particular Attendant, Administrator will notify the Attendant and take the appropriate action.</li>
+			<li>All grievances will be documented in both Client and Attendant folders</li>
+			<li>Attendance Policy</li>
+			<li>If an Attendant fails to show up to an assigned job, clients may contact the Area Manager of Essential Care, 24 hours a day, 7 days a week at <a href="tel:7024871703">702-487-1703</a> and, if necessary, a substitute Attendant will be dispatched as soon as possible. The Administrator will discuss with Attendant their failure to timely show up to the assigned job. Administrator will then make a determination as to whether to terminate the employee or issue a written warning.</li>
+			<li>If an additional visit is required, the Area Manager will be notified and give permission and collect fees for services rendered.</li>
+		</ul>
+		<p>An Essential Care representative explained and gave me a copy of the grievance policy as well as the client rights information sheet. (Please See Grievance and Attendance Policies attached hereto and incorporated herein by reference).</p>
 		<div class="m-signature-pad">
 			<div class="ui-toolbar">
-				<label for="" class="left">Client Signature</label>
+				<label for="" class="left">Signature</label>
 				<button class="button clear right" data-action="clear">Clear</button>
 			</div>
 			<div class="m-signature-pad--body">
 				<canvas></canvas>
 			</div>
 		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
+		<div class="m-signature-pad">
+			<div class="ui-toolbar">
+				<label for="" class="left">Essential Care Representative Signature</label>
+				<button class="button clear right" data-action="clear">Clear</button>
+			</div>
+			<div class="m-signature-pad--body">
+				<canvas></canvas>
+			</div>
+		</div>
+		<fieldset class="table noborder">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 		<div class="btns" ng-hide="$state.includes('super');">
 			<a class="btn done" back>Cancel</a>
 			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
@@ -30,18 +96,18 @@
 
 	$('.m-signature-pad').each(function(){
 		var wrapper = this,
-		    clearButton = wrapper.querySelector("[data-action=clear]"),
-		    canvas = wrapper.querySelector("canvas"),
-		    signaturePad;
+		 clearButton = wrapper.querySelector("[data-action=clear]"),
+		 canvas = wrapper.querySelector("canvas"),
+		 signaturePad;
 		
 		// Adjust canvas coordinate space taking into account pixel ratio,
 		// to make it look crisp on mobile devices.
 		// This also causes canvas to be cleared.
 		function resizeCanvas() {
-		    var ratio =  window.devicePixelRatio || 1;
-		    canvas.width = canvas.offsetWidth * ratio;
-		    canvas.height = canvas.offsetHeight * ratio;
-		    canvas.getContext("2d").scale(ratio, ratio);
+		 var ratio = window.devicePixelRatio || 1;
+		 canvas.width = canvas.offsetWidth * ratio;
+		 canvas.height = canvas.offsetHeight * ratio;
+		 canvas.getContext("2d").scale(ratio, ratio);
 		}
 		
 		window.onresize = resizeCanvas;
@@ -50,7 +116,7 @@
 		signaturePad = new SignaturePad(canvas);
 		
 		clearButton.addEventListener("click", function (event) {
-		    signaturePad.clear();
+		 signaturePad.clear();
 		});
 	});
 	

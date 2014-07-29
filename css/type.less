@@ -42,8 +42,13 @@ ul {
 		li {
 			padding: 0 0 10px;
 			margin: 0 0 0 20px;
+			line-height: 1.4em;
 		}	
 	}
+}
+
+.strike {
+	text-decoration: line-through;
 }
 
 ol {
@@ -53,6 +58,23 @@ ol {
 		li {
 			padding: 0 0 10px;
 			margin: 0 0 0 20px;
+			line-height: 1.4em;
+			input[type=checkbox], input[type=radio] {
+				+ label.option {
+					&:before {
+						top: 10px;
+					}
+					.action {
+						float: right;
+						margin: -3px 0 0;
+					}
+				}
+			}
+		}
+		ol {
+			&.c-list {
+				list-style: lower-alpha;
+			}
 		}
 	}
 }
