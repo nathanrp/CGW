@@ -24,30 +24,24 @@ body {
 	right: 0;
 	bottom: 0;
 	&.open {
-		.page, .nav-overlay {
+		.page, .nav-overlay, header {
 			.translate3d(240px, 0px, 0px);
 		}
 		.nav-overlay {
 			display: block;
 		}
 		header {
-			ul {
-				li {
-					a:not(.btn) {
-						&.nav-toggle {
-							span, span:before, span:after {
-								top: 10px;
-							}
-							span {
-								background: transparent;
-								&:before {
-									.rotate(45deg);	
-								}
-								&:after {
-									.rotate(-45deg);
-								}
-							}
-						}
+			.nav-toggle {
+				span, span:before, span:after {
+					top: 14px;
+				}
+				span {
+					background: transparent;
+					&:before {
+						.rotate(45deg);	
+					}
+					&:after {
+						.rotate(-45deg);
 					}
 				}
 			}
@@ -87,83 +81,48 @@ a {
 	width: 100%;
 	background: @brand;
 	z-index: 3;
-	height: 50px;
+	height: 56px;
 	@transition: transform 0.25s cubic-bezier(.7, 0, .175, 1) 0s;
 	.transition(@transition);
 	white-space: nowrap;
 	color: @white;
-	ul {
-		font-weight: 500;
-		li {
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
-			a:not(.back), h1 {
-				height: 50px;
-				line-height: 50px;
+	.nav-toggle {
+		font-size: 15px;
+		font-weight: 700;
+		width: 40px;
+		height: 56px;
+		display: block;
+		position: relative;
+		float: left;
+		span, span:before, span:after {
+			cursor: pointer;
+			border-radius: 1px;
+			height: 2px;
+			width: 24px;
+			background: darken(@brand,33%);
+			position: absolute;
+			display: block;
+			content: '';
+			@transition: transform 0.25s cubic-bezier(.7, 0, .175, 1) 0s;
+			.transition(@transition);
+		}
+		span {
+			top: 27px;
+			left: 12px;
+			&:before {
+				top: -8px;
 			}
-			a:not(.back) {
-				display: block;
-				color: lighten(@brand,35%);
-				border-bottom: 3px solid transparent;
-				margin: 0 0 -1px;
-				text-align: center;
-				padding: 0 20px;
-				&.nav-toggle {
-					font-size: 15px;
-					font-weight: 700;
-					width: 30px;
-					position: relative;
-					span, span:before, span:after {
-						cursor: pointer;
-						border-radius: 1px;
-						height: 3px;
-						width: 30px;
-						background: @white;
-						position: absolute;
-						display: block;
-						content: '';
-						@transition: transform 0.25s cubic-bezier(.7, 0, .175, 1) 0s;
-						.transition(@transition);
-					}
-					span {
-						top: 23px;
-						left: 5px;
-						&:before {
-							top: -10px;
-						}
-						&:after {
-							bottom: -10px;
-						}
-					}
-				}
-			}
-			h1 {
-				padding: 0 10px;
-				.flag {
-					margin-left: 10px;
-				}
-				&.breadcrumbs {
-					color: lighten(@brand,25%);
-					.caret {
-						color: lighten(@brand, 20%);
-					}
-					.current {
-						color: @white;
-					}
-				}
-			}
-			&.active, &:hover {
-				a {
-					color: @white;
-				}
-			}
-			&.active {
-				a {
-					background: darken(@brand,10%); 
-				}
+			&:after {
+				bottom: -8px;
 			}
 		}
+	}
+	.title {
+		line-height: 56px;
+		font-size: 24px;
+		display: inline-block;
+		font-weight: 500;
+		padding: 0 0 0 16px;
 	}
 	.btn {
 		margin: 6px 0 6px 5px;
@@ -174,7 +133,7 @@ a {
 	background: @ltgray;
 	position: absolute;
 	height: 100%;
-	top: 50px;
+	top: 0;
 	bottom: 0;
 	z-index: 1;
 	width: 240px;
@@ -183,7 +142,7 @@ a {
 	overflow-y: auto;
 	overflow-x: hidden;
 	ul {
-		padding: 10px 0 20px;
+		padding: 0 0 20px;
 		li {
 			position: relative;
 			svg, i {
@@ -222,6 +181,32 @@ a {
 					color: @brand;
 				}
 			}
+			&.profile {
+				a {
+					padding: 24px 16px;
+					white-space: normal;
+					line-height: 1.4em;
+					.avatar {
+						display: relative;
+						width: 64px;
+						height: 64px;
+						overflow: hidden;
+						border-radius: 50%;
+						margin-bottom: 24px;
+						img {
+							width: 100%;
+							display: block;
+						}
+					}
+					span {
+						display: block;
+						&.company {
+							.opacity(.5);
+						}
+					}
+				}
+				margin: 0 0 16px;
+			}
 		}
 	}
 	.cgw {
@@ -243,7 +228,7 @@ a {
 
 .page {
 	background: @white;
-	padding: 50px 0 0;
+	padding: 56px 0 0;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -253,7 +238,7 @@ a {
 	.content {
 		position: relative;
 		z-index: 1;
-		padding: 0 10px;
+		padding: 0 16px 16px;
 		width: 100%;
 		height: 100%;
 		overflow-x: hidden;
@@ -261,7 +246,7 @@ a {
 	}
 	.ui-section {
 		&.noheader {
-			padding-top: 10px;
+			padding-top: 16px;
 		}
 		.ui-header {
 			.clearfix();

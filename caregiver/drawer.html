@@ -1,11 +1,16 @@
 <ul>
-	<li ui-sref-active="active" class="logo">
-		<ng-include src="'img/logo.svg'"></ng-include>
-		<a ui-sref="caregiver">Essential Care</a>
+	<li ui-sref-active="active" as-parent class="profile">
+		<a ui-sref="caregiver.profile">
+			<div class="avatar">
+				<img src="img/caregiver.png" />
+			</div>
+			<span class="name">Rainn Wilson</span>
+			<span class="company">Essential Care</span>
+		</a>
 	</li>
-	<li ui-sref-active="active" as-parent>
-		<i class="icon-head"></i>
-		<a ui-sref="caregiver.profile">Rainn Wilson</a>
+	<li ui-sref-active="active">
+		<i class="icon-bell"></i>
+		<a ui-sref="caregiver">Notifications</a>
 	</li>
 	<li ui-sref-active="active" as-parent>
 		<i class="icon-clock"></i>
