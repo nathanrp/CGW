@@ -442,6 +442,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.requests.request.npsda', {
+
+					url: '/npsda',
+					views: {
+						'content@': {
+							templateUrl: 'request/npsda.html'
+						},
+						'header@': {
+							templateUrl: 'request/npsda.header.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.requests.request.ndirs', {
 
 					url: '/ndirs',
@@ -1336,6 +1349,19 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/fndirs.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.fnpsda', {
+
+					url: '/fnpsda',
+					views: {
+						'content@': {
+							templateUrl: 'request/npsda.html'
+						},
+						'header@': {
+							templateUrl: 'super/fnpsda.header.html'
 						}
 					 }
 				})
