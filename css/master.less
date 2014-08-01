@@ -126,12 +126,12 @@ a {
 		color: @white;
 		.avatar {
 			display: inline-block;
-			width: 36px;
-			height: 36px;
+			width: 32px;
+			height: 32px;
 			overflow: hidden;
 			border-radius: 50%;
 			vertical-align: middle;
-			margin: 0 8px 0 0;
+			margin: -1px 8px 0 0;
 			img {
 				width: 100%;
 				display: block;
@@ -311,8 +311,9 @@ a {
 		overflow-y: auto;
 	}
 	.ui-section {
-		&.noheader {
-			padding-top: 16px;
+		padding: 16px 0 0;
+		.ui-section {
+			padding-top: 0;
 		}
 		.ui-header {
 			.clearfix();

@@ -1,10 +1,11 @@
+<ul class="ui-tabs tabs tabs-4">
+	<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
+	<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
+	<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
+	<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.info">Info</a></li>
+</ul>
 <div class="ui-section client">
 	<small id="check-in-feedback" class="flag flag-feedback" style="display:none;" center-me>You are checked in.</small>
-	<ul class="ui-tabs tabs tabs-3">
-		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.tasks">Tasks</a></li>
-		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.schedule">Schedule</a></li>
-		<li ui-sref-active="active" as-parent><a ui-sref="caregiver.clients.client.notes">Notes</a></li>
-	</ul>
 	<div ui-view="tab-content" class="ui-content tab"></div>
 </div>
 

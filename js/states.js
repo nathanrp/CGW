@@ -571,6 +571,8 @@ CGW.config(
 					 }
 				})
 
+// start caregiver
+
 				.state('caregiver', {
 
 					url: '/caregiver',
@@ -714,6 +716,16 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'caregiver/client.header.html'
+						}
+					 }
+				})
+				
+				.state('caregiver.clients.client.info', {
+
+					url: '/info',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/client.info.html'
 						}
 					 }
 				})
