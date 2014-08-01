@@ -124,6 +124,19 @@ a {
 		font-weight: 400;
 		padding: 0 0 0 16px;
 		color: @white;
+		.avatar {
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			overflow: hidden;
+			border-radius: 50%;
+			vertical-align: middle;
+			margin: 0 8px 0 0;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
 	}
 	.subtitle {
 		color: fadeout(@white,30%);
@@ -138,7 +151,7 @@ a {
 			vertical-align: top;
 		}
 	}
-	.back, .actions .action {
+	.back, .cancel, .actions .action {
 		display: block;
 		height: 56px;
 		line-height: 56px;
@@ -148,6 +161,17 @@ a {
 		color: darken(@brand,33%);
 		&.action-text {
 			width: auto;
+			padding: 0 16px;
+			margin: 9px 0;
+			line-height: 34px;
+			height: 36px;
+			border-radius: 4px;
+			border: 1px solid darken(@brand,16%);
+		}
+		.chevron {
+			&:before {
+				
+			}
 		}
 	}
 	.actions {
@@ -155,17 +179,16 @@ a {
 		right: 0px;
 		top: 0;
 		background: @brand;
-		.action {
-			&:last-child {
-				padding-right: 16px;
-			}
-		}
+		padding: 0 16px;
 	}
-	.back {
+	.back, .cancel {
 		position: absolute;
 		left: 0;
 		top: 0;
 		background: @brand;
+	}
+	.back {
+		display: none;
 	}
 	.btn {
 		margin: 6px 0 6px 5px;
@@ -231,7 +254,7 @@ a {
 					white-space: normal;
 					line-height: 1.4em;
 					.avatar {
-						display: relative;
+						display: block;
 						width: 64px;
 						height: 64px;
 						overflow: hidden;

@@ -50,7 +50,8 @@ input[type=checkbox], input[type=radio] {
     opacity:0;
 	+ label.option {
 		position: relative;
-		padding: 10px 0 10px 40px;
+		padding: 8px 0 9px 40px;
+		line-height: 1.2em;
 		input[type=date] {
 			margin-top: -10px;
 			margin-left: 5px;
@@ -123,9 +124,20 @@ input[type=checkbox] {
 	&:checked {
 		+ label.option {
 			&:before {
-				content: '\2713';
+				content: '\e116';
 				text-shadow: 0 2px 0 fadeout(@black,80%);
 				line-height: 21px;
+				display: inline-block;
+				font-family: "feather";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				speak: none;
+				line-height: 17px;
+				font-size: 22px;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
 		}
 	}

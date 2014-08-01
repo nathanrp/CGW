@@ -8,6 +8,13 @@
 		overflow-x: auto;
 		overflow-y: hidden;
 	}
+	.week-schedule {
+		&.caregiver {
+			.day, .name, .clients {
+				width: percentage(1/7);
+			}
+		}
+	}
 	.days, .client {
 		.clearfix();
 		min-width: 800px;

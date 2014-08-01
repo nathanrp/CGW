@@ -1,4 +1,7 @@
-<ul>
-	<li><a class="nav-toggle"><span></span></a></li>
-	<li ui-sref-active="active" as-parent ng-class="{active:$state.includes('caregiver.clients')}"><a ui-sref="caregiver.clients">Clients</a></li>
-</ul>
+<a class="nav-toggle"><span></span></a>
+<a class="back" back><i class="icon-arrow-left"></i></a>
+<a class="subtitle" ui-sref="caregiver.clients">Clients</a><span class="title"><span class="avatar"><img src="img/family.jpg" /></span>Chowrichzy Wisdomy Octopios</span>
+<div class="actions">
+	<a id="check-out-btn" class="action action-text done ladda-button" data-style="slide-left" style="display:none;">Check Out</a>
+	<a id="check-in-btn" class="action action-text done ladda-button" data-style="slide-left">Check In</a>
+</div>
