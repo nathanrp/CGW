@@ -221,7 +221,6 @@ form {
 				label {
 					padding: 10px 0;
 					display: inline-block;
-					color: @bcolor;
 					line-height: inherit;
 				}
 				&[class^="options-"],
@@ -259,19 +258,22 @@ form {
 		}
 	}
 	fieldset {
-		padding: 10px 20px;
-		margin: 10px 0;
-		border-radius: 4px;
-		border: 1px solid @ltgray;
 		legend {
 			font-weight: 700;
 			padding: 0 20px;
 		}
+		border-bottom: 1px solid @ltgray;
+		margin: 0 0 24px;
+		padding: 16px 0 16px;
+		&:last-child {
+			border-bottom: none;
+		}
 		dl {
 			dt {
-				color: lighten(@bcolor,20%);
+				font-size: 15px;
+				color: lighten(@bcolor,50%);
 				label {
-					padding: 0 0 10px;
+					padding: 0 0 6px;
 					display: block;
 					line-height: 1.4em;
 					.reqd {
@@ -320,10 +322,6 @@ form {
 					padding-bottom: 5px;
 				}
 			}
-		}
-		&.noborder {
-			border: none;
-			padding: 10px 0;
 		}
 		&.editable {
 			border-style: dashed;

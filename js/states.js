@@ -598,7 +598,7 @@ CGW.config(
 							templateUrl: 'caregiver/drawer.html'
 						},
 						'header@': {
-							templateUrl: 'caregiver/header.html'
+							templateUrl: 'caregiver/profile.header.html'
 						}
 					 }
 				})
