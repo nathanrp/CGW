@@ -4,6 +4,7 @@ CGW.config(
 
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
+				.when('/franchisee/clients', '/franchisee/clients/clients')
 				.otherwise('/404');
 
 			$stateProvider
@@ -87,7 +88,7 @@ CGW.config(
 							templateUrl: 'franchisee/invoice.html'
 						},
 						'header@': {
-							templateUrl: 'franchisee/invoices.header.html'
+							templateUrl: 'franchisee/invoice.header.html'
 						}
 					 }
 				})
@@ -100,7 +101,7 @@ CGW.config(
 							templateUrl: 'franchisee/invoice.edit.html'
 						},
 						'header@': {
-							templateUrl: 'franchisee/invoice.header.html'
+							templateUrl: 'franchisee/invoice.edit.header.html'
 						}
 					 }
 				})
@@ -113,7 +114,7 @@ CGW.config(
 							templateUrl: 'franchisee/invoice.payment.html'
 						},
 						'header@': {
-							templateUrl: 'franchisee/invoice.header.html'
+							templateUrl: 'franchisee/invoice.payment.header.html'
 						}
 					 }
 				})
@@ -144,6 +145,16 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.clients.clients', {
+
+					url: '/clients',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/clients.clients.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.clients.new', {
 
 					url: '/new',
@@ -164,8 +175,8 @@ CGW.config(
 						'header@': {
 							templateUrl: 'franchisee/clients.header.html'
 						},
-						'content@': {
-							templateUrl: 'franchisee/client.html'
+						'tab-content': {
+							templateUrl: 'caregiver/contact.html'
 						}
 					 }
 				})
@@ -313,15 +324,12 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests', {
+				.state('franchisee.clients.requests', {
 
 					url: '/requests',
 					views: {
-						'content@': {
+						'tab-content': {
 							templateUrl: 'franchisee/requests.html'
-						},
-						'header@': {
-							templateUrl: 'franchisee/clients.header.html'
 						}
 					 }
 				})

@@ -10,7 +10,7 @@
 					</div>
 					<a class="link">Edit Address</a>
 				</div>
-				<div class="col-xs-12 col-md-6 table">
+				<fieldset class="col-xs-12 col-md-6 table">
 					<dl>
 						<dt><label for="">Invoice Number</label></dt>
 						<dd><input type="tel" random-id /></dd>
@@ -19,11 +19,14 @@
 						<dt><label for="">Date</label></dt>
 						<dd><input type="date" class="datepicker" jq-datepicker value="Aug 15, 2014" /></dd>
 					</dl>
-				</div>
+				</fieldset>
 			</div>
 		</div>
 		<div class="inv-content">
 			<div class="table-wrapper">
+				<div class="ui-toolbar">
+					<a class="btn left">Add line</a>
+				</div>
 				<table>
 					<thead>
 						<tr>
@@ -68,13 +71,6 @@
 					</tfoot>
 				</table>
 			</div>
-			<div class="ui-toolbar">
-				<a class="btn left">Add line</a>
-			</div>
-		</div>
-		<div class="btns">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>

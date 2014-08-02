@@ -1,10 +1,34 @@
 <div class="ui-section">
 	<form class="paper-form invoice">
 		<div class="inv-client">
-			<div class="name">Chowrichzy Wisdomy Octopios</div>
-			<div class="address">
-				<div>4321 Rally Road</div>
-				<div>Antelope, UT 89234</div>
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<div class="name">Chowrichzy Wisdomy Octopios</div>
+					<div class="address">
+						<div>4321 Rally Road</div>
+						<div>Antelope, UT 89234</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<table>
+						<tbody>
+							<tr>
+								<td>Invoice #</td>
+								<td random-id></td>
+							</tr>
+							<tr>
+								<td>Invoice Date</td>
+								<td>Aug 15, 2014</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Amount Due</td>
+								<td random-money></td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 			</div>
 		</div>
 		<div class="inv-content">
@@ -43,10 +67,6 @@
 					<dd><textarea></textarea></dd>
 				</dl>
 			</fieldset>
-		</div>
-		<div class="btns">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
 		</div>
 	</form>
 </div>
