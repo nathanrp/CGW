@@ -227,7 +227,7 @@ CGW.config(
 					url: '/edit',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.edit.header.html'
+							templateUrl: 'franchisee/schedule.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/schedule.html'

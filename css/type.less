@@ -46,6 +46,13 @@ ul {
 	}
 }
 
+abbr {
+	font-size: 0.9em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .strike {
 	text-decoration: line-through;
 }
@@ -87,6 +94,10 @@ dl {
 		padding: 0 0 10px;
 		dt, dd {
 			padding: 0 0 10px;
+		}
+		dt {
+			font-size: 15px;
+			color: lighten(@bcolor,50%);
 		}
 	}
 	&.dlhead {
