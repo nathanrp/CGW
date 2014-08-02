@@ -106,31 +106,29 @@
 			</dl>
 			<dl>
 				<dt></dt>
-				<dt><label for="">If you meet both conditions, write &ldquo;Exempt&rdquo; here</label></dt>
+				<dt class="left"><label for="">If you meet both conditions, write &ldquo;Exempt&rdquo; here</label></dt>
 				<dd><input type="text" /></dd>
 			</dl>
 		</fieldset>
 		<p>Under penalties of perjury, I declare that I have examined this certificate and, to the best of my knowledge and belief, it is true, correct, and complete.</p>
 		<p>This form is not valid unless you sign it.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Employee&rsquo;s signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature of Preparer or Translator</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
 	</form>
 </div>
 

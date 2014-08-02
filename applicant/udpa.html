@@ -10,13 +10,10 @@
 		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<h2 class="title">Utah Individual Clearance for Direct Patient Access</h2>
 		<div class="instructions">
-			<p>All fields must be complete or form will be returned</p>
+			<p>All fields must be complete or form will be returned. Information must be completed by the applicant.</p>
 		</div>
 		<fieldset class="table">
 			<legend>Applicant Information</legend>
-			<div class="instructions">
-				<p>Information must be completed by the applicant</p>
-			</div>
 			<dl>
 				<dt><label for="">First Name</label></dt>
 				<dd><input type="text" /></dd>
@@ -122,7 +119,7 @@
 			<label for="" class="option">Volunteer</label>
 			<input type="checkbox" name="" />
 			<label for="" class="option">Other</label>
-			<dl>
+			<dl class="indent">
 				<dt><label for="">Position Description</label></dt>
 				<dd><textarea class="fill-width"></textarea></dd>
 			</dl>
@@ -160,25 +157,23 @@
 			</dl>
 		</fieldset>
 		<p>I hereby authorize the Utah Department of Health (<abbr>UDOH</abbr>) to submit my direct patient access application to the Utah Bureau of Criminal Identification (<abbr>BCI</abbr>) for processing in accordance with Utah Code annotated Chapter 26 Title 21 Part 2. I authorize <abbr>BCI</abbr> to access and review state and federal criminal history records and provide that information to the UDOH to be used to make a clearance determination. I do herby release <abbr>UDOH</abbr> and <abbr>BCI</abbr>, all persons, organizations, or government agencies from any damages of, or resulting from, furnishing such information. I have been provided with a copy of this form. I have read and understand the foregoing and my certification is true and correct to the best of my knowledge and belief.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Applicant Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
 	</form>
 </div>
 

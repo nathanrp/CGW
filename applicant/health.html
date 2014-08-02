@@ -75,7 +75,7 @@
 		<fieldset>
 			<legend>Allergies</legend>
 			<dl>
-				<dt><label for="">Do you have any allergies to</label></dt>
+				<dt><label for="">Do you have any allergies to:</label></dt>
 				<dd class="options-vertical">
 					<input type="checkbox" />
 					<label class="option" >Latex or vinyl</label>
@@ -218,19 +218,17 @@
 		<p>Please note that if you are pregnant or planning pregnancy, please discuss the occupational risks peculiar to your position (such as exposure to communicable diseases, exposure to cleaner/ disinfectant fumes, lifting) with your physician.</p>
 		<p>If you have any conditions that may prevent you from performing assigned duties satisfactorily, these must be discussed with your employer. All information will be kept confidential.</p>
 		<p>The information on this health evaluation is complete and accurate to the best of my knowledge. I hereby certify that I am free of any physical, mental, or emotional condition that would be detrimental to the well-being of those in my care.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 	</form>
 </div>
 

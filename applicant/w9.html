@@ -27,6 +27,18 @@
 					<small class="help">disregarded entity name, if different from above</small>
 				</dd>
 			</dl>
+			<dl>
+				<dt><label for="">Address</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">City, State ZIP code</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
+			<dl>
+				<dt><label for="">List account numbers(s) here (optional)</label></dt>
+				<dd><input type="text" /></dd>
+			</dl>
 		</fieldset>
 		<fieldset class="table">
 			<p>Check appropriate box for federal tax</p>
@@ -60,25 +72,10 @@
 				</dd>
 			</dl>
 		</fieldset>
+		<h3>Part 1 Taxpayer Identification Number (<abbr>TIN</abbr>)</h3>
+		<p>Enter your <abbr>TIN</abbr> in the appropriate box. The <abbr>TIN</abbr> provided must match the name given on the &ldquo;Name&rdquo; line to avoid backup withholding. For individuals, this is your social security number (<abbr>SSN</abbr>). However, for a resident alien, sole proprietor, or disregarded entity, see the <a href="http://www.irs.gov/pub/irs-pdf/iw9.pdf" class="link">Part I instructions on page 3</a>. For other entities, it is your employer identification number (<abbr>EIN</abbr>). If you do not have a number, see How to get a <abbr>TIN</abbr> on <a href="http://www.irs.gov/pub/irs-pdf/iw9.pdf" class="link">page 3</a>.</p>
+		<p>Note. If the account is in more than one name, see the chart on <a href="http://www.irs.gov/pub/irs-pdf/iw9.pdf" class="link">page 4</a> for guidelines on whose number to enter.</p>
 		<fieldset class="table">
-			<dl>
-				<dt><label for="">Address</label></dt>
-				<dd><input type="text" /></dd>
-			</dl>
-			<dl>
-				<dt><label for="">City, State ZIP code</label></dt>
-				<dd><input type="text" /></dd>
-			</dl>
-			<dl>
-				<dt><label for="">List account numbers(s) here (optional)</label></dt>
-				<dd><input type="text" /></dd>
-			</dl>
-		</fieldset>
-		<fieldset class="table">
-			<legend>Part 1 Taxpayer Identification Number (TIN)</legend>
-			<p>Enter your TIN in the appropriate box. The TIN provided must match the name given on the &ldquo;Name&rdquo; line to avoid backup withholding. For individuals, this is your social security number (SSN). However, for a resident alien, sole proprietor, or disregarded entity, see the Part I instructions on page 3. For other entities, it is your employer identification number (EIN). If you do not have a number, see How to get a
-TIN on page 3.</p>
-			<p>Note. If the account is in more than one name, see the chart on page 4 for guidelines on whose number to enter.</p>
 			<dl>
 				<dt><label for="">Social security number</label></dt>
 				<dd><input type="tel" /></dd>
@@ -89,34 +86,32 @@ TIN on page 3.</p>
 			</dl>
 		</fieldset>
 		
-		<fieldset class="table">
-			<legend>Part 2 Certification</legend>
-			<p>Under penalties of perjury, I certify that:</p>
-			<p>1. The number shown on this form is my correct taxpayer identification number (or I am waiting for a number to be issued to me), and</p>
-			<p>2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service (IRS) that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am no longer subject to backup withholding, and</p>
-			<p>3. I am a U.S. citizen or other U.S. person <a>See instruction</a>.</p>
-			<p><strong>Certification instructions.</strong> You must cross out item 2 above if you have been notified by the IRS that you are currently subject to backup withholding because you have failed to report all interest and dividends on your tax return. For real estate transactions, item 2 does not apply. For mortgage interest paid, acquisition or abandonment of secured property, cancellation of debt, contributions to an individual retirement arrangement (IRA), and
-generally, payments other than interest and dividends, you are not required to sign the certification, but you must provide your correct TIN. See the instructions on page 4.</p>
-			<div class="m-signature-pad">
-				<div class="ui-toolbar">
-					<label for="" class="left">Signature of U.S. person</label>
+		<h3>Part 2 Certification</h3>
+		<p>Under penalties of perjury, I certify that:</p>
+		<ol class="n-list">
+			<li>The number shown on this form is my correct taxpayer identification number (or I am waiting for a number to be issued to me), and</li>
+			<li>I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue Service (IRS) that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the <abbr>IRS</abbr> has notified me that I am no longer subject to backup withholding, and</li>
+			<li>I am a U.S. citizen or other U.S. person <a>See instruction</a>.</li>
+		</ol>
+		<p><strong>Certification instructions.</strong> You must cross out item 2 above if you have been notified by the <abbr>IRS</abbr> that you are currently subject to backup withholding because you have failed to report all interest and dividends on your tax return. For real estate transactions, item 2 does not apply. For mortgage interest paid, acquisition or abandonment of secured property, cancellation of debt, contributions to an individual retirement arrangement (<abbr>IRS</abbr>), and
+generally, payments other than interest and dividends, you are not required to sign the certification, but you must provide your correct <abbr>TIN</abbr>. See the instructions on <a href="http://www.irs.gov/pub/irs-pdf/iw9.pdf" class="link">page 4</a>.</p>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
 					<button class="button clear right" data-action="clear">Clear</button>
-				</div>
-				<div class="m-signature-pad--body">
+				</dt>
+				<dd class="m-signature-pad--body">
 					<canvas></canvas>
-				</div>
-			</div>
-			<fieldset class="table">
-				<dl>
-					<dt><label for="">Date</label></dt>
-					<dd><input type="date" class="datepicker" jq-datepicker /></dd>
-				</dl>
-			</fieldset>
+				</dd>
+			</dl>
 		</fieldset>
-		<div class="btns"  ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 	</form>
 </div>
 

@@ -109,28 +109,24 @@
 			</dl>
 		</fieldset>
 		<p>This authority is to remain in full force and effect until COMPANY and BANK have received written notification from me of its termination in such time in such manner as to afford COMPANY and BANK a reasonable opportunity to act on it.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Employee Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
-		<div class="table">
-			<fieldset class="table">
-				<dl>
-					<dt><label for="">Date</label></dt>
-					<dd><input type="date" class="datepicker" jq-datepicker /></dd>
-				</dl>
-			</fieldset>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 		<p>A copy of this agreement must be given to the employee. Note: All written debit and credit authorization must provide that the employee may revoke the authorization only by notifying the originator in the manner specified in the authorization.</p>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
 	</form>
 </div>
 

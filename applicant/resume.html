@@ -63,17 +63,14 @@
 		<fieldset class="table">
 			<legend>Availability</legend>
 			<dl>
-				<dt></dt>
+				<dt><label for="">Start Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 				<dd class="options-horizontal">
 					<input type="radio" />
 					<label class="option">Full-time</label>
 					<input type="radio" />
 					<label class="option">Part-time</label>
 				</dd>
-			</dl>
-			<dl>
-				<dt><label for="">Start Date</label></dt>
-				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 			<div class="instructions">
 				<p>What days and hours are you available to work?</p>
@@ -201,7 +198,7 @@
 				</dd>
 			</dl>
 		</fieldset>
-		<fieldset>
+		<fieldset class="table">
 			<legend>Experience</legend>
 			<dl>
 				<dt><label for="">How long have you worked professionally as a Care-Provider?</label></dt>
@@ -378,7 +375,7 @@
 		</fieldset>
 		<fieldset>
 			<dl>
-				<dt><label for="">Have you ever been convicted of a felony or misdemeanor other than traffic violations? If so please explain</label></dt>
+				<dt><label for="">Have you ever been convicted of a felony or misdemeanor other than traffic violations? If so please explain.</label></dt>
 				<dd>
 					<textarea class="smart-width"></textarea>
 				</dd>
@@ -387,7 +384,7 @@
 		<fieldset class="table">
 			<legend>References</legend>
 			<div class="instructions">
-				<p>List 2 references who we can verify your work experience:</p>
+				<p>List 2 references who we can verify your work experience.</p>
 			</div>
 			<dl>
 				<dt><label for="">Name</label>
@@ -404,19 +401,23 @@
 		</fieldset>
 		<p>By signing this application I agree to voluntarily submit to any drug and/or alcohol screening requested by Essential Care at any time before, during or up to 30 days after my work.</p>
 		<p>I certify to the best of my knowledge that the above information is complete and true.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 	</form>
 </div>
 

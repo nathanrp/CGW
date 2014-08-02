@@ -26,15 +26,17 @@
 		<p>We look forward to working with you.</p>
 		<p>I understand the above statements</p>
 		<p>Sincerely,</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Prospective Team Member Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Print Name</label></dt>
@@ -45,10 +47,6 @@
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
 		<div class="visible-print">
 			<h3>Essential Care</h3>
 			<p>2753 E. Broadway Rd., Suite 101-216, Mesa, AZ 85204</p>

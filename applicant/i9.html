@@ -130,21 +130,23 @@ States, include the following:</p>
 				<dd>
 					<select>
 						<option></option>
-						<option>Afganistan</option>
+						<option>List of Countries</option>
 					</select>
 				</dd>
 			</dl>
 			<small class="help">Some aliens may write &ldquo;N/A&rdquo; on the Foreign Passport Number and Country of Issuance fields. <a href="http://www.uscis.gov/sites/default/files/files/form/i-9.pdf" class="link">(See instructions)</a>)</small>
 		</fieldset>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Signature of Employee</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
@@ -156,22 +158,22 @@ States, include the following:</p>
 			<p>To be completed and signed if Section 1 is prepared by a person other than the employee.</p>
 		</div>
 		<p>I attest, under penalty of perjury, that I have assisted in the completion of this form and that to the best of my knowledge the information is true and correct.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Signature of Preparer or Translator</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature of Preparer or Translator</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
-		</fieldset>
-		<fieldset class="table">
 			<dl>
 				<dt><label for="">Last Name (Family Name)</label></dt>
 				<dd><input type="text" /></dd>
@@ -202,10 +204,6 @@ States, include the following:</p>
 				<dd><input type="tel" class="zip" /></dd>
 			</dl>
 		</fieldset>
-		<div class="btns">
-			<a class="btn" back>Cancel</a>
-			<a class="primary btn ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
 	</form>
 </div>
 
