@@ -7,7 +7,6 @@
 			<input type="checkbox" />
 			<label class="option" >Nevada</label>
 		</fieldset>
-		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<p>[Code of Federal Regulations]
 		<br/>[Title 12, Volume 1]
 		<br/>[Revised as of January 1, 2003]
@@ -48,19 +47,23 @@
 		<p>[57 FR 8203, Mar. 6, 1992, as amended at 59 FR 45403, Sept. 1, 1994; 60 FR 33294, June 27, 1995; 62 FR 46037, Aug. 29, 1997; 64 FR 67052, Nov. 30, 1999; 68 FR 66720, Nov. 28, 2003]</p>
 		<h3>Sec. 489.104 Effective dates.</h3>
 		<p>These provisions apply to services furnished on or after December 1, 1991 payments made under section 1833(a)(1)(A) of the Act on or after December 1, 1991, and contracts effective on or after December 1, 1991.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Client Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
-		<div class="btns" ng-hide="$state.includes(&rsquo;super&rsquo;);">
-			<a class="btn done" back>Cancel</a>
-			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 	</form>
 </div>
 

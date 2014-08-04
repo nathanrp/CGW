@@ -7,7 +7,6 @@
 			<input type="checkbox" />
 			<label class="option" >Nevada</label>
 		</fieldset>
-		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<fieldset class="table">
 			<legend>Client</legend>
 			<dl class="error">
@@ -83,6 +82,7 @@
 					<select>
 						<option></option>
 						<option>Utah</option>
+						<option>All States</option>
 					</select>
 				</dd>
 			</dl>
@@ -179,24 +179,31 @@
 			</dl>
 		</fieldset>
 		<fieldset>
-			<legend>Additional Requests/Notes</legend>
-			<textarea class="smart-width"></textarea>
+			<legend>Additional</legend>
+			<dl>
+				<dt><label for="">Notes/Requests</label></dt>
+				<dd><textarea class="smart-width" placeholder="&hellip;"></textarea></dd>
+			</dl>
 		</fieldset>
 		<p>I understand this is the plan of care I would like implemented by Essential Care and if I wish to change it I must contact the manager at <a href="tel:7024871703">702-487-1703</a>.
 		</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Client Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn done" back>Cancel</a>
-			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<dl>
+				<dt><label for="">Date</label></dt>
+				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+			</dl>
+		</fieldset>
 	</form>
 </div>
 

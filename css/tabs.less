@@ -36,18 +36,18 @@
 
 ul {
 	&.list {
-		padding: 10px 0;
+		padding: 8px 0;
 		li {
+			border-bottom: 1px solid darken(@ltgray,10%);
 			a {
 				display: block;
 				padding: 16px 20px;
-				border-bottom: 1px solid darken(@ltgray,10%);
 				position: relative;
 				white-space: nowrap;
 				.flag {
 					position: absolute;
 					right: 5px;
-					top: 10px;
+					top: 8px;
 					color: @bcolor;
 				}
 				small {
@@ -57,7 +57,7 @@ ul {
 				.title {
 					display: block;
 					font-weight: 500;
-					padding: 0 0 10px;
+					padding: 0 0 .5em;
 				}
 				.secondary {
 					color: lighten(@bcolor, 30%);
@@ -65,15 +65,8 @@ ul {
 					padding-bottom: 5px;
 				}
 			}
-			&:first-child {
-				a {
-					border-top: 1px solid @ltgray;
-				}
-			}
 			&:last-child {
-				a {
-					border-bottom: 1px solid @ltgray;
-				}
+				border-bottom: none;
 			}
 		}
 		&.avatar-list {
@@ -124,17 +117,21 @@ ul {
 				top: 21px;
 			}
 		}
-		&:first-child {
-			border-top: 1px solid @ltgray;
-		}
 		&:last-child {
-			border-bottom: 1px solid @ltgray;
+			border-bottom: none;
 		}
 		small {
 			color: lighten(@black,50%);
 		}
 		label {
 			line-height: 37px;
+		}
+		dl {
+			&.dl {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 	&.wtoolbar {

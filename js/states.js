@@ -173,10 +173,10 @@ CGW.config(
 					url: '/client',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/clients.header.html'
+							templateUrl: 'franchisee/client.header.html'
 						},
-						'tab-content': {
-							templateUrl: 'caregiver/contact.html'
+						'content@': {
+							templateUrl: 'franchisee/client.html'
 						}
 					 }
 				})
@@ -186,7 +186,7 @@ CGW.config(
 					url: '/information',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.header.html'
+							templateUrl: 'franchisee/client.info.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/client.info.html'
@@ -225,7 +225,7 @@ CGW.config(
 					url: '/schedule',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.header.html'
+							templateUrl: 'franchisee/client.schedule.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/client.schedule.html'
@@ -264,7 +264,7 @@ CGW.config(
 					url: '/invoices',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.header.html'
+							templateUrl: 'franchisee/client.invoices.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/invoices.html'
@@ -277,7 +277,20 @@ CGW.config(
 					url: '/tasks',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.header.html'
+							templateUrl: 'franchisee/client.tasks.header.html'
+						},
+						'content@': {
+							templateUrl: 'franchisee/client.tasks.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.clients.client.tasks.edit', {
+
+					url: '/edit',
+					views: {
+						'header@': {
+							templateUrl: 'franchisee/client.tasks.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/client.tasks.html'
@@ -290,7 +303,7 @@ CGW.config(
 					url: '/history',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.header.html'
+							templateUrl: 'franchisee/client.historys.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/client.historys.html'
@@ -316,7 +329,7 @@ CGW.config(
 					url: '/request',
 					views: {
 						'header@': {
-							templateUrl: 'franchisee/client.header.html'
+							templateUrl: 'franchisee/client.request.header.html'
 						},
 						'content@': {
 							templateUrl: 'franchisee/client.request.html'
@@ -333,11 +346,14 @@ CGW.config(
 						}
 					 }
 				})
-				
-				.state('franchisee.requests.request', {
+
+				.state('franchisee.clients.requests.request', {
 
 					url: '/request',
 					views: {
+						'header@': {
+							templateUrl: 'franchisee/client.request.header.html'
+						},
 						'content@': {
 							templateUrl: 'franchisee/request.html'
 						}
@@ -346,7 +362,7 @@ CGW.config(
 
 // Client Forms
 
-				.state('franchisee.requests.request.request', {
+				.state('franchisee.clients.requests.request.request', {
 
 					url: '/request',
 					views: {
@@ -359,7 +375,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.dirs', {
+				.state('franchisee.clients.requests.request.dirs', {
 
 					url: '/directives',
 					views: {
@@ -372,7 +388,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.assess', {
+				.state('franchisee.clients.requests.request.assess', {
 
 					url: '/assessment',
 					views: {
@@ -385,7 +401,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.eval', {
+				.state('franchisee.clients.requests.request.eval', {
 
 					url: '/evaluation',
 					views: {
@@ -398,7 +414,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.agreement', {
+				.state('franchisee.clients.requests.request.agreement', {
 
 					url: '/agreement',
 					views: {
@@ -411,7 +427,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.rights', {
+				.state('franchisee.clients.requests.request.rights', {
 
 					url: '/rights',
 					views: {
@@ -424,7 +440,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.title42', {
+				.state('franchisee.clients.requests.request.title42', {
 
 					url: '/title42',
 					views: {
@@ -437,7 +453,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.psda', {
+				.state('franchisee.clients.requests.request.psda', {
 
 					url: '/psda',
 					views: {
@@ -450,7 +466,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.npsda', {
+				.state('franchisee.clients.requests.request.npsda', {
 
 					url: '/npsda',
 					views: {
@@ -463,7 +479,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.requests.request.ndirs', {
+				.state('franchisee.clients.requests.request.ndirs', {
 
 					url: '/ndirs',
 					views: {

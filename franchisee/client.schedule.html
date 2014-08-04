@@ -1,11 +1,10 @@
 <div class="schedule">
 	<div class="ui-toolbar">
-		<div jq-ui-buttonset class="left">
+		<h3 class="left">Apr 27 &mdash; May 3, 2014</h3>
+		<div jq-ui-buttonset class="right">
 			<a><i class="chevron left"></i></a>
 			<a><i class="chevron right"></i></a>
 		</div>
-		<h3 class="left">Apr 27 &mdash; May 3, 2014</h3>
-		<a class="btn right" ui-sref="franchisee.clients.client.schedule.edit" ng-hide="$state.includes('caregiver');">Edit Schedule</a>
 	</div>
 	<div class="week-schedule list-schedule ui-content">
 		<div class="days">
@@ -129,3 +128,53 @@
 		</div>
 	</div>
 </div>
+
+<div class="dialog" id="event-dialog">
+	<h2>Rainn Wilson</h2>
+	<dl class="dl">
+		<dd>Tuesday, May 29, 2014</dd>
+		<dd><span random-small-number></span>&ndash;<span random-small-number></span> pm</dd>
+		<dt>Caregiver</dt>
+		<dd random-name></dd>
+	</dl>
+</div>
+
+<script>
+
+	$('.time').click(function(){
+		$('#event-dialog').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'Edit Schedule',
+					click: function(event){
+						
+						$(this).dialog('close');
+						window.location.replace('/cgw/#/franchisee/clients/client/schedule/edit');
+					},
+					class: 'next full-btn'
+				}
+				,
+				{
+					text: 'Schedule Caregiver',
+					click: function(event){
+						
+						$(this).dialog('close');
+						window.location.replace('/cgw/#/franchisee/caregiver/select');
+					},
+					class: 'next full-btn'
+				}
+			]
+		});
+	});
+
+</script>

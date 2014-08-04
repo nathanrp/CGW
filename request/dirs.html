@@ -7,7 +7,6 @@
 			<input type="checkbox" />
 			<label class="option" >Nevada</label>
 		</fieldset>
-		<a class="btn icon-btn print"><i class="icon-printer"></i></a>
 		<h2 class="title">Acknowledgment of Patient Information on Advanced Directives</h2>
 		<fieldset class="table">
 			<dl>
@@ -32,6 +31,7 @@
 					<select>
 						<option></option>
 						<option>Utah</option>
+						<option>All States</option>
 					</select>
 				</dd>
 			</dl>
@@ -61,7 +61,7 @@
 					<label class="option" for="">Declaration</label>
 					<input type="checkbox" />
 					<label class="option" for="">Durable Power of Attorney for Health Care Decisions</label>
-					<p>If yes, I have provided a copy of my advance directive to the hospital (if I haven&rsquo;t, I will provide a copy to the hospital as soon as possible)</p>
+					<p class="indent">If yes, I have provided a copy of my advance directive to the hospital (if I haven&rsquo;t, I will provide a copy to the hospital as soon as possible)</p>
 					<input type="checkbox" />
 					<label class="option" for="">Copy is provided</label>
 				</li>
@@ -79,55 +79,57 @@
 			</dl>
 		</fieldset>
 		<p>I understand I will not be discriminated against on my provision of care whether or not I have an advance directive.</p>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Patient&rsquo; Signature</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Patient Signature</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Family or Other (if patient is unable to sign)</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Family or Other (if patient is unable to sign)</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<div class="m-signature-pad">
-			<div class="ui-toolbar">
-				<label for="" class="left">Hospital Representative</label>
-				<button class="button clear right" data-action="clear">Clear</button>
-			</div>
-			<div class="m-signature-pad--body">
-				<canvas></canvas>
-			</div>
-		</div>
+		<fieldset class="m-signature-pad initials">
+			<dl>
+				<dt class="ui-toolbar">
+					<label for="" class="left">Hospital Representative</label>
+					<button class="button clear right" data-action="clear">Clear</button>
+				</dt>
+				<dd class="m-signature-pad--body">
+					<canvas></canvas>
+				</dd>
+			</dl>
+		</fieldset>
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Date</label></dt>
 				<dd><input type="date" class="datepicker" jq-datepicker /></dd>
 			</dl>
 		</fieldset>
-		<div class="btns" ng-hide="$state.includes('super');">
-			<a class="btn done" back>Cancel</a>
-			<a class="btn primary ladda-button done" data-style="expand-left" done>Save</a>
-		</div>
 	</form>
 </div>
 
