@@ -5,6 +5,7 @@ CGW.config(
 			$urlRouterProvider
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
 				.when('/franchisee/clients', '/franchisee/clients/clients')
+				.when('/franchisee/caregivers', '/franchisee/caregivers/caregivers')
 				.otherwise('/404');
 
 			$stateProvider
@@ -504,31 +505,43 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.caregivers.caregivers', {
+					url: '/caregivers',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/caregivers.caregivers.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.caregivers.caregiver', {
 					url: '/caregiver',
 					views: {
+						'header@': {
+							templateUrl: 'franchisee/caregiver.header.html'
+						},
 						'content@': {
 							templateUrl: 'franchisee/caregiver.html'
 						}
 					 }
 				})
 				
-				.state('franchisee.applicants', {
+				.state('franchisee.caregivers.applicants', {
 					url: '/applicants',
 					views: {
-						'content@': {
+						'tab-content': {
 							templateUrl: 'franchisee/applicants.html'
-						},
-						'header@': {
-							templateUrl: 'franchisee/caregivers.header.html'
 						}
 					 }
 				})
 				
-				.state('franchisee.applicants.applicant', {
+				.state('franchisee.caregivers.applicants.applicant', {
 
 					url: '/applicant',
 					views: {
+						'header@': {
+							templateUrl: 'franchisee/applicant.header.html'
+						},
 						'content@': {
 							templateUrl: 'franchisee/applicant.html'
 						}
