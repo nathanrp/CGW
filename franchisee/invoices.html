@@ -10,13 +10,12 @@
 				<dt><label for="">Client Name</label></dt>
 				<dd><input type="text" /></dd>
 			</dl>
-			<dl>
+			<dl ng-show="$state.includes('super');">
 				<dt><label for="">Area</label></dt>
 				<dd>
 					<select>
 						<option>All Areas</option>
-						<option>Kaysville</option>
-						<option>Fruit Heights</option>
+						<option>Geographic Areas</option>
 					</select>
 				</dd>
 			</dl>
@@ -45,13 +44,24 @@
 		</div>
 	</form>
 	<div class="ui-toolbar">
-		<a class="btn primary left" ui-sref="franchisee.invoices.invoice.payment">Enter Payment</a>
+		<fieldset class="table left">
+			<dl>
+				<dt><label for="">Showing</label></dt>
+				<dd>
+					<select>
+						<option>Active</option>
+						<option>Archived</option>
+						<option>Deleted</option>
+					</select>
+				</dd>
+			</dl>
+		</fieldset>
 		<a class="btn right"><i class="icon-printer"></i> Print</a>
-		<div class="ui-buttonset right">
+		<div class="ui-buttonset right" ng-hide="$state.includes('super');">
 			<a class="btn">Archive</a>
 			<a class="btn"><i class="icon-trash"></i> Delete</a>
 		</div>
-		<a class="btn right open-search">Search</a>
+		<a class="btn primary right" ui-sref="franchisee.invoices.invoice.payment" ng-hide="$state.includes('super');">Enter Payment</a>
 	</div>
 	<div class="table-wrapper">
 		<table>
@@ -190,28 +200,14 @@
 			</tbody>
 		</table>
 	</div>
-	<div class="ui-toolbar">
-		<div class="ui-buttonset left">
-			<a class="btn">Prev</a>
-			<a class="btn">Next</a>
-		</div>
-		<label class="right" for="">Showing</label>
-		<select class="right">
-			<option>Active</option>
-			<option>Archived</option>
-			<option>Deleted</option>
-		</select>
-	</div>
 </div>
 
 <script>
 	$('.open-search').click(function(){
-		$(this).hide();
 		$('.advanced-search').slideDown(250);
 	});
 	
 	$('.close-search').click(function(){
-		$('.open-search').show();
 		$('.advanced-search').slideUp(250);
 		spinner = new Spinner().spin();
 		$('.table-wrapper').append('<div class="spinner-overlay"/>');

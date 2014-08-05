@@ -1063,7 +1063,7 @@ CGW.config(
 							templateUrl: 'super/drawer.html'
 						},
 						'header@': {
-							templateUrl: 'super/header.html'
+							templateUrl: 'super/notifications.header.html'
 						}
 					 }
 				})
@@ -1089,7 +1089,7 @@ CGW.config(
 							templateUrl: 'super/franchisee.html'
 						},
 						'header@': {
-							templateUrl: 'super/franchisees.header.html'
+							templateUrl: 'super/franchisee.header.html'
 						}
 					 }
 				})
@@ -1102,7 +1102,7 @@ CGW.config(
 							templateUrl: 'super/geos.html'
 						},
 						'header@': {
-							templateUrl: 'super/account.header.html'
+							templateUrl: 'super/geos.header.html'
 						}
 					 }
 				})
@@ -1138,7 +1138,7 @@ CGW.config(
 					url: '/account',
 					views: {
 						'content@': {
-							templateUrl: 'super/account.html'
+							templateUrl: 'franchisee/invoices.html'
 						},
 						'header@': {
 							templateUrl: 'super/account.header.html'

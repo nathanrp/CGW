@@ -15,8 +15,7 @@
 				<dd>
 					<select>
 						<option>All Areas</option>
-						<option>Kaysville</option>
-						<option>Fruit Heights</option>
+						<option>Geographic Areas</option>
 					</select>
 				</dd>
 			</dl>
@@ -37,7 +36,6 @@
 	</form>
 	<div class="ui-toolbar">
 		<a class="btn right"><i class="icon-printer"></i> Print</a>
-		<a class="btn right open-search">Search</a>
 	</div>
 	<div class="table-wrapper">
 		<table>
@@ -68,7 +66,7 @@
 						<input type="checkbox" id="" />
 						<label for="" class="option"></label>
 					</td>
-					<td><a ui-sref="super.accounts.account">Natalia Allanovna Romanova</a></td>
+					<td><a ui-sref="super.accounts.account">Davis County, <abbr>UT</abbr></a></td>
 					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
 					<td class="money" random-money></td>
@@ -76,22 +74,14 @@
 			</tbody>
 		</table>
 	</div>
-	<div class="ui-toolbar">
-		<div class="ui-buttonset left">
-			<a class="btn">Prev</a>
-			<a class="btn">Next</a>
-		</div>
-	</div>
 </div>
 
 <script>
 	$('.open-search').click(function(){
-		$(this).hide();
 		$('.advanced-search').slideDown(250);
 	});
 	
 	$('.close-search').click(function(){
-		$('.open-search').show();
 		$('.advanced-search').slideUp(250);
 		spinner = new Spinner().spin();
 		$('.table-wrapper').append('<div class="spinner-overlay"/>');

@@ -1,13 +1,12 @@
 <div class="ui-section clients">
 	<div class="ui-content">
 		<div class="ui-toolbar">
-			<h2 class="left">Geography</h2>
 			<form>
 				<fieldset class="table">
 					<dl>
 						<dt><label for="">Add Geography</label></dt>
 						<dd>
-							<input type="number" placeholder="Zip Code" />
+							<input type="tel" placeholder="Zip Code" />
 							<small class="help"></small>
 						</dd>
 						<dd>
@@ -39,7 +38,7 @@
 
 <script>
 
-	$('input[type=number]').keyup(function(){
+	$('input[type=tel]').keyup(function(){
 		if($(this).val().length==5) {
 			spinner = new Spinner({
 					length: 3,
