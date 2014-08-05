@@ -10,25 +10,37 @@
 	li {
 		background: @white;
 		border-bottom: 1px solid @ltgray;
-		margin-bottom: 30px;
+		margin-bottom: 36px;
+		padding: 0 0 36px;
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 	time {
-		a {
-			color: @brand;
-		}
+		color: lighten(@bcolor, 40%);
 		display: block;
-		padding: 0 0 10px;
+		line-height: 1.4em;
+		padding: 0 0 .5em;
 	}
 	.photo {
+		border-radius: 2px;
+		overflow: hidden;
+		margin: 0 0 16px;
 		img {
 			display: block;
 			max-width: 100%;
-			margin: 0 0 10px;
 		}
 		figcaption {
 			display: block;
 			padding: 0 0 10px;
 			background: @ltgray;
+		}
+	}
+	.note {
+		p {
+			&:last-child {
+				padding-bottom: 0;
+			}
 		}
 	}
 	.caregiver {

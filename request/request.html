@@ -1,6 +1,6 @@
 <div class="ui-section">
 	<form class="paper-form" ng-controller="form">
-		<fieldset class="table options-vertical" ng-show="$state.includes('super');">
+		<fieldset class="table options-vertical editable" ng-show="$state.includes('super');">
 			<legend>State Visibility</legend>
 			<input type="checkbox" />
 			<label class="option" >Utah</label>
@@ -181,8 +181,8 @@
 		<fieldset>
 			<legend>Additional</legend>
 			<dl>
-				<dt><label for="">Notes/Requests</label></dt>
-				<dd><textarea class="smart-width" placeholder="&hellip;"></textarea></dd>
+				<dt><label for="">Notes</label></dt>
+				<dd><textarea class="smart-width" placeholder=""></textarea></dd>
 			</dl>
 		</fieldset>
 		<p>I understand this is the plan of care I would like implemented by Essential Care and if I wish to change it I must contact the manager at <a href="tel:7024871703">702-487-1703</a>.

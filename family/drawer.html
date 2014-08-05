@@ -1,11 +1,16 @@
 <ul>
-	<li ui-sref-active="active" ui-sref="family" class="logo">
-		<ng-include src="'img/logo.svg'"></ng-include>
-		<a>Essential Care</a>
+	<li ui-sref-active="active" as-parent class="profile" ui-sref="family.profile">
+		<a>
+			<div class="avatar">
+				<img src="img/family.png" />
+			</div>
+			<span class="name">Chowrichzy Octopios</span>
+			<span class="company">Essential Care</span>
+		</a>
 	</li>
-	<li ui-sref-active="active" as-parent>
-		<i class="icon-head"></i>
-		<a ui-sref="family.profile">Natalia Allanovna Romanova</a>
+	<li ui-sref-active="active" ui-sref="family">
+		<i class="icon-image"></i>
+		<a>Photos</a>
 	</li>
 	<li ui-sref-active="active" as-parent>
 		<i class="icon-heart"></i>
@@ -21,3 +26,5 @@
 	</li>
 	<ng-include src="'ix/ix.drawer.html'"></ng-include>
 </ul>
+
+<a class="cgw" href="http://www.myessentialcare.com/" target="blank"><i></i>Caregiver Window</a>
