@@ -30,7 +30,11 @@
 				$('.task').attr('disabled',false);
 				a.hide();
 				$('#check-out-btn').show();
-				$('#check-in-feedback').fadeIn(250);
+				$('body').append('<div class="feedback feedback-toast">You are checked in.</div>');
+				$('.feedback-toast').outerHeight(56);
+				setTimeout(function(){
+					$('.feedback-toast').outerHeight(0);
+				}, 3000)
 			}, 2000)
 		}
 	});
