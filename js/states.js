@@ -3,6 +3,7 @@ CGW.config(
 		function ($stateProvider, $urlRouterProvider) {
 
 			$urlRouterProvider
+				.when('/', '/signin')
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
 				.when('/franchisee/clients', '/franchisee/clients/clients')
 				.when('/franchisee/caregivers', '/franchisee/caregivers/caregivers')
@@ -22,6 +23,22 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: '404.header.html'
+						}
+					 }
+				})
+				
+				.state('signin', {
+
+					url: '/signin',
+					views: {
+						'content@': {
+							templateUrl: 'signin.html'
+						},
+						'drawer@': {
+							templateUrl: 'signin.drawer.html'
+						},
+						'header@': {
+							templateUrl: 'signin.header.html'
 						}
 					 }
 				})
