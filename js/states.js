@@ -3,7 +3,7 @@ CGW.config(
 		function ($stateProvider, $urlRouterProvider) {
 
 			$urlRouterProvider
-				.when('/', '/signin')
+				.when('', '/signin')
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
 				.when('/franchisee/clients', '/franchisee/clients/clients')
 				.when('/franchisee/caregivers', '/franchisee/caregivers/caregivers')
