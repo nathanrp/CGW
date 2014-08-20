@@ -510,6 +510,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.clients.requests.request.urights', {
+
+					url: '/urights',
+					views: {
+						'content@': {
+							templateUrl: 'request/urights.html'
+						},
+						'header@': {
+							templateUrl: 'request/urights.header.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.caregivers', {
 					url: '/caregivers',
 					views: {
@@ -975,6 +988,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('applicant.bg', {
+
+					url: '/bg',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/bg.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/bg.header.html'
+						}
+					 }
+				})
+				
 				.state('family', {
 
 					url: '/family',
@@ -1428,6 +1454,19 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/fnpsda.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.furights', {
+
+					url: '/furights',
+					views: {
+						'content@': {
+							templateUrl: 'request/furights.html'
+						},
+						'header@': {
+							templateUrl: 'super/furights.header.html'
 						}
 					 }
 				})
