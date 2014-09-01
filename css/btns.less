@@ -2,21 +2,19 @@
 
 .btn, button, .ui-button, input[type=submit], .owl-prev, .owl-next {
 	display: inline-block;
-	letter-spacing: 1px;
-	text-transform: uppercase;
 	line-height: 36px;
 	padding: 0 10px;
 	border-radius: 4px;
 	background: @ltgray;
 	color: @bcolor;
-	font-weight: 700;
+	font-weight: 500;
 	cursor: pointer;
 	vertical-align: middle;
-	font-size: 15px;
 	border: none;
 	font-family: @bfont;
 	text-align: center;
 	.nowrap();
+	font-size: 17px;
 	i {
 		margin-right: 5px;
 		color: darken(@ltgray,30%);
@@ -166,6 +164,20 @@
 	}
 	&.padding {
 		padding: 20px 0 10px;
+	}
+	&.pagination {
+		a {
+			display: inline-block;
+			padding: 5px 10px;
+			margin: 0 5px;
+			color: @brand;
+			border-radius: 4px;
+			text-align: center;
+			&.active {
+				background: @brand;
+				color: @white;
+			}
+		}
 	}
 }
 

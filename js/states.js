@@ -7,6 +7,7 @@ CGW.config(
 				.when('/caregiver/clients/client', '/caregiver/clients/client/tasks')
 				.when('/franchisee/clients', '/franchisee/clients/clients')
 				.when('/franchisee/caregivers', '/franchisee/caregivers/caregivers')
+				.when('/franchisee/reports', '/franchisee/reports/invoices')
 				.otherwise('/404');
 
 			$stateProvider
@@ -85,20 +86,30 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.invoices', {
-					
-					url: '/invoices',
+				.state('franchisee.reports', {
+
+					url: '/reports',
 					views: {
 						'content@': {
-							templateUrl: 'franchisee/invoices.html'
+							templateUrl: 'franchisee/reports.html'
 						},
 						'header@': {
-							templateUrl: 'franchisee/invoices.header.html'
+							templateUrl: 'franchisee/reports.header.html'
 						}
 					 }
 				})
 				
-				.state('franchisee.invoices.invoice', {
+				.state('franchisee.reports.invoices', {
+
+					url: '/invoices',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/invoices.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.reports.invoices.invoice', {
 					
 					url: '/invoice',
 					views: {
@@ -111,7 +122,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.invoices.invoice.edit', {
+				.state('franchisee.reports.invoices.invoice.edit', {
 					
 					url: '/edit',
 					views: {
@@ -124,7 +135,7 @@ CGW.config(
 					 }
 				})
 				
-				.state('franchisee.invoices.invoice.payment', {
+				.state('franchisee.reports.invoices.invoice.payment', {
 					
 					url: '/payment',
 					views: {
@@ -133,6 +144,29 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'franchisee/invoice.payment.header.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.reports.payrolls', {
+
+					url: '/payrolls',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/payrolls.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.reports.payrolls.payroll', {
+					
+					url: '/payroll',
+					views: {
+						'content@': {
+							templateUrl: 'franchisee/payroll.html'
+						},
+						'header@': {
+							templateUrl: 'franchisee/payroll.header.html'
 						}
 					 }
 				})
@@ -1333,6 +1367,19 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('super.forms.cbg', {
+
+					url: '/cbg',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/bg.html'
+						},
+						'header@': {
+							templateUrl: 'super/cbg.header.html'
+						}
+					 }
+				})
 
 // Client Super Forms
 				
@@ -1463,7 +1510,7 @@ CGW.config(
 					url: '/furights',
 					views: {
 						'content@': {
-							templateUrl: 'request/furights.html'
+							templateUrl: 'request/urights.html'
 						},
 						'header@': {
 							templateUrl: 'super/furights.header.html'
