@@ -101,7 +101,10 @@
 					border-color: lighten(@turqoise,20%);
 					min-height: 51px;
 				}
-				&:last-child {
+				&.cover {
+					background: @green;
+					border-color: darken(@green,10%);
+					color: @white;
 				}
 			}
 		}
@@ -161,6 +164,11 @@
 			color: @white;
 			background: @red;
 			border-color: @red;
+		}
+		&.cover {
+			background: @green;
+			border-color: darken(@green,10%);
+			color: @white;
 		}
 		&.live-in {
 			background: lighten(@turqoise,25%);

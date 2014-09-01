@@ -195,7 +195,7 @@ CGW.directive('randomMoney',function($document){
 
 CGW.directive('randomName',function($document){
 	return function (scope, element, attrs) {
-		var names = ['Chowrichzy Wisdomy Octopios', 'Bruce Wayne', 'Natalia Allanovna Romanova', 'Loki Laufeyson', 'Remy LeBeau', 'Alec Holland', 'Raven Darkholme', 'Maz &lsquo;Magnus&rsquo; Eisenhardt', 'Reed Richards', 'Obadiah Stane', 'Clark Kent', 'Charles Francis Xavier', 'Rocket Raccoon',];
+		var names = ['Chowrichzy Octopios', 'Bruce Wayne', 'Natalia Romanova', 'Loki Laufeyson', 'Remy LeBeau', 'Alec Holland', 'Raven Darkholme', 'Maz Eisenhardt', 'Reed Richards', 'Obadiah Stane', 'Clark Kent', 'Charles Xavier', 'Rocket Raccoon',];
 		$(element).html(names[Math.floor(Math.random()*names.length)]);
 	}
 });

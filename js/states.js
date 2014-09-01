@@ -759,6 +759,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('caregiver.schedule.covers', {
+
+					url: '/covers',
+					views: {
+						'content@': {
+							templateUrl: 'caregiver/covers.html'
+						},
+						'header@': {
+							templateUrl: 'caregiver/covers.header.html'
+						}
+					 }
+				})
+				
 				.state('caregiver.skills', {
 
 					url: '/skills',

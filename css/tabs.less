@@ -39,6 +39,7 @@ ul {
 		padding: 8px 0;
 		li {
 			border-bottom: 1px solid darken(@ltgray,10%);
+			position: relative;
 			a {
 				display: block;
 				padding: 16px 20px;
@@ -71,7 +72,7 @@ ul {
 		}
 		&.avatar-list {
 			li {
-				a {
+				a, .option {
 					padding-left: 46px;
 					.avatar {
 						display: block;
@@ -86,13 +87,30 @@ ul {
 					}
 				}
 				&:first-child {
-					a {
+					a, .option {
 						border-top: none;
 					}
 				}
 				&:last-child {
-					a {
+					a, .option {
 						border-bottom: none;
+					}
+				}
+			}
+		}
+		&.check-list {
+			li {
+				.option {
+					position: relative;
+					display: block;
+					padding-top: 16px;
+					padding-bottom: 16px;
+					padding: 16px 0px 16px 90px;
+					&:before {
+						top: 12px;
+					}
+					.avatar {
+						left: 44px;
 					}
 				}
 			}

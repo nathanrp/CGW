@@ -2,15 +2,30 @@
 	<div class="ui-content">
 		<ul class="worklist">
 			<li class="warning">
-				<p>You have not checked in at Chowrichzy Wisdomy Octopios.</p>
+				<p>You have not checked in at Chowrichzy Octopios.</p>
 				<p>9:00 <abbr>am</abbr>&ndash;11:00<abbr>am</abbr>.</p>
+			</li>
+			<li>
+				<a class="btn action cover">Respond</a>
+				<p>Rainn Wilson has requested you cover for Wednesday, November 11 at 5&ndash;8pm with Chowrichzy Octopios.</p>
 			</li>
 		</ul>
 	</div>
 </div>
 
 <div class="dialog" id="location" title="Check In">
-	<p>We see you are close to Chowrichzy Wisdomy Octopios. Would you like to check in now?</p>
+	<p>We see you are close to Chowrichzy Octopios. Would you like to check in now?</p>
+</div>
+
+<div class="dialog" id="cover">
+	<h2>Will you cover Rainn Wilson?</h2>
+	<dl class="dl">
+		<dt>Client</dt>
+		<dd>Chowrichzy Octopios</dd>
+		<dd>123 Main St., Kaysville, UT 84037</dd>
+		<dt>Time</dt>
+		<dd>Tuesday, May 29 <span random-small-number></span>&ndash;<span random-small-number></span> pm</dd>
+	</dl>
 </div>
 
 <script>
@@ -37,6 +52,37 @@
 				class: 'next primary full-btn'
 			}
 		]
+	});
+	
+	$('.cover').click(function(){
+		$('#cover').dialog({
+			resizable: false,
+			modal: true,
+			width: 280,
+			buttons: [
+				{
+					text: 'Cancel',
+					click: function(){
+						$(this).dialog('close');
+					},
+					class: 'prev full-btn'
+				},
+				{
+					text: 'No',
+					click: function(event){
+						$(this).dialog('close');
+					},
+					class: 'next full-btn'
+				},
+				{
+					text: 'Yes',
+					click: function(event){
+						$(this).dialog('close');
+					},
+					class: 'next primary full-btn'
+				}
+			]
+		});
 	});
 
 </script>
