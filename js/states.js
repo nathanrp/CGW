@@ -557,6 +557,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.clients.requests.request.selecter', {
+
+					url: '/selecter',
+					views: {
+						'header@': {
+							templateUrl: 'request/selecter.header.html'
+						},
+						'content@': {
+							templateUrl: 'request/selecter.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.caregivers', {
 					url: '/caregivers',
 					views: {
@@ -1048,6 +1061,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('applicant.photo', {
+
+					url: '/photo',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/photo.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/photo.header.html'
+						}
+					 }
+				})
+				
 				.state('family', {
 
 					url: '/family',
@@ -1390,6 +1416,19 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/cbg.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.photo', {
+
+					url: '/photo',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/photo.html'
+						},
+						'header@': {
+							templateUrl: 'super/photo.header.html'
 						}
 					 }
 				})

@@ -1,0 +1,33 @@
+<div class="ui-section">
+	<div class="ui-toolbar">
+		<a class="btn left warning">Reject Photo</a>
+		<a class="btn left snap">Take Photo</a>
+		<a class="btn left snap">Upload Photo</a>
+		<a class="btn right warning" style="display:none;">Delete Photo</a>
+	</div>
+	<div class="crop photo">
+		<img src="img/crop.jpg" id="avatar" style="visibility:hidden;" />
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.Jcrop.css">
+<script src="js/jquery.Jcrop.min.js"></script>
+
+<script>
+
+	$('.snap').click(function(){
+		spinner = new Spinner().spin();
+		$('.crop').append('<div class="spinner-overlay"/>');
+		$('.crop').append(spinner.el);
+		setTimeout(function(){
+			$('#avatar').Jcrop({
+				aspectRatio: 1,
+				setSelect: [ 16, 16, 128, 128 ]
+			});
+			$('.spinner-overlay').remove();
+			spinner.stop();
+			$('.warning').show();
+		}, 2000);
+	});
+	
+</script>
