@@ -1428,7 +1428,7 @@ CGW.config(
 							templateUrl: 'applicant/photo.html'
 						},
 						'header@': {
-							templateUrl: 'super/photo.header.html'
+							templateUrl: 'applicant/photo.header.html'
 						}
 					 }
 				})
