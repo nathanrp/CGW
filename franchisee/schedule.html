@@ -4,7 +4,7 @@
 		<a class="btn right" ui-sref="franchisee.selecter">Select Caregiver</a>
 		<a class="btn right" ui-sref="franchisee.clients.client.schedule.edit.message">Edit Message</a>
 	</div>
-	<form class="ui-content ng-pristine ng-valid">
+	<form class="ui-content">
 		<fieldset class="table">
 			<dl>
 				<dt><label for="">Starts on</label></dt>
@@ -20,8 +20,20 @@
 				</dd>
 			</dl>
 		</fieldset>
-		<fieldset class="table">
+		<fieldset class="table client-repeat-schedule">
 			<legend>Repeat</legend>
+			<dl class="dlhead">
+				<dt></dt>
+				<dt>
+					<input type="checkbox" name="" id="">
+					<label for="" class="option">Same Schedule Everyday</label>
+				</dt>
+				<dt>
+					<input type="checkbox" name="" id="">
+					<label for="" class="option">Same Caregiver(s) Everyday</label>
+				</dt>
+				<dt></dt>
+			</dl>
 			<dl>
 				<dd class="options-vertical">
 					<input type="checkbox" id="3">
@@ -37,14 +49,23 @@
 					</select>
 				</dd>
 				<dd>
-					<a class="selected-caregiver link">
+					<a class="selected-caregiver link" ui-sref="franchisee.selecter">
 						<span class="avatar avatar-small"><img src="img/caregiver.png" /></span>
 						<span class="name">Rainn Wilson</span>
+						<span class="dates">Until Nov 11</span>
+					</a>
+					<a class="selected-caregiver link" ui-sref="franchisee.selecter">
+						<span class="avatar avatar-small"><img src="img/caregiver.png" /></span>
+						<span class="name">Rainn Wilson</span>
+						<span class="dates">Starting on Jan 14</span>
+					</a>
+					<a class="selected-caregiver link" ui-sref="franchisee.selecter">
+						<span class="avatar avatar-small"><img src="img/caregiver.png" /></span>
+						<span class="name">Rainn Wilson</span>
+						<span class="dates">Starting on Jan 14</span>
 					</a>
 				</dd>
-				<dd>
-					<a class="btn"><i class="icon-trash"></i> Remove</a>
-				</dd>
+				<dd><a class="btn"><i class="icon-trash"></i> Remove</a></dd>
 			</dl>
 			<dl>
 				<dd></dd>
@@ -61,8 +82,7 @@
 					<a class="btn" ui-sref="franchisee.selecter">Select Caregiver</a>
 				</dd>
 				<dd>
-					<a class="btn"><i class="icon-trash"></i> Remove</a>
-					<a class="btn">Add Time</a>
+					<a class="btn"><i class="icon-trash"></i> Remove</a> <a class="btn">Add Time</a>
 				</dd>
 			</dl>
 			<dl class="options-vertical">

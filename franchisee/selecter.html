@@ -1,4 +1,9 @@
 <div class="ui-section selecter">
+	<div class="ui-header">
+		<h3 class="ui-title">
+			Sundays from 12:00pm to 5:00pm
+		</h3>
+	</div>
 	<div class="ui-content">
 		<div class="ui-toolbar">
 			<div class="options-horizontal left">
@@ -11,228 +16,197 @@
 				<input type="checkbox" id="3" checked="checked" />
 				<label class="option" for="3">Show Available</label>
 			</div>
+			<a class="btn right">Add Cargiver</a>
 			<a class="btn right" ui-sref="franchisee.clients.client.schedule.edit.message">Edit Message</a>
 		</div>
-		<form class="owl-carousel">
-			<div class="item">
-				<div class="avatar">
-					<img src="img/caregiver.png" alt="Caregiver" />
-					<span class="flag">.2 m</span>
-				</div>
-				<div class="options-vertical">
-					<input type="checkbox" name="caregiver" />
-					<label class="option">Rainn Wilson</label>
-				</div>
-				<ul class="tags">
-					<li class="tag">RN</li>
-					<li class="tag">Alzheimer&rsquo;s</li>
-					<li class="tag">Assist Shower/Bath</li>
-				</ul>
-				<fieldset>
+		<form>
+			<div class="ui-toolbar toolbar-selecter">
+				<fieldset class="table left">
 					<dl>
-						<dt><label for="">Schedule</label></dt>
-						<dd class="options-vertical">
-							<input type="checkbox">
-							<label class="option">Sun 9am &ndash; 12pm</label>
-							<input type="checkbox">
-							<label class="option">Sun 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Mon 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Tue 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Wed 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Thu 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Fri 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Sat 12pm &ndash; 6pm</label>
-						</dd>
+						<dt><label for="">Start Date</label></dt>
+						<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+						<dt><label for="">End Date</label></dt>
+						<dd><input type="date" class="datepicker" jq-datepicker /></dd>
+						<dd><a class="btn">Remove</a></dd>
 					</dl>
 				</fieldset>
+				<a class="btn">Remove Caregiver</a>
 			</div>
-			<div class="item">
-				<div class="avatar">
-					<img src="img/caregiver.png" alt="Caregiver" />
-					<span class="flag">1.6 m</span>
+			<div class="owl-carousel">
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">.2 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+						<li class="tag">Alzheimer&rsquo;s</li>
+						<li class="tag">Assist Shower/Bath</li>
+					</ul>
 				</div>
-				<div class="options-vertical">
-					<input type="checkbox" name="caregiver" />
-					<label class="option">Rainn Wilson</label>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">1.6 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">Alzheimer&rsquo;s</li>
+					</ul>
 				</div>
-				<ul class="tags">
-					<li class="tag">Alzheimer&rsquo;s</li>
-				</ul>
-				<fieldset>
-					<dl>
-						<dt><label for="">Schedule</label></dt>
-						<dd class="options-vertical">
-							<input type="checkbox">
-							<label class="option">Sun 9am &ndash; 12pm</label>
-							<input type="checkbox">
-							<label class="option">Sun 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Mon 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Tue 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Wed 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Thu 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Fri 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Sat 12pm &ndash; 6pm</label>
-						</dd>
-					</dl>
-				</fieldset>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">4 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+					</ul>
+				</div>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">.2 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+						<li class="tag">Alzheimer&rsquo;s</li>
+						<li class="tag">Assist Shower/Bath</li>
+					</ul>
+				</div>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">1.6 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">Alzheimer&rsquo;s</li>
+					</ul>
+				</div>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">4 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+					</ul>
+				</div>
 			</div>
-			<div class="item">
-				<div class="avatar">
-					<img src="img/caregiver.png" alt="Caregiver" />
-					<span class="flag">4 m</span>
-				</div>
-				<div class="options-vertical">
-					<input type="checkbox" name="caregiver" />
-					<label class="option">Rainn Wilson</label>
-				</div>
-				<ul class="tags">
-					<li class="tag">RN</li>
-				</ul>
-				<fieldset>
+			<div class="ui-toolbar toolbar-selecter">
+				<fieldset class="table left">
 					<dl>
-						<dt><label for="">Schedule</label></dt>
-						<dd class="options-vertical">
-							<input type="checkbox">
-							<label class="option">Sun 9am &ndash; 12pm</label>
-							<input type="checkbox">
-							<label class="option">Sun 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Mon 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Tue 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Wed 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Thu 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Fri 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Sat 12pm &ndash; 6pm</label>
-						</dd>
+						<dd><a class="btn">Add Start &amp; End Dates</a></dd>
 					</dl>
 				</fieldset>
+				<a class="btn">Remove Caregiver</a>
 			</div>
-			<div class="item">
-				<div class="avatar">
-					<img src="img/caregiver.png" alt="Caregiver" />
-					<span class="flag">.2 m</span>
+			<div class="owl-carousel">
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">.2 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+						<li class="tag">Alzheimer&rsquo;s</li>
+						<li class="tag">Assist Shower/Bath</li>
+					</ul>
 				</div>
-				<div class="options-vertical">
-					<input type="checkbox" name="caregiver" />
-					<label class="option">Rainn Wilson</label>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">1.6 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">Alzheimer&rsquo;s</li>
+					</ul>
 				</div>
-				<ul class="tags">
-					<li class="tag">RN</li>
-					<li class="tag">Alzheimer&rsquo;s</li>
-					<li class="tag">Assist Shower/Bath</li>
-				</ul>
-				<fieldset>
-					<dl>
-						<dt><label for="">Schedule</label></dt>
-						<dd class="options-vertical">
-							<input type="checkbox">
-							<label class="option">Sun 9am &ndash; 12pm</label>
-							<input type="checkbox">
-							<label class="option">Sun 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Mon 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Tue 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Wed 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Thu 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Fri 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Sat 12pm &ndash; 6pm</label>
-						</dd>
-					</dl>
-				</fieldset>
-			</div>
-			<div class="item">
-				<div class="avatar">
-					<img src="img/caregiver.png" alt="Caregiver" />
-					<span class="flag">1.6 m</span>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">4 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+					</ul>
 				</div>
-				<div class="options-vertical">
-					<input type="checkbox" name="caregiver" />
-					<label class="option">Rainn Wilson</label>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">.2 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+						<li class="tag">Alzheimer&rsquo;s</li>
+						<li class="tag">Assist Shower/Bath</li>
+					</ul>
 				</div>
-				<ul class="tags">
-					<li class="tag">Alzheimer&rsquo;s</li>
-				</ul>
-				<fieldset>
-					<dl>
-						<dt><label for="">Schedule</label></dt>
-						<dd class="options-vertical">
-							<input type="checkbox">
-							<label class="option">Sun 9am &ndash; 12pm</label>
-							<input type="checkbox">
-							<label class="option">Sun 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Mon 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Tue 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Wed 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Thu 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Fri 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Sat 12pm &ndash; 6pm</label>
-						</dd>
-					</dl>
-				</fieldset>
-			</div>
-			<div class="item">
-				<div class="avatar">
-					<img src="img/caregiver.png" alt="Caregiver" />
-					<span class="flag">4 m</span>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">1.6 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">Alzheimer&rsquo;s</li>
+					</ul>
 				</div>
-				<div class="options-vertical">
-					<input type="checkbox" name="caregiver" />
-					<label class="option">Rainn Wilson</label>
+				<div class="item">
+					<div class="avatar">
+						<img src="img/caregiver.png" alt="Caregiver" />
+						<span class="flag">4 m</span>
+					</div>
+					<div class="options-vertical">
+						<input type="checkbox" name="caregiver" />
+						<label class="option">Rainn Wilson</label>
+					</div>
+					<ul class="tags">
+						<li class="tag">RN</li>
+					</ul>
 				</div>
-				<ul class="tags">
-					<li class="tag">RN</li>
-				</ul>
-				<fieldset>
-					<dl>
-						<dt><label for="">Schedule</label></dt>
-						<dd class="options-vertical">
-							<input type="checkbox">
-							<label class="option">Sun 9am &ndash; 12pm</label>
-							<input type="checkbox">
-							<label class="option">Sun 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Mon 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Tue 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Wed 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Thu 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Fri 12pm &ndash; 6pm</label>
-							<input type="checkbox">
-							<label class="option">Sat 12pm &ndash; 6pm</label>
-						</dd>
-					</dl>
-				</fieldset>
 			</div>
 		</form>
 	</div>
@@ -250,9 +224,9 @@ $(document).ready(function() {
 		slideSpeed : 300,
 		paginationSpeed : 400,
 
-		items : 3, 
-		itemsDesktop : [1024,3],
-		itemsTablet: [768,2],
+		items : 4, 
+		itemsDesktop : [1024,4],
+		itemsTablet: [768,3],
 		itemsMobile : [480,1]
 		
 	});
