@@ -684,6 +684,18 @@ CGW.config(
 						}
 					 }
 				})
+				
+				.state('franchisee.admin.accounting', {
+					url: '/accounting',
+					views: {
+						'content@': {
+							templateUrl: 'franchisee/accounting.html'
+						},
+						'header@': {
+							templateUrl: 'franchisee/accounting.header.html'
+						}
+					 }
+				})
 
 // start caregiver
 
