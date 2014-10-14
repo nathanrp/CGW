@@ -1,23 +1,32 @@
 <div class="ui-section caregiver">
 	<form class="ui-content">
 		<fieldset class="table">
-			<legend>Invoice</legend>
+			<div class="instructions nomt">
+				<p>Pre bill will generate the invoice before the first day of the billing period, post bill after the last day.</p>
+			</div>
 			<dl>
-				<dt><label for="">Send Invoice</label></dt>
+				<dt><label for="">Sending</label></dt>
 				<dd class="options-vertical">
 					<input id="" type="radio" checked="checked" />
 					<label for="" class="option">Pre bill</label>
 					<input id="" type="radio" />
-					<label for="" class="option">Post bill</label>
+					<label for="" class="option">Post Bill</label>
 				</dd>
 			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<div class="instructions nomt">
+				<p>Automatic invoice adjustment will credit or charge any balance or extra amount due to the invoice.</p>
+			</div>
 			<dl>
-				<dt><label for="">Invoice Adjustments</label></dt>
+				<dt><label for="">Adjustments</label></dt>
 				<dd class="options-vertical">
 					<input id="" type="checkbox" />
-					<label for="" class="option">Automatically Adjust Invoice</label>
+					<label for="" class="option">Automatic</label>
 				</dd>
 			</dl>
+		</fieldset>
+		<fieldset class="table">
 			<dl>
 				<dt><label for="">Frequency</label></dt>
 				<dd class="options-vertical">
@@ -27,25 +36,18 @@
 					<label for="" class="option">Every 2 weeks</label>
 				</dd>
 			</dl>
+		</fieldset>
+		<fieldset class="table">
+			<div class="instructions nomt">
+				<p>Show hours worked by the caregiver or number of shifts completed by the caregiver. Checking into a shift qualifies as a shift completion.</p>
+			</div>
 			<dl>
-				<dt><label for="">Caregiver Hours on Invoice</label></dt>
+				<dt><label for="">Caregiver Hours</label></dt>
 				<dd class="options-vertical">
 					<input id="" type="radio"checked="checked" />
 					<label for="" class="option">Show hours worked</label>
 					<input id="" type="radio" />
 					<label for="" class="option">Show shift completion</label>
-				</dd>
-			</dl>
-		</fieldset>
-		<fieldset class="table">
-			<legend>Payroll</legend>
-			<dl>
-				<dt><label for="">Frequency</label></dt>
-				<dd class="options-vertical">
-					<input id="" type="radio" checked="checked" />
-					<label for="" class="option">Bi Monthly (1st &amp; 15th)</label>
-					<input id="" type="radio" />
-					<label for="" class="option">Every 2 Weeks</label>
 				</dd>
 			</dl>
 		</fieldset>
