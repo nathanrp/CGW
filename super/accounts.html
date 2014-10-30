@@ -35,6 +35,11 @@
 		</div>
 	</form>
 	<div class="ui-toolbar">
+		<select class="left">
+			<option>Month to Date</option>
+			<option>Last Month</option>
+			<option>Next Month</option>
+		</select>
 		<a class="btn right"><i class="icon-printer"></i> Print</a>
 	</div>
 	<div class="table-wrapper">
@@ -46,17 +51,17 @@
 						<label for="" class="option"></label>
 					</th>
 					<th><a>Franchisee</a></th>
-					<th class="date"><a>Date</a></th>
 					<th class="money"><a>Total</a></th>
-					<th class="percent"><a>Percent</a></th>
+					<th class="percent center"><a>Percent</a></th>
+					<th class="percent money"><a>Royalty</a></th>
 				</tr>
 			</thead>
 			<tfoot>
 				<tr>
 					<td></td>
 					<td>Totals</td>
-					<td></td>
 					<td class="money" random-money></td>
+					<td class="center"></td>
 					<td class="money" random-money></td>
 				</tr>
 			</tfoot>
@@ -67,8 +72,8 @@
 						<label for="" class="option"></label>
 					</td>
 					<td><a ui-sref="super.accounts.account">Davis County, <abbr>UT</abbr></a></td>
-					<td class="date">Aug. 15, 2014</td>
 					<td class="money" random-money></td>
+					<td class="center">5</td>
 					<td class="money" random-money></td>
 				</tr>
 			</tbody>

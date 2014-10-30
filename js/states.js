@@ -1248,6 +1248,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('super.franchisees.franchisee.royalty', {
+
+					url: '/royalty',
+					views: {
+						'content@': {
+							templateUrl: 'super/royalty.html'
+						},
+						'header@': {
+							templateUrl: 'super/royalty.header.html'
+						}
+					 }
+				})
+				
 				.state('super.accounts', {
 
 					url: '/accounts',

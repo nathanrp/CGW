@@ -80,6 +80,7 @@
 		padding: 0 16px;
 		@transition: 0.25s ease-in-out all;
 		.transition(@transition);
+		border-radius: 0;
 	}
 }
 
@@ -133,6 +134,9 @@
 		.action {
 			float: right;
 			margin: 0 0 0 20px;
+		}
+		&.confirm {
+			color: @green;
 		}
 	}
 }
