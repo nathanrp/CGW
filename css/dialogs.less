@@ -162,3 +162,38 @@
 		height: 100% !important;
 	}
 }
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+.ui-autocomplete {
+	background: darken(@white,1%);
+	.box-shadow(0 0 6px fadeout(@black,70%));
+	border-radius: 4px;
+	overflow: hidden;
+	border: 1px solid @ltgray;
+	z-index: 999;
+	max-width: 90%;
+	position: absolute;
+}
+
+.ui-menu {
+	.ui-menu-item {
+		border-bottom: 1px solid darken(@ltgray,10%);
+		position: relative;
+		a {
+			display: block;
+			padding: 8px 10px;
+			position: relative;
+			white-space: nowrap;
+			&.ui-state-focus {
+				background: @brand;
+				color: @white;
+			}
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
