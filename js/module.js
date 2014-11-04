@@ -211,3 +211,11 @@ CGW.directive('jqDatepicker',function($document){
 		}
 	}
 });
+
+CGW.directive('jqAutocomplete',function($document){
+	return function (scope, element, attrs) {
+		$(element).autocomplete({
+			source: ['Chowrichzy Octopios', 'Bruce Wayne', 'Natalia Romanova', 'Loki Laufeyson', 'Remy LeBeau', 'Alec Holland', 'Raven Darkholme', 'Maz Eisenhardt', 'Reed Richards', 'Obadiah Stane', 'Clark Kent', 'Charles Xavier', 'Rocket Raccoon']
+		});
+	}
+});

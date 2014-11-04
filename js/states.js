@@ -603,6 +603,18 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.caregivers.caregiver.pay', {
+					url: '/pay',
+					views: {
+						'header@': {
+							templateUrl: 'franchisee/pay.header.html'
+						},
+						'content@': {
+							templateUrl: 'franchisee/pay.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.caregivers.applicants', {
 					url: '/applicants',
 					views: {
