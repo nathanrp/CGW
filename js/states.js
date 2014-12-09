@@ -1098,6 +1098,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('applicant.docs', {
+
+					url: '/photo',
+					views: {
+						'content@': {
+							templateUrl: 'applicant/docs.html'
+						},
+						'header@': {
+							templateUrl: 'applicant/docs.header.html'
+						}
+					 }
+				})
+				
 				.state('family', {
 
 					url: '/family',

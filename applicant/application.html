@@ -43,6 +43,10 @@
 		<i class="number">11</i>
 		<a ui-sref="applicant.photo">Photo</a>
 	</li>
+	<li ng-show="$state.includes('applicant');">
+		<i class="number">12</i>
+		<a ui-sref="applicant.docs">Additional Documents</a>
+	</li>
 </ol>
 <div class="btns">
 	<a id="withdraw-btn" class="btn" ng-show="$state.includes('applicant');">Withdraw Application</a>
