@@ -1100,7 +1100,7 @@ CGW.config(
 				
 				.state('applicant.docs', {
 
-					url: '/photo',
+					url: '/docs',
 					views: {
 						'content@': {
 							templateUrl: 'applicant/docs.html'
