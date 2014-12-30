@@ -570,6 +570,16 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.clients.archived', {
+
+					url: '/archived',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/clients.clients.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.caregivers', {
 					url: '/caregivers',
 					views: {
@@ -633,6 +643,15 @@ CGW.config(
 						},
 						'content@': {
 							templateUrl: 'franchisee/applicant.html'
+						}
+					 }
+				})
+				
+				.state('franchisee.caregivers.archived', {
+					url: '/archived',
+					views: {
+						'tab-content': {
+							templateUrl: 'franchisee/caregivers.caregivers.html'
 						}
 					 }
 				})
