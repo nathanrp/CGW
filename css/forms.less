@@ -1,6 +1,6 @@
 // forms
 
-input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel], input[type=email] {
+input[type=text], select, textarea, input[type=number], .textarea, input[type=date], input[type=tel], input[type=email], input[type=file] {
 	font-family: @bfont;
 	font-size: 17px;
 	background: darken(@white,2%);
@@ -33,6 +33,10 @@ input[type=text], select, textarea, input[type=number], .textarea, input[type=da
 
 select, input[type=date] {
 	min-height: 34px;
+}
+
+input[type=file] {
+	line-height: inherit;
 }
 
 textarea, .textarea {
@@ -226,6 +230,9 @@ form {
 					p {
 						padding-top: 0px;
 					}
+				}
+				.link {
+					line-height: 36px;
 				}
 			}
 			dt {
