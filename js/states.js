@@ -324,6 +324,19 @@ CGW.config(
 					 }
 				})
 				
+				.state('franchisee.clients.client.billing', {
+
+					url: '/billing',
+					views: {
+						'header@': {
+							templateUrl: 'franchisee/billing.header.html'
+						},
+						'content@': {
+							templateUrl: 'franchisee/billing.html'
+						}
+					 }
+				})
+				
 				.state('franchisee.clients.client.tasks', {
 
 					url: '/tasks',
