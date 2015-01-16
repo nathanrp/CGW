@@ -1,56 +1,55 @@
 <div class="ui-section">
+	<div class="feedback warning">
+		<p><strong>Hours Warning!</strong> Rainn Wilson now has more than 29 hours.</p>
+		<p><strong>Hours Warning!</strong> Peter Clark now has more than 40 hours.</p>
+	</div>
 	<div class="ui-toolbar">
 		<h3 class="title left">Edit Schedule</h3>
-		<a class="btn right" ui-sref="franchisee.selecter">Select Caregiver</a>
-		<a class="btn right" ui-sref="franchisee.clients.client.schedule.edit.message">Edit Message</a>
 	</div>
 	<form class="ui-content">
-		<div class="feedback warning">
-			<p><strong>Hours Warning!</strong> Rainn Wilson now has more than 29 hours.</p>
-			<p><strong>Hours Warning!</strong> Peter Clark now has more than 40 hours.</p>
-		</div>
-		<fieldset class="table">
-			<dl>
-				<dt><label for="">Starts on</label></dt>
-				<dd><input type="date" jq-datepicker class="datepicker"></dd>
-			</dl>
-			<dl>
-				<dt><label>Ends</label></dt>
-				<dd class="options-horizontal">
-					<input type="radio" name="ends" id="10">
-					<label for="10" class="option">Never</label>
-					<input type="radio" name="ends" id="11">
-					<label for="11" class="option">On <input type="date" jq-datepicker class="datepicker"></label>
-				</dd>
-			</dl>
-		</fieldset>
-		<fieldset class="table client-repeat-schedule">
-			<legend>Repeat</legend>
-			<dl class="dlhead">
-				<dt></dt>
-				<dt>
-					<input type="checkbox" name="" id="">
-					<label for="" class="option">Same Schedule Everyday</label>
-				</dt>
-				<dt>
-					<input type="checkbox" name="" id="">
-					<label for="" class="option">Same Caregiver(s) Everyday</label>
-				</dt>
-				<dt></dt>
-			</dl>
-			<dl>
-				<dt>
-					<label>Sun</label>
-				</dt>
-				<dd>
-					<select class="pw">
-						<option>12:00am</option>
-						<option>i++ 30 m</option>
-					</select> <label>to</label> <select class="pw">
-						<option>12:00am</option>
-						<option>i++ 30 m</option>
-					</select>
-				</dd>
+		<fieldset>
+			<div class="table">
+				<dl>
+					<dd><input type="date" jq-datepicker class="datepicker"></dd>
+					<dd>
+						<select class="pw">
+							<option>12:00am</option>
+							<option>i++ 30 m</option>
+						</select>
+					</dd>
+					<dt><label>to</label></dt>
+					<dd><input type="date" jq-datepicker class="datepicker"></dd>
+					<dd>
+						<select class="pw">
+							<option>12:00am</option>
+							<option>i++ 30 m</option>
+						</select>
+					</dd>
+				</dl>
+			</div>
+			<div class="table">
+				<dl>
+					<dt>
+						<label>Repeats on</label>
+					</dt>
+					<dd class="options-horizontal">
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>S</abbr></label>
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>M</abbr></label>
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>T</abbr></label>
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>W</abbr></label>
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>T</abbr></label>
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>F</abbr></label>
+						<input type="checkbox" name="" id="">
+						<label for="" class="option"><abbr>S</abbr></label>
+					</dd>
+				</dl>
+			</div>
 				<dd>
 					<a class="selected-caregiver link" ui-sref="franchisee.selecter">
 						<span class="avatar avatar-small"><img src="img/caregiver.png" /></span>
