@@ -397,12 +397,9 @@ a {
 }
 
 .selected-caregiver {
-	display: block;
+	display: inline-block;
 	padding: 0 0 10px;
-	white-space: nowrap;
-	.avatar-small, .name {
-		vertical-align: middle;
-	}
+	vertical-align: middle;
 	.avatar-small {
 		display: block;
 		border-radius: 50%;
@@ -416,17 +413,13 @@ a {
 			height: 100%;
 		}
 	}
-	.name, .dates {
-		display: block;
+	.name {
+		display: inline-block;
 	}
 	.name {
-		line-height: 22px;
+		line-height: 36px;
 	}
-	.dates {
-		color: lighten(@bcolor,30%);
-		font-size: 14px;
-	}
-	&:last-child {
-		padding-bottom: 20px;
+	+ .btn {
+		margin-left: 16px;
 	}
 }
