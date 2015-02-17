@@ -1,12 +1,5 @@
 <div class="ui-section">
 	<form class="paper-form" ng-controller="form">
-		<fieldset class="table options-vertical editable" ng-show="$state.includes('super');">
-			<legend>State Visibility</legend>
-			<input type="checkbox" />
-			<label class="option" >Utah</label>
-			<input type="checkbox" />
-			<label class="option" >Nevada</label>
-		</fieldset>
 		<div class="feedback warning">
 			<p>If the client has no email, and because email is required by the system, create a fake email at myessentialcare.com. For example, client123@myessentialcare.com. Without a real email from the client, the client will not have access to the family portal.</p>
 		</div>
@@ -138,10 +131,7 @@
 		</fieldset>
 		<fieldset class="table">
 			<legend>Our Services</legend>
-			<div class="ui-toolbar" ng-show="$state.includes('super');">
-				<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
-			</div>
-			<dl class="wrap-edit">
+			<dl>
 				<dt><label for="">How can we help?</label></dt>
 				<dd class="options-vertical"> 
 					<input type="checkbox" id="9" />

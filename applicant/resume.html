@@ -1,12 +1,6 @@
 <div class="ui-section">
 	<form class="paper-form" ng-controller="form">
-		<fieldset class="table options-vertical editable" ng-show="$state.includes('super');">
-			<legend>State Visibility</legend>
-			<input type="checkbox" />
-			<label class="option" >Utah</label>
-			<input type="checkbox" />
-			<label class="option" >Nevada</label>
-		</fieldset>
+		
 		<fieldset class="table">
 			<legend>Applicant</legend>
 			<dl>
@@ -236,10 +230,7 @@
 			<div class="instructions">
 				<p>Check the conditions and duties that you have encountered or performed.</p>
 			</div>
-			<div class="ui-toolbar" ng-show="$state.includes('super');">
-				<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
-			</div>
-			<div class="container-fluid wrap-edit">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-4 col-xs-12 options-vertical">
 						<input type="checkbox" id="1" />
@@ -301,10 +292,7 @@
 			<dl>
 				<dt><label for="">What certifications do you have? <small><abbr>CNA</abbr>, Caregiver, Etc.</small></label></dt>
 				<dd>
-					<div class="ui-toolbar" ng-show="$state.includes('super');">
-						<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
-					</div>
-					<div class="container-fluid padding-bottom-sm wrap-edit">
+					<div class="container-fluid padding-bottom-sm">
 						<div class="row">
 							<div class="col-sm-4 col-xs-12 options-vertical">
 								<input type="checkbox" />
@@ -334,10 +322,7 @@
 			<dl>
 				<dt><label for="">Do you speak any language other than English?</label></dt>
 				<dd>
-					<div class="ui-toolbar" ng-show="$state.includes('super');">
-						<a class="btn add-item left" ui-sref="super.forms.resume.experiences">Manage List</a>
-					</div>
-					<div class="container-fluid padding-bottom-sm wrap-edit">
+					<div class="container-fluid padding-bottom-sm">
 						<div class="row">
 							<div class="col-sm-4 col-xs-12 options-vertical">
 								<input type="checkbox" />

@@ -1357,6 +1357,61 @@ CGW.config(
 					 }
 				})
 
+
+// Task lists
+
+				.state('super.forms.services', {
+
+					url: '/services',
+					views: {
+						'content@': {
+							templateUrl: 'super/services.html'
+						},
+						'header@': {
+							templateUrl: 'super/services.header.html'
+						}
+					 }
+				})
+
+				.state('super.forms.tasks', {
+
+					url: '/tasks',
+					views: {
+						'content@': {
+							templateUrl: 'super/experiences.html'
+						},
+						'header@': {
+							templateUrl: 'super/experiences.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.skills', {
+
+					url: '/skills',
+					views: {
+						'content@': {
+							templateUrl: 'super/experiences.html'
+						},
+						'header@': {
+							templateUrl: 'super/experiences.header.html'
+						}
+					 }
+				})
+				
+				.state('super.forms.certs', {
+
+					url: '/certs',
+					views: {
+						'content@': {
+							templateUrl: 'super/certs.html'
+						},
+						'header@': {
+							templateUrl: 'super/certs.header.html'
+						}
+					 }
+				})
+
 // Caregiver Super Forms
 				
 				.state('super.forms.resume', {
@@ -1368,19 +1423,6 @@ CGW.config(
 						},
 						'header@': {
 							templateUrl: 'super/resume.header.html'
-						}
-					 }
-				})
-				
-				.state('super.forms.resume.experiences', {
-
-					url: '/experiences',
-					views: {
-						'content@': {
-							templateUrl: 'super/experiences.html'
-						},
-						'header@': {
-							templateUrl: 'super/experiences.header.html'
 						}
 					 }
 				})

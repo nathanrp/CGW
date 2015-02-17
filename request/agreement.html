@@ -1,25 +1,28 @@
 <div class="ui-section">
 	<form class="paper-form" ng-controller="form">
-		<fieldset class="table options-vertical editable" ng-show="$state.includes('super');">
-			<legend>State Visibility</legend>
-			<input type="checkbox" />
-			<label class="option" >Utah</label>
-			<input type="checkbox" />
-			<label class="option" >Nevada</label>
-		</fieldset>
+		
 		<h2 class="title">Client Service Agreement</h2>
 		<ol class="n-list">
 			<li>Dates services began <input type="date" class="datepicker" jq-datepicker /> Date services end <input type="date" class="datepicker" jq-datepicker /></li>
 			<li class="options-horizontal">Days of the week that services will be provided <input type="checkbox" /><label class="option">Monday</label> <input type="checkbox" /><label class="option">Tuesday</label> <input type="checkbox" /><label class="option">Wednesday</label> <input type="checkbox" /><label class="option">Thursday</label> <input type="checkbox" /><label class="option">Friday</label> <input type="checkbox" /><label class="option">Saturday</label> <input type="checkbox" /><label class="option">Sunday</label></li>
-			<li>Description of Services <input type="radio" /><label class="option">Hourly</label> or <input type="radio" /><label class="option">Live-In</label>
+			<li>Description of Services <input type="radio" id="s1" name="shift-type" /><label class="option s" for="s1">Hourly</label> or <input type="radio" id="s2" name="shift-type" /><label class="option s" for="s2">Live-In</label>
 				<ul class="b-list">
-					<li>Requested EssentialCare Personnel to sit with clients for between <select class="pw">
-						<option>12:00am</option>
-						<option>i++ 30 m</option>
-					</select> and <select class="pw">
-						<option>12:00am</option>
-						<option>i++ 30 m</option>
-					</select> on the days above.</li>
+					<li id="s3">Requested EssentialCare Personnel to sit with clients for between 
+						<select class="pw">
+							<option>12:00am</option>
+							<option>i++ 30 m</option>
+						</select> and <select class="pw">
+							<option>12:00am</option>
+							<option>i++ 30 m</option>
+						</select> on the days above.
+					</li>
+					<li id="s4" style="display:none;">
+						Requested EssentialCare Personal live-in shift starts at 
+						</select> and <select class="pw">
+							<option>12:00am</option>
+							<option>i++ 30 m</option>
+						</select>
+					</li>
 					<li>Client agrees to pre-pay for services under this Agreement. Any changes in hours or services agreed to must be approved by Essential Care 24 hours in advance of services to be provided, either orally or in writing.</li>
 					<li>EssentialCare Personnel that is being provided by EssentialCare is not medically trained nor licensed to provide medical or nursing care. It is expressly acknowledged that EssentialCare Personnel shall only provide services as set forth herein. EssentialCare Personnel services do not include any medical services, nursing services or any services that require a medical or nursing license.</li>
 				</ul>
@@ -253,6 +256,16 @@
 		clearButton.addEventListener("click", function (event) {
 		  signaturePad.clear();
 		});
+	});
+	
+	$('#s1, #s2').change(function(){
+		if($('#s1').is(':checked')) {
+			$('#s3').show();
+			$('#s4').hide();
+		} else {
+			$('#s4').show();
+			$('#s3').hide();
+		}
 	});
 	
 </script>
