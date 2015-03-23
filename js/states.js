@@ -378,7 +378,7 @@ CGW.config(
 				
 				.state('franchisee.clients.client.historys.history', {
 
-					url: '/history',
+					url: '/historys',
 					views: {
 						'header@': {
 							templateUrl: 'franchisee/client.history.header.html'
