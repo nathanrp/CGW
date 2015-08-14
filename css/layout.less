@@ -1,0 +1,70 @@
+// layout
+
+* {
+	.box-sizing(border-box);
+	outline: 0;
+	&::-moz-focus-inner {
+		border: 0;
+	}
+	-webkit-overflow-scrolling: touch;
+//	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	padding: @abh 0 0;
+}
+
+a {
+	cursor: pointer;
+}
+
+.app-bar {
+	background: @green;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: @abh;
+	.heart {
+		margin: 12px 24px;
+	}
+}
+
+.app-content {
+	padding: 12px;
+}
+
+.avatar-list {
+	ul {
+		li {
+			a {
+				position: relative;
+				display: block;
+				padding: 12px 0 12px 56px;
+				.avatar {
+					position: absolute;
+					display: block;
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+					overflow: hidden;
+					top: 12px;
+					left: 12px;
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+				.name, .secondary {
+					display: block;
+				}
+				.secondary {
+					font-size: 13px;
+					color: @gray;
+				}
+			}
+		}
+	}
+}
