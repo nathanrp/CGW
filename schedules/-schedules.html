@@ -1,0 +1,26 @@
+<div class="app-bar breadcrumbs">
+	<span ng-bind="title" class="title"></span>
+</div>
+<div class="toolbar">
+	<div class="btn-group left">
+		<a class="btn"><i class="fa fa-caret-left"></i></a>
+		<a class="btn">Today</a>
+		<a class="btn"><i class="fa fa-caret-right"></i></a>
+	</div>
+	<div class="title left">
+		Oct 19 &ndash; 25
+	</div>
+	<div class="btn-group" ng-controller="schedule-view">
+		<a class="btn view-week">Week</a>
+		<a class="btn view-month">Month</a>
+	</div>
+</div>
+
+<ng-include src="'schedules/-week.html'"></ng-include>
+<ng-include	src="'schedules/-month.html'"></ng-include>
+
+<div class="legend">
+	<span class="switched">Switched</span>
+	<span class="needs-caregiver">Needs Caregiver</span>
+	<span class="missed">Missed</span>
+</div>

@@ -1,0 +1,62 @@
+<div class="app-bar breadcrumbs">
+	<a href="#/clients" class="crumb">Clients</a>
+	<span ng-bind="title" class="title"></span>
+</div>
+<div class="feedback warning">
+	<a class="dismiss">Dismiss</a>
+	<p>Client does not have a caregiver assigned for future shifts.</p>
+</div>
+<div class="client-card">
+	<div class="row">
+		<div class="col-xs-12 col-sm-2">
+			<div class="avatar">
+				<img src="img/avatar-old.png" />
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-10">
+			<div class="name" ng-bind="title"></div>
+			<div class="secondary">
+				<a class="address"><i class="fa fa-map-marker"></i> Route de Meyrin 385, 1217 Meyrin, Switzerland</a>
+				<a class="phone" href="tel:1-555-555-5555">(123) 456-7890</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-4">
+		<dl class="dl-lot">
+			<dt>Next Care Shift</dt>
+			<dd><a href="#/clients/client/history/shift">Oct 2, 2015 <i class="fa fa-calendar"></i> 12<abbr>pm</abbr>&ndash;4<abbr>pm</abbr></a></dd>
+			<dt>Caregiver</dt>
+			<dd>
+				<a class="btn">Assign caregiver</a>
+			</dd>
+		</dl>
+	</div>
+	<div class="col-xs-12 col-sm-4">
+		<dl class="dl-lot">
+			<dt>Last Care Given</dt>
+			<dd><a href="#/clients/client/history/shift">Oct 1, 2015 <i class="fa fa-calendar"></i> 12<abbr>pm</abbr>&ndash;4<abbr>pm</abbr></a></dd>
+			<dt>Caregiver</dt>
+			<dd><a href="#/caregivers/caregiver">Maryam Deluca</a></dd>
+		</dl>
+	</div>
+	<div class="col-xs-12 col-sm-4">
+		<dl class="dl-lot">
+			<dt>Client Since</dt>
+			<dd>Oct 2005, 10 yrs</dd>
+		</dl>
+	</div>
+</div>
+<ul class="nav-list">
+	<li>
+		<a href="#/clients/client/schedule">Care Schedule</a>
+	</li>
+	<li>
+		<a>Care History</a>
+	</li>
+	<li>
+		<a>Contact Information</a>
+	</li>
+</ul>
+		

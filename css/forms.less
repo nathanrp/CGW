@@ -1,0 +1,83 @@
+// forms
+
+input[type=text], 
+input[type=date], 
+select {
+	display: inline-block;
+	font-family: @font-stack;
+	font-size: @fsize;
+	color: @fcolor;
+	background: @white;
+	border: solid 1px @gray;
+	border-color: @gray lighten(@gray,15%) lighten(@gray,15%) lighten(@gray,15%);
+	padding: 3px 6px;
+	max-width: 100%;
+	&.datepicker {
+		width: 112px;
+	}
+}
+
+.options {
+	.option {
+		padding: 3px 0 6px 24px;
+		display: block;
+		position: relative;
+		input[type=checkbox],
+		input[type=radio] {
+			position: absolute;
+			left: 1px;
+			top: 4px;
+		}
+		input[type=text] {
+			margin: -3px 0 -6px;
+		}
+	}
+	&.inline {
+		display: inline-block;
+		.option {
+			display: inline-block;
+			padding-right: 12px;
+		}
+	}
+}
+
+form {
+	fieldset {
+		margin: 0 0 24px;
+		legend {
+			font-weight: 500;
+		}
+	}
+	.input, .options, .label, .btns {
+		padding: 0 0 12px;
+	}
+	.label {
+		text-align: right;
+		label {
+			display: block;
+			padding: 3px 0 0;
+			font-weight: 500;
+		}
+		.btn {
+			margin-top: -3px;
+		}
+		&.text-left {
+			text-align: left;
+		}
+	}
+	.input {
+		label {
+			display: inline-block;
+		}
+		input[type=text], 
+		input[type=date], 
+		select {
+			margin-bottom: 3px;
+		}
+	}
+	.help {
+		display: block;
+		font-size: 14px;
+		color: @gray;
+	}
+}

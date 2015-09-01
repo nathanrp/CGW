@@ -1,0 +1,39 @@
+// tabs
+
+.nav-tabs {
+	width: 100%;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			line-height: @abh;
+			margin: 0 12px;
+			font-weight: 500;
+			font-size: 15px;
+			.opacity(.5);
+		}
+		&.active {
+			a {
+				.box-shadow(0 -3px 0 @btgreen inset);
+				.opacity(1);
+				&:hover {
+					color: @fcolor;
+				}
+			}
+		}
+		&:hover {
+			a {
+				.opacity(1);
+			}
+		}
+	}
+}
+
+.tab-content {
+	.tab-pane {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}

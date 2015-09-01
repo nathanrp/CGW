@@ -20,6 +20,7 @@
 	<script src="js/ui-bootstrap-tpls.min.js"></script>
 
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 
 	<script src="js/app.js"></script>
 	<script src="js/controllers.js"></script>
@@ -27,21 +28,20 @@
 
 </head>
 <body>
-	<div class="app-bar">
-		<h1 class="heart">Caregiver Window</h1>
-	</div>
-	<div class="app-content">
-		<div class="avatar-list">
-			<ul>
-				<li>
-					<a>
-						<span class="avatar"><img src="img/avatar-old.png" /></span>
-						<span class="name">Chowrichzy Wisdomy Octopios</span>
-						<span class="secondary">Route de Meyrin 385, 1217 Meyrin, Switzerland</span>
-					</a>
-				</li>
+	<a class="nav-toggle"><span></span></a>
+	<div class="app-nav" ng-controller="cgw-nav">
+		<nav class="nav">
+			<ul class="user-nav">
+				<li ng-class="getClass('/user')"><a>Pacific Care</a></li>
 			</ul>
-		</div>
+			<ul class="nav-nav">
+				<li ng-class="getClass('/schedules')"><a href="#/schedules">Schedules</a></li>
+				<li ng-class="getClass('/clients')"><a href="#/clients">Clients</a></li>
+				<li ng-class="getClass('/caregivers')"><a href="#/caregivers">Caregivers</a></li>
+			</ul>
+		</nav>
 	</div>
+	<div class="app-content" ng-view></div>
+	<div class="nav-mask"></div>
 </body>
 </html>

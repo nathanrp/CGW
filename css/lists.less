@@ -1,0 +1,118 @@
+// lists\
+
+.avatar-list {
+	ul {
+		li {
+			a {
+				position: relative;
+				display: block;
+				padding: 16px 0 12px 72px;
+				.avatar {
+					position: absolute;
+					display: block;
+					width: 48px;
+					height: 48px;
+					border-radius: 50%;
+					overflow: hidden;
+					top: 12px;
+					left: 12px;
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+				.name, .secondary {
+					display: block;
+				}
+				.secondary {
+					font-size: 15px;
+					color: @gray;
+				}
+			}
+		}
+	}
+}
+
+.select-caregiver-list {
+	ul {
+		li {
+			.option-alt {
+				position: relative;
+				display: block;
+				padding: 16px 0 12px 96px;
+				input[type=checkbox] {
+					position: absolute;
+					left: 3px;
+					top: 18px;
+				}
+				.avatar {
+					position: absolute;
+					display: block;
+					width: 48px;
+					height: 48px;
+					border-radius: 50%;
+					overflow: hidden;
+					top: 12px;
+					left: 36px;
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+				.name, .distance, .secondary {
+					display: block;
+				}
+				.name {
+					font-weight: 500;
+				}
+				.distance, .secondary {
+					color: @gray;
+				}
+				.distance {
+					.number {
+						font-weight: 500;
+						color: @fcolor;
+					}
+				}
+				.secondary {
+					font-size: 15px;
+				}
+			}
+			.shifts {
+				padding: 0 0 0 96px;
+			}
+		}
+	}
+}
+
+.nav-list {
+	padding: 0 0 12px;
+	li {
+		a {
+			display: block;
+			padding: 6px 0;
+			.box-shadow(0 -1px 0 @ltgray inset);
+		}
+		&:last-child {
+			a {
+				.box-shadow(none);
+			}
+		}
+	}
+}
+
+dl {
+	&.dl-lot {
+		padding: 0 0 12px;
+		dt {
+			color: @green;
+			font-size: 15px;
+		}
+		dd {
+			padding: 0 0 6px;
+			.btn {
+				margin: 3px 0;
+			}
+		}
+	}
+}

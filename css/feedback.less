@@ -1,0 +1,83 @@
+// feedback
+
+.feedback {
+	border-radius: 4px;
+	padding: 29px 12px 12px;
+	font-weight: 500;
+	font-size: 15px;
+	margin: 0 0 24px;
+	position: relative;
+	&:before {
+		.fa-icon();
+		position: absolute;
+		left: 12px;
+		top: 6px;
+	}
+	p {
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	.dismiss {
+		position: absolute;
+		right: 12px;
+		top: 3px;
+		text-transform: uppercase;
+		font-size: .9em;
+		letter-spacing: 1px;
+		font-weight: 500;
+		.opacity(.5);
+		&:hover {
+			.opacity(1);
+			color: @fcolor;
+		}
+	}
+	&.info {
+		background: @ltgreen;
+		&:before {
+			content: @fa-var-certificate;
+			color: @green;
+			.opacity(.5);
+		}
+	}
+	&.warning {
+		background: @ltyell;
+		&:before {
+			content: @fa-var-warning;
+			color: @red;
+			.opacity(.5);
+		}
+	}
+	&.small {
+		padding: 3px;
+	}
+	&.inline {
+		display: inline-block;
+		margin: 0;
+		padding: 1px 3px 1px 29px;
+		&:before {
+			left: 6px;
+			top: 3px;
+		}
+	}
+}
+
+.legend {
+	white-space: nowrap;
+	font-size: 13px;
+	margin: 0 0 24px;
+	.switched, .needs-caregiver, .missed {
+		display: inline-block;
+		padding: 0 6px 0 12px;
+		margin: 0 0 0 6px;
+	}
+	.switched {
+		.box-shadow(inset 4px 0 0 @gray, inset 0 0 0 1px @ltgray;);
+	}
+	.needs-caregiver {
+		.box-shadow(inset 4px 0 0 @ltyell, inset 0 0 0 1px @ltgray;);
+	}
+	.missed {
+		.box-shadow(inset 4px 0 0 @red, inset 0 0 0 1px @ltgray;);
+	}
+}

@@ -5,6 +5,54 @@
 
 @media (max-width: 64em) {
 
+	.app-nav {
+		left: -200px;
+	}
+
+	.app-content {
+		padding-left: 12px;
+		.app-bar, .nav-tabs.tabs-bar {
+			left: 0;
+			padding-left: @abh + 12px;
+			&.breadcrumbs {
+				.crumb {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	// btns
 	
+	.toolbar {
+		text-align: left;
+		.left {
+			float: none;
+		}
+		.tool {
+			display: block;
+		}
+	}
+
+	// forms
+
+	form {
+		.label {
+			padding-bottom: 6px;
+			text-align: left;
+			label {
+			}
+		}
+		.input {
+			input[type=text], 
+			input[type=date], 
+			select {
+				width: 100%;
+				&.datepicker {
+					width: 100%;
+				}
+			}
+		}
+	}
 
 }

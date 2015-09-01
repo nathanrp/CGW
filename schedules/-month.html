@@ -1,0 +1,276 @@
+<div class="schedule month" style="display: none;">
+	<div class="columns days">
+		<div class="day mon"></div>
+		<div class="day tue"></div>
+		<div class="day wed"></div>
+		<div class="day thu"></div>
+		<div class="day fri"></div>
+		<div class="day sat"></div>
+		<div class="day sun"></div>
+	</div>
+	<div class="rows days">
+		<div class="day mon">
+			<span>Mon<span>
+		</div>
+		<div class="day tue">
+			<span>Tue<span>
+		</div>
+		<div class="day wed">
+			<span>Wed<span>
+		</div>
+		<div class="day thu">
+			<span>Thu<span>
+		</div>
+		<div class="day fri">
+			<span>Fri<span>
+		</div>
+		<div class="day sat">
+			<span>Sat<span>
+		</div>
+		<div class="day sun">
+			<span>Sun<span>
+		</div>
+	</div>
+	<div class="rows weeks">
+		<div class="dates row">
+			<div class="date past">27</div>
+			<div class="date past">28</div>
+			<div class="date past">29</div>
+			<div class="date past">30</div>
+			<div class="date">1</div>
+			<div class="date">2</div>
+			<div class="date">3</div>
+		</div>
+		<div class="week row">
+			<div class="mon day past">
+				<a class="shift">
+					<span class="time">8:30</span>
+					<span class="caregiver">Ezequiel Blackwood</span>
+				</a>
+				<a class="shift">
+					<span class="time">6:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="tue day past">
+				<a class="shift needs-caregiver">
+					<span class="time">8:30</span>
+					<span class="caregiver feedback warning inline">Needs Caregiver</span>
+				</a>
+			</div>
+			<div class="wed day past"></div>
+			<div class="thu day days-2 past">
+				<a class="shift day-1" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">12:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+				<a class="shift day-2 current" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">7:00<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="sat day"></div>
+			<div class="sun day"></div>
+		</div>
+	</div>
+	<div class="rows weeks">
+		<div class="dates row">
+			<div class="date">4</div>
+			<div class="date">5</div>
+			<div class="date">6</div>
+			<div class="date today">7</div>
+			<div class="date">8</div>
+			<div class="date">9</div>
+			<div class="date">10</div>
+		</div>
+		<div class="week row">
+			<div class="mon day">
+				<a class="shift">
+					<span class="time">8:30</span>
+					<span class="caregiver">Ezequiel Blackwood</span>
+				</a>
+				<a class="shift">
+					<span class="time">6:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="tue day">
+				<a class="shift needs-caregiver">
+					<span class="time">8:30</span>
+					<span class="caregiver feedback warning inline">Needs Caregiver</span>
+				</a>
+			</div>
+			<div class="wed day"></div>
+			<div class="thu day days-2">
+				<a class="shift day-1 missed" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">12:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+				<a class="shift day-2" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">7:00<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="sat day"></div>
+			<div class="sun day"></div>
+		</div>
+	</div>
+	<div class="rows weeks">
+		<div class="dates row">
+			<div class="date">11</div>
+			<div class="date">12</div>
+			<div class="date">13</div>
+			<div class="date">14</div>
+			<div class="date">15</div>
+			<div class="date">16</div>
+			<div class="date">17</div>
+		</div>
+		<div class="week row">
+			<div class="mon day">
+				<a class="shift">
+					<span class="time">8:30</span>
+					<span class="caregiver">Ezequiel Blackwood</span>
+				</a>
+				<a class="shift">
+					<span class="time">6:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="tue day">
+				<a class="shift needs-caregiver">
+					<span class="time">8:30</span>
+					<span class="caregiver feedback warning inline">Needs Caregiver</span>
+				</a>
+			</div>
+			<div class="wed day"></div>
+			<div class="thu day days-2">
+				<a class="shift day-1" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">12:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+				<a class="shift day-2" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">7:00<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="sat day"></div>
+			<div class="sun day"></div>
+		</div>
+	</div>
+	<div class="rows weeks">
+		<div class="dates row">
+			<div class="date">18</div>
+			<div class="date">19</div>
+			<div class="date">20</div>
+			<div class="date">21</div>
+			<div class="date">22</div>
+			<div class="date">23</div>
+			<div class="date">24</div>
+		</div>
+		<div class="week row">
+			<div class="mon day">
+				<a class="shift">
+					<span class="time">8:30</span>
+					<span class="caregiver">Isaura Fritz</span>
+				</a>
+				<a class="shift">
+					<span class="time">9:00</span>
+					<span class="caregiver">Verdell	Daigle</span>
+				</a>
+				<a class="shift">
+					<span class="time">9:30</span>
+					<span class="caregiver">Joette	Angel</span>
+				</a>
+				<a class="shift">
+					<span class="time">9:30</span>
+					<span class="caregiver">Page	Batson</span>
+				</a>
+				<a class="shift">
+					<span class="time">11:30</span>
+					<span class="caregiver">Sherryl	Woodall</span>
+				</a>
+				<a class="shift">
+					<span class="time">12:30<abbr>p</abbr></span>
+					<span class="caregiver">Chantell Salinas</span>
+				</a>
+				<a class="shift">
+					<span class="time">1:30<abbr>p</abbr></span>
+					<span class="caregiver">Wan	Dion</span>
+				</a>
+				<a class="shift">
+					<span class="time">2:30<abbr>p</abbr></span>
+					<span class="caregiver">Wilford Brandon</span>
+				</a>
+				<a class="shift">
+					<span class="time">3:30<abbr>p</abbr></span>
+					<span class="caregiver">Bette Eller</span>
+				</a>
+				<a class="shift">
+					<span class="time">6:30<abbr>p</abbr></span>
+					<span class="caregiver">Agripina Hughey</span>
+				</a>
+			</div>
+			<div class="tue day">
+				<a class="shift needs-caregiver">
+					<span class="time">8:30</span>
+					<span class="caregiver feedback warning inline">Needs Caregiver</span>
+				</a>
+			</div>
+			<div class="wed day"></div>
+			<div class="thu day days-2">
+				<a class="shift day-1" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">12:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+				<a class="shift day-2" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">7:00<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="sat day"></div>
+			<div class="sun day"></div>
+		</div>
+	</div>
+	<div class="rows weeks">
+		<div class="dates row">
+			<div class="date">25</div>
+			<div class="date">26</div>
+			<div class="date">27</div>
+			<div class="date">28</div>
+			<div class="date">29</div>
+			<div class="date">30</div>
+			<div class="date">31</div>
+		</div>
+		<div class="week row">
+			<div class="mon day">
+				<a class="shift">
+					<span class="time">8:30</span>
+					<span class="caregiver">Ezequiel Blackwood</span>
+				</a>
+				<a class="shift">
+					<span class="time">6:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="tue day">
+				<a class="shift needs-caregiver">
+					<span class="time">8:30</span>
+					<span class="caregiver feedback warning inline">Needs Caregiver</span>
+				</a>
+			</div>
+			<div class="wed day"></div>
+			<div class="thu day days-2">
+				<a class="shift day-1" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">12:30<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+				<a class="shift day-2" ng-controller="schedulesWhatCtrl" ng-click="open('small')">
+					<span class="time">7:00<abbr>p</abbr></span>
+					<span class="caregiver">China Delgadillo</span>
+				</a>
+			</div>
+			<div class="sat day"></div>
+			<div class="sun day"></div>
+		</div>
+	</div>
+</div>

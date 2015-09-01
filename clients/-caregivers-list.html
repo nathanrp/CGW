@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h1>Select Caregiver for Weekly Shift at 12:30<abbr>pm</abbr> &ndash; 8:30<abbr>pm</abbr> on Mondays</h1>
+  <a class="close" ng-click="cancel()">Close</a>
+</div>
+<div class="modal-body">
+	<div class="toolbar">
+		<div class="options inline left">
+			<label class="option"><input type="checkbox" /> Show only with no schedule conflict</label>
+		</div>
+		<div class="tool">
+			<i class="fa fa-search"></i>
+			<input type="text" placeholder="Search by name&hellip;" />
+		</div>
+	</div>
+	<div class="select-caregiver-list">
+		<ul>
+			<li>
+				<label class="option-alt">
+					<input type="checkbox" />
+					<span class="avatar"><img src="img/caregiver-1.png" /></span>
+					<span class="name">Chau	Sepulveda</span>
+					<span class="distance"><span class="number">3.7 m</span> from client</span>
+					<span class="secondary">4468 Virginia Street, Bismarck, <abbr>ND</abbr> 58501</span>
+				</label>
+			</li>
+			<li>
+				<label class="option-alt">
+					<input type="checkbox" />
+					<span class="avatar"><img src="img/caregiver-3.png" /></span>
+					<span class="name">Whitley	Singletary</span>
+					<span class="distance"><span class="number">5.1 m</span> from client</span>
+					<span class="secondary">918 Sycamore Drive, Chillicothe, <abbr>OH</abbr> 45601</span>
+				</label>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="modal-footer btns">
+	<a class="btn primary">Done</a>
+	<a class="btn" ng-click="cancel()">Cancel</a>
+</div>

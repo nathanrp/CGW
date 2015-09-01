@@ -1,0 +1,234 @@
+// modals
+
+body {
+	&.modal-open {
+		overflow: hidden;
+	}
+}
+
+.modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 9;
+	overflow: hidden;
+	.modal-dialog {
+		width: 600px;
+		margin: 36px auto;
+		&.modal-small {
+			width: 300px;
+		}
+		&.modal-full {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			margin: 0;
+			right: 0;
+			overflow: hidden;
+			.modal-content {
+				border: 0;
+				position: fixed;
+				top: 36px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				border-radius: 0;
+				overflow-x: hidden;
+				overflow-y: auto;
+				.modal-header {
+					.close {
+						right: 0;
+					}
+				}
+				.modal-body {
+					padding-bottom: 68px;
+				}
+				.modal-footer {
+					background: @bg;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					-webkit-transform: translateZ(0);
+				}
+			}
+		}
+		.modal-content {
+			background: @bg;
+			border-radius: 4px;
+			.box-shadow(0 3px 12px fadeout(@black,50%));
+			.modal-header, .modal-body, .modal-footer {
+				position: relative;
+			}
+			.modal-header {
+				padding: 24px 12px;
+				h1 {
+					font-weight: 500;
+				}
+				.close {
+					position: absolute;
+					right: -9px;
+					top: -38px;
+				}
+			}
+			.modal-body {
+				padding: 12px;
+			}
+			.modal-footer {
+				padding: 12px 12px 24px;
+			}
+		}
+	}
+}
+
+.modal-open {
+	.modal {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.modal-backdrop {
+		z-index: 8;
+		visibility: visible;
+		.opacity(1);
+	}
+}
+
+// datepicker
+
+// datepicker
+
+.ui-datepicker {
+	display: none;
+	position: absolute;
+	.box-shadow(0 3px 12px fadeout(@black,50%));
+	border-radius: 4px;
+	background: @bg;
+	padding: 24px;
+	z-index: 9 !important;
+	.ui-datepicker-header {
+		padding: 0 0 18px;
+		line-height: 24px;
+		.ui-datepicker-prev, .ui-datepicker-next {
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			position: relative;
+			text-indent: 9999px;
+			&:before, &:after {
+				display: block;
+				width: 12px;
+				position: absolute;
+				height: 2px;
+				background: @fcolor;
+			}
+			&:before, &:after {
+				content: '';
+			}
+		}
+		.ui-datepicker-prev {
+			float: left;
+			&:before {
+				.rotate(45deg);
+				left: 6px;
+				top: 15px;
+			}
+			&:after {
+				.rotate(-45deg);
+				left: 6px;
+				top: 8px;
+			}
+		}
+		.ui-datepicker-next {
+			float: right;
+			&:before {
+				.rotate(135deg);
+				left: 6px;
+				top: 15px;
+			}
+			&:after {
+				.rotate(-135deg);
+				left: 6px;
+				top: 8px;
+			}
+		}
+		.ui-datepicker-title {
+			text-align: center;
+			.ui-datepicker-month {
+				margin: 0 6px 0 0;
+			}
+		}
+	}
+	.ui-datepicker-calendar {
+		overflow: hidden;
+		thead {
+			tr {
+				th {
+					font-size: 14px;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					text-align: center;
+					vertical-align: bottom;
+					font-weight: 600;
+					border-bottom: 1px solid @gray;
+					padding: 6px;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					text-align: center;
+					&.ui-datepicker-other-month {
+						color: @gray;
+						line-height: 28px;
+					}
+					a {
+						color: @fcolor;
+						display: block;
+						padding: 6px;
+						border-radius: 50%;
+						width: 34px;
+						height: 34px;
+						line-height: 20px;
+						&:hover {
+							&:before {
+								content: "";
+								position: absolute;
+								background-color: @ltgray;
+								left: 0;
+								top: -5000px;
+								height: 10000px;
+								width: 100%;
+								z-index: -1;
+							}
+						}
+					}
+					&.ui-datepicker-today {
+						a {
+							background: @btyell;
+						}
+					}
+					&.ui-datepicker-current-day, &:hover {
+						a {
+							background: @btgreen;
+							color: @white;
+							position: relative;
+						}
+					}
+				}
+			}
+		}
+	}
+	.ui-datepicker-buttonpane {
+		padding: 18px 0 0;
+		text-align: right;
+		.ui-priority-secondary {
+			float: left;
+		}
+	}
+}

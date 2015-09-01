@@ -1,0 +1,54 @@
+<div class="app-bar breadcrumbs">
+	<span ng-bind="title" class="title"></span>
+	<div class="tools">
+		<a class="btn" href="#/clients/client/schedule">Cancel</a>
+		<a class="btn primary" href="#/clients/client/schedule">Save</a>
+	</div>
+</div>
+<form>
+	<fieldset>
+		<div class="row">
+			<div class="col-xs-12 col-sm-2">
+				<div class="label">
+					<label>Start Date</label>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-2">
+				<div class="input">
+					<input type="text" class="datepicker" jq-datepicker />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-2">
+				<div class="label">
+					<label>Ends</label>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-10">
+				<div class="options inline">
+					<label class="option"><input type="radio" name="3" checked="checked" /> Never</label>
+					<label class="option"><input type="radio" name="3" /> On <input type="text" class="datepicker" jq-datepicker /></label>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-2">
+				<div class="label text-left">
+					<label>Shifts</label>
+				</div>
+			</div>
+		</div>
+		<div class="shifts">
+			<ng-include	src="'clients/-shift.html'"></ng-include>
+			<ng-include	src="'clients/-shift.html'"></ng-include>
+		</div>
+		<div class="btns row">
+			<div class="col-xs-12 col-sm-offset-2 col-sm-10">
+				<a class="btn add-shift">Add Shift</a>
+			</div>
+		</div>
+	</fieldset>
+</form>
