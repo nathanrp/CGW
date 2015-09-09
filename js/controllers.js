@@ -23,6 +23,20 @@ cgw.controller('cgw-nav', ['$scope','$location', function($scope,$location) {
 
 }]);
 
+// new client
+
+cgw.controller('saved-client', ['$scope','$location', function($scope,$location) {
+
+	$('body .new-client').show();
+	$('.toast').addClass('burnt');
+	setTimeout (
+		function() {
+			$('.toast').removeClass('burnt');
+		}, 3000
+	);
+
+}]);
+
 // adding, editing shifts
 
 cgw.controller('shift', ['$scope','$location', function($scope,$location) {

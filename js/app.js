@@ -12,6 +12,15 @@ cgw.config(function($routeProvider) {
 			templateUrl : 'clients/-clients.html',
 			title: 'Clients'
 		})
+		.when('/clients/new', {
+			templateUrl : 'clients/-new.html',
+			title: 'New Client'
+		})
+		.when('/clients/saved', {
+			templateUrl : 'clients/-clients.html',
+			title: 'Clients',
+			controller: 'saved-client'
+		})
 		.when('/clients/client', {
 			templateUrl : 'clients/-client.html',
 			title: 'Chowrichzy Wisdomy Octopios'
